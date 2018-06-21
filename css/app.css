@@ -3486,7 +3486,7 @@ tbody.collapse.in {
   background: #d7d7d7;
   height: 200px;
   padding: 40px 10px 20px 10px;
-  border-bottom: 1px solid #fff000; }
+  border-bottom: 1px solid #fff; }
 
 #CS-page {
   clear: both;
@@ -4168,5 +4168,3 @@ footer {
   .content-grid.thumbnails article {
     padding-left: 0 !important;
     padding-right: 0 !important; } }
-
-/*# sourceMappingURL=app.css.map */
