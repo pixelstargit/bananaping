@@ -1,0 +1,52 @@
+/*! PZ - SELECTED FONT ICONS
+ *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */
+/* FONT PATH
+ * -------------------------- */
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../fonts/fontawesome-webfont.eot?v=4.7.0');
+  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  &:hover {  text-decoration: none;}
+}
+.fa-twitter {
+  background: #0ea9e3;
+  &:before { content: "\f099";}
+}
+.fa-facebook {
+  background: #3b549b;
+  &:before { content: "\f09a";}
+}
+.fa-google-plus {
+  background: #de131d;
+  &:before {  content: "\f1a0";}
+}
+.fa-linkedin {
+  background: #047aba;
+  &:before {  content: "\f0e1";}
+}
+.fa-vimeo{
+  background: #00adef;
+  &:before {  content: "\f27d";}
+}
+/*fa-volume-down content: "\f027";*/
+.fa-audio { background: url(../images/icon-audio.png);}
+/* fa-youtube-play content: "\f16a"; */
+.fa-video { background: url(../images/icon-video.png);}
+/*fa-book content: "\f02d";*/
+.fa-book { background: url(../images/icon-book.png);}
+
+/*fa-chevron-right left */
+.glyphicon.icon-prev:before{ font-family: "FontAwesome"; content: "\f053";}
+.glyphicon.icon-next:before{ font-family: "FontAwesome"; content: "\f054";}

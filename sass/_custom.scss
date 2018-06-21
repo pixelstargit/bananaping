@@ -1,0 +1,442 @@
+/*Cityscape Styles*/
+/*Sections*/
+
+#CS-header .img-responsive {margin: 1px auto;}
+#logo {
+  background: $color-grey-light;
+  height: 200px;
+  padding:40px 10px 20px 10px;
+  border-bottom: 1px solid #fff000;
+}
+#CS-page{
+  clear: both;
+  max-width: $main-page-width;
+  margin: 1px auto;
+  .container{max-width: $main-page-width; }
+  section, .clear-row{clear: both;}
+}
+#CS-footer{
+  clear: both;
+  background: $color-grey-heavy;
+  color: $color-white;
+  a {color: $color-white;}
+}
+
+/* text resets */
+.btn, h1, h2, h3 {letter-spacing: $letter-normal;  font-weight: 900;}
+b, strong { font-family: $font-velino-text; font-weight: 900;}
+ /* p {font-weight: 600;}*/
+
+/*Navbar*/
+#CS-header {
+  nav{
+    border-radius:0; border:none;
+    background: $color-grey-dark;
+    max-width: $main-page-width;
+    width:100%;
+    margin: 0 auto;
+    a{color: $color-white; font-family: $font-din; font-size: 14px; text-transform: uppercase; letter-spacing: $letter-normal; }
+    /*adjust breaking point vs text size*/
+    li {border-right: solid 1px $color-white;}
+    li:last-child {border-right:0;}
+    li li a{color: $color-grey-dark;}
+    .active > a {background: $color-red;}
+    ul li{
+    width: 15.6667%; /* fallback for non-calc() browsers*/
+    width: calc(100% / 6 ); /*$nav-item-total*/ box-sizing: border-box;
+    }
+    ul li.thin{  width:12.6667%; }
+    ul li.wide { width:20.6667%;
+      a{ padding-left: 3px;padding-right: 3px;}
+    }
+  }
+}
+
+.navbar{
+  .navbar-collapse { text-align: center;  padding-right:0;  padding-left:0; }
+  .navbar-nav { display: inline-block; float: none; width:100%;
+   > li > a:hover{  background: $color-grey-light;}
+  }
+}
+.nav > li > a { min-height:65px; padding: 20px 0 0 0;}
+.nav-login {
+  float:right;
+  margin-top:-103px;/*adjust position vs text size*/
+  background: $color-grey-medium;
+  li {
+    border-right: 0!important;
+    border-left: 1px solid $color-grey-light;
+    min-width: 165px;
+  }
+  li a {
+    min-height:33px;
+    padding:10px $gutter-default;
+    font-size:12px!important;
+    letter-spacing: $letter-wide !important;
+  }
+}
+.navbar-toggle .icon-bar { background-color: $color-white!important; }
+
+/* sub nav drop down */
+#CS-header nav .dropdown-menu {
+  border-radius: 0; border-color:#ffffff; border-width: 0 1px 1px 1px; margin-left:-1px; padding:0;
+  min-width:203px;
+  background-color: rgba(137, 137, 137, 0.8); /*$color-grey-dark;*/
+  li {
+    width:100% !important; background: transparent;
+    border-top: solid 1px #ffffff; border-right:none;
+    text-align: center;
+  a { width:100%; min-height:3em; padding-top:1em;
+      text-transform: capitalize; color: $color-grey-heavy;
+    }
+  &.active > a {color:$color-red; background-color:#f5f5f5;}
+  }
+}
+/*Styles*/
+/* Carousel Feature*/
+.showcase{
+  .carousel-caption{
+    left:0; right: 30%; bottom: 0;
+    padding: 0 3em;
+    margin-left: 0;
+    background-color: $overlay-white;
+    text-shadow: none;
+    text-align: left;
+    h2{ color: $color-red; font-family: $font-din; font-weight: 400;
+      text-decoration: none; text-transform: uppercase;
+      font-size: $font-size-tiny; margin-top: 1em; margin-bottom: 0.5em;}
+    h3, h3 a{ color: $color-grey-heavy;
+      text-decoration: none; text-transform: uppercase; margin-top: 0;padding-bottom: 0.3em;}
+  }
+}
+.content-showcase img{ padding-bottom: 10px;}
+.showcase.content-showcase img{ padding-bottom: 0px;}
+.carousel-control {
+  background-image: none!important;
+  .icon-prev { left:10%;}
+  .icon-next { right:10%;}
+}
+.carousel-inner > .item > img, .carousel-inner > .item > a > img { width: 100%;}
+.caption {font-size:0.8em!important; background: $color-white;}
+.grey{ background: $color-grey-light; padding: 1em 1em 1em 3em; font-family: $font-velino-thin;}
+.gallery {padding-top: $gutter-default;padding-bottom: $gutter-default;}
+
+/*Page Text Styles */
+.content-text, .content-grid{
+  font-family: $font-velino-thin;
+  p, hr, h1, h2, h3, h4, ul { padding:12px 0; margin: $gutter-wide 0;}
+  p {font-family: $font-velino-thin;font-size: $font-size-small; }
+}
+.title-block{
+  background: $color-grey-dark;
+  padding: 0;  max-width:170px; min-width: 170px;
+  text-align: center;
+  h2, a {  color: $color-white; font-family: $font-din; font-size: 13px; text-transform: uppercase;
+    padding:$gutter-wide;}
+  &.orange{ background: $color-red; margin: 80px auto; }
+  &.red{ background: $color-red;}
+  &.yellow{
+    background: $color-sunny; margin: 0 0 10px 0;
+    h2, a {color: $color-grey-dark;}
+  }
+}
+.title-count{
+  background: $color-red;
+  padding: 0;
+  text-align: center; float:left;
+  h2 {
+    float:left; padding: $gutter-wide; padding-right: 100px;
+    &.count{min-width:20px;  padding-right:$gutter-wide; border-left:1px solid #ffffff; }
+  }
+  h2, a { color: $color-white; font-family: $font-din; font-size: 13px; text-transform: uppercase;
+     margin:0;}
+  .count.grey, .count.grey a{color: $color-grey-dark; }
+}
+.content-small p {font-size:13px; padding: 0.3em 0;}
+
+
+/*Buttons - sold and buy*/
+.btn{
+  &, a {
+    color: $color-white;
+    font-family: $font-din;
+    border-radius: 0;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: $letter-normal;
+    padding: 3px;
+   }
+  background-color: $color-green;
+  border-color: $color-green;
+  padding: 8px 22px;
+  &.sold{ background-color: $color-red; border-color: $color-red;}
+  &.orange{ background-color: $color-red; border-color: $color-red; min-width:170px;}
+}
+
+/*GRID styles and spacing of items thumbnails cover videos*/
+.content-grid {
+  article {
+    padding:0;
+    img {margin: 0 auto; width: 100%;}
+  }
+  &.thumbnails article {
+    padding: 10px 5px;
+    &.col-sm-4:nth-child(3n+1) {padding-left:0; padding-right:10px; clear:both;}
+    &.col-sm-4:nth-child(3n) {padding-left:10px; padding-right:0;}
+  }
+  &.videos{
+    padding-top: 5px;padding-bottom: $gutter-default;
+    article:nth-child(odd) { padding: 9px 30px 9px 0;}
+    article:nth-child(even){ padding: 9px 0 5px 30px;}
+  }
+  &.cover{
+    margin:-5px;
+    padding-top: 10px;
+    article {
+      padding:5px 5px;
+      img {width:100%; }
+      background-color: $color-white;
+      margin: 0;
+      .btn{
+        position: absolute;
+        right: 5px;
+        top: 50%;
+        a{font-size: 11px; padding:1em;}
+        }
+    }
+  }
+  &.post-list{
+    padding-top:$gutter-wide;
+    .col-sm-4{ width: 35.4%;
+      article, .title-block.red { margin-left:1em; margin-right:0;}}
+    .col-sm-4:first-child{ width:$width-leftbar;
+      article,.title-block.red { margin-left: 0;}}
+    .post-summary {
+      padding-top:5px;
+      article {background: $color-grey-light; }
+    }
+    p {font-family: $font-velino-thin; font-size: $font-size-small; }
+    h3{
+      font-family: $font-velino-text; font-size: $font-size-big; text-transform: uppercase;
+      font-weight: 900; padding-top: 1em;
+      margin: -4px 0;
+    }
+ }
+}
+
+/* Sidebar and right content styles */
+#CS-page section section{clear:none;}
+.content-sidebars {
+  border-top: 2px $color-white solid;
+  aside {  background:#efefef; padding:0;}
+  section { background: $color-white; padding:0;}
+  p, hr, h1, h2, h3, h4{ padding:$gutter-wide $gutter-default; margin:0;}
+  p {font-family: $font-velino-thin;font-size: $font-size-small; }
+  h3{font-size: $font-size-big; text-transform: uppercase;}
+}
+.side-summary, .post-summary {
+  h3{padding: $gutter-default; padding-bottom:0;}
+  p {padding: $gutter-default; line-height: 1.3em;}
+}
+.side-menu{ width:$width-leftbar;}
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.magazine {
+  &.col-sm-9 { width:$width-rightbar;}
+  .title-yellow { background: #ffff00;  border-left: 1px solid $color-white; }
+  article:first-child .title-yellow {padding-top:355px; overflow: hidden;}
+  .title-yellow-image img {width: 100%; border-left: 1px solid $color-white;}
+  .title-yellow-overlay {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+  }
+  .title, .date{ background-color: $overlay-white;}
+  .title{ padding-bottom: 0.5em; padding-top: 0.5em;}
+  .date{ color: $color-red; font-family: $font-din; font-weight: 400; text-transform: uppercase;
+    font-size: $font-size-tiny; padding-top: 1em; padding-bottom: 0;}
+  .issue {top:0;position: absolute; min-width:165px;border-left:1px solid $color-white; border-bottom: 0;}
+  .showcase{margin:0 $gutter-default;}
+  .intro {font-size: $font-size-base; font-family: $font-velino-textitalic;  font-weight: 900;}
+}
+
+
+/*Styles: Zebra */
+.zebra article:nth-child(even) { background: transparent; }
+.zebra article:nth-child(odd)  { background: $overlay-white; }
+.zebra.bee article:nth-child(odd)  { background: $color-yellow; }
+
+/* Extras side menu */
+nav.sub-menu{
+  li { padding: 0;}
+  li a { font-family: $font-din;  font-size:15px;}
+  ul {
+    li { background: #f9f9f9; text-transform: uppercase; margin: 1em 0;}
+    li.active {background: #edeb51; a {color: $color-grey-medium;}}
+    li a{ padding:2em 1em; min-height:85px; color: $color-grey-light;}
+    li a:hover {background: none;background-color: $overlay-white; color:#ccc;}
+  }
+  .icon {
+    width:60px; height:60px;
+    float:left;
+    margin:12px 12px 12px 25px;
+    background-size: cover;
+  }
+  ol {
+    li {
+      padding:0 1em; line-height: 1.25em;
+      a {
+        color: $color-grey-dark;
+        padding: 1em 0 0 1em; min-height: 50px;
+        font-size: 14px; letter-spacing: $letter-normal;
+      }
+    }
+    li.active a{color: #a9a500; }
+  }
+}
+
+/* Footer styles */
+/* Socials = font-awesome */
+.social-icons{
+  text-align: center;
+  a{
+    display: inline-block; vertical-align: middle;
+  }
+  .fa {
+    color: $color-white;
+    font-size: 3em;
+    width: 60px;
+    height: 60px;
+    padding-top: 9px;
+    margin:$gutter-default;
+  }
+  .footer-logo{
+    padding:$gutter-default;
+  }
+}
+
+/* Footer alt */
+footer{
+  padding-top:80px;
+  &.footer-alt{padding-top:2px;}
+}
+.footer-alt{
+  p {font-family: $font-velino-thin;  text-align: left; font-size: 0.9em;}
+  h3 {font-family:$font-velino-textitalic; font-style: italic; font-size: 21px;  text-align: left;
+   letter-spacing: 0;  font-weight: 900;}
+  form {font-family: $font-din;font-size:$font-size-small; padding-top:10px; }
+  label{ width: 10%; float: left; clear: both; padding-top: 10px;}
+  input{
+    border-radius: 4px; border:0;
+    margin: 3px 0; padding: 5px 10px;
+    width: 80%;
+    font-size: $font-size-big;
+    color: $text-color;
+    float: right;
+    &[type="submit"] {
+      color: $color-white;
+      width:170px; float:right;
+      text-transform: uppercase;
+      font-size: 14px;
+      border-radius: 0;
+      margin-right:0;
+    }
+  }
+  div {padding-right: 30px;}
+  .footer-form{ padding-bottom:30px;}
+  .social-icons {
+    padding-bottom:30px;
+    .fa {
+      font-size: 1.5em;  border-radius: 40px;
+      width: 40px; height: 40px;
+      padding-top: 9px;
+      margin:5px; float:left;
+    }
+  }
+}
+.footer-text{
+  clear: both;
+  font-family: $font-velino-thin;
+  hr { border-top: 1px solid #444444; margin-top:15px; margin-bottom:10px; }
+  p { text-align: center; padding-bottom: 2em;}
+}
+.footer-res{ font-size:13px;}
+
+/*login form style*/
+.content-login{
+  background: url(../images/showcase-gallery.jpg);
+  background-size: cover;
+  min-height:720px; height: 100vh;
+  padding-top:30px;
+  text-align: center;
+  .login-box {
+    padding: 3em 6em; margin: 0 auto; max-width: 650px;
+    background-color: rgba(255,255,255,0.7);
+    .logo {max-width:300px; margin: 0 auto;}
+    h1 {font-size: 24px;color: $color-red; font-family: $font-velino-textitalic; font-weight: 900;}
+    h2 {font-size: 18px; font-family: $font-velino-textitalic;  font-weight: 900; }
+    input {
+      background: $color-grey-medium; border:0;  border-radius: 0;
+      margin: 3px 2%; padding: 10px 10px;
+      width: 46%; float:left;
+      font-family: $font-din;font-size:11px; color: $color-white;
+      text-transform: uppercase; text-align: center;
+      &[type="submit"] {
+        width:200px; border-radius: 0; clear:both; float:none;
+        background: $color-red;
+        font-size:14px;
+        letter-spacing: 0.07em;
+      }
+    }
+  }
+}
+
+/*Responsive breakpoints*/
+/*adjust max-breaking point vs nav text size*/
+@media only screen and (max-width:826px) and (min-width:768px){.nav .wide a {padding-top: 10px;}}
+@media only screen and (max-width:980px){ #CS-page {margin:1px 10px;}}
+
+@media only screen and (max-width:767px){
+  /*body{background: #ff00ff;}*/
+  .nav-login, #CS-header nav ul li {margin:0 ;float:none; width:100% !important;}
+  #CS-header nav li li a{color: $color-white;}
+  #CS-header nav li{border-right: none;}
+  .social-icons { max-width:400px; margin: 0 auto;}
+  .magazine article:first-child .title-yellow {padding-top:54px; max-height:300px; }
+  .content-grid.videos article { padding:5px 0 !important;}
+  .content-grid.thumbnails article{
+    &.col-sm-4:nth-child(3n+1) {padding-left:10px;clear:none;}
+    &.col-sm-4:nth-child(3n) {padding-right:10px;}
+    &.col-xs-6:nth-child(odd) {padding-right:10px; padding-left:0; clear:both;}
+    &.col-xs-6:nth-child(even) {padding-right:0; padding-left:10px;}
+   }
+  .row-eq-height {    display: block!important;}
+  .magazine.yellow-image.col-sm-9 { width: $width-rightbar;}
+  .magazine.col-xs-12, .side-menu.sub-menu{ width:100%; }
+  .content-login .login-box { padding: 3em 2em;}
+}
+@media only screen and (max-width:425px){
+  .showcase .carousel-caption{right: 20%;}
+  .post-list .col-sm-4, .side-menu.col-xs-12 {width:100%!important; }
+  .magazine.yellow-image.col-xs-12, .content-login .login-box input.col-xs-12 {width:100%!important; }
+  .showcase .carousel-caption{
+    display:none;
+    right: 0;
+    h2 {font-size: 0.7em;}
+    h3 {font-size: 1em;}
+  }
+  .grey{padding:1em;}
+  .footer-alt input, .footer-alt input[type="submit"]{width:100%; margin-left:0;}
+  .content-login .login-box { padding: 1em ;}
+  .content-grid.post-list .col-sm-4 article, .content-grid.post-list .col-sm-4 .title-block.red {
+    margin-left: 0;}
+
+}
+@media only screen and (max-width:375px){
+  .col-xs-6{width:100%;}
+  .content-grid.thumbnails article{padding-left: 0!important; padding-right: 0!important;}
+}

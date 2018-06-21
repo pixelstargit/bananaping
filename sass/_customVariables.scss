@@ -1,0 +1,55 @@
+//
+// Variables
+// --------------------------------------------------
+
+//custom
+$main-color: #b7b7b7;
+$main-page-width: 980px;
+$nav-item-total: 6;
+
+//Colours
+$color-white: #ffffff;
+$color-grey-light: #d7d7d7;
+$color-grey-medium: #b7b7b7;
+$color-grey-dark: #898989;
+$color-grey-heavy: #222222;
+$color-red: #ff0000;
+$color-green: #00b254;
+$color-yellow: #ffff00;
+$color-sunny: #f0ec00;
+
+$overlay-white: rgba(255,255,255,0.6);
+
+
+//fonts
+
+$font-din: "din_alternatebold", sans-serif;
+$font-velino-thin: "velino_text_thinthin", serif;
+$font-velino-text: "velino_text_blackblack", serif;
+$font-velino-textitalic: "velino_text_blackitalic", serif;
+
+$font-family-sans-serif: $font-velino-text;
+
+$font-size-tiny:  12px; /*9pt*/
+$font-size-small:  14px; /* 12pt din*/
+$font-size-base:  16px; /*default 14pt velino*/
+$font-size-big:  18px; /*13pt*/
+
+
+$font-size-h1: 30px; /*default is 41px*/
+$font-size-h2: 34px; /*default is 34px*/
+$font-size-h3: 28px; /*default is 28px*/
+$font-size-h4: 20px; /*default is 20px*/
+
+//padding
+$gutter-default: 15px;
+$gutter-thin: 0.3em;
+$gutter-wide: 0.5em;
+
+//magazine sidebar widths
+$width-leftbar: 29.2%;
+$width-rightbar: 70.8%;
+
+$letter-skinny: 0.05em;
+$letter-normal: 0.07em;
+$letter-wide: 0.1em;
