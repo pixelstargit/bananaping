@@ -365,6 +365,23 @@ footer{
   hr { border-top: 1px solid #444444; margin-top:15px; margin-bottom:10px; }
   p { text-align: center; padding-bottom: 2em;}
 }
+.footer-menu{
+    clear:both;
+    font-family: $font-din;
+    ul {
+      width:20%;
+      float:left;
+      li {
+        list-style: none;
+      }
+    }
+    .foot-menu-head{
+      border-bottom: 2px solid #444444;
+    }
+    .border-left{
+      border-left: 2px solid #444444;
+    }
+}
 .footer-res{ font-size:13px;}
 
 /*login form style*/
