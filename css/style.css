@@ -31,10 +31,15 @@
   clear: both;
   background: #222222;
   color: #ffffff; }
-  #CS-footer a {
-    color: #ffffff; }
   #CS-footer .fullwide {
     background: #b7b7b7; }
+  #CS-footer .footer-logo {
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 800;
+    color: #ababa7;
+    letter-spacing: 0.072em; }
 
 /* text resets */
 .btn, h1, h2, h3 {
@@ -57,10 +62,11 @@ b, strong {
   /*adjust breaking point vs text size*/ }
   #CS-header nav a {
     color: #ffffff;
-    font-family: "din_alternatebold", sans-serif;
-    font-size: 14px;
+    font-family: "Raleway", sans-serif;
+    font-size: 11.5px;
     text-transform: uppercase;
-    letter-spacing: 0.07em; }
+    letter-spacing: 0.07em;
+    font-weight: 600; }
   #CS-header nav li {
     border-right: solid 1px #ffffff; }
   #CS-header nav li:last-child {
@@ -487,6 +493,8 @@ nav.sub-menu ol li.active a {
     margin: 15px; }
   .social-icons .footer-logo {
     padding: 15px; }
+    .social-icons .footer-logo a {
+      font-family: "Raleway", sans-serif; }
 
 /* Footer alt */
 footer {
@@ -559,19 +567,33 @@ footer {
 
 .footer-menu {
   clear: both;
-  font-family: "din_alternatebold", sans-serif; }
+  font-family: "Helvetica LT Std", sans-serif;
+  font-size: 11.5px;
+  letter-spacing: 0.08em; }
+  .footer-menu a {
+    color: #ccc; }
   .footer-menu ul {
     width: 20%;
     float: left; }
     .footer-menu ul li {
       list-style: none; }
   .footer-menu .foot-menu-head {
-    border-bottom: 2px solid #444444; }
+    border-bottom: 2px solid #444444;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.1em; }
+    .footer-menu .foot-menu-head a {
+      color: #fff; }
   .footer-menu .border-left {
     border-left: 2px solid #444444; }
 
 .footer-res {
-  font-size: 13px; }
+  font-size: 13px;
+  font-family: "Helvetica LT Std", sans-serif;
+  font-style: italic;
+  color: #858585;
+  letter-spacing: 0.05em; }
 
 /*login form style*/
 .content-login {

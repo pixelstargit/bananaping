@@ -20,10 +20,10 @@
   clear: both;
   background: $color-grey-heavy;
   color: $color-white;
-  a {color: $color-white;}
   .fullwide{
     background: $color-grey-medium;
   }
+  .footer-logo {font-family: $font-raleway; text-transform: uppercase; font-size: 24px; font-weight: 800; color: #ababa7; letter-spacing: 0.072em; }
 }
 
 /* text resets */
@@ -39,7 +39,7 @@ b, strong { font-family: $font-velino-text; font-weight: 900;}
     max-width: $main-page-width;
     width:100%;
     margin: 0 auto;
-    a{color: $color-white; font-family: $font-din; font-size: 14px; text-transform: uppercase; letter-spacing: $letter-normal; }
+    a{color: $color-white; font-family: $font-raleway; font-size: 11.5px; text-transform: uppercase; letter-spacing: $letter-normal; font-weight: 600;}
     /*adjust breaking point vs text size*/
     li {border-right: solid 1px $color-white;}
     li:last-child {border-right:0;}
@@ -320,6 +320,7 @@ nav.sub-menu{
   }
   .footer-logo{
     padding:$gutter-default;
+    a {font-family: $font-raleway;}
   }
 }
 
@@ -371,7 +372,8 @@ footer{
 }
 .footer-menu{
     clear:both;
-    font-family: $font-din;
+    font-family: $font-helvetica; font-size:11.5px; letter-spacing: 0.08em;
+    a { color: #ccc; }
     ul {
       width:20%;
       float:left;
@@ -381,12 +383,14 @@ footer{
     }
     .foot-menu-head{
       border-bottom: 2px solid #444444;
+      font-family: $font-raleway; font-weight: 700; font-size: 12px; letter-spacing: 0.1em;
+      a {color:#fff;}
     }
     .border-left{
       border-left: 2px solid #444444;
     }
 }
-.footer-res{ font-size:13px;}
+.footer-res{ font-size:13px; font-family: $font-helvetica; font-style: italic; color: #858585; letter-spacing: 0.05em;}
 
 /*login form style*/
 .content-login{
