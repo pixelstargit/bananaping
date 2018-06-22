@@ -23,7 +23,14 @@
   src: url("../fonts/velinotext-blackitalic.eot?#iefix") format("embedded-opentype"), url("../fonts/velinotext-blackitalic.woff2") format("woff2"), url("../fonts/velinotext-blackitalic.woff") format("woff"), url("../fonts/velinotext-blackitalic.ttf") format("truetype"), url("../fonts/velinotext-blackitalic.svg#velinotext-blackitalic") format("svg");
   font-weight: bold;
   font-style: italic; }
-
+/*9pt*/
+/* 12pt din*/
+/*default 14pt velino*/
+/*13pt*/
+/*default is 41px*/
+/*default is 34px*/
+/*default is 28px*/
+/*default is 20px*/
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
@@ -294,7 +301,7 @@ body {
   font-family: "velino_text_blackblack", serif;
   font-size: 16px;
   line-height: 1.42857;
-  color: #333333;
+  color: #b7b7b7;
   background-color: #fff; }
 
 input,
@@ -1969,7 +1976,7 @@ select[multiple].input-lg {
   display: block;
   margin-top: 5px;
   margin-bottom: 10px;
-  color: #737373; }
+  color: #f7f7f7; }
 
 @media (min-width: 768px) {
   .form-inline .form-group {

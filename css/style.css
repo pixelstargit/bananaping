@@ -1,8 +1,14 @@
+/*9pt*/
+/* 12pt din*/
+/*default 14pt velino*/
+/*13pt*/
+/*default is 41px*/
+/*default is 34px*/
+/*default is 28px*/
+/*default is 20px*/
 /*a Pixelzoo theme*/
-/*Cityscape Styles*/
+/*Cityscape Styles - v10 trans 11.3*/
 /*Sections*/
-body { line-height: 0.6em;}
-p { line-height: 1.5em;}
 #CS-header .img-responsive {
   margin: 1px auto; }
 
@@ -10,7 +16,7 @@ p { line-height: 1.5em;}
   background: #d7d7d7;
   height: 200px;
   padding: 40px 10px 20px 10px;
-  border-bottom: 1px solid #ffffff; }
+  border-bottom: 1px solid #ffff00; }
 
 #CS-page {
   clear: both;
@@ -37,6 +43,7 @@ b, strong {
   font-family: "velino_text_blackblack", serif;
   font-weight: 900; }
 
+/* p {font-weight: 600;}*/
 /*Navbar*/
 #CS-header nav {
   border-radius: 0;
@@ -45,7 +52,7 @@ b, strong {
   max-width: 980px;
   width: 100%;
   margin: 0 auto;
- }
+  /*adjust breaking point vs text size*/ }
   #CS-header nav a {
     color: #ffffff;
     font-family: "din_alternatebold", sans-serif;
@@ -91,7 +98,8 @@ b, strong {
 
 .nav-login {
   float: right;
-  margin-top: -99px;
+  margin-top: -103px;
+  /*adjust position vs text size*/
   background: #b7b7b7; }
   .nav-login li {
     border-right: 0 !important;
@@ -114,7 +122,8 @@ b, strong {
   margin-left: -1px;
   padding: 0;
   min-width: 203px;
-  background: #898989; }
+  background-color: rgba(137, 137, 137, 0.8);
+  /*$color-grey-dark;*/ }
   #CS-header nav .dropdown-menu li {
     width: 100% !important;
     background: transparent;
@@ -126,10 +135,10 @@ b, strong {
       min-height: 3em;
       padding-top: 1em;
       text-transform: capitalize;
-      color: #ffffff; }
+      color: #222222; }
     #CS-header nav .dropdown-menu li.active > a {
-      color: #ffffff;
-      background-color: #ff0000; }
+      color: #ff0000;
+      background-color: #f5f5f5; }
 
 /*Styles*/
 /* Carousel Feature*/
@@ -510,7 +519,7 @@ footer {
   padding: 5px 10px;
   width: 80%;
   font-size: 18px;
-  color: #333333;
+  color: #b7b7b7;
   float: right; }
   .footer-alt input[type="submit"] {
     color: #ffffff;
@@ -605,7 +614,7 @@ footer {
   #CS-page {
     margin: 1px 10px; } }
 @media only screen and (max-width: 767px) {
-
+  /*body{background: #ff00ff;}*/
   .nav-login, #CS-header nav ul li {
     margin: 0;
     float: none;
@@ -663,13 +672,12 @@ footer {
     width: 100% !important; }
 
   .showcase .carousel-caption {
+    display: none;
     right: 0; }
     .showcase .carousel-caption h2 {
       font-size: 0.7em; }
     .showcase .carousel-caption h3 {
       font-size: 1em; }
-
-  .carousel-inner > .item > img, .carousel-inner > .item > a > img {/*gets distorted if you set height*/}
 
   .grey {
     padding: 1em; }
