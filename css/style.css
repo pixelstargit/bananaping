@@ -33,6 +33,8 @@
   color: #ffffff; }
   #CS-footer a {
     color: #ffffff; }
+  #CS-footer .fullwide {
+    background: #b7b7b7; }
 
 /* text resets */
 .btn, h1, h2, h3 {

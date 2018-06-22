@@ -21,6 +21,9 @@
   background: $color-grey-heavy;
   color: $color-white;
   a {color: $color-white;}
+  .fullwide{
+    background: $color-grey-medium;
+  }
 }
 
 /* text resets */
@@ -319,6 +322,7 @@ nav.sub-menu{
     padding:$gutter-default;
   }
 }
+
 
 /* Footer alt */
 footer{
