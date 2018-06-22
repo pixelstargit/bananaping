@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -10,8 +11,9 @@
 
     <title>magazine</title>
 
-    <!-- Bootstrap core CSS -->
+    <!-- Bootstrap core CSS & Theme Style -->
     <link href="css/app.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 
 
   </head>
@@ -158,6 +160,14 @@
                 </div>
                 <p class="caption grey col-sm-12">CAPTION + PHOTO CREDIT HERE: Spear-throwing at one of the anthropology day events which were part of the events at the 1904 Olympics</p>
               </div>
+              <div class="item">
+                <img src="images/placeholder.jpg" alt="Gallery">
+                <div class="carousel-caption">
+                  <h2>Fasdsadsadd</h2>
+                  <h3><a href="#">Silent Lives</a></h3>
+                </div>
+                <p class="caption grey col-sm-12">CAPTION + PHOTO CREDIT HERE: Spear-throwing at one of the anthropology day events which were part of the events at the 1904 Olympics</p>
+              </div>
 
 
             </div>
@@ -181,6 +191,23 @@
 <!--Bootstrap js -->
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap.js"></script>
+<script>
+$(".carousel").on("touchstart", function(event){
+        var xClick = event.originalEvent.touches[0].pageX;
+    $(this).one("touchmove", function(event){
+        var xMove = event.originalEvent.touches[0].pageX;
+        if( Math.floor(xClick - xMove) > 5 ){
+            $(this).carousel('next');
+        }
+        else if( Math.floor(xClick - xMove) < -5 ){
+            $(this).carousel('prev');
+        }
+    });
+    $(".carousel").on("touchend", function(){
+            $(this).off("touchmove");
+    });
+});
+</script>
 
   </body>
 </html>
