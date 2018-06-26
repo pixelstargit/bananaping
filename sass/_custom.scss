@@ -30,6 +30,10 @@
 .btn, h1, h2, h3 {letter-spacing: $letter-normal;  font-weight: 900;}
 b, strong { font-family: $font-velino-text; font-weight: 900;}
 p {clear: both;} /* font-weight: 600;*/
+.yellow {background: $color-yellow;}
+.sunny {background: $color-sunny;}
+.pink{background: #F7989D;}
+
 
 /*Navbar*/
 #CS-header {
@@ -225,17 +229,27 @@ p {clear: both;} /* font-weight: 600;*/
         }
     }
   }
-  &.post-list{
+  &.post-list {
     padding-top:$gutter-wide;
-    .col-sm-4{ width: 35.4%;
-      article, .title-block.red { margin-left:1em; margin-right:0;}}
+    margin: -$gutter-default;
+    article {
+      padding:0;
+      img {width:100%; }
+      margin: $gutter-default;
+      }
+    p, h1, h2, h3, h4 {padding: $gutter-default;}
+    /*section removed?*/
+    .col-sm-4{ width: calc(30% - #{$gutter-default});/*auto calc */
+      article, .title-block.red { margin-left:1em; margin-right:0;}
+      }
     .col-sm-4:first-child{ width:$width-leftbar;
-      article,.title-block.red { margin-left: 0;}}
+      article,.title-block.red { margin-left: 0;}
+      }
     .post-summary {
       padding-top:5px;
       article {background: $color-grey-light; }
     }
-    p {font-family: $font-velino-thin; font-size: $font-size-small; }
+    p {font-family: $font-velino-thin; font-size: $font-size-small; padding: $gutter-default;}
     h3{
       font-family: $font-velino-text; font-size: $font-size-big; text-transform: uppercase;
       font-weight: 900; padding-top: 1em;
@@ -267,6 +281,10 @@ p {clear: both;} /* font-weight: 600;*/
 }
 .magazine {
   &.col-sm-9 { width:$width-rightbar;}
+  .breadcrumbs{
+    margin-bottom:-10px;
+    position: absolute;
+  }
   .title-yellow { background: #ffff00;  border-left: 1px solid $color-white; }
   article:first-child .title-yellow {padding-top:355px; overflow: hidden;}
   .title-yellow-image img {width: 100%; border-left: 1px solid $color-white;}
@@ -285,7 +303,7 @@ p {clear: both;} /* font-weight: 600;*/
 }
 
 
-/*Styles: Zebra */
+/*Styles: Zebra */ /*section removed?*/
 .zebra article:nth-child(even) { background: transparent; }
 .zebra article:nth-child(odd)  { background: $overlay-white; }
 .zebra.bee article:nth-child(odd)  { background: $color-yellow; }
