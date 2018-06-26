@@ -209,9 +209,10 @@ p {clear: both;} /* font-weight: 600;*/
     &.col-sm-4:nth-child(3n) {padding-left:10px; padding-right:0;}
   }
   &.videos{
-    padding-top: 5px;padding-bottom: $gutter-default;
+    padding: 0;
+    /*section removed?
     article:nth-child(odd) { padding: 9px 30px 9px 0;}
-    article:nth-child(even){ padding: 9px 0 5px 30px;}
+    article:nth-child(even){ padding: 9px 0 5px 30px;}*/
   }
   &.cover{
     margin:-5px;
@@ -238,12 +239,12 @@ p {clear: both;} /* font-weight: 600;*/
       margin: $gutter-default;
       }
     p, h1, h2, h3, h4 {padding: $gutter-default;}
-    /*section removed?*/
     .col-sm-4{ width: calc(30% - #{$gutter-default});/*auto calc */
+      /*section removed?
       article, .title-block.red { margin-left:1em; margin-right:0;}
       }
     .col-sm-4:first-child{ width:$width-leftbar;
-      article,.title-block.red { margin-left: 0;}
+      article,.title-block.red { margin-left: 0;} */
       }
     .post-summary {
       padding-top:5px;
