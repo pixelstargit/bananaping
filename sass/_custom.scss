@@ -97,13 +97,16 @@ b, strong { font-family: $font-velino-text; font-weight: 900;}
   }
 }
 /*Styles*/
-.breadcrumbs{
-  background: $color-red;
-}
+
 /* Carousel Feature*/
+
 .showcase{
+  .breadcrumbs{
+    margin-bottom:-10px;
+    position: absolute;
+  }
   .carousel-caption{
-    left:0; right: 30%; bottom: 0;
+    left:0; right: 0; bottom: 0;
     padding: 0 3em;
     margin-left: 0;
     background-color: $overlay-white;
@@ -181,6 +184,10 @@ b, strong { font-family: $font-velino-text; font-weight: 900;}
 }
 
 /*GRID styles and spacing of items thumbnails cover videos*/
+.cover-section{
+}
+.cover-recommend{
+}
 .content-grid {
   article {
     padding:0;

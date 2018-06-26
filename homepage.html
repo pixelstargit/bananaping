@@ -37,17 +37,17 @@
              <div id="navbar" class="navbar-collapse collapse">
                <ul class="nav navbar-nav">
                  <li class="active thin"><a href="#">Home</a></li>
-                 <li><a href="#">CS Collective</a></li>
+                 <li><a href="#">About Us</a></li>
                  <li><a href="#">Magazine</a></li>
                  <li><a href="#">Projects</a></li>
         <!-- Wide 2 lines menu item -->
                  <li class="dropdown wide">
                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                     Special Publications</a>
+                     The Download</a>
                    <ul class="dropdown-menu">
-                     <li><a href="#">Issue 1</a></li>
-                     <li><a href="#">Issue 2</a></li>
-                     <li><a href="#">Issue 3</a></li>
+                     <li><a href="#">Subnav 1</a></li>
+                     <li><a href="#">Subnav 2</a></li>
+                     <li><a href="#">Subnav 3</a></li>
                      <li><a href="#">One more extra long titled link</a></li>
                    </ul>
                  </li>
@@ -64,21 +64,35 @@
 <!-- Main Content Page -->
 <!-- Homepage-->
 <div id="CS-page">
+
+
+
   <!-- Showcase-->
 
     <section class="showcase">
+
       <div id="carousel-featured" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner" role="listbox">
 
   <!--Slides -->
           <div class="item active">
+            <!-- Breadcrumbs-->
+            <div class="breadcrumbs">
+              <button type="button" class="btn orange"><a href="#">#03/Urban Things</a></button>
+            </div>
+
             <img src="images/placeholder.jpg" alt="Featured">
             <div class="carousel-caption">
-              <h2>Featured</h2>
-              <h3><a href="#">IABR 2016: Next Africa</a></h3>
+              <h2>Conversation</h2>
+            (dots slider)
+              <h3><a href="#">Wonky beats midtempos, bleeps & burps, crazy, zany phraseologies & integalatic organics</a></h3>
             </div>
           </div>
           <div class="item">
+            <!-- Breadcrumbs-->
+            <div class="breadcrumbs">
+              <button type="button" class="btn orange"><a href="#">#04/different breadcrumb?</a></button>
+            </div>
             <img src="images/placeholder.jpg" alt="Featured">
             <div class="carousel-caption">
               <h2>Featured</h2>
@@ -101,7 +115,18 @@
       </div>
     </section>
 
+    <!-- Cover sections-->
+      <section class="content-grid">
+        <article class="col-xs-6 col-sm-8">
+          <button type="button" class="btn orange"><a href="#">Magazine</a></button>
+        </article>
+        <article class="col-xs-6 col-sm-4">
+          <button type="button" class="btn orange"><a href="#">Recommended</a></button>
+        </article>
+      </section>
+
     <!-- grid-->
+    <!--**note - may have to adjust grid to a sidebar ie 2 col nested with 2|1-->
       <section class="content-grid cover">
     <!--Cover thumbnails-->
         <article class="col-xs-6 col-sm-4">
@@ -113,6 +138,15 @@
             <button type="button" class="btn"><a href="#">Buy Print</a></button>
             <img src="images/cover-01.jpg" alt="Buy Print">
         </article>
+    <!--Cover recommended article-->
+        <article class="cover-recommend col-xs-6 col-sm-4"><!--add colour background-->
+            <img src="images/cover-01.jpg" alt="Buy Print" style="height:200px;"> <!--new height-->
+            <h2>Interview</h2>
+            <h1>Majority World</h1>
+            <p>Something here adjust background colour and height of thumbmnail of article. might also need to make this a nested grid with sidebar 1=2| 1=1 </p>
+            <h4>Zeeshan Khan</h4>
+        </article>
+
         <article class="col-xs-6 col-sm-4">
     <!--Sold out--><button type="button" class="btn sold"><a href="#">Sold Out</a></button>
             <img src="images/cover-02.jpg" alt="Buy Print">
@@ -121,25 +155,52 @@
             <button type="button" class="btn"><a href="#">Buy Print</a></button>
             <img src="images/cover-01.jpg" alt="Buy Print">
         </article>
+
+
+    <!--Cover recommended article-->
+        <article class="cover-recommend col-xs-6 col-sm-4"><!--add colour background-->
+            <img src="images/cover-01.jpg" alt="Buy Print" style="height:200px;"> <!--new height-->
+            <h2>Download</h2>
+            <h1>Map of Institutional Circumnavigation</h1>
+            <p>Something here about four lines of text -- which part is clickable to the destination page.</p>
+        </article>
+
         <article class="col-xs-6 col-sm-4">
             <button type="button" class="btn"><a href="#">Buy Print</a></button>
             <img src="images/cover-01.jpg"  alt="Buy Print">
         </article>
+
         <article class="col-xs-6 col-sm-4">
             <button type="button" class="btn"><a href="#">Buy Print</a></button>
             <img src="images/cover-01.jpg"  alt="Buy Print">
         </article>
-        <article class="col-xs-6 col-sm-4">
-            <button type="button" class="btn"><a href="#">Buy Print</a></button>
-            <img src="images/cover-01.jpg"  alt="Buy Print">
+
+    <!--Cover recommended article-->
+        <article class="cover-recommend col-xs-6 col-sm-4"><!--add colour background-->
+            <img src="images/cover-01.jpg" alt="Buy Print" style="height:200px;"> <!--new height-->
+            <h2>Intelligence</h2>
+            <h1>Cities in Tension</h1>
+            <p>Something here about four lines of text -- which part is clickable to the destination page.</p>
+            <h4>Joylon Leslie</h4>
         </article>
+
     <!--blank cover-->
         <article class="col-xs-6 col-sm-4">
           <img src="images/cover-placeholder.png">
         </article>
+
     <!--Hidden cover for odd to even rows-->
         <article class="hidden-xs col-xs-6 col-sm-4">
           <img src="images/cover-placeholder.png">
+        </article>
+
+    <!--Cover recommended article-->
+        <article class="cover-recommend col-xs-6 col-sm-4"><!--add colour background-->
+            <img src="images/cover-01.jpg" alt="Buy Print" style="height:200px;"> <!--new height-->
+            <h2>Dispatch</h2>
+            <h1>Systems, not band-aids</h1>
+            <p>Something here about two - four lines of text </p>
+            <h4>Tau Tavengwa</h4>
         </article>
 
       </section>
@@ -147,11 +208,11 @@
 </div>
 
 <!-- Footer -->
-<div id="CS-footer">
+<div id="CS-footer"><!--add new padding styles-->
   <footer>
     <div class="fullwide">
       <div class="container footer-logo">
-          <a href="#">CS Collective<img src="images/logo-cscollective.png" class="img-responsive" alt="CS Collective"></a>
+          <a href="#">CS Collective</a>
       </div>
     </div>
     <div class="container">
