@@ -29,7 +29,7 @@
 /* text resets */
 .btn, h1, h2, h3 {letter-spacing: $letter-normal;  font-weight: 900;}
 b, strong { font-family: $font-velino-text; font-weight: 900;}
- /* p {font-weight: 600;}*/
+p {clear: both;} /* font-weight: 600;*/
 
 /*Navbar*/
 #CS-header {
@@ -138,6 +138,7 @@ b, strong { font-family: $font-velino-text; font-weight: 900;}
   p {font-family: $font-velino-thin;font-size: $font-size-small; }
 }
 .title-block{
+  float: left;
   background: $color-grey-dark;
   padding: 0;  max-width:170px; min-width: 170px;
   text-align: center;
@@ -149,6 +150,11 @@ b, strong { font-family: $font-velino-text; font-weight: 900;}
     background: $color-sunny; margin: 0 0 10px 0;
     h2, a {color: $color-grey-dark;}
   }
+  &::after{clear: both;}
+}
+.title-pink{
+  background: $color-red;
+  float: left;
 }
 .title-count{
   background: $color-red;
