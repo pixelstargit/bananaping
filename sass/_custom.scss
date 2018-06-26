@@ -20,10 +20,6 @@
   clear: both;
   background: $color-grey-heavy;
   color: $color-white;
-  .fullwide{
-    background: $color-grey-medium;
-  }
-  .footer-logo {font-family: $font-raleway; text-transform: uppercase; font-size: 24px; font-weight: 800; color: #ababa7; letter-spacing: 0.072em; }
 }
 
 /* text resets */
@@ -339,7 +335,22 @@ nav.sub-menu{
 }
 
 /* Footer styles */
-/* Socials = font-awesome */
+footer{
+  .fullwide{
+    background: $color-grey-darker;
+    padding: $gutter-default;
+  }
+  .footer-logo a{
+    font-family: $font-raleway;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 800;
+    color: $color-grey-medium;
+    letter-spacing: 0.072em;
+    text-decoration: none;
+  }
+}
+/* Socials = font-awesome removed section
 .social-icons{
   text-align: center;
   a{
@@ -357,12 +368,13 @@ nav.sub-menu{
     padding:$gutter-default;
     a {font-family: $font-raleway;}
   }
-}
+} */
 
 
-/* Footer alt */
+
+
+/* Footer alt  removed styles?
 footer{
-  padding-top:80px;
   &.footer-alt{padding-top:2px;}
 }
 .footer-alt{
@@ -398,7 +410,7 @@ footer{
       margin:5px; float:left;
     }
   }
-}
+}*/
 .footer-text{
   clear: both;
   font-family: $font-velino-thin;
@@ -407,13 +419,16 @@ footer{
 }
 .footer-menu{
     clear:both;
-    font-family: $font-helvetica; font-size:11.5px; letter-spacing: 0.08em;
+    font-family: $font-helvetica; font-size:11.5px; letter-spacing: 0.08em; line-height: 2em;
+    padding: $gutter-default 0;
     a { color: #ccc; }
     ul {
-      width:20%;
-      float:left;
+      width:20%; float:left; padding: 0 $gutter-default;
+      &:first-child { padding-left:0;}
+      &:last-child { padding-right:0;}
       li {
         list-style: none;
+        padding: $gutter-thin 0;
       }
     }
     .foot-menu-head{
