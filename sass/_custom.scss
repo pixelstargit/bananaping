@@ -200,6 +200,7 @@ p {clear: both;} /* font-weight: 600;*/
 .content-grid {
   article {
     &.pink {background: $color-pink;}
+          &.blush {background: $color-blush;}
     &.rosy{background: $color-rosy;}
     &.mint{background: $color-mint;}
     &.sunny {background: $color-sunny;}
@@ -346,6 +347,11 @@ footer{
     background: $color-grey-darker;
     padding: $gutter-default;
   }
+
+  .footer-narrow {
+    max-width: 980px;
+  }
+
   .footer-logo a{
     font-family: $font-raleway;
     text-transform: uppercase;
@@ -378,12 +384,13 @@ footer{
     }
     .foot-menu-head{
       border-bottom: 1px solid #fff;
+      max-width: 95px;
       padding-bottom: 0.1em;
       font-family: $font-helvetica-bold; font-weight: 700; font-size: 12px; letter-spacing: 0.1em;
       a {color:#fff;}
     }
     .border-left{
-      border-left: 2px solid #444444;
+      border-left: 1px solid #fff;
     }
 }
 .footer-res{ font-size:13px; font-family: $font-helvetica; font-style: italic; color: #858585; letter-spacing: 0.05em;}
