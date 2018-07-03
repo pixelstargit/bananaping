@@ -26,9 +26,9 @@
 .btn, h1, h2, h3 {letter-spacing: $letter-normal;  font-weight: 900;}
 b, strong { font-family: $font-velino-text; font-weight: 900;}
 p {clear: both;} /* font-weight: 600;*/
+
 .yellow {background: $color-yellow;}
-.sunny {background: $color-sunny;}
-.pink{background: #F7989D;}
+
 
 
 /*Navbar*/
@@ -188,10 +188,21 @@ p {clear: both;} /* font-weight: 600;*/
 /*GRID styles and spacing of items thumbnails cover videos*/
 .cover-section{
 }
-.cover-recommend{
+.cover-recommend{ /*12 | 20 |12 |14pt -check font sizes*/
+  max-height: 400px; min-height: 407px; overflow: hidden; clear: right;
+  color: $color-black;
+  img { max-height:230px; padding:0;}
+  h2 { font-family: $font-raleway; padding:$gutter-thin; font-size: $font-size-default; text-transform: uppercase;}
+  h1 { font-family: $font-raleway;  padding:$gutter-thin; font-weight: 700; font-style: italic; font-size: $font-size-h4; text-transform: uppercase;}
+  P { font-family: $font-stag-body; padding:$gutter-thin; font-size: $font-size-default;}
+  h4 { font-family: $font-raleway; padding:$gutter-thin; font-weight: 700; font-style: italic; font-size: $font-size-small;text-transform: uppercase;}
 }
 .content-grid {
   article {
+    &.pink {background: $color-pink;}
+    &.rosy{background: $color-rosy;}
+    &.mint{background: $color-mint;}
+    &.sunny {background: $color-sunny;}
     padding:0;
     img {margin: 0 auto; width: 100%;}
   }
@@ -212,7 +223,6 @@ p {clear: both;} /* font-weight: 600;*/
     article {
       padding:5px 5px;
       img {width:100%; }
-      background-color: $color-white;
       margin: 0;
       .btn{
         position: absolute;
@@ -368,7 +378,7 @@ footer{
     }
     .foot-menu-head{
       border-bottom: 2px solid #444444;
-      font-family: $font-raleway; font-weight: 700; font-size: 12px; letter-spacing: 0.1em;
+      font-family: $font-helvetica; font-weight: 700; font-size: 12px; letter-spacing: 0.1em;
       a {color:#fff;}
     }
     .border-left{
