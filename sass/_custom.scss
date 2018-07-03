@@ -49,10 +49,6 @@ p {clear: both;} /* font-weight: 600;*/
     width: 15.6667%; /* fallback for non-calc() browsers*/
     width: calc(100% / 6 ); /*$nav-item-total*/ box-sizing: border-box;
     }
-    ul li.thin{  width:12.6667%; }
-    ul li.wide { width:20.6667%;
-      a{ padding-left: 3px;padding-right: 3px;}
-    }
   }
 }
 
@@ -350,67 +346,6 @@ footer{
     text-decoration: none;
   }
 }
-/* Socials = font-awesome removed section
-.social-icons{
-  text-align: center;
-  a{
-    display: inline-block; vertical-align: middle;
-  }
-  .fa {
-    color: $color-white;
-    font-size: 3em;
-    width: 60px;
-    height: 60px;
-    padding-top: 9px;
-    margin:$gutter-default;
-  }
-  .footer-logo{
-    padding:$gutter-default;
-    a {font-family: $font-raleway;}
-  }
-} */
-
-
-
-
-/* Footer alt  removed styles?
-footer{
-  &.footer-alt{padding-top:2px;}
-}
-.footer-alt{
-  p {font-family: $font-velino-thin;  text-align: left; font-size: 0.9em;}
-  h3 {font-family:$font-velino-textitalic; font-style: italic; font-size: 21px;  text-align: left;
-   letter-spacing: 0;  font-weight: 900;}
-  form {font-family: $font-din;font-size:$font-size-small; padding-top:10px; }
-  label{ width: 10%; float: left; clear: both; padding-top: 10px;}
-  input{
-    border-radius: 4px; border:0;
-    margin: 3px 0; padding: 5px 10px;
-    width: 80%;
-    font-size: $font-size-big;
-    color: $text-color;
-    float: right;
-    &[type="submit"] {
-      color: $color-white;
-      width:170px; float:right;
-      text-transform: uppercase;
-      font-size: 14px;
-      border-radius: 0;
-      margin-right:0;
-    }
-  }
-  div {padding-right: 30px;}
-  .footer-form{ padding-bottom:30px;}
-  .social-icons {
-    padding-bottom:30px;
-    .fa {
-      font-size: 1.5em;  border-radius: 40px;
-      width: 40px; height: 40px;
-      padding-top: 9px;
-      margin:5px; float:left;
-    }
-  }
-}*/
 .footer-text{
   clear: both;
   font-family: $font-velino-thin;
@@ -473,7 +408,6 @@ footer{
 
 /*Responsive breakpoints*/
 /*adjust max-breaking point vs nav text size*/
-@media only screen and (max-width:826px) and (min-width:768px){.nav .wide a {padding-top: 10px;}}
 @media only screen and (max-width:980px){ #CS-page {margin:1px 10px;}}
 
 @media only screen and (max-width:767px){
