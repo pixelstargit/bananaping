@@ -33,37 +33,21 @@
   font-stretch: normal;
   unicode-range: U+0020-00FE; }
 @font-face {
-  font-family: 'Helvetica LT Std';
-  src: url("../fonts/HelveticaLTStd-Obl.eot");
-  src: url("../fonts/HelveticaLTStd-Obl.eot?#iefix") format("embedded-opentype"), url("../fonts/HelveticaLTStd-Obl.woff2") format("woff2"), url("../fonts/HelveticaLTStd-Obl.woff") format("woff"), url("../fonts/HelveticaLTStd-Obl.svg#HelveticaLTStd-Obl") format("svg");
-  font-weight: 400;
-  font-style: italic;
-  font-stretch: normal;
-  unicode-range: U+0020-00FE; }
-@font-face {
-  font-family: 'Helvetica LT Std';
-  src: url("../fonts/HelveticaLTStd-Roman.eot");
-  src: url("../fonts/HelveticaLTStd-Roman.eot?#iefix") format("embedded-opentype"), url("../fonts/HelveticaLTStd-Roman.woff2") format("woff2"), url("../fonts/HelveticaLTStd-Roman.woff") format("woff"), url("../fonts/HelveticaLTStd-Roman.svg#HelveticaLTStd-Roman") format("svg");
+  font-family: 'HelveticaNeue';
+  src: url("../fonts/HelveticaNeueLight.eot");
+  src: url("../fonts/HelveticaNeueLight.eot?#iefix") format("embedded-opentype"), url("../fonts/HelveticaNeueLight.woff2") format("woff2"), url("../fonts/HelveticaNeueLight.woff") format("woff"), url("../fonts/HelveticaNeueLight.svg#HelveticaNeue Light") format("svg");
   font-weight: 400;
   font-style: normal;
   font-stretch: normal;
-  unicode-range: U+0020-00FE; }
+  unicode-range: U+0020-02DC; }
 @font-face {
-  font-family: 'Helvetica LT Std Light';
-  src: url("../fonts/HelveticaLTStd-Light.eot");
-  src: url("../fonts/HelveticaLTStd-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/HelveticaLTStd-Light.woff2") format("woff2"), url("../fonts/HelveticaLTStd-Light.woff") format("woff"), url("../fonts/HelveticaLTStd-Light.svg#HelveticaLTStd-Light") format("svg");
-  font-weight: 300;
+  font-family: 'Helvetica Neue';
+  src: url("../fonts/HelveticaNeueBold.eot");
+  src: url("../fonts/HelveticaNeueBold.eot?#iefix") format("embedded-opentype"), url("../fonts/HelveticaNeueBold.woff2") format("woff2"), url("../fonts/HelveticaNeueBold.woff") format("woff"), url("../fonts/HelveticaNeueBold.svg#Helvetica Neue Bold") format("svg");
+  font-weight: 700;
   font-style: normal;
   font-stretch: normal;
-  unicode-range: U+0020-00FE; }
-@font-face {
-  font-family: 'Helvetica LT Std Light';
-  src: url("../fonts/HelveticaLTStd-LightObl.eot");
-  src: url("../fonts/HelveticaLTStd-LightObl.eot?#iefix") format("embedded-opentype"), url("../fonts/HelveticaLTStd-LightObl.woff2") format("woff2"), url("../fonts/HelveticaLTStd-LightObl.woff") format("woff"), url("../fonts/HelveticaLTStd-LightObl.svg#HelveticaLTStd-LightObl") format("svg");
-  font-weight: 300;
-  font-style: italic;
-  font-stretch: normal;
-  unicode-range: U+0020-00FE; }
+  unicode-range: U+0-10FFFF; }
 /* OLD Font Styles - DELETE WHEN WE HAVE REPLACED FONTS*/
 @font-face {
   font-family: 'din_alternatebold';

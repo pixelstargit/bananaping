@@ -56,11 +56,11 @@
 
 @font-face {
     font-family:'HelveticaNeue';
-    src: url('HelveticaNeue Light.eot');
-	src: url('HelveticaNeue Light.eot?#iefix') format('embedded-opentype'),
-		url('HelveticaNeue Light.woff2') format('woff2'),
-		url('HelveticaNeue Light.woff') format('woff'),
-		url('HelveticaNeue Light.svg#HelveticaNeue Light') format('svg');
+    src: url('../fonts/HelveticaNeueLight.eot');
+	src: url('../fonts/HelveticaNeueLight.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/HelveticaNeueLight.woff2') format('woff2'),
+		url('../fonts/HelveticaNeueLight.woff') format('woff'),
+		url('../fonts/HelveticaNeueLight.svg#HelveticaNeue Light') format('svg');
     font-weight: 400;
     font-style: normal;
     font-stretch: normal;
@@ -69,11 +69,11 @@
 
 @font-face {
     font-family:'Helvetica Neue';
-    src: url('Helvetica Neue Bold.eot');
-	src: url('Helvetica Neue Bold.eot?#iefix') format('embedded-opentype'),
-		url('Helvetica Neue Bold.woff2') format('woff2'),
-		url('Helvetica Neue Bold.woff') format('woff'),
-		url('Helvetica Neue Bold.svg#Helvetica Neue Bold') format('svg');
+    src: url('../fonts/HelveticaNeueBold.eot');
+	src: url('../fonts/HelveticaNeueBold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/HelveticaNeueBold.woff2') format('woff2'),
+		url('../fonts/HelveticaNeueBold.woff') format('woff'),
+		url('../fonts/HelveticaNeueBold.svg#Helvetica Neue Bold') format('svg');
     font-weight: 700;
     font-style: normal;
     font-stretch: normal;
