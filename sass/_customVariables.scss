@@ -18,7 +18,14 @@ $color-grey-heavy: #222222;
 $color-red: #ff0000;
 $color-green: #00b254;
 $color-yellow: #ffff00;
-$color-sunny: #f0ec00;
+$color-black: #000000;
+
+
+//recommended piece colours
+$color-pink: #ff8a8a;
+$color-rosy: #f9b5ba;
+$color-mint: #c4e4c2;
+$color-sunny: #fff99d;
 
 $overlay-white: rgba(255,255,255,0.6);
 
@@ -40,7 +47,8 @@ $font-velino-textitalic: "velino_text_blackitalic", serif;
 
 $font-family-sans-serif: $font-velino-text;
 
-$font-size-tiny:  12px; /*9pt*/
+$font-size-tiny:  10px; /*9pt*/
+$font-size-default:  12px; /*9pt*/
 $font-size-small:  14px; /* 12pt din*/
 $font-size-base:  16px; /*default 14pt velino*/
 $font-size-big:  18px; /*13pt*/
