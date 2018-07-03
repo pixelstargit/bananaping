@@ -324,6 +324,8 @@ p {
   padding: 0; }
   .content-grid article.pink {
     background: #ff8a8a; }
+  .content-grid article.blush {
+    background: #f6999f; }
   .content-grid article.rosy {
     background: #f9b5ba; }
   .content-grid article.mint {
@@ -533,6 +535,8 @@ nav.sub-menu ol li.active a {
 footer .fullwide {
   background: #2C2D2C;
   padding: 15px; }
+footer .footer-narrow {
+  max-width: 980px; }
 footer .footer-logo a {
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
@@ -557,24 +561,27 @@ footer .footer-logo a {
   clear: both;
   font-family: "HelveticaNeue", sans-serif;
   font-size: 11.5px;
-  letter-spacing: 0.08em;
-  line-height: 2em;
+  letter-spacing: 0.09em;
+  line-height: 1.9em;
   padding: 11px 0; }
   .footer-menu a {
     color: #ccc; }
   .footer-menu ul {
     width: 20%;
     float: left;
-    padding: 0 15px; }
+    padding: 0 15px;
+    margin-bottom: 20px; }
     .footer-menu ul:first-child {
       padding-left: 0; }
     .footer-menu ul:last-child {
-      padding-right: 0; }
+      padding-right: 0;
+      padding-left: 25px; }
     .footer-menu ul li {
       list-style: none;
       padding: 0.3em 0; }
   .footer-menu .foot-menu-head {
     border-bottom: 1px solid #fff;
+    max-width: 95px;
     padding-bottom: 0.1em;
     font-family: "Helvetica Neue", sans-serif;
     font-weight: 700;
@@ -583,11 +590,19 @@ footer .footer-logo a {
     .footer-menu .foot-menu-head a {
       color: #fff; }
   .footer-menu .border-left {
-    border-left: 2px solid #444444; }
+    position: relative; }
+  .footer-menu .border-left:after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    margin: 0 auto;
+    border-left: 1px solid #fff;
+    height: 192px;
+    margin-left: -25px; }
 
 .footer-res {
   font-size: 13px;
-  font-family: "HelveticaNeue", sans-serif;
+  font-family: "HelveticaNeueMediumItalic", sans-serif;
   font-style: italic;
   color: #858585;
   letter-spacing: 0.05em; }
