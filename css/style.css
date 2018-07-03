@@ -1,4 +1,5 @@
 /*9pt*/
+/*9pt*/
 /* 12pt din*/
 /*default 14pt velino*/
 /*13pt*/
@@ -47,12 +48,6 @@ p {
 /* font-weight: 600;*/
 .yellow {
   background: #ffff00; }
-
-.sunny {
-  background: #f0ec00; }
-
-.pink {
-  background: #F7989D; }
 
 /*Navbar*/
 #CS-header nav {
@@ -164,7 +159,7 @@ p {
     font-weight: 400;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 10px;
     margin-top: 1em;
     margin-bottom: 0.5em; }
   .showcase .carousel-caption h3, .showcase .carousel-caption h3 a {
@@ -232,7 +227,7 @@ p {
   .title-block.red {
     background: #ff0000; }
   .title-block.yellow {
-    background: #f0ec00;
+    background: #fff99d;
     margin: 0 0 10px 0; }
     .title-block.yellow h2, .title-block.yellow a {
       color: #898989; }
@@ -291,8 +286,50 @@ p {
     min-width: 170px; }
 
 /*GRID styles and spacing of items thumbnails cover videos*/
+.cover-recommend {
+  /*12 | 20 |12 |14pt -check font sizes*/
+  max-height: 400px;
+  min-height: 407px;
+  overflow: hidden;
+  clear: right;
+  color: #000000; }
+  .cover-recommend img {
+    max-height: 230px;
+    padding: 0; }
+  .cover-recommend h2 {
+    font-family: "Raleway", sans-serif;
+    padding: 0.3em;
+    font-size: 12px;
+    text-transform: uppercase; }
+  .cover-recommend h1 {
+    font-family: "Raleway", sans-serif;
+    padding: 0.3em;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 20px;
+    text-transform: uppercase; }
+  .cover-recommend P {
+    font-family: "Stag Light", serif;
+    padding: 0.3em;
+    font-size: 12px; }
+  .cover-recommend h4 {
+    font-family: "Raleway", sans-serif;
+    padding: 0.3em;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 14px;
+    text-transform: uppercase; }
+
 .content-grid article {
   padding: 0; }
+  .content-grid article.pink {
+    background: #ff8a8a; }
+  .content-grid article.rosy {
+    background: #f9b5ba; }
+  .content-grid article.mint {
+    background: #c4e4c2; }
+  .content-grid article.sunny {
+    background: #fff99d; }
   .content-grid article img {
     margin: 0 auto;
     width: 100%; }
@@ -315,7 +352,6 @@ p {
   padding-top: 10px; }
   .content-grid.cover article {
     padding: 5px 5px;
-    background-color: #ffffff;
     margin: 0; }
     .content-grid.cover article img {
       width: 100%; }
@@ -426,7 +462,7 @@ p {
   font-family: "din_alternatebold", sans-serif;
   font-weight: 400;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 10px;
   padding-top: 1em;
   padding-bottom: 0; }
 .magazine .issue {
@@ -523,7 +559,7 @@ footer .footer-logo a {
   font-size: 11.5px;
   letter-spacing: 0.08em;
   line-height: 2em;
-  padding: 15px 0; }
+  padding: 11px 0; }
   .footer-menu a {
     color: #ccc; }
   .footer-menu ul {
@@ -538,8 +574,9 @@ footer .footer-logo a {
       list-style: none;
       padding: 0.3em 0; }
   .footer-menu .foot-menu-head {
-    border-bottom: 2px solid #444444;
-    font-family: "Raleway", sans-serif;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 0.1em;
+    font-family: "Helvetica Neue", sans-serif;
     font-weight: 700;
     font-size: 12px;
     letter-spacing: 0.1em; }
