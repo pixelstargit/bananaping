@@ -588,7 +588,8 @@ footer .footer-logo a {
     font-size: 12px;
     letter-spacing: 0.1em; }
     .footer-menu .foot-menu-head a {
-      color: #fff; }
+      color: #fff;
+      text-decoration: none; }
   .footer-menu .border-left {
     position: relative; }
   .footer-menu .border-left:after {
