@@ -270,15 +270,18 @@ p {clear: both;} /* font-weight: 600;*/
 #CS-page section section{clear:none;}
 .content-sidebars {
   border-top: 2px $color-white solid;
-  aside {  background:#efefef; padding:0;}
+  aside { background:#efefef; padding:0; }
   section { background: $color-white; padding:0;}
   p, hr, h1, h2, h3, h4{ padding:$gutter-wide $gutter-default; margin:0;}
-  p {font-family: $font-velino-thin;font-size: $font-size-small; }
-  h3{font-size: $font-size-big; text-transform: uppercase;}
+
+  color: $color-black;
+  p {font-family: $font-stag-body; font-size: $font-size-small; }
+  h3{font-family: $font-raleway; font-size: $font-size-big; text-transform: uppercase; font-style: italic;}
 }
 .side-summary, .post-summary {
   h3{padding: $gutter-default; padding-bottom:0;}
   p {padding: $gutter-default; line-height: 1.3em;}
+  .selected{background: $color-crimson!important; color: $color-white;}
 }
 .side-menu{ width:$width-leftbar;}
 .row-eq-height {
@@ -311,9 +314,9 @@ p {clear: both;} /* font-weight: 600;*/
 }
 
 
-/*Styles: Zebra */ /*section removed?*/
+/*Styles: Zebra */
 .zebra article:nth-child(even) { background: transparent; }
-.zebra article:nth-child(odd)  { background: $overlay-white; }
+.zebra article:nth-child(odd)  { background: #f9f9f9; }
 .zebra.bee article:nth-child(odd)  { background: $color-yellow; }
 
 /* Extras side menu */
