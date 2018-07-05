@@ -7,7 +7,7 @@
   background: $color-grey-light;
   height: 200px;
   padding:40px 10px 20px 10px;
-  border-bottom: 1px solid #ffff00;
+
 }
 #CS-page{
   clear: both;
@@ -52,8 +52,8 @@ p {clear: both;} /* font-weight: 600;*/
   }
 }
 
-.navbar{
-  .navbar-collapse { text-align: center;  padding-right:0;  padding-left:0; }
+.navbar{ max-height: 65px;
+  .navbar-collapse { text-align: center;  padding-right:0;  padding-left:0;}
   .navbar-nav { display: inline-block; float: none; width:100%;
    > li > a:hover{  background: $color-grey-light;}
   }
@@ -62,19 +62,34 @@ p {clear: both;} /* font-weight: 600;*/
 .nav-login {
   float:right;
   margin-top:-103px;/*adjust position vs text size*/
-  background: $color-grey-medium;
+  background: $color-grey-dark;
   li {
     border-right: 0!important;
     border-left: 1px solid $color-grey-light;
     min-width: 165px;
   }
   li a {
-    min-height:33px;
-    padding:10px $gutter-default;
-    font-size:12px!important;
-    letter-spacing: $letter-wide !important;
+    min-height:30px;
+    padding:8px $gutter-default;
+    font-size:10px!important;
+    letter-spacing: 0.12em !important;
   }
 }
+
+/*almost the same as nav-login - consolidate these styles better?*/
+.nav-language  {
+  float:left;
+  margin-top:-31px;/*adjust position vs text size*/
+  li {
+    display: inline-block;
+    min-width: 62px;
+  }
+  li a {
+    min-width: 62px;
+  }
+
+}
+
 .navbar-toggle .icon-bar { background-color: $color-white!important; }
 
 /* sub nav drop down */

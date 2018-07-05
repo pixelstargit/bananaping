@@ -16,8 +16,7 @@
 #logo {
   background: #d7d7d7;
   height: 200px;
-  padding: 40px 10px 20px 10px;
-  border-bottom: 1px solid #ffff00; }
+  padding: 40px 10px 20px 10px; }
 
 #CS-page {
   clear: both;
@@ -80,16 +79,18 @@ p {
     /*$nav-item-total*/
     box-sizing: border-box; }
 
-.navbar .navbar-collapse {
-  text-align: center;
-  padding-right: 0;
-  padding-left: 0; }
-.navbar .navbar-nav {
-  display: inline-block;
-  float: none;
-  width: 100%; }
-  .navbar .navbar-nav > li > a:hover {
-    background: #d7d7d7; }
+.navbar {
+  max-height: 65px; }
+  .navbar .navbar-collapse {
+    text-align: center;
+    padding-right: 0;
+    padding-left: 0; }
+  .navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+    width: 100%; }
+    .navbar .navbar-nav > li > a:hover {
+      background: #d7d7d7; }
 
 .nav > li > a {
   min-height: 65px;
@@ -99,16 +100,27 @@ p {
   float: right;
   margin-top: -103px;
   /*adjust position vs text size*/
-  background: #b7b7b7; }
+  background: #898989; }
   .nav-login li {
     border-right: 0 !important;
     border-left: 1px solid #d7d7d7;
     min-width: 165px; }
   .nav-login li a {
-    min-height: 33px;
-    padding: 10px 15px;
-    font-size: 12px !important;
-    letter-spacing: 0.1em !important; }
+    min-height: 30px;
+    padding: 8px 15px;
+    font-size: 10px !important;
+    letter-spacing: 0.12em !important; }
+
+/*almost the same as nav-login - consolidate these styles better?*/
+.nav-language {
+  float: left;
+  margin-top: -31px;
+  /*adjust position vs text size*/ }
+  .nav-language li {
+    display: inline-block;
+    min-width: 62px; }
+  .nav-language li a {
+    min-width: 62px; }
 
 .navbar-toggle .icon-bar {
   background-color: #ffffff !important; }
@@ -355,7 +367,7 @@ p {
   margin: -5px;
   padding-top: 10px; }
   .content-grid.cover article {
-    padding: 5px 5px;
+    padding: 0.3em;
     margin: 0; }
     .content-grid.cover article img {
       width: 100%; }
@@ -476,38 +488,12 @@ nav.sub-menu ul li {
   nav.sub-menu ul li a:hover {
     background: none; }
 
-/*magazine headers*/
+/*magazine headers ?? gutter for thumbnailvs cover??*/
 .magazine.col-sm-9 {
   width: 70.8%; }
 .magazine .breadcrumbs {
   margin-bottom: -10px;
   position: absolute; }
-.magazine .title-yellow {
-  background: #ffff00;
-  border-left: 1px solid #ffffff; }
-.magazine article:first-child .title-yellow {
-  padding-top: 355px;
-  overflow: hidden; }
-.magazine .title-yellow-image img {
-  width: 100%;
-  border-left: 1px solid #ffffff; }
-.magazine .title-yellow-overlay {
-  position: absolute;
-  bottom: 0;
-  width: 100%; }
-.magazine .title, .magazine .date {
-  background-color: rgba(255, 255, 255, 0.6); }
-.magazine .title {
-  padding-bottom: 0.5em;
-  padding-top: 0.5em; }
-.magazine .date {
-  color: #ff0000;
-  font-family: "din_alternatebold", sans-serif;
-  font-weight: 400;
-  text-transform: uppercase;
-  font-size: 10px;
-  padding-top: 1em;
-  padding-bottom: 0; }
 .magazine .issue {
   top: 0;
   position: absolute;
@@ -521,6 +507,56 @@ nav.sub-menu ul li {
   font-family: "velino_text_blackitalic", serif;
   font-weight: 900; }
 
+/*cover articles with overlays and showcase headers */
+.title-header {
+  border-left: 1px solid #ffffff; }
+  .title-header .title-header-image img {
+    width: 100%;
+    border-left: 1px solid #ffffff; }
+  .title-header .title-header-overlay {
+    position: absolute;
+    bottom: 0.3em;
+    width: calc(100% - (2 * 0.3em));
+    /* twice gutter of the .cover */
+    padding: 0.5em 0 3em;
+    background-color: rgba(161, 161, 161, 0.81);
+    text-align: center;
+    color: #ffffff; }
+    .title-header .title-header-overlay .title {
+      padding: 0;
+      margin: 0;
+      font-family: "Raleway", sans-serif;
+      font-style: italic;
+      text-transform: uppercase;
+      font-size: 36px; }
+    .title-header .title-header-overlay .tag {
+      background: rgba(235, 33, 46, 0.68);
+      font-family: "Raleway", sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      text-transform: uppercase;
+      padding: 0.5em;
+      display: block;
+      margin: 0 auto;
+      max-width: 25%;
+      min-width: 150px; }
+    .title-header .title-header-overlay p {
+      margin: 0;
+      padding: 0.3em;
+      font-family: "Raleway", sans-serif;
+      font-size: 16px; }
+
+.magazine .title-header-overlay {
+  width: 100%;
+  bottom: 0; }
+  .magazine .title-header-overlay .title {
+    font-size: 46px; }
+
+/*for overlay on magazine layout*/
+.showcase .title-header-overlay {
+  width: 100%; }
+
+/*for overlay on showcase layout*/
 /* Footer styles */
 footer .fullwide {
   background: #2C2D2C;
@@ -667,10 +703,7 @@ footer .footer-logo a {
     max-width: 400px;
     margin: 0 auto; }
 
-  .magazine article:first-child .title-yellow {
-    padding-top: 54px;
-    max-height: 300px; }
-
+  /*.magazine article:first-child .title-header {padding-top:54px; max-height:300px; }*/
   .content-grid.videos article {
     padding: 5px 0 !important; }
 
@@ -690,9 +723,7 @@ footer .footer-logo a {
   .row-eq-height {
     display: block !important; }
 
-  .magazine.yellow-image.col-sm-9 {
-    width: 70.8%; }
-
+  /*.magazine.title-header.col-sm-9 { width: $width-rightbar;}*/
   .magazine.col-xs-12, .side-menu.sub-menu {
     width: 100%; }
 
@@ -705,7 +736,8 @@ footer .footer-logo a {
   .post-list .col-sm-4, .side-menu.col-xs-12 {
     width: 100% !important; }
 
-  .magazine.yellow-image.col-xs-12, .content-login .login-box input.col-xs-12 {
+  /*.magazine.title-header-image.col-xs-12,*/
+  .content-login .login-box input.col-xs-12 {
     width: 100% !important; }
 
   .showcase .carousel-caption {
