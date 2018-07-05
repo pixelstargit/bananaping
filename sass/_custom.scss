@@ -50,6 +50,41 @@ p {clear: both;} /* font-weight: 600;*/
     width: calc(100% / 6 ); /*$nav-item-total*/ box-sizing: border-box;
     }
   }
+  .nav-login {
+    float:right;
+    margin-top:-103px;/*adjust position vs text size*/
+    background: $color-grey-dark;
+    li {
+      border-right: 0!important;
+      border-left: 1px solid $color-grey-light;
+      min-width: 165px;
+    }
+    li a {
+      min-height:30px;
+      padding:8px $gutter-default;
+      font-size:10px!important;
+      letter-spacing: 0.12em !important;
+    }
+  }
+
+  /*almost the same as nav-login - consolidate these styles better?*/
+  .nav-language  {
+    float:left;
+    margin-top:-30px;/*adjust position vs text size*/
+    background: $color-grey-dark;
+    li {
+      display: inline-block;
+      width: auto; /*62px;*/
+      a {
+        min-height:30px;
+        padding: 8px 5px;
+        font-size:10px!important;
+        letter-spacing: 0.12em !important;
+        margin-top: -1px;
+        }
+      &:last-child { margin-left:-5px;}
+    }
+  }
 }
 
 .navbar{ max-height: 65px;
@@ -59,36 +94,9 @@ p {clear: both;} /* font-weight: 600;*/
   }
 }
 .nav > li > a { min-height:65px; padding: 20px 0 0 0;}
-.nav-login {
-  float:right;
-  margin-top:-103px;/*adjust position vs text size*/
-  background: $color-grey-dark;
-  li {
-    border-right: 0!important;
-    border-left: 1px solid $color-grey-light;
-    min-width: 165px;
-  }
-  li a {
-    min-height:30px;
-    padding:8px $gutter-default;
-    font-size:10px!important;
-    letter-spacing: 0.12em !important;
-  }
-}
 
-/*almost the same as nav-login - consolidate these styles better?*/
-.nav-language  {
-  float:left;
-  margin-top:-31px;/*adjust position vs text size*/
-  li {
-    display: inline-block;
-    min-width: 62px;
-  }
-  li a {
-    min-width: 62px;
-  }
 
-}
+
 
 .navbar-toggle .icon-bar { background-color: $color-white!important; }
 

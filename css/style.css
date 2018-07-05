@@ -49,35 +49,68 @@ p {
   background: #ffff00; }
 
 /*Navbar*/
-#CS-header nav {
-  border-radius: 0;
-  border: none;
-  background: #898989;
-  max-width: 980px;
-  width: 100%;
-  margin: 0 auto;
-  /*adjust breaking point vs text size*/ }
-  #CS-header nav a {
-    color: #ffffff;
-    font-family: "Raleway", sans-serif;
-    font-size: 11.5px;
-    text-transform: uppercase;
-    letter-spacing: 0.07em;
-    font-weight: 600; }
-  #CS-header nav li {
-    border-right: solid 1px #ffffff; }
-  #CS-header nav li:last-child {
-    border-right: 0; }
-  #CS-header nav li li a {
-    color: #898989; }
-  #CS-header nav .active > a {
-    background: #ff0000; }
-  #CS-header nav ul li {
-    width: 15.6667%;
-    /* fallback for non-calc() browsers*/
-    width: calc(100% / 6 );
-    /*$nav-item-total*/
-    box-sizing: border-box; }
+#CS-header {
+  /*almost the same as nav-login - consolidate these styles better?*/ }
+  #CS-header nav {
+    border-radius: 0;
+    border: none;
+    background: #898989;
+    max-width: 980px;
+    width: 100%;
+    margin: 0 auto;
+    /*adjust breaking point vs text size*/ }
+    #CS-header nav a {
+      color: #ffffff;
+      font-family: "Raleway", sans-serif;
+      font-size: 11.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      font-weight: 600; }
+    #CS-header nav li {
+      border-right: solid 1px #ffffff; }
+    #CS-header nav li:last-child {
+      border-right: 0; }
+    #CS-header nav li li a {
+      color: #898989; }
+    #CS-header nav .active > a {
+      background: #ff0000; }
+    #CS-header nav ul li {
+      width: 15.6667%;
+      /* fallback for non-calc() browsers*/
+      width: calc(100% / 6 );
+      /*$nav-item-total*/
+      box-sizing: border-box; }
+  #CS-header .nav-login {
+    float: right;
+    margin-top: -103px;
+    /*adjust position vs text size*/
+    background: #898989; }
+    #CS-header .nav-login li {
+      border-right: 0 !important;
+      border-left: 1px solid #d7d7d7;
+      min-width: 165px; }
+    #CS-header .nav-login li a {
+      min-height: 30px;
+      padding: 8px 15px;
+      font-size: 10px !important;
+      letter-spacing: 0.12em !important; }
+  #CS-header .nav-language {
+    float: left;
+    margin-top: -30px;
+    /*adjust position vs text size*/
+    background: #898989; }
+    #CS-header .nav-language li {
+      display: inline-block;
+      width: auto;
+      /*62px;*/ }
+      #CS-header .nav-language li a {
+        min-height: 30px;
+        padding: 8px 5px;
+        font-size: 10px !important;
+        letter-spacing: 0.12em !important;
+        margin-top: -1px; }
+      #CS-header .nav-language li:last-child {
+        margin-left: -5px; }
 
 .navbar {
   max-height: 65px; }
@@ -95,32 +128,6 @@ p {
 .nav > li > a {
   min-height: 65px;
   padding: 20px 0 0 0; }
-
-.nav-login {
-  float: right;
-  margin-top: -103px;
-  /*adjust position vs text size*/
-  background: #898989; }
-  .nav-login li {
-    border-right: 0 !important;
-    border-left: 1px solid #d7d7d7;
-    min-width: 165px; }
-  .nav-login li a {
-    min-height: 30px;
-    padding: 8px 15px;
-    font-size: 10px !important;
-    letter-spacing: 0.12em !important; }
-
-/*almost the same as nav-login - consolidate these styles better?*/
-.nav-language {
-  float: left;
-  margin-top: -31px;
-  /*adjust position vs text size*/ }
-  .nav-language li {
-    display: inline-block;
-    min-width: 62px; }
-  .nav-language li a {
-    min-width: 62px; }
 
 .navbar-toggle .icon-bar {
   background-color: #ffffff !important; }
