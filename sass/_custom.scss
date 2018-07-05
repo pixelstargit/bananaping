@@ -327,21 +327,24 @@ nav.sub-menu{
     margin-bottom:-10px;
     position: absolute;
   }
-  .title-yellow { background: #ffff00;  border-left: 1px solid $color-white; }
-  article:first-child .title-yellow {padding-top:355px; overflow: hidden;}
-  .title-yellow-image img {width: 100%; border-left: 1px solid $color-white;}
-  .title-yellow-overlay {
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-  }
-  .title, .date{ background-color: $overlay-white;}
-  .title{ padding-bottom: 0.5em; padding-top: 0.5em;}
-  .date{ color: $color-red; font-family: $font-din; font-weight: 400; text-transform: uppercase;
-    font-size: $font-size-tiny; padding-top: 1em; padding-bottom: 0;}
+
   .issue {top:0;position: absolute; min-width:165px;border-left:1px solid $color-white; border-bottom: 0;}
   .showcase{margin:0 $gutter-default;}
   .intro {font-size: $font-size-base; font-family: $font-velino-textitalic;  font-weight: 900;}
+}
+
+.title-header { border-left: 1px solid $color-white;
+  .title-header-image img {width: 100%; border-left: 1px solid $color-white;}
+  .title-header-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: $overlay-white;
+    .title{ padding-bottom: 0.5em; padding-top: 0.5em;}
+    .tag{ color: $color-red; font-family: $font-din; font-weight: 400; text-transform: uppercase;
+      font-size: $font-size-tiny; padding-top: 1em; padding-bottom: 0;}
+    p{ color: $color-white;}
+    }
 }
 
 
@@ -450,7 +453,7 @@ footer{
   #CS-header nav li li a{color: $color-white;}
   #CS-header nav li{border-right: none;}
   .social-icons { max-width:400px; margin: 0 auto;}
-  .magazine article:first-child .title-yellow {padding-top:54px; max-height:300px; }
+  /*.magazine article:first-child .title-header {padding-top:54px; max-height:300px; }*/
   .content-grid.videos article { padding:5px 0 !important;}
   .content-grid.thumbnails article{
     &.col-sm-4:nth-child(3n+1) {padding-left:10px;clear:none;}
@@ -459,14 +462,14 @@ footer{
     &.col-xs-6:nth-child(even) {padding-right:0; padding-left:10px;}
    }
   .row-eq-height {    display: block!important;}
-  .magazine.yellow-image.col-sm-9 { width: $width-rightbar;}
+  /*.magazine.title-header.col-sm-9 { width: $width-rightbar;}*/
   .magazine.col-xs-12, .side-menu.sub-menu{ width:100%; }
   .content-login .login-box { padding: 3em 2em;}
 }
 @media only screen and (max-width:425px){
   .showcase .carousel-caption{right: 20%;}
   .post-list .col-sm-4, .side-menu.col-xs-12 {width:100%!important; }
-  .magazine.yellow-image.col-xs-12, .content-login .login-box input.col-xs-12 {width:100%!important; }
+  /*.magazine.title-header-image.col-xs-12,*/ .content-login .login-box input.col-xs-12 {width:100%!important; }
   .showcase .carousel-caption{
     display:none;
     right: 0;
