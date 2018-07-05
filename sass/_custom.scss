@@ -224,7 +224,7 @@ p {clear: both;} /* font-weight: 600;*/
     margin:-5px;
     padding-top: 10px;
     article {
-      padding:5px 5px;
+      padding:$gutter-thin;
       img {width:100%; }
       margin: 0;
       .btn{
@@ -320,32 +320,49 @@ nav.sub-menu{
     }
 }
 
-/*magazine headers*/
+/*magazine headers ?? gutter for thumbnailvs cover??*/
 .magazine {
   &.col-sm-9 { width:$width-rightbar;}
   .breadcrumbs{
     margin-bottom:-10px;
     position: absolute;
   }
-
   .issue {top:0;position: absolute; min-width:165px;border-left:1px solid $color-white; border-bottom: 0;}
-  .showcase{margin:0 $gutter-default;}
+  .showcase{    margin:0 $gutter-default;    }
   .intro {font-size: $font-size-base; font-family: $font-velino-textitalic;  font-weight: 900;}
 }
 
+/*cover articles with overlays and showcase headers */
 .title-header { border-left: 1px solid $color-white;
   .title-header-image img {width: 100%; border-left: 1px solid $color-white;}
   .title-header-overlay {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background-color: $overlay-white;
-    .title{ padding-bottom: 0.5em; padding-top: 0.5em;}
-    .tag{ color: $color-red; font-family: $font-din; font-weight: 400; text-transform: uppercase;
-      font-size: $font-size-tiny; padding-top: 1em; padding-bottom: 0;}
-    p{ color: $color-white;}
+    position: absolute; bottom: $gutter-thin;
+    width: calc(100% - (2 * #{$gutter-thin})); /* twice gutter of the .cover */
+    padding: $gutter-wide 0 3em;
+    background-color: $overlay-grey;
+    text-align: center;
+    color: $color-white;
+    .title{
+      padding: 0; margin: 0;
+      font-family: $font-raleway; font-style: italic;
+      font-size: 36px;
+      }
+    .tag{
+      background: $overlay-red;
+      font-family: $font-raleway; font-size: $font-size-base; font-weight: 500;
+      text-transform: uppercase;
+      padding: 0.5em;
+      display: block; margin: 0 auto; max-width: 25%; min-width: 150px;
+      }
+    p{
+      margin: 0; padding: 0.3em;
+      font-family: $font-raleway;
+      font-size: $font-size-base;
+      }
     }
 }
+.magazine .title-header-overlay { width: 100%; bottom: 0; .title{font-size:46px;}} /*for overlay on magazine layout*/
+.showcase .title-header-overlay { width: 100%; } /*for overlay on showcase layout*/
 
 
 
