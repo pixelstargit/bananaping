@@ -209,7 +209,6 @@ p {
     font-size: 14px; }
 
 .title-block {
-  float: left;
   background: #898989;
   padding: 0;
   max-width: 170px;
@@ -234,9 +233,8 @@ p {
   .title-block::after {
     clear: both; }
 
-.title-pink {
-  background: #ff0000;
-  float: left; }
+.title-red {
+  background: #ff0000; }
 
 .title-count {
   background: #ff0000;
@@ -286,39 +284,43 @@ p {
     min-width: 170px; }
 
 /*GRID styles and spacing of items thumbnails cover videos*/
-.cover-recommend {
+.cover-recommend, .cover-headline {
   /*12 | 20 |12 |14pt -check font sizes*/
   max-height: 400px;
   min-height: 407px;
   overflow: hidden;
   clear: right;
   color: #000000; }
-  .cover-recommend img {
+  .cover-recommend img, .cover-headline img {
     max-height: 230px;
     padding: 0; }
-  .cover-recommend h2 {
+  .cover-recommend h2, .cover-headline h2 {
     font-family: "Raleway", sans-serif;
     padding: 0.3em;
     font-size: 12px;
     text-transform: uppercase; }
-  .cover-recommend h1 {
+  .cover-recommend h1, .cover-headline h1 {
     font-family: "Raleway", sans-serif;
     padding: 0.3em;
     font-weight: 700;
     font-style: italic;
     font-size: 20px;
     text-transform: uppercase; }
-  .cover-recommend P {
+  .cover-recommend P, .cover-headline P {
     font-family: "Stag Light", serif;
     padding: 0.3em;
     font-size: 12px; }
-  .cover-recommend h4 {
+  .cover-recommend h4, .cover-headline h4 {
     font-family: "Raleway", sans-serif;
     padding: 0.3em;
     font-weight: 700;
     font-style: italic;
     font-size: 14px;
     text-transform: uppercase; }
+
+.cover-headline {
+  max-height: 110px;
+  min-height: 110px; }
 
 .content-grid article {
   padding: 0; }
@@ -403,9 +405,9 @@ p {
   clear: none; }
 
 .content-sidebars {
-  border-top: 2px #ffffff solid; }
+  border-top: 2px #ffffff solid;
+  color: #000000; }
   .content-sidebars aside {
-    background: #efefef;
     padding: 0; }
   .content-sidebars section {
     background: #ffffff;
@@ -414,21 +416,29 @@ p {
     padding: 0.5em 15px;
     margin: 0; }
   .content-sidebars p {
-    font-family: "velino_text_thinthin", serif;
+    font-family: "Stag Light", serif;
     font-size: 14px; }
   .content-sidebars h3 {
+    font-family: "Raleway", sans-serif;
     font-size: 18px;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    font-style: italic; }
 
-.side-summary h3, .post-summary h3 {
-  padding: 15px;
-  padding-bottom: 0; }
-.side-summary p, .post-summary p {
-  padding: 15px;
-  line-height: 1.3em; }
+.side-summary, .post-summary {
+  background: #efefef; }
+  .side-summary h3, .post-summary h3 {
+    padding: 15px;
+    padding-bottom: 0; }
+  .side-summary p, .post-summary p {
+    padding: 15px;
+    line-height: 1.3em; }
+  .side-summary .selected, .post-summary .selected {
+    background: #fb3434 !important;
+    color: #ffffff; }
 
 .side-menu {
-  width: 29.2%; }
+  width: 29.2%;
+  background: #e2e2e2; }
 
 .row-eq-height {
   display: -webkit-box;
@@ -436,6 +446,37 @@ p {
   display: -ms-flexbox;
   display: flex; }
 
+/*Styles: Zebra */
+.zebra article:nth-child(even) {
+  background: transparent; }
+
+.zebra article:nth-child(odd) {
+  background: #f9f9f9; }
+
+.zebra.bee article:nth-child(odd) {
+  background: #ffff00; }
+
+/* Extras side menu */
+nav.sub-menu ul li {
+  margin: 15px 0;
+  background: #c2c2c2; }
+  nav.sub-menu ul li.active {
+    background: #ff8a8a; }
+  nav.sub-menu ul li h4 {
+    padding: 1em 4em 0;
+    color: #a1a1a1;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-family: "Raleway", sans-serif; }
+  nav.sub-menu ul li a {
+    padding: 1em 4em;
+    color: #707070;
+    font-size: 14px;
+    font-family: "Raleway", sans-serif; }
+  nav.sub-menu ul li a:hover {
+    background: none; }
+
+/*magazine headers*/
 .magazine.col-sm-9 {
   width: 70.8%; }
 .magazine .breadcrumbs {
@@ -479,57 +520,6 @@ p {
   font-size: 16px;
   font-family: "velino_text_blackitalic", serif;
   font-weight: 900; }
-
-/*Styles: Zebra */
-/*section removed?*/
-.zebra article:nth-child(even) {
-  background: transparent; }
-
-.zebra article:nth-child(odd) {
-  background: rgba(255, 255, 255, 0.6); }
-
-.zebra.bee article:nth-child(odd) {
-  background: #ffff00; }
-
-/* Extras side menu */
-nav.sub-menu li {
-  padding: 0; }
-nav.sub-menu li a {
-  font-family: "din_alternatebold", sans-serif;
-  font-size: 15px; }
-nav.sub-menu ul li {
-  background: #f9f9f9;
-  text-transform: uppercase;
-  margin: 1em 0; }
-nav.sub-menu ul li.active {
-  background: #edeb51; }
-  nav.sub-menu ul li.active a {
-    color: #b7b7b7; }
-nav.sub-menu ul li a {
-  padding: 2em 1em;
-  min-height: 85px;
-  color: #d7d7d7; }
-nav.sub-menu ul li a:hover {
-  background: none;
-  background-color: rgba(255, 255, 255, 0.6);
-  color: #ccc; }
-nav.sub-menu .icon {
-  width: 60px;
-  height: 60px;
-  float: left;
-  margin: 12px 12px 12px 25px;
-  background-size: cover; }
-nav.sub-menu ol li {
-  padding: 0 1em;
-  line-height: 1.25em; }
-  nav.sub-menu ol li a {
-    color: #898989;
-    padding: 1em 0 0 1em;
-    min-height: 50px;
-    font-size: 14px;
-    letter-spacing: 0.07em; }
-nav.sub-menu ol li.active a {
-  color: #a9a500; }
 
 /* Footer styles */
 footer .fullwide {
