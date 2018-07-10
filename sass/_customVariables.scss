@@ -32,7 +32,7 @@ $color-sunny: #fff99d;
 
 
 $overlay-white: rgba(255,255,255,0.6);
-$overlay-grey: rgba(161,161,161,0.81);
+$overlay-grey: rgba(161,161,161,0.46);
 $overlay-red: rgba(235,33,46,0.68);
 
 //fonts
@@ -56,7 +56,7 @@ $font-family-sans-serif: $font-velino-text;
 
 $font-size-tiny:  10px; /*9pt*/
 $font-size-default:  12px; /*9pt*/
-$font-size-small:  14px; /* 12pt din*/
+$font-size-small:  12px; /* 12pt din*/
 $font-size-base:  16px; /*default 14pt velino*/
 $font-size-big:  18px; /*13pt*/
 
@@ -76,5 +76,5 @@ $width-leftbar: 29.2%;
 $width-rightbar: 70.8%;
 
 $letter-skinny: 0.05em;
-$letter-normal: 0.07em;
+$letter-normal: 0.075em;
 $letter-wide: 0.1em;

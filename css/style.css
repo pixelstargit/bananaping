@@ -34,7 +34,7 @@
 
 /* text resets */
 .btn, h1, h2, h3 {
-  letter-spacing: 0.07em;
+  letter-spacing: 0.075em;
   font-weight: 900; }
 
 b, strong {
@@ -64,7 +64,7 @@ p {
       font-family: "Raleway", sans-serif;
       font-size: 11.5px;
       text-transform: uppercase;
-      letter-spacing: 0.07em;
+      letter-spacing: 0.075em;
       font-weight: 600; }
     #CS-header nav li {
       border-right: solid 1px #ffffff; }
@@ -225,7 +225,7 @@ p {
     margin: 0.5em 0; }
   .content-text p, .content-grid p {
     font-family: "velino_text_thinthin", serif;
-    font-size: 14px; }
+    font-size: 12px; }
 
 .title-block {
   background: #898989;
@@ -292,7 +292,7 @@ p {
     border-radius: 0;
     text-transform: uppercase;
     font-size: 14px;
-    letter-spacing: 0.07em;
+    letter-spacing: 0.075em;
     padding: 3px; }
   .btn.sold {
     background-color: #ff0000;
@@ -305,57 +305,72 @@ p {
 /*GRID styles and spacing of items thumbnails cover videos*/
 .cover-recommend, .cover-headline {
   /*12 | 20 |12 |14pt -check font sizes*/
-  max-height: 400px;
-  min-height: 407px;
-  overflow: hidden;
-  clear: right;
-  color: #000000; }
+  color: #000000;
+  letter-spacing: 0.1em;
+  /*tag*/
+  /*title*/
+  /*summary*/
+  /*author*/ }
   .cover-recommend img, .cover-headline img {
     max-height: 230px;
-    padding: 0; }
+    padding: 0 0 10px 0;
+    margin: 0 auto;
+    width: 100%; }
   .cover-recommend h2, .cover-headline h2 {
     font-family: "Raleway", sans-serif;
-    padding: 0.3em;
     font-size: 12px;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    padding: 10px 30px 0;
+    margin: 0; }
   .cover-recommend h1, .cover-headline h1 {
     font-family: "Raleway", sans-serif;
-    padding: 0.3em;
     font-weight: 700;
     font-style: italic;
     font-size: 20px;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    padding: 10px 30px 0;
+    margin: 0;
+    width: 100%;
+    overflow: hidden; }
   .cover-recommend P, .cover-headline P {
     font-family: "Stag Light", serif;
-    padding: 0.3em;
-    font-size: 12px; }
+    font-size: 12px;
+    padding: 10px 30px;
+    margin: 0 0 10px 0;
+    max-height: 65px;
+    overflow: hidden; }
   .cover-recommend h4, .cover-headline h4 {
     font-family: "Raleway", sans-serif;
-    padding: 0.3em;
     font-weight: 700;
     font-style: italic;
-    font-size: 14px;
-    text-transform: uppercase; }
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 0 30px;
+    margin: 0; }
+  .cover-recommend.pink, .cover-headline.pink {
+    background: #ff8a8a; }
+  .cover-recommend.blush, .cover-headline.blush {
+    background: #f6999f; }
+  .cover-recommend.rosy, .cover-headline.rosy {
+    background: #f9b5ba; }
+  .cover-recommend.mint, .cover-headline.mint {
+    background: #c4e4c2; }
+  .cover-recommend.sunny, .cover-headline.sunny {
+    background: #fff99d; }
 
-.cover-headline {
+.content-grid.cover article.cover-recommend, .content-grid.cover article.cover-headline {
+  max-height: 397px;
+  min-height: 397px;
+  overflow: hidden;
+  clear: right;
+  padding: 0;
+  margin: 0.3em;
+  /* see responsive section for widths*/ }
+  .content-grid.cover article.cover-recommend.col-sm-4, .content-grid.cover article.cover-headline.col-sm-4 {
+    width: calc(33% - 0.6em); }
+.content-grid.cover article.cover-headline {
   max-height: 110px;
   min-height: 110px; }
-
-.content-grid article {
-  padding: 0; }
-  .content-grid article.pink {
-    background: #ff8a8a; }
-  .content-grid article.blush {
-    background: #f6999f; }
-  .content-grid article.rosy {
-    background: #f9b5ba; }
-  .content-grid article.mint {
-    background: #c4e4c2; }
-  .content-grid article.sunny {
-    background: #fff99d; }
-  .content-grid article img {
-    margin: 0 auto;
-    width: 100%; }
 .content-grid.thumbnails article {
   padding: 10px 5px; }
   .content-grid.thumbnails article.col-sm-4:nth-child(3n+1) {
@@ -409,7 +424,7 @@ p {
       background: #d7d7d7; }
   .content-grid.post-list p {
     font-family: "velino_text_thinthin", serif;
-    font-size: 14px;
+    font-size: 12px;
     padding: 15px; }
   .content-grid.post-list h3 {
     font-family: "velino_text_blackblack", serif;
@@ -436,7 +451,8 @@ p {
     margin: 0; }
   .content-sidebars p {
     font-family: "Stag Light", serif;
-    font-size: 14px; }
+    font-size: 12px;
+    letter-spacing: 0.075em; }
   .content-sidebars h3 {
     font-family: "Raleway", sans-serif;
     font-size: 18px;
@@ -484,13 +500,13 @@ nav.sub-menu ul li {
   nav.sub-menu ul li h4 {
     padding: 1em 4em 0;
     color: #a1a1a1;
-    font-size: 14px;
+    font-size: 12px;
     text-transform: uppercase;
     font-family: "Raleway", sans-serif; }
   nav.sub-menu ul li a {
     padding: 1em 4em;
     color: #707070;
-    font-size: 14px;
+    font-size: 12px;
     font-family: "Raleway", sans-serif; }
   nav.sub-menu ul li a:hover {
     background: none; }
@@ -517,41 +533,47 @@ nav.sub-menu ul li {
 /*cover articles with overlays and showcase headers */
 .title-header {
   border-left: 1px solid #ffffff; }
-  .title-header .title-header-image img {
+  .title-header img {
     width: 100%;
     border-left: 1px solid #ffffff; }
   .title-header .title-header-overlay {
     position: absolute;
-    bottom: 0.3em;
     width: calc(100% - (2 * 0.3em));
     /* twice gutter of the .cover */
-    padding: 0.5em 0 3em;
-    background-color: rgba(161, 161, 161, 0.81);
+    padding: 24px 0 30px;
+    background-color: rgba(161, 161, 161, 0.46);
     text-align: center;
     color: #ffffff; }
     .title-header .title-header-overlay .title {
-      padding: 0;
+      padding: 4px 0 0 0;
       margin: 0;
       font-family: "Raleway", sans-serif;
-      font-style: italic;
       text-transform: uppercase;
-      font-size: 36px; }
+      font-size: 60px;
+      letter-spacing: 0.075em; }
     .title-header .title-header-overlay .tag {
       background: rgba(235, 33, 46, 0.68);
       font-family: "Raleway", sans-serif;
-      font-size: 16px;
-      font-weight: 500;
+      font-size: 14px;
+      font-weight: 600;
       text-transform: uppercase;
-      padding: 0.5em;
+      letter-spacing: 0.2em;
+      padding: 0.4em;
       display: block;
       margin: 0 auto;
-      max-width: 25%;
+      max-width: 20%;
       min-width: 150px; }
     .title-header .title-header-overlay p {
-      margin: 0;
-      padding: 0.3em;
+      margin: -3px 0 0;
+      padding: 0;
       font-family: "Raleway", sans-serif;
-      font-size: 16px; }
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.075em; }
+  .title-header .vert-center {
+    top: 50%;
+    transform: translate(0, -50%);
+    margin-top: 28px; }
 
 .magazine .title-header-overlay {
   width: 100%;
@@ -735,7 +757,10 @@ footer .footer-logo a {
     width: 100%; }
 
   .content-login .login-box {
-    padding: 3em 2em; } }
+    padding: 3em 2em; }
+
+  .content-grid.cover article.cover-recommend.col-xs-6 {
+    width: calc(50% - 0.6em); } }
 @media only screen and (max-width: 425px) {
   .showcase .carousel-caption {
     right: 20%; }
@@ -766,7 +791,10 @@ footer .footer-logo a {
     padding: 1em; }
 
   .content-grid.post-list .col-sm-4 article, .content-grid.post-list .col-sm-4 .title-block.red {
-    margin-left: 0; } }
+    margin-left: 0; }
+
+  .content-grid.cover article.cover-recommend.col-xs-6 {
+    width: calc(100% - 0.6em); } }
 @media only screen and (max-width: 375px) {
   .col-xs-6 {
     width: 100%; }
