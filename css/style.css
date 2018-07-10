@@ -770,7 +770,14 @@ footer .footer-logo a {
     padding: 3em 2em; }
 
   .content-grid.cover article.cover-recommend.col-xs-6 {
-    width: calc(50% - 0.6em); } }
+    width: calc(50% - 0.6em); }
+
+  .content-grid.cover.mixed article.cover-recommend.col-xs-6 {
+    width: calc(100% - 0.6em);
+    min-height: initial;
+    max-height: initial; }
+    .content-grid.cover.mixed article.cover-recommend.col-xs-6 img {
+      display: none; } }
 @media only screen and (max-width: 425px) {
   .showcase .carousel-caption {
     right: 20%; }
@@ -805,6 +812,9 @@ footer .footer-logo a {
 
   .content-grid.cover article.cover-recommend.col-xs-6 {
     width: calc(100% - 0.6em); }
+
+  .content-grid.cover.mixed article.cover-recommend.col-xs-6 img {
+    display: block; }
 
   .quote.col-xs-6 {
     width: 100%; } }
