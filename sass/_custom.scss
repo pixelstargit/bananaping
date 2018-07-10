@@ -210,27 +210,39 @@ p {clear: both;} /* font-weight: 600;*/
 .cover-section{
 }
 .cover-recommend, .cover-headline { /*12 | 20 |12 |14pt -check font sizes*/
-  max-height: 400px; min-height: 407px; overflow: hidden; clear: right;
   color: $color-black;
-  img { max-height:230px; padding:0;}
-  h2 { font-family: $font-raleway; padding:$gutter-thin; font-size: $font-size-default; text-transform: uppercase;}
-  h1 { font-family: $font-raleway;  padding:$gutter-thin; font-weight: 700; font-style: italic; font-size: $font-size-h4; text-transform: uppercase;}
-  P { font-family: $font-stag-body; padding:$gutter-thin; font-size: $font-size-default;}
-  h4 { font-family: $font-raleway; padding:$gutter-thin; font-weight: 700; font-style: italic; font-size: $font-size-small;text-transform: uppercase;}
+  letter-spacing: 0.1em;
+  img { max-height:230px; padding:0 0 10px 0; margin: 0 auto; width: 100%;}
+  h2 { font-family: $font-raleway; font-size: $font-size-default; text-transform: uppercase; padding:10px 30px 0;  margin: 0; }/*tag*/
+  h1 { font-family: $font-raleway; font-weight: 700; font-style: italic; font-size: $font-size-h4; text-transform: uppercase;
+    padding:10px 30px 0;  margin: 0; width:100%; overflow: hidden; }/*title*/
+  P { font-family: $font-stag-body; font-size: $font-size-default;
+    padding:10px 30px; margin: 0 0 10px 0; max-height: 65px; overflow: hidden;
+  }/*summary*/
+  h4 { font-family: $font-raleway; font-weight: 700; font-style: italic; font-size: $font-size-small;text-transform: uppercase;
+     padding:0 30px;  margin: 0;
+  }/*author*/
+
+        &.pink {background: $color-pink; }
+        &.blush {background: $color-blush;}
+        &.rosy{background: $color-rosy;}
+        &.mint{background: $color-mint;}
+        &.sunny {background: $color-sunny;}
 }
-.cover-headline{
-  max-height:110px;
-  min-height:110px;
-}
+
 .content-grid {
-  article {
-    &.pink {background: $color-pink;}
-          &.blush {background: $color-blush;}
-    &.rosy{background: $color-rosy;}
-    &.mint{background: $color-mint;}
-    &.sunny {background: $color-sunny;}
-    padding:0;
-    img {margin: 0 auto; width: 100%;}
+  &.cover article {
+    &.cover-recommend, &.cover-headline{
+      max-height: 397px; min-height: 397px; overflow: hidden; clear: right;
+      padding: 0;
+      margin: $gutter-thin;
+      &.col-sm-4 {width: calc(33% - 0.6em);}
+      /* see responsive section for widths*/
+    }
+    &.cover-headline{
+       max-height:110px;
+       min-height:110px;
+    }
   }
   &.thumbnails article {
     padding: 10px 5px;
@@ -296,7 +308,7 @@ p {clear: both;} /* font-weight: 600;*/
   p, hr, h1, h2, h3, h4{ padding:$gutter-wide $gutter-default; margin:0;}
 
   color: $color-black;
-  p {font-family: $font-stag-body; font-size: $font-size-small; }
+  p {font-family: $font-stag-body; font-size: $font-size-small; letter-spacing: $letter-normal;}
   h3{font-family: $font-raleway; font-size: $font-size-big; text-transform: uppercase; font-style: italic;}
 }
 .side-summary, .post-summary {
@@ -357,31 +369,40 @@ nav.sub-menu{
 
 /*cover articles with overlays and showcase headers */
 .title-header { border-left: 1px solid $color-white;
-  .title-header-image img {width: 100%; border-left: 1px solid $color-white;}
+  img {width: 100%; border-left: 1px solid $color-white;}
   .title-header-overlay {
-    position: absolute; bottom: $gutter-thin;
+    position: absolute;
     width: calc(100% - (2 * #{$gutter-thin})); /* twice gutter of the .cover */
-    padding: $gutter-wide 0 3em;
+    padding: 24px 0 30px;
     background-color: $overlay-grey;
     text-align: center;
     color: $color-white;
     .title{
-      padding: 0; margin: 0;
-      font-family: $font-raleway; font-style: italic;text-transform: uppercase;
-      font-size: 36px;
+      padding: 4px 0 0 0; margin: 0;
+      font-family: $font-raleway; text-transform: uppercase;
+      font-size: 60px;
+      letter-spacing: 0.075em;
       }
     .tag{
       background: $overlay-red;
-      font-family: $font-raleway; font-size: $font-size-base; font-weight: 500;
+      font-family: $font-raleway; font-size: 14px; font-weight: 600;
       text-transform: uppercase;
-      padding: 0.5em;
-      display: block; margin: 0 auto; max-width: 25%; min-width: 150px;
+      letter-spacing: 0.2em;
+      padding: 0.4em;
+      display: block; margin: 0 auto; max-width: 20%; min-width: 150px;
       }
     p{
-      margin: 0; padding: 0.3em;
+      margin: -3px 0 0; padding: 0;
       font-family: $font-raleway;
-      font-size: $font-size-base;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.075em;
       }
+    }
+    .vert-center {
+      top: 50%;
+      transform: translate(0, -50%);
+      margin-top:28px;
     }
 }
 .magazine .title-header-overlay { width: 100%; bottom: 0; .title{font-size:46px;}} /*for overlay on magazine layout*/
@@ -485,7 +506,12 @@ footer{
 
 /*Responsive breakpoints*/
 /*adjust max-breaking point vs nav text size*/
-@media only screen and (max-width:980px){ #CS-page {margin:1px 10px;}}
+
+
+
+@media only screen and (max-width:980px){
+  #CS-page {margin:1px 10px;}
+}
 
 @media only screen and (max-width:767px){
   /*body{background: #ff00ff;}*/
@@ -505,6 +531,8 @@ footer{
   /*.magazine.title-header.col-sm-9 { width: $width-rightbar;}*/
   .magazine.col-xs-12, .side-menu.sub-menu{ width:100%; }
   .content-login .login-box { padding: 3em 2em;}
+
+  .content-grid.cover article.cover-recommend.col-xs-6 {width: calc(50% - 0.6em);}
 }
 @media only screen and (max-width:425px){
   .showcase .carousel-caption{right: 20%;}
@@ -521,7 +549,7 @@ footer{
   .content-login .login-box { padding: 1em ;}
   .content-grid.post-list .col-sm-4 article, .content-grid.post-list .col-sm-4 .title-block.red {
     margin-left: 0;}
-
+  .content-grid.cover article.cover-recommend.col-xs-6 {width: calc(100% - 0.6em);}
 }
 @media only screen and (max-width:375px){
   .col-xs-6{width:100%;}
