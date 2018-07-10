@@ -219,8 +219,8 @@ p {clear: both;} /* font-weight: 600;*/
   P { font-family: $font-stag-body; font-size: $font-size-default;
     padding:10px 30px; margin: 0 0 10px 0; max-height: 65px; overflow: hidden;
   }/*summary*/
-  h4 { font-family: $font-raleway; font-weight: 700; font-style: italic; font-size: $font-size-small;text-transform: uppercase;
-     padding:0 30px;  margin: 0;
+  h4 { font-family: $font-raleway; font-weight: 700; font-style: italic; font-size: 14px;text-transform: uppercase;
+     padding:0 30px 20px;  margin: 0;
   }/*author*/
 
         &.pink {background: $color-pink; }
@@ -232,8 +232,8 @@ p {clear: both;} /* font-weight: 600;*/
 
 .content-grid {
   &.cover article {
-    &.cover-recommend, &.cover-headline{
-      max-height: 397px; min-height: 397px; overflow: hidden; clear: right;
+    &.cover-recommend, &.cover-headline {
+      max-height: 393px; min-height: 393px; overflow: hidden; clear: right;
       padding: 0;
       margin: $gutter-thin;
       &.col-sm-4 {width: calc(33% - 0.6em);}
@@ -256,7 +256,7 @@ p {clear: both;} /* font-weight: 600;*/
     article:nth-child(even){ padding: 9px 0 5px 30px;}*/
   }
   &.cover{
-    margin:-5px;
+    margin: 0;/*-14px 0 -3px; fixes for main placement of outer grid*/
     padding-top: 10px;
     article {
       padding:$gutter-thin;
@@ -308,13 +308,13 @@ p {clear: both;} /* font-weight: 600;*/
   p, hr, h1, h2, h3, h4{ padding:$gutter-wide $gutter-default; margin:0;}
 
   color: $color-black;
-  p {font-family: $font-stag-body; font-size: $font-size-small; letter-spacing: $letter-normal;}
+  p {font-family: $font-stag-body; font-size: $font-size-default; letter-spacing: $letter-normal;}
   h3{font-family: $font-raleway; font-size: $font-size-big; text-transform: uppercase; font-style: italic;}
 }
 .side-summary, .post-summary {
   background:#efefef;
   h3{padding: $gutter-default; padding-bottom:0;}
-  p {padding: $gutter-default; line-height: 1.3em;}
+  p {padding: $gutter-default; line-height: 1.5em; font-size: $font-size-small; padding-top:5px;}
   .selected{background: $color-crimson!important; color: $color-white;}
 }
 .side-menu{ width:$width-leftbar; background:#e2e2e2;}
@@ -550,8 +550,9 @@ footer{
   .content-grid.post-list .col-sm-4 article, .content-grid.post-list .col-sm-4 .title-block.red {
     margin-left: 0;}
   .content-grid.cover article.cover-recommend.col-xs-6 {width: calc(100% - 0.6em);}
+  .quote.col-xs-6{ width:100%;}
 }
 @media only screen and (max-width:375px){
-  .col-xs-6{width:100%;}
+  .col-xs-6 {width:100%;}
   .content-grid.thumbnails article{padding-left: 0!important; padding-right: 0!important;}
 }
