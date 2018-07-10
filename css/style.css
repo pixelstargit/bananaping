@@ -318,7 +318,7 @@ p {
     width: 100%; }
   .cover-recommend h2, .cover-headline h2 {
     font-family: "Raleway", sans-serif;
-    font-size: 12px;
+    font-size: 14px;
     text-transform: uppercase;
     padding: 10px 30px 0;
     margin: 0; }
@@ -334,7 +334,7 @@ p {
     overflow: hidden; }
   .cover-recommend P, .cover-headline P {
     font-family: "Stag Light", serif;
-    font-size: 12px;
+    font-size: 14px;
     padding: 10px 30px;
     margin: 0 0 10px 0;
     max-height: 65px;
@@ -343,9 +343,9 @@ p {
     font-family: "Raleway", sans-serif;
     font-weight: 700;
     font-style: italic;
-    font-size: 12px;
+    font-size: 14px;
     text-transform: uppercase;
-    padding: 0 30px;
+    padding: 0 30px 20px;
     margin: 0; }
   .cover-recommend.pink, .cover-headline.pink {
     background: #ff8a8a; }
@@ -359,8 +359,8 @@ p {
     background: #fff99d; }
 
 .content-grid.cover article.cover-recommend, .content-grid.cover article.cover-headline {
-  max-height: 397px;
-  min-height: 397px;
+  max-height: 393px;
+  min-height: 393px;
   overflow: hidden;
   clear: right;
   padding: 0;
@@ -386,7 +386,8 @@ p {
   article:nth-child(odd) { padding: 9px 30px 9px 0;}
   article:nth-child(even){ padding: 9px 0 5px 30px;}*/ }
 .content-grid.cover {
-  margin: -5px;
+  margin: 0;
+  /*-14px 0 -3px; fixes for main placement of outer grid*/
   padding-top: 10px; }
   .content-grid.cover article {
     padding: 0.3em;
@@ -451,7 +452,7 @@ p {
     margin: 0; }
   .content-sidebars p {
     font-family: "Stag Light", serif;
-    font-size: 12px;
+    font-size: 14px;
     letter-spacing: 0.075em; }
   .content-sidebars h3 {
     font-family: "Raleway", sans-serif;
@@ -466,11 +467,20 @@ p {
     padding-bottom: 0; }
   .side-summary p, .post-summary p {
     padding: 15px;
-    line-height: 1.3em; }
+    line-height: 1.5em;
+    font-size: 12px;
+    padding-top: 5px;
+    text-shadow: #000 0px 0px 0px; }
   .side-summary .selected, .post-summary .selected {
     background: #fb3434 !important;
     color: #ffffff; }
+    .side-summary .selected p, .post-summary .selected p {
+      text-shadow: #fff 0px 0px 0px; }
 
+/*I added it this way to be more specifc but maybe there is a better way, otherwise tex-shadow is ignored
+.side-summary .selected p {
+  text-shadow: #fff 0px 0px 0px !important;
+} */
 .side-menu {
   width: 29.2%;
   background: #e2e2e2; }
@@ -794,7 +804,10 @@ footer .footer-logo a {
     margin-left: 0; }
 
   .content-grid.cover article.cover-recommend.col-xs-6 {
-    width: calc(100% - 0.6em); } }
+    width: calc(100% - 0.6em); }
+
+  .quote.col-xs-6 {
+    width: 100%; } }
 @media only screen and (max-width: 375px) {
   .col-xs-6 {
     width: 100%; }
