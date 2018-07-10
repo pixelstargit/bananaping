@@ -541,6 +541,8 @@ footer{
   .content-login .login-box { padding: 3em 2em;}
 
   .content-grid.cover article.cover-recommend.col-xs-6 {width: calc(50% - 0.6em);}
+  .content-grid.cover.mixed article.cover-recommend.col-xs-6 {width: calc(100% - 0.6em); min-height:initial; max-height: initial;
+  img {display:none;}}
 }
 @media only screen and (max-width:425px){
   .showcase .carousel-caption{right: 20%;}
@@ -558,9 +560,11 @@ footer{
   .content-grid.post-list .col-sm-4 article, .content-grid.post-list .col-sm-4 .title-block.red {
     margin-left: 0;}
   .content-grid.cover article.cover-recommend.col-xs-6 {width: calc(100% - 0.6em);}
+    .content-grid.cover.mixed article.cover-recommend.col-xs-6 img {display: block;}
   .quote.col-xs-6{ width:100%;}
 }
 @media only screen and (max-width:375px){
   .col-xs-6 {width:100%;}
   .content-grid.thumbnails article{padding-left: 0!important; padding-right: 0!important;}
+
 }
