@@ -1,12 +1,11 @@
 /*a Pixelzoo theme*/
-/*Cityscape Styles - v10 trans 11.3*/
+/*Cityscape Styles - v12*/
 /*Sections*/
 
 #CS-header .img-responsive {margin: 1px auto;}
 #logo {
   background: $color-grey-light;
-  height: 200px;
-  padding:40px 10px 20px 10px;
+  padding:40px 10px 8px 10px;
 }
 #CS-page{
   clear: both;
@@ -27,10 +26,6 @@
 b, strong { font-family: $font-velino-text; font-weight: 900;}
 p {clear: both;} /* font-weight: 600;*/
 
-.yellow {background: $color-yellow;}
-
-
-
 /*Navbar*/
 #CS-header {
   nav{
@@ -40,7 +35,6 @@ p {clear: both;} /* font-weight: 600;*/
     width:100%;
     margin: 0 auto;
     a{color: $color-white; font-family: $font-raleway; font-size: 11.5px; text-transform: uppercase; letter-spacing: $letter-normal; font-weight: 600;}
-    /*adjust breaking point vs text size*/
     li {border-right: solid 1px $color-white;}
     li:last-child {border-right:0;}
     li li a{color: $color-grey-dark;}
@@ -50,15 +44,8 @@ p {clear: both;} /* font-weight: 600;*/
     width: calc(100% / 6 ); /*$nav-item-total*/ box-sizing: border-box;
     }
   }
-  .nav-login {
-    float:right;
-    margin-top:-96px;/*adjust position vs text size*/
+  .nav-language, .nav-login  {
     background: $color-grey-dark;
-    li {
-      border-right: 0!important;
-      border-left: 1px solid $color-grey-light;
-      min-width: 165px;
-    }
     li a {
       min-height:30px;
       padding:8px $gutter-default;
@@ -66,27 +53,25 @@ p {clear: both;} /* font-weight: 600;*/
       letter-spacing: 0.12em !important;
     }
   }
-
-  /*almost the same as nav-login - consolidate these styles better?*/
+  .nav-login {
+    float:right; margin-top:-96px;/*adjust position for nav login*/
+    li {
+      border-right: 0!important;
+      border-left: 2px solid $color-grey-light;
+      min-width: 165px;
+    }
+  }
   .nav-language  {
-    float:left;
-    margin-top:-30px;/*adjust position vs text size*/
-    background: $color-grey-dark;
+    float:left; margin-top:-30px;/*adjust position for nav language*/
     li {
       display: inline-block;
       width: auto; /*62px;*/
-      a {
-        min-height:30px;
-        padding: 8px 5px;
-        font-size:10px!important;
-        letter-spacing: 0.12em !important;
-        margin-top: -1px;
-        }
+      a { margin-top: -1px; padding:8px 5px; }
       &:last-child { margin-left:-5px;}
     }
   }
 }
-
+/*general nav hamburger menu*/
 .navbar{ max-height: 65px;
   .navbar-collapse { text-align: center;  padding-right:0;  padding-left:0;}
   .navbar-nav { display: inline-block; width:100%;
@@ -94,7 +79,6 @@ p {clear: both;} /* font-weight: 600;*/
   }
 }
 .nav > li > a { min-height:65px; padding: 20px 0 0 0;}
-
 .navbar-toggle .icon-bar { background-color: $color-white!important; }
 
 /* sub nav drop down */
@@ -162,10 +146,6 @@ p {clear: both;} /* font-weight: 600;*/
     padding:$gutter-wide;}
   &.orange{ background: $color-red; margin: 80px auto; }
   &.red{ background: $color-red;}
-  &.yellow{
-    background: $color-sunny; margin: 0 0 10px 0;
-    h2, a {color: $color-grey-dark;}
-  }
   &::after{clear: both;}
 }
 
@@ -336,7 +316,6 @@ p {clear: both;} /* font-weight: 600;*/
 /*Styles: Zebra */
 .zebra article:nth-child(even) { background: transparent; }
 .zebra article:nth-child(odd)  { background: #f9f9f9; }
-.zebra.bee article:nth-child(odd)  { background: $color-yellow; }
 
 /* Extras side menu */
 nav.sub-menu{
@@ -363,15 +342,15 @@ nav.sub-menu{
     }
 }
 
-/*magazine headers ?? gutter for thumbnailvs cover??*/
+/*magazine headers (this means there is a sidebar on the page)*/
 .magazine {
   &.col-sm-9 { width:$width-rightbar;}
   .breadcrumbs{
     margin-bottom:-10px;
     position: absolute;
-  }
-  .issue {top:0;position: absolute; min-width:165px;border-left:1px solid $color-white; border-bottom: 0;}
-  .showcase{    margin:0 $gutter-default;    }
+    }
+    .issue {top:0;position: absolute; min-width:165px;border-left:1px solid $color-white; border-bottom: 0;}
+  .showcase{    margin:0 $gutter-default;    } /*style inside magazine layout = rightside*/
   .intro {font-size: $font-size-base; font-family: $font-velino-textitalic;  font-weight: 900;}
 }
 
@@ -414,7 +393,7 @@ nav.sub-menu{
     }
 }
 .magazine .title-header-overlay { width: 100%; bottom: 0; .title{font-size:46px;}} /*for overlay on magazine layout*/
-.showcase .title-header-overlay { width: 100%; } /*for overlay on showcase layout*/
+.showcase .title-header-overlay { width: 100%; bottom: 0;} /*for overlay on showcase layout*/
 
 
 
