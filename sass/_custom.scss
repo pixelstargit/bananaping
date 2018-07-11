@@ -7,19 +7,19 @@
   background: $color-grey-light;
   height: 200px;
   padding:40px 10px 20px 10px;
-
 }
 #CS-page{
   clear: both;
   max-width: $main-page-width;
+  margin-bottom:100px;
   margin: 1px auto;
+  height: auto;
   .container{max-width: $main-page-width; }
   section, .clear-row{clear: both;}
 }
 #CS-footer{
   clear: both;
-  background: $color-grey-heavy;
-  color: $color-white;
+  color: $color-white; padding-top: $gutter-thin; /* bottom of cspage whitespace*/
 }
 
 /* text resets */
@@ -52,7 +52,7 @@ p {clear: both;} /* font-weight: 600;*/
   }
   .nav-login {
     float:right;
-    margin-top:-103px;/*adjust position vs text size*/
+    margin-top:-96px;/*adjust position vs text size*/
     background: $color-grey-dark;
     li {
       border-right: 0!important;
@@ -89,14 +89,11 @@ p {clear: both;} /* font-weight: 600;*/
 
 .navbar{ max-height: 65px;
   .navbar-collapse { text-align: center;  padding-right:0;  padding-left:0;}
-  .navbar-nav { display: inline-block; float: none; width:100%;
+  .navbar-nav { display: inline-block; width:100%;
    > li > a:hover{  background: $color-grey-light;}
   }
 }
 .nav > li > a { min-height:65px; padding: 20px 0 0 0;}
-
-
-
 
 .navbar-toggle .icon-bar { background-color: $color-white!important; }
 
@@ -123,6 +120,7 @@ p {clear: both;} /* font-weight: 600;*/
   .breadcrumbs{
     margin-bottom:-10px;
     position: absolute;
+    z-index: 99;
   }
   .carousel-caption{
     left:0; right: 0; bottom: 0;
@@ -212,15 +210,16 @@ p {clear: both;} /* font-weight: 600;*/
 }
 .cover-recommend, .cover-headline { /*12 | 20 |12 |14pt -check font sizes*/
   color: $color-black;
-  letter-spacing: 0.1em;
+  letter-spacing: $letter-wide;
   img { max-height:230px; padding:0 0 10px 0; margin: 0 auto; width: 100%;}
-  h2 { font-family: $font-raleway; font-size: $font-size-default; text-transform: uppercase; padding:10px 30px 0;  margin: 0; }/*tag*/
+  h2 { font-family: $font-raleway; font-size: $font-size-small; text-transform: uppercase;
+       padding:10px 20px 0 30px;  margin: 0; }/*tag*/
   h1 { font-family: $font-raleway; font-weight: 700; font-style: italic; font-size: $font-size-h4; text-transform: uppercase;
-    padding:10px 30px 0;  margin: 0; width:100%; overflow: hidden; }/*title*/
-  P { font-family: $font-stag-body; font-size: $font-size-default;
-    padding:10px 30px; margin: 0 0 10px 0; max-height: 65px; overflow: hidden;
+      padding:10px 20px 0 30px;  margin: 0; width:100%; overflow: hidden; }/*title*/
+  P { font-family: $font-stag-body; font-size: $font-size-small;
+     padding:10px 25px 0 30px; margin: 0 0 10px 0; max-height: 65px; overflow: hidden;
   }/*summary*/
-  h4 { font-family: $font-raleway; font-weight: 700; font-style: italic; font-size: 14px;text-transform: uppercase;
+  h4 { font-family: $font-raleway; font-weight: 700; font-style: italic; font-size: $font-size-default; text-transform: uppercase;
      padding:0 30px 20px;  margin: 0;
   }/*author*/
 
@@ -232,9 +231,25 @@ p {clear: both;} /* font-weight: 600;*/
 }
 
 .content-grid {
+      margin-left: -$gutter-thin;  margin-right: -0.4em;
+      /*-14px 0 -3px; fixes for main placement of outer grid*/
+  &.breadcrumbs article {
+      padding:0.6em $gutter-thin $gutter-thin;  margin: 0;
+      img {width:100%; }
+    }
+  &.cover{ /*defaults */
+    article {
+      padding:$gutter-thin;  margin: 0;
+      img {width:100%; }
+      .btn{
+        position: absolute; right: 5px; top: 50%;
+        a{font-size: 11px; padding:1em;}
+        }
+    }
+  }
   &.cover article {
     &.cover-recommend, &.cover-headline {
-      max-height: 393px; min-height: 393px; overflow: hidden; clear: right;
+      max-height: 398px; min-height: 398px; overflow: hidden; clear: right;
       padding: 0;
       margin: $gutter-thin;
       &.col-sm-4 {width: calc(33% - 0.6em);}
@@ -255,21 +270,6 @@ p {clear: both;} /* font-weight: 600;*/
     /*section removed?
     article:nth-child(odd) { padding: 9px 30px 9px 0;}
     article:nth-child(even){ padding: 9px 0 5px 30px;}*/
-  }
-  &.cover{
-    margin: 0;/*-14px 0 -3px; fixes for main placement of outer grid*/
-    padding-top: 10px;
-    article {
-      padding:$gutter-thin;
-      img {width:100%; }
-      margin: 0;
-      .btn{
-        position: absolute;
-        right: 5px;
-        top: 50%;
-        a{font-size: 11px; padding:1em;}
-        }
-    }
   }
   &.post-list {
     padding-top:$gutter-wide;
@@ -421,6 +421,7 @@ nav.sub-menu{
 
 /* Footer styles */
 footer{
+  background: $color-grey-heavy;
   .fullwide{
     background: $color-grey-darker;
     padding: $gutter-default;
