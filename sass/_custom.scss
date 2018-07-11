@@ -342,11 +342,7 @@ nav.sub-menu{
 /*magazine headers (this means there is a sidebar on the page)*/
 .magazine {
   &.col-sm-9 { width:$width-rightbar;}
-  .breadcrumbs{
-    margin-bottom:-10px;
-    position: absolute;
-    }
-    .issue {top:0;position: absolute; min-width:165px;border-left:1px solid $color-white; border-bottom: 0;}
+  .issue {top:0;position: absolute; min-width:165px;border-left:1px solid $color-white; border-bottom: 0;}
   .showcase{    margin:0 $gutter-default;    } /*style inside magazine layout = rightside*/
   .intro {font-size: $font-size-base; font-family: $font-velino-textitalic;  font-weight: 900;}
 }
