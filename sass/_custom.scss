@@ -22,7 +22,7 @@
 }
 
 /* text resets */
-.btn{letter-spacing: $letter-normal; font-weight: 600;}
+.btn, .title-block h2 {letter-spacing: $letter-normal; font-weight: 600;}
 h1, h2, h3 {letter-spacing: $letter-normal;  font-weight: 900;}
 b, strong { font-family: $font-velino-text; font-weight: 900;}
 p {clear: both;} /* font-weight: 600;*/
@@ -133,42 +133,39 @@ p {clear: both;} /* font-weight: 600;*/
 .grey{ background: $color-grey-light; padding: 1em 1em 1em 3em; font-family: $font-velino-thin;}
 .gallery {padding-top: $gutter-default;padding-bottom: $gutter-default;}
 
+
+
 /*Page Text Styles */
 .content-text, .content-grid{
   font-family: $font-velino-thin;
   p, hr, h1, h2, h3, h4, ul { padding:12px 0; margin: $gutter-wide 0;}
-  p {font-family: $font-velino-thin;font-size: $font-size-small; }
-}
-.title-block{
-  background: $color-grey-dark;
-  padding: 0;  max-width:170px; min-width: 170px;
-  text-align: center;
-  h2, a {  color: $color-white; font-family: $font-din; font-size: 13px; text-transform: uppercase;
-    padding:$gutter-wide;}
-  &.orange{ background: $color-red; margin: 80px auto; }
-  &.red{ background: $color-red;}
-  &::after{clear: both;}
-}
-
-.title-red{
-  background: $color-red;
-}
-.title-count{
-  background: $color-red;
-  padding: 0;
-  text-align: center; float:left;
-  h2 {
-    float:left; padding: $gutter-wide; padding-right: 100px;
-    &.count{min-width:20px;  padding-right:$gutter-wide; border-left:1px solid #ffffff; }
-  }
-  h2, a { color: $color-white; font-family: $font-din; font-size: 13px; text-transform: uppercase;
-     margin:0;}
-  .count.grey, .count.grey a{color: $color-grey-dark; }
+  p {font-family: $font-stag-body; font-size: $font-size-default; }
 }
 .content-small p {font-size:13px; padding: 0.3em 0;}
-
+.content-text.breadcrumbs{ /*same as btn breadcrumbs and title-block but divided into 4 subnav*/
+  width:100%; padding-top: $gutter-thin;
+  article{ float: left; width:25%; }
+  .btn { min-width: 100%; background: $color-grey-dark; border-color:$color-white;
+  &.current{background: $color-red;}
+   }
+}
 
 /*Buttons & Breadcrumbs - sold and buy*/
+.title-block{ /*same as btn breadcrumbs*/
+  background: $color-grey-medium;
+  float:left; padding: 0;  border: 1px solid $color-white;
+  h2, a {
+      color: $color-white;
+      font-family: $font-raleway;
+      text-transform: uppercase;
+      font-size: $font-size-small;
+      letter-spacing: $letter-normal;
+      padding: 2px 22px;
+    }
+  &.orange{ background: $color-red; margin: 80px auto; }
+  &::after{clear: both;}
+}
+.title-red {background: $color-red;}
 .btn{
   &, a {
     color: $color-white;
@@ -177,13 +174,14 @@ p {clear: both;} /* font-weight: 600;*/
     text-transform: uppercase;
     font-size: $font-size-small;
     letter-spacing: $letter-normal;
-    padding: 3px;
+    padding: 5px 19px;
    }
   background-color: $color-green;
   border-color: $color-green;
-  padding: 8px 22px;
+  padding: 0;
+
   &.sold{ background-color: $color-red; border-color: $color-red;}
-  &.orange{ background-color: $color-red; border-color: $color-red; min-width:170px;}
+  &.orange{ background-color: $color-red; border-color: $color-red; min-width:180px;}
 }
 
 /*GRID styles and spacing of items thumbnails cover videos*/
@@ -278,10 +276,15 @@ p {clear: both;} /* font-weight: 600;*/
 }
 
 /* Sidebar and right content styles */
-#CS-page section section{clear:none;}
+#CS-page .content-sidebars section{clear:none;} /*/this is causing text overlay none clears why is it here -- for magazine layout rather */
 .content-sidebars {
   border-top: 2px $color-white solid;
-  aside { padding:0; }
+  aside { padding:0;
+    .breadcrumb {
+      .btn, a {width:100%;}
+      .btn { text-align :left; padding: 1em 4em;}
+    }
+  }
   section { background: $color-white; padding:0;}
   p, hr, h1, h2, h3, h4{ padding:$gutter-wide $gutter-default; margin:0;}
 
