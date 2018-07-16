@@ -139,7 +139,12 @@ p {clear: both;} /* font-weight: 600;*/
 .content-text, .content-grid{
   font-family: $font-velino-thin;
   p, hr, h1, h2, h3, h4, ul { padding:12px 0; margin: $gutter-wide 0;}
-  p {font-family: $font-stag-body; font-size: $font-size-default; }
+  p {font-family: $font-stag-body; font-size: $font-size-default; color:$color-black; }
+  .person  {
+    color: $color-pink;
+    font-weight: normal;
+    b {text-transform: uppercase;}
+   }
 }
 .content-small p {font-size:13px; padding: 0.3em 0;}
 .content-text.breadcrumbs{ /*same as btn breadcrumbs and title-block but divided into 4 subnav*/
@@ -208,7 +213,7 @@ p {clear: both;} /* font-weight: 600;*/
         &.sunny {background: $color-sunny;}
 }
 .content-grid {
-  margin-left: -$gutter-thin;  margin-right: -0.4em;  /* fixes for main placement of outer grid*/
+  /*margin-left: -$gutter-thin;  margin-right: -0.4em = home;   fixes for main placement of outer grid --override individual pages rater*/
   &.breadcrumbs article { /*breadcrumbs section to take grid styles*/
       padding:0.6em $gutter-thin $gutter-thin;  margin: 0;
     }

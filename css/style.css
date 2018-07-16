@@ -1,27 +1,23 @@
-/*9pt*/
-/*9pt*/
-/* 12pt din*/
-/*default 14pt velino*/
-/*13pt*/
 /*default is 41px*/
 /*default is 34px*/
 /*default is 28px*/
 /*default is 20px*/
 /*a Pixelzoo theme*/
-/*Cityscape Styles - v10 trans 11.3*/
+/*Cityscape Styles - v12*/
 /*Sections*/
 #CS-header .img-responsive {
   margin: 1px auto; }
 
 #logo {
   background: #d7d7d7;
-  height: 200px;
-  padding: 40px 10px 20px 10px; }
+  padding: 40px 10px 8px 10px; }
 
 #CS-page {
   clear: both;
   max-width: 980px;
-  margin: 1px auto; }
+  margin-bottom: 100px;
+  margin: 1px auto;
+  height: auto; }
   #CS-page .container {
     max-width: 980px; }
   #CS-page section, #CS-page .clear-row {
@@ -29,11 +25,16 @@
 
 #CS-footer {
   clear: both;
-  background: #222222;
-  color: #ffffff; }
+  color: #ffffff;
+  padding-top: 0.3em;
+  /* bottom of cspage whitespace*/ }
 
 /* text resets */
-.btn, h1, h2, h3 {
+.btn, .title-block h2 {
+  letter-spacing: 0.075em;
+  font-weight: 600; }
+
+h1, h2, h3 {
   letter-spacing: 0.075em;
   font-weight: 900; }
 
@@ -45,73 +46,65 @@ p {
   clear: both; }
 
 /* font-weight: 600;*/
-.yellow {
-  background: #ffff00; }
-
 /*Navbar*/
-#CS-header {
-  /*almost the same as nav-login - consolidate these styles better?*/ }
-  #CS-header nav {
-    border-radius: 0;
-    border: none;
-    background: #898989;
-    max-width: 980px;
-    width: 100%;
-    margin: 0 auto;
-    /*adjust breaking point vs text size*/ }
-    #CS-header nav a {
-      color: #ffffff;
-      font-family: "Raleway", sans-serif;
-      font-size: 11.5px;
-      text-transform: uppercase;
-      letter-spacing: 0.075em;
-      font-weight: 600; }
-    #CS-header nav li {
-      border-right: solid 1px #ffffff; }
-    #CS-header nav li:last-child {
-      border-right: 0; }
-    #CS-header nav li li a {
-      color: #898989; }
-    #CS-header nav .active > a {
-      background: #ff0000; }
-    #CS-header nav ul li {
-      width: 15.6667%;
-      /* fallback for non-calc() browsers*/
-      width: calc(100% / 6 );
-      /*$nav-item-total*/
-      box-sizing: border-box; }
-  #CS-header .nav-login {
-    float: right;
-    margin-top: -103px;
-    /*adjust position vs text size*/
-    background: #898989; }
-    #CS-header .nav-login li {
-      border-right: 0 !important;
-      border-left: 1px solid #d7d7d7;
-      min-width: 165px; }
-    #CS-header .nav-login li a {
-      min-height: 30px;
-      padding: 8px 15px;
-      font-size: 10px !important;
-      letter-spacing: 0.12em !important; }
-  #CS-header .nav-language {
-    float: left;
-    margin-top: -30px;
-    /*adjust position vs text size*/
-    background: #898989; }
-    #CS-header .nav-language li {
-      display: inline-block;
-      width: auto;
-      /*62px;*/ }
-      #CS-header .nav-language li a {
-        min-height: 30px;
-        padding: 8px 5px;
-        font-size: 10px !important;
-        letter-spacing: 0.12em !important;
-        margin-top: -1px; }
-      #CS-header .nav-language li:last-child {
-        margin-left: -5px; }
+#CS-header nav {
+  border-radius: 0;
+  border: none;
+  background: #898989;
+  max-width: 980px;
+  width: 100%;
+  margin: 0 auto; }
+  #CS-header nav a {
+    color: #ffffff;
+    font-family: "Raleway", sans-serif;
+    font-size: 11.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.075em;
+    font-weight: 600; }
+  #CS-header nav li {
+    border-right: solid 1px #ffffff; }
+  #CS-header nav li:last-child {
+    border-right: 0; }
+  #CS-header nav li li a {
+    color: #898989; }
+  #CS-header nav .active > a {
+    background: #ff0000; }
+  #CS-header nav ul li {
+    width: 15.6667%;
+    /* fallback for non-calc() browsers*/
+    width: calc(100% / 6 );
+    /*$nav-item-total*/
+    box-sizing: border-box; }
+#CS-header .nav-language, #CS-header .nav-login {
+  background: #898989; }
+  #CS-header .nav-language li a, #CS-header .nav-login li a {
+    min-height: 30px;
+    padding: 8px 15px;
+    font-size: 10px !important;
+    letter-spacing: 0.12em !important; }
+#CS-header .nav-login {
+  float: right;
+  margin-top: -96px;
+  /*adjust position for nav login*/ }
+  #CS-header .nav-login li {
+    border-right: 0 !important;
+    border-left: 2px solid #d7d7d7;
+    min-width: 165px; }
+#CS-header .nav-language {
+  float: left;
+  margin-top: -30px;
+  /*adjust position for nav language*/ }
+  #CS-header .nav-language li {
+    display: inline-block;
+    width: auto;
+    /*62px;*/ }
+    #CS-header .nav-language li a {
+      margin-top: -1px;
+      padding: 8px 5px; }
+    #CS-header .nav-language li:last-child {
+      margin-left: -5px; }
 
+/*general nav hamburger menu*/
 .navbar {
   max-height: 65px; }
   .navbar .navbar-collapse {
@@ -120,7 +113,6 @@ p {
     padding-left: 0; }
   .navbar .navbar-nav {
     display: inline-block;
-    float: none;
     width: 100%; }
     .navbar .navbar-nav > li > a:hover {
       background: #d7d7d7; }
@@ -160,9 +152,11 @@ p {
 
 /*Styles*/
 /* Carousel Feature*/
-.showcase .breadcrumbs {
+.showcase .breadcrumb {
+  /*overlay breadcrumb on showcase img*/
   margin-bottom: -10px;
-  position: absolute; }
+  position: absolute;
+  z-index: 99; }
 .showcase .carousel-caption {
   left: 0;
   right: 0;
@@ -224,83 +218,75 @@ p {
     padding: 12px 0;
     margin: 0.5em 0; }
   .content-text p, .content-grid p {
-    font-family: "velino_text_thinthin", serif;
-    font-size: 12px; }
+    font-family: "Stag Light", serif;
+    font-size: 14px;
+    color: #000000; }
+  .content-text .person, .content-grid .person {
+    color: #ff8a8a;
+    font-weight: normal; }
+    .content-text .person b, .content-grid .person b {
+      text-transform: uppercase; }
 
+.content-small p {
+  font-size: 13px;
+  padding: 0.3em 0; }
+
+.content-text.breadcrumbs {
+  /*same as btn breadcrumbs and title-block but divided into 4 subnav*/
+  width: 100%;
+  padding-top: 0.3em; }
+  .content-text.breadcrumbs article {
+    float: left;
+    width: 25%; }
+  .content-text.breadcrumbs .btn {
+    min-width: 100%;
+    background: #898989;
+    border-color: #ffffff; }
+    .content-text.breadcrumbs .btn.current {
+      background: #ff0000; }
+
+/*Buttons & Breadcrumbs - sold and buy*/
 .title-block {
-  background: #898989;
+  /*same as btn breadcrumbs*/
+  background: #b7b7b7;
+  float: left;
   padding: 0;
-  max-width: 170px;
-  min-width: 170px;
-  text-align: center; }
+  border: 1px solid #ffffff; }
   .title-block h2, .title-block a {
     color: #ffffff;
-    font-family: "din_alternatebold", sans-serif;
-    font-size: 13px;
+    font-family: "Raleway", sans-serif;
     text-transform: uppercase;
-    padding: 0.5em; }
+    font-size: 12px;
+    letter-spacing: 0.075em;
+    padding: 2px 22px; }
   .title-block.orange {
     background: #ff0000;
     margin: 80px auto; }
-  .title-block.red {
-    background: #ff0000; }
-  .title-block.yellow {
-    background: #fff99d;
-    margin: 0 0 10px 0; }
-    .title-block.yellow h2, .title-block.yellow a {
-      color: #898989; }
   .title-block::after {
     clear: both; }
 
 .title-red {
   background: #ff0000; }
 
-.title-count {
-  background: #ff0000;
-  padding: 0;
-  text-align: center;
-  float: left; }
-  .title-count h2 {
-    float: left;
-    padding: 0.5em;
-    padding-right: 100px; }
-    .title-count h2.count {
-      min-width: 20px;
-      padding-right: 0.5em;
-      border-left: 1px solid #ffffff; }
-  .title-count h2, .title-count a {
-    color: #ffffff;
-    font-family: "din_alternatebold", sans-serif;
-    font-size: 13px;
-    text-transform: uppercase;
-    margin: 0; }
-  .title-count .count.grey, .title-count .count.grey a {
-    color: #898989; }
-
-.content-small p {
-  font-size: 13px;
-  padding: 0.3em 0; }
-
-/*Buttons - sold and buy*/
 .btn {
   background-color: #00b254;
   border-color: #00b254;
-  padding: 8px 22px; }
+  padding: 0; }
   .btn, .btn a {
     color: #ffffff;
-    font-family: "din_alternatebold", sans-serif;
+    font-family: "Raleway", sans-serif;
     border-radius: 0;
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 12px;
     letter-spacing: 0.075em;
-    padding: 3px; }
+    padding: 5px 19px; }
   .btn.sold {
     background-color: #ff0000;
     border-color: #ff0000; }
   .btn.orange {
     background-color: #ff0000;
     border-color: #ff0000;
-    min-width: 170px; }
+    min-width: 180px; }
 
 /*GRID styles and spacing of items thumbnails cover videos*/
 .cover-recommend, .cover-headline {
@@ -318,9 +304,9 @@ p {
     width: 100%; }
   .cover-recommend h2, .cover-headline h2 {
     font-family: "Raleway", sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     text-transform: uppercase;
-    padding: 10px 30px 0;
+    padding: 10px 20px 0 30px;
     margin: 0; }
   .cover-recommend h1, .cover-headline h1 {
     font-family: "Raleway", sans-serif;
@@ -328,14 +314,14 @@ p {
     font-style: italic;
     font-size: 20px;
     text-transform: uppercase;
-    padding: 10px 30px 0;
+    padding: 10px 20px 0 30px;
     margin: 0;
     width: 100%;
     overflow: hidden; }
   .cover-recommend P, .cover-headline P {
     font-family: "Stag Light", serif;
-    font-size: 14px;
-    padding: 10px 30px;
+    font-size: 12px;
+    padding: 10px 25px 0 30px;
     margin: 0 0 10px 0;
     max-height: 65px;
     overflow: hidden; }
@@ -358,92 +344,103 @@ p {
   .cover-recommend.sunny, .cover-headline.sunny {
     background: #fff99d; }
 
-.content-grid.cover article.cover-recommend, .content-grid.cover article.cover-headline {
-  max-height: 393px;
-  min-height: 393px;
-  overflow: hidden;
-  clear: right;
-  padding: 0;
-  margin: 0.3em;
-  /* see responsive section for widths*/ }
-  .content-grid.cover article.cover-recommend.col-sm-4, .content-grid.cover article.cover-headline.col-sm-4 {
-    width: calc(33% - 0.6em); }
-.content-grid.cover article.cover-headline {
-  max-height: 110px;
-  min-height: 110px; }
-.content-grid.thumbnails article {
-  padding: 10px 5px; }
-  .content-grid.thumbnails article.col-sm-4:nth-child(3n+1) {
-    padding-left: 0;
-    padding-right: 10px;
-    clear: both; }
-  .content-grid.thumbnails article.col-sm-4:nth-child(3n) {
-    padding-left: 10px;
-    padding-right: 0; }
-.content-grid.videos {
-  padding: 0;
-  /*section removed?
-  article:nth-child(odd) { padding: 9px 30px 9px 0;}
-  article:nth-child(even){ padding: 9px 0 5px 30px;}*/ }
-.content-grid.cover {
-  margin: 0;
-  /*-14px 0 -3px; fixes for main placement of outer grid*/
-  padding-top: 10px; }
-  .content-grid.cover article {
-    padding: 0.3em;
+.content-grid {
+  /*margin-left: -$gutter-thin;  margin-right: -0.4em = home;   fixes for main placement of outer grid --override individual pages rater*/ }
+  .content-grid.breadcrumbs article {
+    /*breadcrumbs section to take grid styles*/
+    padding: 0.6em 0.3em 0.3em;
     margin: 0; }
-    .content-grid.cover article img {
-      width: 100%; }
-    .content-grid.cover article .btn {
-      position: absolute;
-      right: 5px;
-      top: 50%; }
-      .content-grid.cover article .btn a {
-        font-size: 11px;
-        padding: 1em; }
-.content-grid.post-list {
-  padding-top: 0.5em;
-  margin: -15px; }
-  .content-grid.post-list article {
+  .content-grid.cover {
+    /*defaults */ }
+    .content-grid.cover article {
+      padding: 0.3em;
+      margin: 0; }
+      .content-grid.cover article img {
+        width: 100%; }
+      .content-grid.cover article .btn {
+        /*btn for sold / buy*/
+        position: absolute;
+        right: 0.4em;
+        top: 50%; }
+        .content-grid.cover article .btn a {
+          font-size: 11px;
+          padding: 1em; }
+  .content-grid.cover article.cover-recommend, .content-grid.cover article.cover-headline {
+    max-height: 398px;
+    min-height: 398px;
+    overflow: hidden;
+    clear: right;
     padding: 0;
-    margin: 15px; }
-    .content-grid.post-list article img {
-      width: 100%; }
-  .content-grid.post-list p, .content-grid.post-list h1, .content-grid.post-list h2, .content-grid.post-list h3, .content-grid.post-list h4 {
-    padding: 15px; }
-  .content-grid.post-list .col-sm-4 {
-    width: calc(30% - 15px);
-    /*auto calc */
-  /*section removed?
-  article, .title-block.red { margin-left:1em; margin-right:0;}
-  }
-.col-sm-4:first-child{ width:$width-leftbar;
-  article,.title-block.red { margin-left: 0;} */ }
-  .content-grid.post-list .post-summary {
-    padding-top: 5px; }
-    .content-grid.post-list .post-summary article {
-      background: #d7d7d7; }
-  .content-grid.post-list p {
-    font-family: "velino_text_thinthin", serif;
-    font-size: 12px;
-    padding: 15px; }
-  .content-grid.post-list h3 {
-    font-family: "velino_text_blackblack", serif;
-    font-size: 18px;
-    text-transform: uppercase;
-    font-weight: 900;
-    padding-top: 1em;
-    margin: -4px 0; }
+    margin: 0.3em;
+    /* see responsive section for widths*/ }
+    .content-grid.cover article.cover-recommend.col-sm-4, .content-grid.cover article.cover-headline.col-sm-4 {
+      width: calc(33% - 0.6em); }
+  .content-grid.cover article.cover-headline {
+    max-height: 110px;
+    min-height: 110px; }
+  .content-grid.thumbnails article {
+    padding: 10px 5px; }
+    .content-grid.thumbnails article.col-sm-4:nth-child(3n+1) {
+      padding-left: 0;
+      padding-right: 10px;
+      clear: both; }
+    .content-grid.thumbnails article.col-sm-4:nth-child(3n) {
+      padding-left: 10px;
+      padding-right: 0; }
+  .content-grid.videos {
+    padding: 0;
+    /*section removed?
+    article:nth-child(odd) { padding: 9px 30px 9px 0;}
+    article:nth-child(even){ padding: 9px 0 5px 30px;}*/ }
+  .content-grid.post-list {
+    padding-top: 0.5em;
+    margin: -15px; }
+    .content-grid.post-list article {
+      padding: 0;
+      margin: 15px; }
+      .content-grid.post-list article img {
+        width: 100%; }
+    .content-grid.post-list p, .content-grid.post-list h1, .content-grid.post-list h2, .content-grid.post-list h3, .content-grid.post-list h4 {
+      padding: 15px; }
+    .content-grid.post-list .col-sm-4 {
+      width: calc(30% - 15px);
+      /*auto calc */
+    /*section removed?
+    article, .title-block.red { margin-left:1em; margin-right:0;}
+    }
+  .col-sm-4:first-child{ width:$width-leftbar;
+    article,.title-block.red { margin-left: 0;} */ }
+    .content-grid.post-list .post-summary {
+      padding-top: 5px; }
+      .content-grid.post-list .post-summary article {
+        background: #d7d7d7; }
+    .content-grid.post-list p {
+      font-family: "velino_text_thinthin", serif;
+      font-size: 12px;
+      padding: 15px; }
+    .content-grid.post-list h3 {
+      font-family: "velino_text_blackblack", serif;
+      font-size: 18px;
+      text-transform: uppercase;
+      font-weight: 900;
+      padding-top: 1em;
+      margin: -4px 0; }
 
 /* Sidebar and right content styles */
-#CS-page section section {
+#CS-page .content-sidebars section {
   clear: none; }
 
+/*/this is causing text overlay none clears why is it here -- for magazine layout rather */
 .content-sidebars {
   border-top: 2px #ffffff solid;
   color: #000000; }
   .content-sidebars aside {
     padding: 0; }
+    .content-sidebars aside .breadcrumb .btn, .content-sidebars aside .breadcrumb a {
+      width: 100%; }
+    .content-sidebars aside .breadcrumb .btn {
+      text-align: left;
+      padding: 1em 4em; }
   .content-sidebars section {
     background: #ffffff;
     padding: 0; }
@@ -498,9 +495,6 @@ p {
 .zebra article:nth-child(odd) {
   background: #f9f9f9; }
 
-.zebra.bee article:nth-child(odd) {
-  background: #ffff00; }
-
 /* Extras side menu */
 nav.sub-menu ul li {
   margin: 15px 0;
@@ -521,24 +515,23 @@ nav.sub-menu ul li {
   nav.sub-menu ul li a:hover {
     background: none; }
 
-/*magazine headers ?? gutter for thumbnailvs cover??*/
-.magazine.col-sm-9 {
-  width: 70.8%; }
-.magazine .breadcrumbs {
-  margin-bottom: -10px;
-  position: absolute; }
-.magazine .issue {
-  top: 0;
-  position: absolute;
-  min-width: 165px;
-  border-left: 1px solid #ffffff;
-  border-bottom: 0; }
-.magazine .showcase {
-  margin: 0 15px; }
-.magazine .intro {
-  font-size: 16px;
-  font-family: "velino_text_blackitalic", serif;
-  font-weight: 900; }
+/*magazine headers (this means there is a sidebar on the page)*/
+.magazine {
+  /*style inside magazine layout = rightside*/ }
+  .magazine.col-sm-9 {
+    width: 70.8%; }
+  .magazine .issue {
+    top: 0;
+    position: absolute;
+    min-width: 165px;
+    border-left: 1px solid #ffffff;
+    border-bottom: 0; }
+  .magazine .showcase {
+    margin: 0 15px; }
+  .magazine .intro {
+    font-size: 16px;
+    font-family: "velino_text_blackitalic", serif;
+    font-weight: 900; }
 
 /*cover articles with overlays and showcase headers */
 .title-header {
@@ -593,23 +586,26 @@ nav.sub-menu ul li {
 
 /*for overlay on magazine layout*/
 .showcase .title-header-overlay {
-  width: 100%; }
+  width: 100%;
+  bottom: 0; }
 
 /*for overlay on showcase layout*/
 /* Footer styles */
-footer .fullwide {
-  background: #2C2D2C;
-  padding: 15px; }
-footer .footer-narrow {
-  max-width: 980px; }
-footer .footer-logo a {
-  font-family: "Raleway", sans-serif;
-  text-transform: uppercase;
-  font-size: 24px;
-  font-weight: 800;
-  color: #b7b7b7;
-  letter-spacing: 0.072em;
-  text-decoration: none; }
+footer {
+  background: #222222; }
+  footer .fullwide {
+    background: #2C2D2C;
+    padding: 15px; }
+  footer .footer-narrow {
+    max-width: 980px; }
+  footer .footer-logo a {
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 800;
+    color: #b7b7b7;
+    letter-spacing: 0.072em;
+    text-decoration: none; }
 
 .footer-text {
   clear: both;
