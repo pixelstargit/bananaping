@@ -161,26 +161,30 @@ p {
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 0 3em;
+  padding: 0 2px;
   margin-left: 0;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(161, 161, 161, 0.46);
   text-shadow: none;
   text-align: left; }
   .showcase .carousel-caption h2 {
-    color: #ff0000;
-    font-family: "din_alternatebold", sans-serif;
-    font-weight: 400;
+    color: #ffffff;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 10px;
-    margin-top: 1em;
-    margin-bottom: 0.5em; }
+    font-size: 12px;
+    margin-top: 15px;
+    margin-bottom: 0;
+    padding-bottom: 4px; }
   .showcase .carousel-caption h3, .showcase .carousel-caption h3 a {
-    color: #222222;
+    color: #ffffff;
+    font-size: 29px;
     text-decoration: none;
     text-transform: uppercase;
     margin-top: 0;
-    padding-bottom: 0.3em; }
+    padding-bottom: 20px;
+    padding-top: 0;
+    letter-spacing: 0.1em; }
 
 .content-showcase img {
   padding-bottom: 10px; }
@@ -215,7 +219,9 @@ p {
   .content-text p, .content-grid p {
     font-family: "Stag Light", serif;
     font-size: 14px;
-    color: #000000; }
+    color: #000000;
+    letter-spacing: 0.075em;
+    text-shadow: #000 0px 0px 0px; }
   .content-text .person, .content-grid .person {
     color: #ff8a8a;
     font-weight: normal; }
@@ -227,7 +233,7 @@ p {
   padding: 0.3em 0; }
 
 .content-text.breadcrumbs {
-  /*same as btn breadcrumbs and title-block but divided into 4 subnav*/
+  /*same as btn breadcrumbs and title-block but divided into 4 subnav - actually now they are smaller font size and bold - Hannah to check style is applying correctly on other pages*/
   width: 100%;
   padding-top: 0.3em; }
   .content-text.breadcrumbs article {
@@ -508,6 +514,8 @@ nav.sub-menu ul li {
     font-size: 12px;
     text-transform: uppercase;
     font-family: "Raleway", sans-serif; }
+    nav.sub-menu ul li h4.white {
+      color: #ffffff; }
   nav.sub-menu ul li a {
     padding: 1em 4em;
     color: #707070;
@@ -556,7 +564,7 @@ nav.sub-menu ul li {
       font-size: 60px;
       letter-spacing: 0.075em; }
     .title-header .title-header-overlay .tag {
-      background: rgba(235, 33, 46, 0.68);
+      background: rgba(235, 33, 46, 0.48);
       font-family: "Raleway", sans-serif;
       font-size: 14px;
       font-weight: 600;
@@ -567,17 +575,21 @@ nav.sub-menu ul li {
       margin: 0 auto;
       max-width: 20%;
       min-width: 150px; }
+      .title-header .title-header-overlay .tag.long {
+        max-width: 40%; }
     .title-header .title-header-overlay p {
-      margin: -3px 0 0;
+      margin: 0;
       padding: 0;
       font-family: "Raleway", sans-serif;
       font-size: 12px;
       font-weight: 500;
       letter-spacing: 0.075em; }
   .title-header .vert-center {
-    top: 50%;
-    transform: translate(0, -50%);
-    margin-top: 28px; }
+    transform: translate(0, -100%); }
+  .title-header .vert-red {
+    transform: translate(0, -100%);
+    background: rgba(235, 33, 46, 0.48);
+    margin-bottom: 40px; }
 
 .magazine .title-header-overlay {
   width: 100%;
@@ -591,6 +603,15 @@ nav.sub-menu ul li {
   bottom: 0; }
 
 /*for overlay on showcase layout*/
+.masonry .title-header-overlay {
+  width: calc(100% - (2 * 0.3em));
+  bottom: 0.3em;
+  /*for project overlay on masonry layout*/ }
+  .masonry .title-header-overlay p {
+    color: #ffffff; }
+  .masonry .title-header-overlay .title {
+    font-size: 36px; }
+
 /* Footer styles */
 footer {
   background: #222222; }
