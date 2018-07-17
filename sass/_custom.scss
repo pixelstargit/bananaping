@@ -130,7 +130,6 @@ p {clear: both;} /* font-weight: 600;*/
 }
 .carousel-inner > .item > img, .carousel-inner > .item > a > img { width: 100%;}
 .caption {font-size:0.8em!important; background: $color-white;}
-.grey{ background: $color-grey-light; padding: 1em 1em 1em 3em; font-family: $font-velino-thin;}
 .gallery {padding-top: $gutter-default;padding-bottom: $gutter-default;}
 
 
@@ -152,6 +151,7 @@ p {clear: both;} /* font-weight: 600;*/
   article{ float: left; width:25%; }
   .btn { min-width: 100%; background: $color-grey-dark; border-color:$color-white;
   &.current{background: $color-red;}
+  a {font-size: 11px; font-weight: 700;}
    }
 }
 
@@ -169,6 +169,9 @@ p {clear: both;} /* font-weight: 600;*/
     }
   &.orange{ background: $color-red; margin: 80px auto; }
   &::after{clear: both;}
+  &.count{
+    h2,a {padding:2px, 10px;}
+  }
 }
 .title-red {background: $color-red;}
 .btn{
@@ -294,7 +297,7 @@ p {clear: both;} /* font-weight: 600;*/
   p, hr, h1, h2, h3, h4{ padding:$gutter-wide $gutter-default; margin:0;}
 
   color: $color-black;
-  p {font-family: $font-stag-body; font-size: $font-size-default; letter-spacing: $letter-normal; }
+  p {font-family: $font-stag-body; font-size: $font-size-default; letter-spacing: $letter-normal; text-shadow: #000 0px 0px 0px;}
   h3{font-family: $font-raleway; font-size: $font-size-big; text-transform: uppercase; font-style: italic;}
 }
 .side-summary, .post-summary {
@@ -535,7 +538,6 @@ footer{
     h2 {font-size: 0.7em;}
     h3 {font-size: 1em;}
   }
-  .grey{padding:1em;}
   .footer-alt input, .footer-alt input[type="submit"]{width:100%; margin-left:0;}
   .content-login .login-box { padding: 1em ;}
   .content-grid.post-list .col-sm-4 article, .content-grid.post-list .col-sm-4 .title-block.red {

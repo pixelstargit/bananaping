@@ -202,11 +202,6 @@ p {
   font-size: 0.8em !important;
   background: #ffffff; }
 
-.grey {
-  background: #d7d7d7;
-  padding: 1em 1em 1em 3em;
-  font-family: "velino_text_thinthin", serif; }
-
 .gallery {
   padding-top: 15px;
   padding-bottom: 15px; }
@@ -244,6 +239,9 @@ p {
     border-color: #ffffff; }
     .content-text.breadcrumbs .btn.current {
       background: #ff0000; }
+    .content-text.breadcrumbs .btn a {
+      font-size: 11px;
+      font-weight: 700; }
 
 /*Buttons & Breadcrumbs - sold and buy*/
 .title-block {
@@ -264,6 +262,8 @@ p {
     margin: 80px auto; }
   .title-block::after {
     clear: both; }
+  .title-block.count h2, .title-block.count a {
+    padding: 2px, 10px; }
 
 .title-red {
   background: #ff0000; }
@@ -450,7 +450,8 @@ p {
   .content-sidebars p {
     font-family: "Stag Light", serif;
     font-size: 14px;
-    letter-spacing: 0.075em; }
+    letter-spacing: 0.075em;
+    text-shadow: #000 0px 0px 0px; }
   .content-sidebars h3 {
     font-family: "Raleway", sans-serif;
     font-size: 18px;
@@ -792,9 +793,6 @@ footer {
       font-size: 0.7em; }
     .showcase .carousel-caption h3 {
       font-size: 1em; }
-
-  .grey {
-    padding: 1em; }
 
   .footer-alt input, .footer-alt input[type="submit"] {
     width: 100%;
