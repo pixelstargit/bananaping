@@ -39,8 +39,9 @@ h1, h2, h3 {
   font-weight: 900; }
 
 b, strong {
-  font-family: "velino_text_blackblack", serif;
-  font-weight: 900; }
+  font-family: "Stag Bold", serif;
+  font-weight: 900;
+  text-shadow: none; }
 
 p {
   clear: both; }
@@ -350,87 +351,91 @@ p {
   .cover-recommend.sunny, .cover-headline.sunny {
     background: #fff99d; }
 
-.content-grid {
-  /*margin-left: -$gutter-thin;  margin-right: -0.4em = home;   fixes for main placement of outer grid --override individual pages rater*/ }
+.content-grid.breadcrumbs {
+  margin-left: -0.3em;
+  margin-right: -0.3em; }
   .content-grid.breadcrumbs article {
     /*breadcrumbs section to take grid styles*/
     padding: 0.6em 0.3em 0.3em;
     margin: 0; }
-  .content-grid.cover {
-    /*defaults */ }
-    .content-grid.cover article {
-      padding: 0.3em;
-      margin: 0; }
-      .content-grid.cover article img {
-        width: 100%; }
-      .content-grid.cover article .btn {
-        /*btn for sold / buy*/
-        position: absolute;
-        right: 0.4em;
-        top: 50%; }
-        .content-grid.cover article .btn a {
-          font-size: 11px;
-          padding: 1em; }
-  .content-grid.cover article.cover-recommend, .content-grid.cover article.cover-headline {
-    max-height: 398px;
-    min-height: 398px;
-    overflow: hidden;
-    clear: right;
+.content-grid.cover {
+  /*defaults */
+  margin-left: -0.3em;
+  margin-right: -0.3em;
+  /* fixes for main placement of outer grid --cover*/ }
+  .content-grid.cover article {
+    padding: 0.3em;
+    margin: 0; }
+    .content-grid.cover article img {
+      width: 100%; }
+    .content-grid.cover article .btn {
+      /*btn for sold / buy*/
+      position: absolute;
+      right: 0.4em;
+      top: 50%; }
+      .content-grid.cover article .btn a {
+        font-size: 11px;
+        padding: 1em; }
+.content-grid.cover article.cover-recommend, .content-grid.cover article.cover-headline {
+  max-height: 398px;
+  min-height: 398px;
+  overflow: hidden;
+  clear: right;
+  padding: 0;
+  margin: 0.3em;
+  /* see responsive section for widths*/ }
+  .content-grid.cover article.cover-recommend.col-sm-4, .content-grid.cover article.cover-headline.col-sm-4 {
+    width: calc(33.3% - 0.6em); }
+.content-grid.cover article.cover-headline {
+  max-height: 110px;
+  min-height: 110px; }
+.content-grid.thumbnails article {
+  padding: 10px 5px; }
+  .content-grid.thumbnails article.col-sm-4:nth-child(3n+1) {
+    padding-left: 0;
+    padding-right: 10px;
+    clear: both; }
+  .content-grid.thumbnails article.col-sm-4:nth-child(3n) {
+    padding-left: 10px;
+    padding-right: 0; }
+.content-grid.videos {
+  padding: 0;
+  /*section removed?
+  article:nth-child(odd) { padding: 9px 30px 9px 0;}
+  article:nth-child(even){ padding: 9px 0 5px 30px;}*/ }
+.content-grid.post-list {
+  padding-top: 0.5em;
+  margin: -15px; }
+  .content-grid.post-list article {
     padding: 0;
-    margin: 0.3em;
-    /* see responsive section for widths*/ }
-    .content-grid.cover article.cover-recommend.col-sm-4, .content-grid.cover article.cover-headline.col-sm-4 {
-      width: calc(33% - 0.6em); }
-  .content-grid.cover article.cover-headline {
-    max-height: 110px;
-    min-height: 110px; }
-  .content-grid.thumbnails article {
-    padding: 10px 5px; }
-    .content-grid.thumbnails article.col-sm-4:nth-child(3n+1) {
-      padding-left: 0;
-      padding-right: 10px;
-      clear: both; }
-    .content-grid.thumbnails article.col-sm-4:nth-child(3n) {
-      padding-left: 10px;
-      padding-right: 0; }
-  .content-grid.videos {
-    padding: 0;
-    /*section removed?
-    article:nth-child(odd) { padding: 9px 30px 9px 0;}
-    article:nth-child(even){ padding: 9px 0 5px 30px;}*/ }
-  .content-grid.post-list {
-    padding-top: 0.5em;
-    margin: -15px; }
-    .content-grid.post-list article {
-      padding: 0;
-      margin: 15px; }
-      .content-grid.post-list article img {
-        width: 100%; }
-    .content-grid.post-list p, .content-grid.post-list h1, .content-grid.post-list h2, .content-grid.post-list h3, .content-grid.post-list h4 {
-      padding: 15px; }
-    .content-grid.post-list .col-sm-4 {
-      width: calc(30% - 15px);
-      /*auto calc */
-    /*section removed?
-    article, .title-block.red { margin-left:1em; margin-right:0;}
-    }
-  .col-sm-4:first-child{ width:$width-leftbar;
-    article,.title-block.red { margin-left: 0;} */ }
-    .content-grid.post-list .post-summary {
-      padding-top: 5px; }
-      .content-grid.post-list .post-summary article {
-        background: #d7d7d7; }
-    .content-grid.post-list p {
-      font-family: "velino_text_thinthin", serif;
-      font-size: 12px;
-      padding: 15px; }
-    .content-grid.post-list h3 {
-      font-family: "velino_text_blackblack", serif;
-      font-size: 18px;
-      text-transform: uppercase;
-      font-weight: 900;
-      padding-top: 1em;
-      margin: -4px 0; }
+    margin: 15px; }
+    .content-grid.post-list article img {
+      width: 100%; }
+  .content-grid.post-list p, .content-grid.post-list h1, .content-grid.post-list h2, .content-grid.post-list h3, .content-grid.post-list h4 {
+    padding: 15px; }
+  .content-grid.post-list .col-sm-4 {
+    width: calc(30% - 15px);
+    /*auto calc */
+  /*section removed?
+  article, .title-block.red { margin-left:1em; margin-right:0;}
+  }
+.col-sm-4:first-child{ width:$width-leftbar;
+  article,.title-block.red { margin-left: 0;} */ }
+  .content-grid.post-list .post-summary {
+    padding-top: 5px; }
+    .content-grid.post-list .post-summary article {
+      background: #d7d7d7; }
+  .content-grid.post-list p {
+    font-family: "velino_text_thinthin", serif;
+    font-size: 12px;
+    padding: 15px; }
+  .content-grid.post-list h3 {
+    font-family: "velino_text_blackblack", serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding-top: 1em;
+    margin: -4px 0; }
 
 /* Sidebar and right content styles */
 #CS-page .content-sidebars section {
@@ -456,13 +461,28 @@ p {
   .content-sidebars p {
     font-family: "Stag Light", serif;
     font-size: 14px;
-    letter-spacing: 0.075em;
+    letter-spacing: 0.14em;
+    line-height: 1.32;
     text-shadow: #000 0px 0px 0px; }
   .content-sidebars h3 {
     font-family: "Raleway", sans-serif;
     font-size: 18px;
     text-transform: uppercase;
     font-style: italic; }
+  .content-sidebars h4.date {
+    font-family: "Raleway", sans-serif;
+    color: #f1666f;
+    font-weight: 900;
+    font-size: 15px;
+    letter-spacing: 0.055em;
+    padding-top: 25px; }
+    .content-sidebars h4.date .author {
+      text-transform: uppercase; }
+  .content-sidebars article h2 {
+    font-family: "Stag Bold", serif;
+    font-size: 15px;
+    letter-spacing: 0.1em;
+    padding-bottom: 12px; }
 
 .side-summary, .post-summary {
   background: #efefef; }
@@ -474,7 +494,8 @@ p {
     line-height: 1.5em;
     font-size: 12px;
     padding-top: 5px;
-    text-shadow: #000 0px 0px 0px; }
+    text-shadow: #000 0px 0px 0px;
+    letter-spacing: 0.075em; }
   .side-summary .selected, .post-summary .selected {
     background: #fb3434 !important;
     color: #ffffff; }
@@ -544,7 +565,7 @@ nav.sub-menu ul li {
 
 /*cover articles with overlays and showcase headers */
 .title-header {
-  border-left: 1px solid #ffffff; }
+  /*border-left: 1px solid $color-white; dont know what this border is for*/ }
   .title-header img {
     width: 100%;
     border-left: 1px solid #ffffff; }
@@ -555,7 +576,8 @@ nav.sub-menu ul li {
     padding: 24px 0 30px;
     background-color: rgba(161, 161, 161, 0.46);
     text-align: center;
-    color: #ffffff; }
+    color: #ffffff;
+    font-style: italic; }
     .title-header .title-header-overlay .title {
       padding: 4px 0 0 0;
       margin: 0;
@@ -569,6 +591,7 @@ nav.sub-menu ul li {
       font-size: 14px;
       font-weight: 600;
       text-transform: uppercase;
+      font-style: normal;
       letter-spacing: 0.2em;
       padding: 0.4em;
       display: block;
@@ -581,15 +604,18 @@ nav.sub-menu ul li {
       margin: 0;
       padding: 0;
       font-family: "Raleway", sans-serif;
+      font-style: normal;
       font-size: 12px;
       font-weight: 500;
       letter-spacing: 0.075em; }
   .title-header .vert-center {
-    transform: translate(0, -100%); }
+    transform: translate(0, -100%);
+    font-style: normal; }
   .title-header .vert-red {
     transform: translate(0, -100%);
     background: rgba(235, 33, 46, 0.48);
-    margin-bottom: 40px; }
+    margin-bottom: 40px;
+    font-style: normal; }
 
 .magazine .title-header-overlay {
   width: 100%;
@@ -609,8 +635,10 @@ nav.sub-menu ul li {
   /*for project overlay on masonry layout*/ }
   .masonry .title-header-overlay p {
     color: #ffffff; }
-  .masonry .title-header-overlay .title {
+  .masonry .title-header-overlay h1.title {
     font-size: 36px; }
+  .masonry .title-header-overlay h2.title {
+    font-size: 24px; }
 
 /* Footer styles */
 footer {

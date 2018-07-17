@@ -24,7 +24,7 @@
 /* text resets */
 .btn, .title-block h2 {letter-spacing: $letter-normal; font-weight: 600;}
 h1, h2, h3 {letter-spacing: $letter-normal;  font-weight: 900;}
-b, strong { font-family: $font-velino-text; font-weight: 900;}
+b, strong {font-family: $font-stag-bold; font-weight: 900; text-shadow: none;}
 p {clear: both;} /* font-weight: 600;*/
 
 /*Navbar*/
@@ -216,11 +216,14 @@ p {clear: both;} /* font-weight: 600;*/
         &.sunny {background: $color-sunny;}
 }
 .content-grid {
-  /*margin-left: -$gutter-thin;  margin-right: -0.4em = home;   fixes for main placement of outer grid --override individual pages rater*/
-  &.breadcrumbs article { /*breadcrumbs section to take grid styles*/
-      padding:0.6em $gutter-thin $gutter-thin;  margin: 0;
+  &.breadcrumbs {
+    margin-left: -$gutter-thin;  margin-right: -$gutter-thin;
+    article { /*breadcrumbs section to take grid styles*/
+    padding:0.6em $gutter-thin $gutter-thin;  margin: 0;
     }
-  &.cover{ /*defaults */
+  }
+&.cover{ /*defaults */
+    margin-left: -$gutter-thin;  margin-right: -$gutter-thin; /* fixes for main placement of outer grid --cover*/
     article {
       padding:$gutter-thin;  margin: 0;
       img {width:100%; }
@@ -235,7 +238,7 @@ p {clear: both;} /* font-weight: 600;*/
       max-height: 398px; min-height: 398px; overflow: hidden; clear: right;
       padding: 0;
       margin: $gutter-thin;
-      &.col-sm-4 {width: calc(33% - 0.6em);}
+      &.col-sm-4 {width: calc(33.3% - 0.6em);}
       /* see responsive section for widths*/
     }
     &.cover-headline{
@@ -297,13 +300,17 @@ p {clear: both;} /* font-weight: 600;*/
   p, hr, h1, h2, h3, h4{ padding:$gutter-wide $gutter-default; margin:0;}
 
   color: $color-black;
-  p {font-family: $font-stag-body; font-size: $font-size-default; letter-spacing: $letter-normal; text-shadow: #000 0px 0px 0px;}
+  p {font-family: $font-stag-body; font-size: $font-size-default; letter-spacing: 0.14em; line-height: 1.32; text-shadow: #000 0px 0px 0px;}
   h3{font-family: $font-raleway; font-size: $font-size-big; text-transform: uppercase; font-style: italic;}
-}
+  h4.date {font-family: $font-raleway; color: #f1666f; font-weight: 900; font-size: 15px; letter-spacing: 0.055em; padding-top: 25px;
+      .author{text-transform: uppercase;}
+    }
+  article h2 {font-family: $font-stag-bold; font-size: 15px; letter-spacing: 0.1em; padding-bottom: 12px;}
+  }
 .side-summary, .post-summary {
   background:#efefef;
   h3{padding: $gutter-default; padding-bottom:0;}
-  p {padding: $gutter-default; line-height: 1.5em; font-size: $font-size-small; padding-top:5px; text-shadow: #000 0px 0px 0px;}
+  p {padding: $gutter-default; line-height: 1.5em; font-size: $font-size-small; padding-top:5px; text-shadow: #000 0px 0px 0px; letter-spacing: $letter-normal;}
   .selected{background: $color-crimson!important; color: $color-white;
     p {text-shadow: #fff 0px 0px 0px;}
     }
@@ -360,7 +367,7 @@ nav.sub-menu{
 }
 
 /*cover articles with overlays and showcase headers */
-.title-header { border-left: 1px solid $color-white;
+.title-header { /*border-left: 1px solid $color-white; dont know what this border is for*/
   img {width: 100%; border-left: 1px solid $color-white;}
   .title-header-overlay {
     position: absolute;
@@ -369,6 +376,7 @@ nav.sub-menu{
     background-color: $overlay-grey;
     text-align: center;
     color: $color-white;
+    font-style: italic;
     .title{
       padding: 4px 0 0 0; margin: 0;
       font-family: $font-raleway; text-transform: uppercase;
@@ -378,7 +386,7 @@ nav.sub-menu{
     .tag{
       background: $overlay-red;
       font-family: $font-raleway; font-size: 14px; font-weight: 600;
-      text-transform: uppercase;
+      text-transform: uppercase; font-style: normal;
       letter-spacing: 0.2em;
       padding: 0.4em;
       display: block; margin: 0 auto; max-width: 20%; min-width: 150px;
@@ -386,7 +394,7 @@ nav.sub-menu{
       }
     p{
       margin: 0; padding: 0;
-      font-family: $font-raleway;
+      font-family: $font-raleway; font-style: normal;
       font-size: 12px;
       font-weight: 500;
       letter-spacing: 0.075em;
@@ -394,18 +402,21 @@ nav.sub-menu{
     }
     .vert-center {
       transform: translate(0, -100%);
+      font-style: normal;
     }
     .vert-red{
       transform: translate(0, -100%);
       background: $overlay-red;
       margin-bottom:40px;
+      font-style: normal;
     }
 }
 .magazine .title-header-overlay { width: 100%; bottom: 0; .title{font-size:46px;}} /*for overlay on magazine layout*/
 .showcase .title-header-overlay { width: 100%; bottom: 0;} /*for overlay on showcase layout*/
 .masonry .title-header-overlay{  width: calc(100% - (2 * #{$gutter-thin})); bottom: $gutter-thin; /*for project overlay on masonry layout*/
         p {color: $color-white;}
-        .title{ font-size: 36px;}
+        h1.title{ font-size: 36px;}
+        h2.title{font-size: 24px;}
 }
 
 /* Footer styles */
