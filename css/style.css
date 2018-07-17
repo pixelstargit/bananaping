@@ -455,9 +455,13 @@ p {
   .content-sidebars section {
     background: #ffffff;
     padding: 0; }
-  .content-sidebars p, .content-sidebars hr, .content-sidebars h1, .content-sidebars h2, .content-sidebars h3, .content-sidebars h4 {
+  .content-sidebars p, .content-sidebars h1, .content-sidebars h2, .content-sidebars h3, .content-sidebars h4 {
     padding: 0.5em 15px;
     margin: 0; }
+  .content-sidebars hr {
+    padding: 0;
+    margin-bottom: 15px;
+    margin-top: 10px; }
   .content-sidebars p {
     font-family: "Stag Light", serif;
     font-size: 14px;
