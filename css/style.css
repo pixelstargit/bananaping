@@ -213,7 +213,7 @@ p {
 
 /*Page Text Styles */
 .content-text, .content-grid {
-  font-family: "velino_text_thinthin", serif; }
+  font-family: "Stag Light", serif; }
   .content-text p, .content-text hr, .content-text h1, .content-text h2, .content-text h3, .content-text h4, .content-text ul, .content-grid p, .content-grid hr, .content-grid h1, .content-grid h2, .content-grid h3, .content-grid h4, .content-grid ul {
     padding: 12px 0;
     margin: 0.5em 0; }
@@ -426,11 +426,11 @@ p {
     .content-grid.post-list .post-summary article {
       background: #d7d7d7; }
   .content-grid.post-list p {
-    font-family: "velino_text_thinthin", serif;
+    font-family: "Stag Light", serif;
     font-size: 12px;
     padding: 15px; }
   .content-grid.post-list h3 {
-    font-family: "velino_text_blackblack", serif;
+    font-family: "Stag Light", serif;
     font-size: 18px;
     text-transform: uppercase;
     font-weight: 900;
@@ -564,7 +564,7 @@ nav.sub-menu ul li {
     margin: 0 15px; }
   .magazine .intro {
     font-size: 16px;
-    font-family: "velino_text_blackitalic", serif;
+    font-family: "Stag Light", serif;
     font-weight: 900; }
 
 /*cover articles with overlays and showcase headers */
@@ -663,7 +663,7 @@ footer {
 
 .footer-text {
   clear: both;
-  font-family: "velino_text_thinthin", serif; }
+  font-family: "Stag Light", serif; }
   .footer-text hr {
     border-top: 1px solid #444444;
     margin-top: 15px;
@@ -742,11 +742,11 @@ footer {
     .content-login .login-box h1 {
       font-size: 24px;
       color: #ff0000;
-      font-family: "velino_text_blackitalic", serif;
+      font-family: "Raleway", sans-serif;
       font-weight: 900; }
     .content-login .login-box h2 {
       font-size: 18px;
-      font-family: "velino_text_blackitalic", serif;
+      font-family: "Raleway", sans-serif;
       font-weight: 900; }
     .content-login .login-box input {
       background: #b7b7b7;

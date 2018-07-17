@@ -136,7 +136,7 @@ p {clear: both;} /* font-weight: 600;*/
 
 /*Page Text Styles */
 .content-text, .content-grid{
-  font-family: $font-velino-thin;
+  font-family: $font-stag-body;
   p, hr, h1, h2, h3, h4, ul { padding:12px 0; margin: $gutter-wide 0;}
   p {font-family: $font-stag-body; font-size: $font-size-default; color:$color-black; letter-spacing: $letter-normal; text-shadow: #000 0px 0px 0px;}
   .person  {
@@ -277,9 +277,9 @@ p {clear: both;} /* font-weight: 600;*/
       padding-top:5px;
       article {background: $color-grey-light; }
     }
-    p {font-family: $font-velino-thin; font-size: $font-size-small; padding: $gutter-default;}
+    p {font-family: $font-stag-body; font-size: $font-size-small; padding: $gutter-default;}
     h3{
-      font-family: $font-velino-text; font-size: $font-size-big; text-transform: uppercase;
+      font-family: $font-stag-body; font-size: $font-size-big; text-transform: uppercase;
       font-weight: 900; padding-top: 1em;
       margin: -4px 0;
     }
@@ -364,7 +364,7 @@ nav.sub-menu{
   &.col-sm-9 { width:$width-rightbar;}
   .issue {top:0;position: absolute; min-width:165px;border-left:1px solid $color-white; border-bottom: 0;}
   .showcase{    margin:0 $gutter-default;    } /*style inside magazine layout = rightside*/
-  .intro {font-size: $font-size-base; font-family: $font-velino-textitalic;  font-weight: 900;}
+  .intro {font-size: $font-size-base; font-family: $font-stag-body;  font-weight: 900;}
 }
 
 /*cover articles with overlays and showcase headers */
@@ -444,7 +444,7 @@ footer{
 }
 .footer-text{
   clear: both;
-  font-family: $font-velino-thin;
+  font-family: $font-stag-body;
   hr { border-top: 1px solid #444444; margin-top:15px; margin-bottom:10px; }
   p { text-align: center; padding-bottom: 2em;}
 }
@@ -496,8 +496,8 @@ footer{
     padding: 3em 6em; margin: 0 auto; max-width: 650px;
     background-color: rgba(255,255,255,0.7);
     .logo {max-width:300px; margin: 0 auto;}
-    h1 {font-size: 24px;color: $color-red; font-family: $font-velino-textitalic; font-weight: 900;}
-    h2 {font-size: 18px; font-family: $font-velino-textitalic;  font-weight: 900; }
+    h1 {font-size: 24px;color: $color-red; font-family: $font-raleway; font-weight: 900;}
+    h2 {font-size: 18px; font-family: $font-raleway;  font-weight: 900; }
     input {
       background: $color-grey-medium; border:0;  border-radius: 0;
       margin: 3px 2%; padding: 10px 10px;
