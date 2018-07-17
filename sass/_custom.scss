@@ -109,16 +109,16 @@ p {clear: both;} /* font-weight: 600;*/
   }
   .carousel-caption{
     left:0; right: 0; bottom: 0;
-    padding: 0 3em;
+    padding: 0 1px;
     margin-left: 0;
-    background-color: $overlay-white;
+    background-color: $overlay-grey;
     text-shadow: none;
     text-align: left;
-    h2{ color: $color-red; font-family: $font-din; font-weight: 400;
+    h2{ color: $color-white; font-family: $font-raleway; font-weight: 700;
       text-decoration: none; text-transform: uppercase;
-      font-size: $font-size-tiny; margin-top: 1em; margin-bottom: 0.5em;}
-    h3, h3 a{ color: $color-grey-heavy;
-      text-decoration: none; text-transform: uppercase; margin-top: 0;padding-bottom: 0.3em;}
+      font-size: $font-size-small; margin-top: 15px; margin-bottom: 0.5em;}
+    h3, h3 a{ color: $color-white; font-size: 29px;
+      text-decoration: none; text-transform: uppercase; margin-top: 0;padding-bottom: 0.3em;padding-top: 0;}
   }
 }
 .content-showcase img{ padding-bottom: 10px;}
@@ -138,7 +138,7 @@ p {clear: both;} /* font-weight: 600;*/
 .content-text, .content-grid{
   font-family: $font-velino-thin;
   p, hr, h1, h2, h3, h4, ul { padding:12px 0; margin: $gutter-wide 0;}
-  p {font-family: $font-stag-body; font-size: $font-size-default; color:$color-black; }
+  p {font-family: $font-stag-body; font-size: $font-size-default; color:$color-black; letter-spacing: $letter-normal; text-shadow: #000 0px 0px 0px;}
   .person  {
     color: $color-pink;
     font-weight: normal;
@@ -146,7 +146,7 @@ p {clear: both;} /* font-weight: 600;*/
    }
 }
 .content-small p {font-size:13px; padding: 0.3em 0;}
-.content-text.breadcrumbs{ /*same as btn breadcrumbs and title-block but divided into 4 subnav*/
+.content-text.breadcrumbs{ /*same as btn breadcrumbs and title-block but divided into 4 subnav - actually now they are smaller font size and bold - Hannah to check style is applying correctly on other pages*/
   width:100%; padding-top: $gutter-thin;
   article{ float: left; width:25%; }
   .btn { min-width: 100%; background: $color-grey-dark; border-color:$color-white;
@@ -338,6 +338,7 @@ nav.sub-menu{
         font-size: $font-size-small;
         text-transform: uppercase;
         font-family: $font-raleway;
+      &.white{color:$color-white;}
       }
       a {
         padding: 1em 4em;
@@ -391,14 +392,17 @@ nav.sub-menu{
       }
     }
     .vert-center {
-      top: 50%;
-      transform: translate(0, -50%);
-      margin-top:28px;
+      transform: translate(0, -100%);
+    }
+    .vert-red{
+      transform: translate(0, -100%);
+      background: $overlay-red;
+      margin-bottom:40px;
     }
 }
 .magazine .title-header-overlay { width: 100%; bottom: 0; .title{font-size:46px;}} /*for overlay on magazine layout*/
 .showcase .title-header-overlay { width: 100%; bottom: 0;} /*for overlay on showcase layout*/
-
+.masonry .title-header-overlay{  width: calc(100% - (2 * #{$gutter-thin})); bottom: $gutter-thin;} /*for project overlay on masonry layout*/
 
 
 
