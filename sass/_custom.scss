@@ -109,16 +109,16 @@ p {clear: both;} /* font-weight: 600;*/
   }
   .carousel-caption{
     left:0; right: 0; bottom: 0;
-    padding: 0 1px;
+    padding: 0 2px;
     margin-left: 0;
     background-color: $overlay-grey;
     text-shadow: none;
     text-align: left;
     h2{ color: $color-white; font-family: $font-raleway; font-weight: 700;
       text-decoration: none; text-transform: uppercase;
-      font-size: $font-size-small; margin-top: 15px; margin-bottom: 0.5em;}
+      font-size: $font-size-small; margin-top: 15px; margin-bottom: 0; padding-bottom: 4px;}
     h3, h3 a{ color: $color-white; font-size: 29px;
-      text-decoration: none; text-transform: uppercase; margin-top: 0;padding-bottom: 0.3em;padding-top: 0;}
+      text-decoration: none; text-transform: uppercase; margin-top: 0; padding-bottom: 20px; padding-top: 0; letter-spacing: 0.1em;}
   }
 }
 .content-showcase img{ padding-bottom: 10px;}
@@ -382,9 +382,10 @@ nav.sub-menu{
       letter-spacing: 0.2em;
       padding: 0.4em;
       display: block; margin: 0 auto; max-width: 20%; min-width: 150px;
+      &.long{max-width:40%;}
       }
     p{
-      margin: -3px 0 0; padding: 0;
+      margin: 0; padding: 0;
       font-family: $font-raleway;
       font-size: 12px;
       font-weight: 500;
@@ -402,9 +403,10 @@ nav.sub-menu{
 }
 .magazine .title-header-overlay { width: 100%; bottom: 0; .title{font-size:46px;}} /*for overlay on magazine layout*/
 .showcase .title-header-overlay { width: 100%; bottom: 0;} /*for overlay on showcase layout*/
-.masonry .title-header-overlay{  width: calc(100% - (2 * #{$gutter-thin})); bottom: $gutter-thin;} /*for project overlay on masonry layout*/
-
-
+.masonry .title-header-overlay{  width: calc(100% - (2 * #{$gutter-thin})); bottom: $gutter-thin; /*for project overlay on masonry layout*/
+        p {color: $color-white;}
+        .title{ font-size: 36px;}
+}
 
 /* Footer styles */
 footer{
