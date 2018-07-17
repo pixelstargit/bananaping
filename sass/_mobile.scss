@@ -1,17 +1,51 @@
 /*Responsive breakpoints*/
-/*adjust max-breaking point vs nav text size*/
-
-
+#logo .small { display:none;}
+/*everything in custom is for desktop and larger*/
 
 @media only screen and (max-width:980px){
   #CS-page {margin:1px 10px;}
 }
 
+
 @media only screen and (max-width:767px){
-  /*body{background: #ff00ff;}*/
-  .nav-login, #CS-header nav ul li {margin:0 ;float:none; width:100% !important;}
-  #CS-header nav li li a{color: $color-white;}
-  #CS-header nav li{border-right: none;}
+/*Half columns for LANDSCAPE to tablets */
+
+body{ background: #ff00ff;}
+#logo {
+  background: #484D4F;
+  padding: 10px;
+  .large{ display:none;}
+  .small {display: block;}
+}
+
+#CS-header {
+  .img-responsive.small { margin:1px 80px 1px auto; }
+  .navbar { max-height:72px;}
+  nav {
+    background: transparent;
+    margin-top: -72px; height: 72px;
+   .navbar-toggle{
+     border: none; background: #34383B; border-radius: 0;
+     margin: 0;  width: 80px;  height: 72px;
+   }
+   .icon-bar {  width: 32px;  height: 4px;  border-radius: 0; margin: 4px auto;}
+  }
+  nav ul li {
+    border-right: none; margin:0 ;float:none; width:100% !important;
+    a{color: $color-white;}
+  }
+  .navbar .navbar-nav{
+    background: $color-grey-medium;
+    width: 50%; float: right;
+  }
+  .navbar-collapse{
+      overflow-x: hidden;
+  }
+}
+
+.nav-language{display: none;}
+
+  .nav-login{display: none; /*margin:0 ;float:none; width:100% !important;*/}
   .social-icons { max-width:400px; margin: 0 auto;}
   /*.magazine article:first-child .title-header {padding-top:54px; max-height:300px; }*/
   .content-grid.videos article { padding:5px 0 !important;}
@@ -30,6 +64,9 @@
   .content-grid.cover.mixed article.cover-recommend.col-xs-6 {width: calc(100% - 0.6em); min-height:initial; max-height: initial;
   img {display:none;}}
 }
+
+
+/*full width columns for PORTRAIT to phones*/
 @media only screen and (max-width:425px){
   .showcase .carousel-caption{right: 20%;}
   .post-list .col-sm-4, .side-menu.col-xs-12 {width:100%!important; }
@@ -48,6 +85,8 @@
     .content-grid.cover.mixed article.cover-recommend.col-xs-6 img {display: block;}
   .quote.col-xs-6{ width:100%;}
 }
+
+/*tiniest PORTRAIT to phones*/
 @media only screen and (max-width:375px){
   .col-xs-6 {width:100%;}
   .content-grid.thumbnails article{padding-left: 0!important; padding-right: 0!important;}
