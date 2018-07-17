@@ -39,8 +39,8 @@ h1, h2, h3 {
   font-weight: 900; }
 
 b, strong {
-  font-family: "Stag Bold", serif;
-  font-weight: 900;
+  font-family: "Stag Semibold", serif;
+  font-weight: 600;
   text-shadow: none; }
 
 p {
@@ -80,7 +80,7 @@ p {
   background: #898989; }
   #CS-header .nav-language li a, #CS-header .nav-login li a {
     min-height: 30px;
-    padding: 8px 15px;
+    padding: 8px 5px 8px 8px;
     font-size: 10px !important;
     letter-spacing: 0.12em !important; }
 #CS-header .nav-login {
@@ -188,7 +188,7 @@ p {
     letter-spacing: 0.1em; }
 
 .content-showcase img {
-  padding-bottom: 10px; }
+  padding-bottom: 21px; }
 
 .showcase.content-showcase img {
   padding-bottom: 0px; }
@@ -221,7 +221,9 @@ p {
     font-family: "Stag Light", serif;
     font-size: 14px;
     color: #000000;
-    letter-spacing: 0.075em;
+    letter-spacing: 0.1em;
+    line-height: 1.2;
+    padding: 2px 0 2px 0;
     text-shadow: #000 0px 0px 0px; }
   .content-text .person, .content-grid .person {
     color: #ff8a8a;
@@ -250,20 +252,27 @@ p {
       font-size: 11px;
       font-weight: 700; }
 
+.space-top {
+  padding-top: 14px; }
+
 /*Buttons & Breadcrumbs - sold and buy*/
 .title-block {
   /*same as btn breadcrumbs*/
   background: #b7b7b7;
   float: left;
   padding: 0;
-  border: 1px solid #ffffff; }
+  border: 1px solid #ffffff;
+  min-width: 170px;
+  text-align: center;
+  margin-bottom: 10px; }
   .title-block h2, .title-block a {
     color: #ffffff;
     font-family: "Raleway", sans-serif;
     text-transform: uppercase;
     font-size: 12px;
     letter-spacing: 0.075em;
-    padding: 2px 22px; }
+    padding: 1px 5px;
+    font-weight: 700; }
   .title-block.orange {
     background: #ff0000;
     margin: 80px auto; }
@@ -271,6 +280,9 @@ p {
     clear: both; }
   .title-block.count h2, .title-block.count a {
     padding: 2px, 10px; }
+
+.title-d-pink {
+  background: #f1666f; }
 
 .title-red {
   background: #ff0000; }
@@ -771,22 +783,65 @@ footer {
         letter-spacing: 0.07em; }
 
 /*Responsive breakpoints*/
-/*adjust max-breaking point vs nav text size*/
+#logo .small {
+  display: none; }
+
+/*everything in custom is for desktop and larger*/
 @media only screen and (max-width: 980px) {
   #CS-page {
     margin: 1px 10px; } }
 @media only screen and (max-width: 767px) {
-  /*body{background: #ff00ff;}*/
-  .nav-login, #CS-header nav ul li {
+  /*Half columns for LANDSCAPE to tablets
+  
+  body{ background: #ff00ff;}*/
+  #logo {
+    background: #484D4F;
+    padding: 10px; }
+    #logo .large {
+      display: none; }
+    #logo .small {
+      display: block; }
+
+  #CS-header .img-responsive.small {
+    margin: 1px 80px 1px auto; }
+  #CS-header .navbar {
+    max-height: 72px; }
+  #CS-header nav {
+    background: transparent;
+    margin-top: -72px;
+    height: 72px; }
+    #CS-header nav .navbar-toggle {
+      border: none;
+      background: #34383B;
+      border-radius: 0;
+      margin: 0;
+      width: 80px;
+      height: 72px; }
+    #CS-header nav .icon-bar {
+      width: 32px;
+      height: 4px;
+      border-radius: 0;
+      margin: 4px auto; }
+  #CS-header nav ul li {
+    border-right: none;
     margin: 0;
     float: none;
     width: 100% !important; }
+    #CS-header nav ul li a {
+      color: #ffffff; }
+  #CS-header .navbar .navbar-nav {
+    background: #b7b7b7;
+    width: 50%;
+    float: right; }
+  #CS-header .navbar-collapse {
+    overflow-x: hidden; }
 
-  #CS-header nav li li a {
-    color: #ffffff; }
+  .nav-language {
+    display: none; }
 
-  #CS-header nav li {
-    border-right: none; }
+  .nav-login {
+    display: none;
+    /*margin:0 ;float:none; width:100% !important;*/ }
 
   .social-icons {
     max-width: 400px;
@@ -828,6 +883,7 @@ footer {
     max-height: initial; }
     .content-grid.cover.mixed article.cover-recommend.col-xs-6 img {
       display: none; } }
+/*full width columns for PORTRAIT to phones*/
 @media only screen and (max-width: 425px) {
   .showcase .carousel-caption {
     right: 20%; }
@@ -865,6 +921,7 @@ footer {
 
   .quote.col-xs-6 {
     width: 100%; } }
+/*tiniest PORTRAIT to phones*/
 @media only screen and (max-width: 375px) {
   .col-xs-6 {
     width: 100%; }

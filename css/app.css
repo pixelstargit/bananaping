@@ -33,6 +33,14 @@
   font-stretch: normal;
   unicode-range: U+0020-00FE; }
 @font-face {
+  font-family: 'Stag Medium';
+  src: url("../fonts/Stag-Medium.eot");
+  src: url("../fonts/Stag-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Stag-Medium.woff2") format("woff2"), url("../fonts/Stag-Medium.woff") format("woff"), url("../fonts/Stag-Medium.svg#Stag-Medium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-00FE; }
+@font-face {
   font-family: 'Stag Bold';
   src: url("../fonts/Stag-Bold.eot");
   src: url("../fonts/Stag-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Stag-Bold.woff2") format("woff2"), url("../fonts/Stag-Bold.woff") format("woff"), url("../fonts/Stag-Bold.svg#Stag-Bold") format("svg");
