@@ -113,7 +113,7 @@ p {clear: both;} /* font-weight: 600;*/
   }
   .carousel-caption{ /*this is for same style to be used on slide show caption and gallery titels*/
     left:0; right: 0; bottom: 0;
-    padding: 0 2px;
+    padding: 0 2px;  /*padding: 0.5em 15px padding for showcase only -- make them the same as magazine layout*/
     margin-left: 0;
     background-color: $overlay-grey;
     text-shadow: none;
@@ -121,8 +121,9 @@ p {clear: both;} /* font-weight: 600;*/
     h2{ color: $color-white; font-family: $font-raleway; font-weight: 700;
       text-decoration: none; text-transform: uppercase;
       font-size: $font-size-small; margin-top: 15px; margin-bottom: 0; padding-bottom: 4px;}
-    h3, h3 a{ color: $color-white; font-size: 29px;
-      text-decoration: none; text-transform: uppercase; margin-top: 0; padding-bottom: 20px; padding-top: 0; letter-spacing: 0.1em;}
+    h3, h3 a{ color: $color-white; font-size: 29px; font-family: $font-raleway;
+      text-decoration: none; text-transform: uppercase; font-style: italic;
+       margin-top: 0; padding-bottom: 20px; padding-top: 0; letter-spacing: 0.1em;}
   }
   &.title-header img, &.vert-red img{ padding-bottom: $gutter-thin;}
   &.slideshow img, &.magazine img{ padding-bottom: 0;}
@@ -174,7 +175,7 @@ p {clear: both;} /* font-weight: 600;*/
     .vert-red{
       background: $overlay-red; font-style: normal;
       position: absolute; top: 33.3%; bottom: 33.3%;}
-    &.magazine{ border-left: 1px solid $color-white;}
+    &.magazine{ border-left: 2px solid $color-white;}
 }
 .magazine .title-header-overlay { width: 100%; bottom: 0; top:initial; .title{font-size:46px;}} /*for overlay on magazine layout*/
 .showcase .title-header-overlay { width: 100%;}
@@ -378,7 +379,7 @@ p {clear: both;} /* font-weight: 600;*/
   text-shadow: #fff 0px 0px 0px !important;
 } */
 
-.side-menu{ width:$width-leftbar; background:#e2e2e2;}
+.side-summary, .side-menu{ width:$width-leftbar; background:#e2e2e2;}
 .row-eq-height {
   display: -webkit-box;
   display: -webkit-flex;
@@ -422,6 +423,7 @@ nav.sub-menu{
   .issue {top:0;position: absolute; min-width:165px;border-left:1px solid $color-white; border-bottom: 0;}
   .showcase{    margin:0 $gutter-default;    } /*style inside magazine layout = rightside*/
   .intro {font-size: $font-size-base; font-family: $font-stag-body;  font-weight: 900;}
+  blockquote { background: $color-dark-pink; color: $color-white;}
 }
 
 
