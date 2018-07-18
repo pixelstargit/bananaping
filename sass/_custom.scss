@@ -73,21 +73,22 @@ p {clear: both;} /* font-weight: 600;*/
     }
   }
 }
-/*general nav hamburger menu*/
+/*general nav resets*/
 .navbar{ max-height: 65px;
   .navbar-collapse { text-align: center;  padding-right:0;  padding-left:0;}
   .navbar-nav { display: inline-block; width:100%;
-   > li > a:hover{  background: $color-grey-light;}
+   > li > a:hover{  background: $color-grey-light; color: $color-grey-dark!important;}
+   > li.active > a:hover{  color: $color-white!important;}
   }
 }
 .nav > li > a { min-height:65px; padding: 20px 0 0 0;}
-.navbar-toggle .icon-bar { background-color: $color-white!important; }
+
 
 /* sub nav drop down */
 #CS-header nav .dropdown-menu {
   border-radius: 0; border-color:#ffffff; border-width: 0 1px 1px 1px; margin-left:-1px; padding:0;
   min-width:203px;
-  background-color: rgba(137, 137, 137, 0.8); /*$color-grey-dark;*/
+  background-color: $color-grey-dark;
   li {
     width:100% !important; background: transparent;
     border-top: solid 1px #ffffff; border-right:none;

@@ -1,8 +1,9 @@
 /*Responsive breakpoints*/
+/*everything in custom is for desktop*/
 body{ background: #ffffff;}
 
-/*everything in custom is for desktop and larger*/
 @media only screen and (max-width:980px){
+/*but not larger than desktop*/
 body{ background: #cc0055;}
   #CS-page {margin:1px 10px;}
 }
@@ -12,55 +13,56 @@ body{ background: #cc0055;}
 /*Half columns for LANDSCAPE to tablets PORTRAIT*/
 body{ background: #ff00ff;}
 
-#logo {
+#logo {  /*small logo*/
   background: #484D4F; padding: 10px;
   .large{ display:none;}
-  .small {display: block;}
+  .small {display: block; margin:1px 80px 1px auto; }
 }
-
-#CS-header {
-  .img-responsive.small { margin:1px 80px 1px auto; }
-  .navbar { max-height:72px;}
+#CS-header { /*hamburger menu*/
+  .navbar { max-height:72px;  z-index: 9999;}
   nav {
-    background: transparent;
-    margin-top: -72px; height: 72px;
-   .navbar-toggle{
-     border: none; background: #34383B; border-radius: 0;
-     margin: 0;  width: 80px;  height: 72px;
-   }
-   .icon-bar {  width: 32px;  height: 4px;  border-radius: 0; margin: 4px auto;}
+    background: transparent; margin-top: -72px; height: 72px;
+   .navbar-toggle { border: none; background: #34383B; border-radius: 0; margin: 0;  width: 80px;  height: 72px; }
+   .icon-bar { width: 32px;  height: 4px;  border-radius: 0; margin: 4px auto; background-color: $color-white!important; }
   }
-  nav ul li {
+  nav ul li {/*burger drop*/
+    &:nth-child(even){background: $overlay-grey-one;}
+    &:nth-child(odd){background: $overlay-grey-two;}
     border-right: none; margin:0 ;float:none; width:100% !important;
-    a{color: $color-white;}
+    a {
+      color: $color-white;
+      padding-left: 30px;
+      text-transform: capitalize;
+      font-size: $font-size-big;
+      /*font-family: $font-helvetica-bold; this doesn't look right*/
+    }
   }
-  .navbar .navbar-nav{
-    background: $color-grey-medium;
-    width: 50%; float: right;
+  .navbar .navbar-nav {
+    margin:0;
+    background: $overlay-grey-base; width: 50%; float: right;
+    min-width: 270px; max-width: 270px; text-align: left;
   }
-  .navbar-collapse{
-      overflow-x: hidden;
-  }
+  .navbar-collapse { overflow-x: hidden; border-top:none;}
+  .nav-language{display: none;}
+  .nav-login{display: none;}
 }
-
-.nav-language{display: none;}
-.nav-login{display: none; /*margin:0 ;float:none; width:100% !important;*/}
-
-
-.social-icons { max-width:400px; margin: 0 auto;}
-
-/*.grids*/
-  .content-grid.videos article { padding:5px 0 !important;}
-  .row-eq-height {    display: block!important;}
-
+#CS-page { /*.grids*/
+  .row-eq-height { display: block!important;}
+  .content-grid {
+    &.thumbnails{
+      .img-responsive{ width:100%;}
+      }
+    &.videos article { padding:5px 0 !important;}
+    &.cover article.cover-recommend.col-xs-6 {width: calc(50% - 0.6em);}
+    &.cover.mixed article.cover-recommend.col-xs-6 {
+        width: calc(100% - 0.6em); min-height:initial; max-height: initial;
+        img {display:none;}
+    }
+  }
+  .social-icons { max-width:400px; margin: 0 auto;}
   .magazine.col-xs-12, .side-menu.sub-menu{ width:100%; }
-
-/*cover halfs*/
-  .content-grid.cover article.cover-recommend.col-xs-6 {width: calc(50% - 0.6em);}
-  .content-grid.cover.mixed article.cover-recommend.col-xs-6 {width: calc(100% - 0.6em); min-height:initial; max-height: initial;
-  img {display:none;}}
+  }
 }
-
 
 
 @media only screen and (max-width:425px){
@@ -72,8 +74,6 @@ body{ background: #ff00ff;}
     .col-xs-6, .img-responsive{ width:100%;}
     }
   }
-
-
   .showcase .carousel-caption{right: 20%;}
   .post-list .col-sm-4, .side-menu.col-xs-12 {width:100%!important; }
   /*.magazine.title-header-image.col-xs-12,*/ .content-login .login-box input.col-xs-12 {width:100%!important; }
@@ -92,6 +92,10 @@ body{ background: #ff00ff;}
     .content-grid.cover.mixed article.cover-recommend.col-xs-6 img {display: block;}
   .quote.col-xs-6{ width:100%;}
 }
+
+
+
+
 
 @media only screen and (max-width:375px){
 /*tiniest PORTRAIT to phones*/
