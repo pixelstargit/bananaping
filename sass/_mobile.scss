@@ -6,6 +6,8 @@ body{ background: #ffffff;}
 /*but not larger than desktop*/
 body{ background: #cc0055;}
   #CS-page {margin:1px 10px;}
+  /*.cover-recommend p{ display: none;}
+  .content-grid.cover article.cover-recommend{max-height: 303px; min-height:  303px;}*/
 }
 
 
@@ -59,9 +61,13 @@ body{ background: #ff00ff;}
         img {display:none;}
     }
   }
+  .breadcrumbs .btn.orange { min-width: 100%; padding: inherit 0;  max-width: 100%;}
   .social-icons { max-width:400px; margin: 0 auto;}
   .magazine.col-xs-12, .side-menu.sub-menu{ width:100%; }
-  }
+  .cover-recommend p{ display: block;}
+
+}
+
 }
 
 
@@ -73,7 +79,9 @@ body{ background: #ff00ff;}
   &.thumbnails{
     .col-xs-6, .img-responsive{ width:100%;}
     }
-  }
+}
+
+
   .showcase .carousel-caption{right: 20%;}
   .post-list .col-sm-4, .side-menu.col-xs-12 {width:100%!important; }
   /*.magazine.title-header-image.col-xs-12,*/ .content-login .login-box input.col-xs-12 {width:100%!important; }
@@ -101,7 +109,8 @@ body{ background: #ff00ff;}
 /*tiniest PORTRAIT to phones*/
 body{ background: #000fff;}
 
-  .col-xs-6 {width:100%;}
-  .content-grid.thumbnails article{padding-left: 0!important; padding-right: 0!important;}
+.col-xs-6 {width:100%;}
+.content-grid.thumbnails article{padding-left: 0!important; padding-right: 0!important;}
+.breadcrumbs .btn.orange { min-width:100%;}
 
 }
