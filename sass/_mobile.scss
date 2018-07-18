@@ -6,8 +6,6 @@ body{ background: #ffffff;}
 /*but not larger than desktop*/
 body{ background: #cc0055;}
   #CS-page {margin:1px 10px;}
-  /*.cover-recommend p{ display: none;}
-  .content-grid.cover article.cover-recommend{max-height: 303px; min-height:  303px;}*/
 }
 
 
@@ -64,8 +62,6 @@ body{ background: #ff00ff;}
   .breadcrumbs .btn.orange { min-width: 100%; padding: inherit 0;  max-width: 100%;}
   .social-icons { max-width:400px; margin: 0 auto;}
   .magazine.col-xs-12, .side-menu.sub-menu{ width:100%; }
-  .cover-recommend p{ display: block;}
-
 }
 
 }
@@ -74,11 +70,14 @@ body{ background: #ff00ff;}
 @media only screen and (max-width:425px){
 /*full width columns for PORTRAIT to phones*/
   body{ background: #00ffff;}
-
-.content-grid {
-  &.thumbnails{
-    .col-xs-6, .img-responsive{ width:100%;}
-    }
+#CS-page{
+  .content-grid {
+    &.thumbnails{
+      .col-xs-6, .img-responsive{ width:100%;}
+      }
+    &.cover article.cover-recommend.col-xs-6 {width: 100%;max-height:initial;}
+    .cover-recommend img, .cover-recommend p { max-height: initial;}
+  }
 }
 
 

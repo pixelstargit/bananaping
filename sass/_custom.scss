@@ -101,16 +101,17 @@ p {clear: both;} /* font-weight: 600;*/
   }
 }
 
-/*Styles*/
+/*SHOWCASE Styles*/
 /* Carousel Feature*/
 
 .showcase{
+  article {position: relative; overflow: hidden; width: 100%;}
   .breadcrumb{ /*overlay breadcrumb on showcase img*/
     margin-bottom:-10px;
     position: absolute;
     z-index: 99;
   }
-  .carousel-caption{
+  .carousel-caption{ /*this is for same style to be used on slide show caption and gallery titels*/
     left:0; right: 0; bottom: 0;
     padding: 0 2px;
     margin-left: 0;
@@ -123,9 +124,10 @@ p {clear: both;} /* font-weight: 600;*/
     h3, h3 a{ color: $color-white; font-size: 29px;
       text-decoration: none; text-transform: uppercase; margin-top: 0; padding-bottom: 20px; padding-top: 0; letter-spacing: 0.1em;}
   }
+  &.title-header img{ padding-bottom: $gutter-thin;}
+  &.slideshow img{ padding-bottom: 0;}
+  &.vert-red img{ padding-bottom: $gutter-thin;}
 }
-.content-showcase img{ padding-bottom: 21px;}
-.showcase.content-showcase img{ padding-bottom: 0px;}
 .carousel-control {
   background-image: none!important;
   .icon-prev { left:10%;}
@@ -134,6 +136,60 @@ p {clear: both;} /* font-weight: 600;*/
 .carousel-inner > .item > img, .carousel-inner > .item > a > img { width: 100%;}
 .caption {font-size:0.8em!important; background: $color-white;}
 .gallery {padding-top: $gutter-default;padding-bottom: $gutter-default;}
+
+/*cover articles with overlays and showcase headers */
+.title-header { /*border-left: 1px solid $color-white; dont know what this border is for
+   border-left: 1px solid $color-white;} this must go for magazine layout only target the child*/
+   img {width: 100%;}
+  .title-header-overlay {
+    position: absolute;
+    width: calc(100% - (2 * #{$gutter-thin})); /* twice gutter of the .cover */
+    padding: 24px 0 30px;
+    background-color: $overlay-grey;
+    text-align: center;
+    color: $color-white;
+    font-style: italic;
+    .title{
+      padding: 4px 0 0 0; margin: 0;
+      font-family: $font-raleway; text-transform: uppercase;
+      font-size: 60px;
+      letter-spacing: 0.075em;
+      }
+    .tag{
+      background: $overlay-red;
+      font-family: $font-raleway; font-size: 14px; font-weight: 600;
+      text-transform: uppercase; font-style: normal;
+      letter-spacing: 0.2em;
+      padding: 0.4em;
+      display: block; margin: 0 auto; max-width: 20%; min-width: 150px;
+      &.long{max-width:40%;}
+      }
+    p{
+      margin: 0; padding: 0;
+      font-family: $font-raleway; font-style: normal;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.075em;
+      }
+    }
+    .vert-center {
+      transform: translate(0, -100%);
+      font-style: normal;
+    }
+    .vert-red{
+      transform: translate(0, -100%);
+      background: $overlay-red;
+      margin-bottom:40px;
+      font-style: normal;
+    }
+}
+.magazine .title-header-overlay { width: 100%; bottom: 0; .title{font-size:46px;}} /*for overlay on magazine layout*/
+.showcase .title-header-overlay { width: 100%; bottom: 0;} /*for overlay on showcase layout*/
+.masonry .title-header-overlay{  width: calc(100% - (2 * #{$gutter-thin})); bottom: $gutter-thin; /*for project overlay on masonry layout*/
+        p {color: $color-white;}
+        h1.title{ font-size: 36px;}
+        h2.title{font-size: 24px;}
+}
 
 
 
@@ -148,8 +204,9 @@ p {clear: both;} /* font-weight: 600;*/
     font-weight: normal;
     b {text-transform: uppercase;}
    }
-}.content-text.breadcrumbs{ /*same as btn breadcrumbs and title-block but divided into 4 subnav - actually now they are smaller font size and bold - Hannah to check style is applying correctly on other pages*/
-  width:100%; padding-top: $gutter-thin;
+}
+.content-text.breadcrumbs{ /*same as btn breadcrumbs and title-block*/
+  width:100%;
   article{ float: left; width:25%; }
   .btn { min-width: 100%; background: $color-grey-dark; border-color:$color-white;
   &.current{background: $color-red;}
@@ -210,7 +267,7 @@ p {clear: both;} /* font-weight: 600;*/
        padding:10px 20px 0 30px;  margin: 0; }/*tag*/
   h1 { font-family: $font-raleway; font-weight: 700; font-style: italic; font-size: $font-size-h4; text-transform: uppercase;
       padding:10px 20px 0 30px;  margin: 0; width:100%; overflow: hidden; }/*title*/
-  P { font-family: $font-stag-body; font-size: $font-size-small;
+  p { font-family: $font-stag-body; font-size: $font-size-small;
      padding:10px 25px 0 30px; margin: 0 0 10px 0; max-height: 65px; overflow: hidden;
   }/*summary*/
   h4 { font-family: $font-raleway; font-weight: 700; font-style: italic; font-size: $font-size-default; text-transform: uppercase;
@@ -374,58 +431,7 @@ nav.sub-menu{
   .intro {font-size: $font-size-base; font-family: $font-stag-body;  font-weight: 900;}
 }
 
-/*cover articles with overlays and showcase headers */
-.title-header { /*border-left: 1px solid $color-white; dont know what this border is for*/
-  img {width: 100%; border-left: 1px solid $color-white;}
-  .title-header-overlay {
-    position: absolute;
-    width: calc(100% - (2 * #{$gutter-thin})); /* twice gutter of the .cover */
-    padding: 24px 0 30px;
-    background-color: $overlay-grey;
-    text-align: center;
-    color: $color-white;
-    font-style: italic;
-    .title{
-      padding: 4px 0 0 0; margin: 0;
-      font-family: $font-raleway; text-transform: uppercase;
-      font-size: 60px;
-      letter-spacing: 0.075em;
-      }
-    .tag{
-      background: $overlay-red;
-      font-family: $font-raleway; font-size: 14px; font-weight: 600;
-      text-transform: uppercase; font-style: normal;
-      letter-spacing: 0.2em;
-      padding: 0.4em;
-      display: block; margin: 0 auto; max-width: 20%; min-width: 150px;
-      &.long{max-width:40%;}
-      }
-    p{
-      margin: 0; padding: 0;
-      font-family: $font-raleway; font-style: normal;
-      font-size: 12px;
-      font-weight: 500;
-      letter-spacing: 0.075em;
-      }
-    }
-    .vert-center {
-      transform: translate(0, -100%);
-      font-style: normal;
-    }
-    .vert-red{
-      transform: translate(0, -100%);
-      background: $overlay-red;
-      margin-bottom:40px;
-      font-style: normal;
-    }
-}
-.magazine .title-header-overlay { width: 100%; bottom: 0; .title{font-size:46px;}} /*for overlay on magazine layout*/
-.showcase .title-header-overlay { width: 100%; bottom: 0;} /*for overlay on showcase layout*/
-.masonry .title-header-overlay{  width: calc(100% - (2 * #{$gutter-thin})); bottom: $gutter-thin; /*for project overlay on masonry layout*/
-        p {color: $color-white;}
-        h1.title{ font-size: 36px;}
-        h2.title{font-size: 24px;}
-}
+
 
 /* Footer styles */
 footer{
