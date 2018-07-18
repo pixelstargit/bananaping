@@ -5,7 +5,14 @@ body{ background: #ffffff;}
 @media only screen and (max-width:980px){
 /*but not larger than desktop*/
 body{ background: #cc0055;}
+
   #CS-page {margin:1px 10px;}
+  .title-header .title-header-overlay {
+    &.vert-red, &.vert-center {
+    .title{ font-size:50px;}
+    .tag { font-size:12px;}
+    }
+  }
 }
 
 
@@ -63,6 +70,14 @@ body{ background: #ff00ff;}
   .social-icons { max-width:400px; margin: 0 auto;}
   .magazine.col-xs-12, .side-menu.sub-menu{ width:100%; }
 }
+.title-header .title-header-overlay{
+  &.vert-red, &.vert-center {
+  padding: 20px 0; top: 25%; bottom:25%;
+  .title{ font-size:40px;}
+  .tag { font-size:12px;}
+  p{ font-size:11px;}
+  }
+}
 
 }
 
@@ -79,7 +94,12 @@ body{ background: #ff00ff;}
     .cover-recommend img, .cover-recommend p { max-height: initial;}
   }
 }
-
+.title-header .title-header-overlay{
+  &.vert-red, &.vert-center {
+  padding: 5px 0; top: 10%; bottom:10%;
+  .title{ font-size:30px;}
+  }
+}
 
   .showcase .carousel-caption{right: 20%;}
   .post-list .col-sm-4, .side-menu.col-xs-12 {width:100%!important; }

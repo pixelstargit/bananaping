@@ -124,9 +124,8 @@ p {clear: both;} /* font-weight: 600;*/
     h3, h3 a{ color: $color-white; font-size: 29px;
       text-decoration: none; text-transform: uppercase; margin-top: 0; padding-bottom: 20px; padding-top: 0; letter-spacing: 0.1em;}
   }
-  &.title-header img{ padding-bottom: $gutter-thin;}
-  &.slideshow img{ padding-bottom: 0;}
-  &.vert-red img{ padding-bottom: $gutter-thin;}
+  &.title-header img, &.vert-red img{ padding-bottom: $gutter-thin;}
+  &.slideshow img, &.magazine img{ padding-bottom: 0;}
 }
 .carousel-control {
   background-image: none!important;
@@ -138,17 +137,13 @@ p {clear: both;} /* font-weight: 600;*/
 .gallery {padding-top: $gutter-default;padding-bottom: $gutter-default;}
 
 /*cover articles with overlays and showcase headers */
-.title-header { /*border-left: 1px solid $color-white; dont know what this border is for
-   border-left: 1px solid $color-white;} this must go for magazine layout only target the child*/
+.title-header {
    img {width: 100%;}
   .title-header-overlay {
-    position: absolute;
     width: calc(100% - (2 * #{$gutter-thin})); /* twice gutter of the .cover */
-    padding: 24px 0 30px;
-    background-color: $overlay-grey;
-    text-align: center;
-    color: $color-white;
-    font-style: italic;
+    padding: 24px 0 30px; position: absolute;  bottom: 0;
+    background-color: $overlay-grey; text-align: center;
+    color: $color-white;  font-style: italic;
     .title{
       padding: 4px 0 0 0; margin: 0;
       font-family: $font-raleway; text-transform: uppercase;
@@ -173,18 +168,16 @@ p {clear: both;} /* font-weight: 600;*/
       }
     }
     .vert-center {
-      transform: translate(0, -100%);
       font-style: normal;
-    }
+      position: absolute; top: 33.3%; bottom: 33.3%;
+     }
     .vert-red{
-      transform: translate(0, -100%);
-      background: $overlay-red;
-      margin-bottom:40px;
-      font-style: normal;
-    }
+      background: $overlay-red; font-style: normal;
+      position: absolute; top: 33.3%; bottom: 33.3%;}
+    &.magazine{ border-left: 1px solid $color-white;}
 }
-.magazine .title-header-overlay { width: 100%; bottom: 0; .title{font-size:46px;}} /*for overlay on magazine layout*/
-.showcase .title-header-overlay { width: 100%; bottom: 0;} /*for overlay on showcase layout*/
+.magazine .title-header-overlay { width: 100%; bottom: 0; top:initial; .title{font-size:46px;}} /*for overlay on magazine layout*/
+.showcase .title-header-overlay { width: 100%;}
 .masonry .title-header-overlay{  width: calc(100% - (2 * #{$gutter-thin})); bottom: $gutter-thin; /*for project overlay on masonry layout*/
         p {color: $color-white;}
         h1.title{ font-size: 36px;}
