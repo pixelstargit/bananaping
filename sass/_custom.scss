@@ -6,6 +6,7 @@
 #logo {
   background: $color-grey-light;
   padding:40px 10px 8px 10px;
+  .small { display:none;}
 }
 #CS-page{
   clear: both;
@@ -138,15 +139,14 @@ p {clear: both;} /* font-weight: 600;*/
 .content-text, .content-grid{
   font-family: $font-stag-body;
   p, hr, h1, h2, h3, h4, ul { padding:12px 0; margin: $gutter-wide 0;}
-  p {font-family: $font-stag-body; font-size: $font-size-default; color:$color-black; letter-spacing: 0.1em; line-height: 1.2; padding: 2px 0 2px 0; text-shadow: #000 0px 0px 0px;}
+  p {font-family: $font-stag-body; font-size: $font-size-default; color:$color-black;
+    letter-spacing: 0.1em; line-height: 1.2; padding: 2px; text-shadow: #000 0px 0px 0px;}
   .person  {
     color: $color-pink;
     font-weight: normal;
     b {text-transform: uppercase;}
    }
-}
-.content-small p {font-size:13px; padding: 0.3em 0;}
-.content-text.breadcrumbs{ /*same as btn breadcrumbs and title-block but divided into 4 subnav - actually now they are smaller font size and bold - Hannah to check style is applying correctly on other pages*/
+}.content-text.breadcrumbs{ /*same as btn breadcrumbs and title-block but divided into 4 subnav - actually now they are smaller font size and bold - Hannah to check style is applying correctly on other pages*/
   width:100%; padding-top: $gutter-thin;
   article{ float: left; width:25%; }
   .btn { min-width: 100%; background: $color-grey-dark; border-color:$color-white;
@@ -154,8 +154,10 @@ p {clear: both;} /* font-weight: 600;*/
   a {font-size: 11px; font-weight: 700;}
    }
 }
+.content-small p {font-size:13px; padding: 0.3em 0;}
+.space-top {padding-top: 15px;}
+.space-bottom {padding-bottom: 15px;}
 
-.space-top {padding-top: 14px;}
 
 /*Buttons & Breadcrumbs - sold and buy*/
 .title-block{ /*same as btn breadcrumbs*/
@@ -197,8 +199,7 @@ p {clear: both;} /* font-weight: 600;*/
 }
 
 /*GRID styles and spacing of items thumbnails cover videos*/
-.cover-section{
-}
+.cover-section{}
 .cover-recommend, .cover-headline { /*12 | 20 |12 |14pt -check font sizes*/
   color: $color-black;
   letter-spacing: $letter-wide;
@@ -250,8 +251,8 @@ p {clear: both;} /* font-weight: 600;*/
        min-height:110px;
     }
   }
-  &.thumbnails article {
-    padding: 10px 5px;
+  &.thumbnails article {/* wider gutter than cover on about page*/
+    padding: 0 5px 10px;
     &.col-sm-4:nth-child(3n+1) {padding-left:0; padding-right:10px; clear:both;}
     &.col-sm-4:nth-child(3n) {padding-left:10px; padding-right:0;}
   }
