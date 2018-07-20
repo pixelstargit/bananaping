@@ -426,7 +426,21 @@ nav.sub-menu{
   blockquote { background: $color-dark-pink; color: $color-white;}
 }
 
-
+/* Socials = font-awesome */
+.social-icons{
+  text-align: center;
+  padding-bottom:30px;
+  a{
+    display: inline-block; vertical-align: middle;
+  }
+  .fa {
+    color: $color-white;    
+      font-size: 1.5em;  border-radius: 40px;
+      width: 40px; height: 40px;
+      padding-top: 9px;
+      margin:5px; float:left;
+  }
+}
 
 /* Footer styles */
 footer{
