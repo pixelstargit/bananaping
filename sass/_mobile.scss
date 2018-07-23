@@ -63,7 +63,8 @@ body{ background: #ff00ff;}
           padding-right: 10px;
         }
       }
-    &.videos article { padding:5px 0 !important;}
+    &.masonry .col-sm-8 { width:100%; min-height: 407px;}
+    &.videos article { padding:0;}
     &.cover article.cover-headline.col-xs-6,
     &.cover article.cover-recommend.col-xs-6 {width: calc(50% - 0.6em);}
     &.cover.mixed article.cover-recommend.col-xs-6 {
@@ -74,6 +75,7 @@ body{ background: #ff00ff;}
   }
   .breadcrumbs .btn.orange { min-width: 100%; padding: inherit 0;  max-width: 100%;}
   .magazine.col-xs-12, .side-menu.sub-menu{ width:100%; }
+  .side-menu img, .side-summary {width: 100%;}
 }
 .title-header .title-header-overlay{
   &.vert-red, &.vert-center {
