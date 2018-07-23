@@ -353,6 +353,14 @@ p {
 .space-bottom {
   padding-bottom: 15px; }
 
+blockquote {
+  font-family: "Raleway", sans-serif;
+  font-size: 30px;
+  letter-spacing: 0.075em;
+  padding: 53px 60px 40px 60px;
+  line-height: 1.2em;
+  margin: 14px 0 10px 0; }
+
 /*Buttons & Breadcrumbs - sold and buy*/
 .title-block {
   /*same as btn breadcrumbs*/
@@ -1702,8 +1710,11 @@ body {
     #CS-page .content-grid.thumbnails article.col-sm-4:nth-child(3n) {
       padding-left: 0;
       padding-right: 10px; }
+    #CS-page .content-grid.masonry .col-sm-8 {
+      width: 100%;
+      min-height: 407px; }
     #CS-page .content-grid.videos article {
-      padding: 5px 0 !important; }
+      padding: 0; }
     #CS-page .content-grid.cover article.cover-headline.col-xs-6, #CS-page .content-grid.cover article.cover-recommend.col-xs-6 {
       width: calc(50% - 0.6em); }
     #CS-page .content-grid.cover.mixed article.cover-recommend.col-xs-6 {
@@ -1719,6 +1730,8 @@ body {
       padding: inherit 0;
       max-width: 100%; }
     #CS-page .magazine.col-xs-12, #CS-page .side-menu.sub-menu {
+      width: 100%; }
+    #CS-page .side-menu img, #CS-page .side-summary {
       width: 100%; }
 
   .title-header .title-header-overlay.vert-red, .title-header .title-header-overlay.vert-center {

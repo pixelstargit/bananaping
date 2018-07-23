@@ -214,6 +214,15 @@ p {clear: both;} /* font-weight: 600;*/
 .space-top {padding-top: 15px;}
 .space-bottom {padding-bottom: 15px;}
 
+blockquote {
+  font-family: "Raleway", sans-serif;
+  font-size: 30px;
+  letter-spacing: $letter-normal;
+  padding: 53px 60px 40px 60px;
+  line-height: 1.2em;
+  margin: 14px 0 10px 0;
+}
+
 
 /*Buttons & Breadcrumbs - sold and buy*/
 .title-block{ /*same as btn breadcrumbs*/
