@@ -185,6 +185,7 @@ p {clear: both;} /* font-weight: 600;*/
         h2.title{font-size: 24px;}
 }
 .masonry .col-sm-4.title-header img {max-height: 395px; overflow: hidden; }
+.masonry.projects .col-sm-4.title-header img {max-height: initial;}
 
 
 
@@ -220,7 +221,8 @@ blockquote {
   letter-spacing: $letter-normal;
   padding: 53px 60px 40px 60px;
   line-height: 1.2em;
-  margin: 14px 0 10px 0;
+  margin: $gutter-default 0 10px $gutter-double;
+  border-left:0;
 }
 
 
@@ -367,7 +369,7 @@ blockquote {
     }
   }
   section { background: $color-white; padding:0;}
-  p, h1, h2, h3, h4{ padding:$gutter-wide $gutter-default; margin:0;}
+  p, h1, h2, h3, h4{ padding:$gutter-wide $gutter-double; margin:0;}
   hr {padding: 0; margin-bottom: 15px; margin-top: 10px;}
 
   color: $color-black;
@@ -433,8 +435,8 @@ nav.sub-menu{
 .magazine {
   &.col-sm-9 { width:$width-rightbar;}
   .issue {top:0;position: absolute; min-width:165px;border-left:1px solid $color-white; border-bottom: 0;}
-  .showcase{    margin:0 $gutter-default;    } /*style inside magazine layout = rightside*/
-  .intro {font-size: $font-size-base; font-family: $font-stag-body;  font-weight: 900;}
+  .showcase{    margin:0 $gutter-double;    } /*style inside magazine layout = rightside*/
+  .intro {font-family: $font-raleway;  font-weight: 900; text-shadow: none; letter-spacing: 0.1em; font-size: 14px; line-height: 1.2em;}
   blockquote { background: $color-dark-pink; color: $color-white;}
 }
 
@@ -442,7 +444,7 @@ nav.sub-menu{
 .social-icons{
   text-align: center;
   padding-bottom:$gutter-default;
-  padding-left: $gutter-default;
+  padding-left: $gutter-double;
   float:left; width: 100%;
   a{
     display: inline-block; vertical-align: middle;
