@@ -221,7 +221,8 @@ blockquote {
   letter-spacing: $letter-normal;
   padding: 53px 60px 40px 60px;
   line-height: 1.2em;
-  margin: 14px 0 10px 0;
+  margin: $gutter-default 0 10px $gutter-double;
+  border-left:0;
 }
 
 
@@ -364,7 +365,7 @@ blockquote {
   aside { padding:0;
     .breadcrumb {
       .btn, a {width:100%;}
-      .btn { text-align :left; padding: 1em 4em;}
+      .btn { text-align :left; padding: 1em 2.3em!important;}
     }
   }
   section { background: $color-white; padding:0;}
@@ -434,8 +435,8 @@ nav.sub-menu{
 .magazine {
   &.col-sm-9 { width:$width-rightbar;}
   .issue {top:0;position: absolute; min-width:165px;border-left:1px solid $color-white; border-bottom: 0;}
-  .showcase{    margin:0 $gutter-default;    } /*style inside magazine layout = rightside*/
-  .intro {font-size: $font-size-base; font-family: $font-raleway;  font-weight: 900; text-shadow: none; letter-spacing: 0.1em;}
+  .showcase{    margin:0 0 0 $gutter-double; } /*style inside magazine layout = rightside*/
+  .intro {font-family: $font-raleway;  font-weight: 900; text-shadow: none; letter-spacing: 0.1em; font-size: 14px; line-height: 1.2em;}
   blockquote { background: $color-dark-pink; color: $color-white;}
 }
 
@@ -872,7 +873,7 @@ footer{
         aside { padding:0;
           .breadcrumb {
             .btn, a {width:100%;}
-            .btn { text-align :left; padding: 1em 4em;}
+            .btn { text-align :left; padding: 1em 4em }
           }
         }
         section { background: $color-white; padding:0;}
