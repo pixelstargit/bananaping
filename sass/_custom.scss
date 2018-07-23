@@ -873,7 +873,11 @@ footer{
         aside { padding:0;
           .breadcrumb {
             .btn, a {width:100%;}
+<<<<<<< HEAD
             .btn { text-align :left; padding: 1em 4em }
+=======
+            .btn { text-align :left; padding: 1em 2.5em;}
+>>>>>>> 542ee7b4382ead1db53b6692bbe941e31c0726e2
           }
         }
         section { background: $color-white; padding:0;}
