@@ -21,31 +21,26 @@
   &:hover {  text-decoration: none;}
 }
 .fa-twitter {
-  background: #0ea9e3;
   &:before { content: "\f099";}
 }
 .fa-facebook {
-  background: #3b549b;
   &:before { content: "\f09a";}
 }
 .fa-google-plus {
-  background: #de131d;
   &:before {  content: "\f1a0";}
 }
 .fa-linkedin {
-  background: #047aba;
   &:before {  content: "\f0e1";}
 }
 .fa-vimeo{
-  background: #00adef;
   &:before {  content: "\f27d";}
 }
-/*fa-volume-down content: "\f027";*/
-.fa-audio { background: url(../images/icon-audio.png);}
-/* fa-youtube-play content: "\f16a"; */
-.fa-video { background: url(../images/icon-video.png);}
-/*fa-book content: "\f02d";*/
-.fa-book { background: url(../images/icon-book.png);}
+.fa-email{
+  &:before {  content: "\f0e0";}
+}
+.fa-print{
+  &:before {  content: "\f02f";}
+}
 
 /*fa-chevron-right left */
 .glyphicon.icon-prev:before{ font-family: "FontAwesome"; content: "\f053";}
