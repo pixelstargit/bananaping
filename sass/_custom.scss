@@ -185,6 +185,7 @@ p {clear: both;} /* font-weight: 600;*/
         h2.title{font-size: 24px;}
 }
 .masonry .col-sm-4.title-header img {max-height: 395px; overflow: hidden; }
+.masonry.projects .col-sm-4.title-header img {max-height: initial;}
 
 
 
@@ -213,6 +214,15 @@ p {clear: both;} /* font-weight: 600;*/
 .content-small p {font-size:13px; padding: 0.3em 0;}
 .space-top {padding-top: 15px;}
 .space-bottom {padding-bottom: 15px;}
+
+blockquote {
+  font-family: "Raleway", sans-serif;
+  font-size: 30px;
+  letter-spacing: $letter-normal;
+  padding: 53px 60px 40px 60px;
+  line-height: 1.2em;
+  margin: 14px 0 10px 0;
+}
 
 
 /*Buttons & Breadcrumbs - sold and buy*/
