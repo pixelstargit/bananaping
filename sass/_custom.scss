@@ -288,7 +288,7 @@ blockquote {
         &.mint{background: $color-mint;}
         &.sunny {background: $color-sunny;}
 }
-.content-grid {
+.content-grid { 
   &.breadcrumbs {
     margin-left: -$gutter-thin;  margin-right: -$gutter-thin;
     article { /*breadcrumbs section to take grid styles*/
