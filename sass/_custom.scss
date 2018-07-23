@@ -429,8 +429,9 @@ nav.sub-menu{
 /* Socials = font-awesome */
 .social-icons{
   text-align: center;
-  padding-bottom:30px;
+  padding-bottom:$gutter-default;
   padding-left: $gutter-default;
+  float:left; width: 100%;
   a{
     display: inline-block; vertical-align: middle;
   }
