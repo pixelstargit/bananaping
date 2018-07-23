@@ -395,7 +395,30 @@ p {clear: both;} /* font-weight: 600;*/
 .zebra article:nth-child(odd)  { background: #f9f9f9; }
 
 /* Extras side menu */
-
+nav.sub-menu{
+  ul {
+    li {
+      margin: $gutter-default 0;
+      background: #c2c2c2;
+      &.active {background: $color-pink;}
+      h4 {
+        padding: 1em 4em 0;
+        color: #a1a1a1;
+        font-size: $font-size-small;
+        text-transform: uppercase;
+        font-family: $font-raleway;
+      &.white{color:$color-white;}
+      }
+      a {
+        padding: 1em 4em;
+        color:#707070;
+        font-size: $font-size-small;
+        font-family: $font-raleway;
+      }
+      a:hover {background: none; }
+      }
+    }
+}
 
 /*magazine headers (this means there is a sidebar on the page)*/
 .magazine {
@@ -485,7 +508,548 @@ footer{
       margin: 0 auto;
       border-left: 1px solid #fff;
       height: 192px;
-      margin-left: -25px;
+      margin-left: -25px;/*a Pixelzoo theme*/
+      /*Cityscape Styles - v12*/
+      /*Sections*/
+
+      #CS-header .img-responsive {margin: 1px auto;}
+      #logo {
+        background: $color-grey-light;
+        padding:40px 10px 8px 10px;
+        .small { display:none;}
+      }
+      #CS-page{
+        clear: both;
+        max-width: $main-page-width;
+        margin-bottom:100px;
+        margin: 1px auto;
+        height: auto;
+        overflow-x: hidden;
+        .container{max-width: $main-page-width; }
+        section, .clear-row{clear: both;}
+      }
+      #CS-footer{
+        clear: both;
+        color: $color-white; padding-top: $gutter-thin; /* bottom of cspage whitespace*/
+      }
+
+      /* text resets */
+      .btn, .title-block h2 {letter-spacing: $letter-normal; font-weight: 600;}
+      h1, h2, h3 {letter-spacing: $letter-normal;  font-weight: 900;}
+      b, strong {font-family: $font-stag-semibold; font-weight: 600; text-shadow: none;}
+      p {clear: both;} /* font-weight: 600;*/
+
+      /*Navbar*/
+      #CS-header {
+        nav{
+          border-radius:0; border:none;
+          background: $color-grey-dark;
+          max-width: $main-page-width;
+          width:100%;
+          margin: 0 auto;
+          a{color: $color-white; font-family: $font-raleway; font-size: 11.5px; text-transform: uppercase; letter-spacing: $letter-normal; font-weight: 600;}
+          li {border-right: solid 1px $color-white;}
+          li:last-child {border-right:0;}
+          li li a{color: $color-grey-dark;}
+          .active > a {background: $color-red;}
+          ul li{
+          width: 15.6667%; /* fallback for non-calc() browsers*/
+          width: calc(100% / 6 ); /*$nav-item-total*/ box-sizing: border-box;
+          }
+        }
+        .nav-language, .nav-login  {
+          background: $color-grey-dark;
+          li a {
+            min-height:30px;
+            padding:8px 5px 8px 8px;
+            font-size:10px!important;
+            letter-spacing: 0.12em !important;
+          }
+        }
+        .nav-login {
+          float:right; margin-top:-96px;/*adjust position for nav login*/
+          li {
+            border-right: 0!important;
+            border-left: 2px solid $color-grey-light;
+            min-width: 165px;
+          }
+        }
+        .nav-language  {
+          float:left; margin-top:-30px;/*adjust position for nav language*/
+          li {
+            display: inline-block;
+            width: auto; /*62px;*/
+            a { margin-top: -1px; padding:8px 5px; }
+            &:last-child { margin-left:-5px;}
+          }
+        }
+      }
+      /*general nav resets*/
+      .navbar{ max-height: 65px;
+        .navbar-collapse { text-align: center;  padding-right:0;  padding-left:0;}
+        .navbar-nav { display: inline-block; width:100%;
+         > li > a:hover{  background: $color-grey-light; color: $color-grey-dark!important;}
+         > li.active > a:hover{  color: $color-white!important;}
+        }
+      }
+      .nav > li > a { min-height:65px; padding: 20px 0 0 0;}
+
+
+      /* sub nav drop down */
+      #CS-header nav .dropdown-menu {
+        border-radius: 0; border-color:#ffffff; border-width: 0 1px 1px 1px; margin-left:-1px; padding:0;
+        min-width:203px;
+        background-color: $color-grey-dark;
+        li {
+          width:100% !important; background: transparent;
+          border-top: solid 1px #ffffff; border-right:none;
+          text-align: center;
+        a { width:100%; min-height:3em; padding-top:1em;
+            text-transform: capitalize; color: $color-grey-heavy;
+          }
+        &.active > a {color:$color-red; background-color:#f5f5f5;}
+        }
+      }
+
+      /*SHOWCASE Styles*/
+      /* Carousel Feature*/
+
+      .showcase{
+        article {position: relative; overflow: hidden; width: 100%;}
+        .breadcrumb{ /*overlay breadcrumb on showcase img*/
+          margin-bottom:-10px;
+          position: absolute;
+          z-index: 99;
+        }
+        .carousel-caption{ /*this is for same style to be used on slide show caption and gallery titels*/
+          left:0; right: 0; bottom: 0;
+          padding: 0 2px;  /*padding: 0.5em 15px padding for showcase only -- make them the same as magazine layout*/
+          margin-left: 0;
+          background-color: $overlay-grey;
+          text-shadow: none;
+          text-align: left;
+          h2{ color: $color-white; font-family: $font-raleway; font-weight: 700;
+            text-decoration: none; text-transform: uppercase;
+            font-size: $font-size-small; margin-top: 15px; margin-bottom: 0; padding-bottom: 4px;}
+          h3, h3 a{ color: $color-white; font-size: 29px; font-family: $font-raleway;
+            text-decoration: none; text-transform: uppercase; font-style: italic;
+             margin-top: 0; padding-bottom: 20px; padding-top: 0; letter-spacing: 0.1em;}
+        }
+        &.title-header img, &.vert-red img{ padding-bottom: $gutter-thin;}
+        &.slideshow img, &.magazine img{ padding-bottom: 0;}
+      }
+      .carousel-control {
+        background-image: none!important;
+        .icon-prev { left:10%;}
+        .icon-next { right:10%;}
+      }
+      .carousel-inner > .item > img, .carousel-inner > .item > a > img { width: 100%;}
+      .caption {font-size:0.8em!important; background: $color-white;}
+      .gallery {padding-top: $gutter-default;padding-bottom: $gutter-default;}
+
+      /*cover articles with overlays and showcase headers */
+      .title-header {
+         img {width: 100%;}
+        .title-header-overlay {
+          width: calc(100% - (2 * #{$gutter-thin})); /* twice gutter of the .cover */
+          padding: 24px 0 30px; position: absolute;  bottom: 0;
+          background-color: $overlay-grey; text-align: center;
+          color: $color-white;  font-style: italic;
+          .title{
+            padding: 4px 0 0 0; margin: 0;
+            font-family: $font-raleway; text-transform: uppercase;
+            font-size: 60px;
+            letter-spacing: 0.075em;
+            }
+          .tag{
+            background: $overlay-red;
+            font-family: $font-raleway; font-size: 14px; font-weight: 600;
+            text-transform: uppercase; font-style: normal;
+            letter-spacing: 0.2em;
+            padding: 0.4em;
+            display: block; margin: 0 auto; max-width: 20%; min-width: 150px;
+            &.long{max-width:40%;}
+            }
+          p{
+            margin: 0; padding: 0;
+            font-family: $font-raleway; font-style: normal;
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.075em;
+            }
+          }
+          .vert-center {
+            font-style: normal;
+            position: absolute; top: 33.3%; bottom: 33.3%;
+           }
+          .vert-red{
+            background: $overlay-red; font-style: normal;
+            position: absolute; top: 33.3%; bottom: 33.3%;}
+          &.magazine{ border-left: 2px solid $color-white;}
+      }
+      .magazine .title-header-overlay { width: 100%; bottom: 0; top:initial; .title{font-size:46px;}} /*for overlay on magazine layout*/
+      .showcase .title-header-overlay { width: 100%;}
+      .masonry .title-header-overlay{  width: calc(100% - (2 * #{$gutter-thin})); bottom: $gutter-thin; /*for project overlay on masonry layout*/
+              p {color: $color-white;}
+              h1.title{ font-size: 36px;}
+              h2.title{font-size: 24px;}
+      }
+      .masonry .col-sm-4.title-header img {max-height: 395px; overflow: hidden; }
+
+
+
+      /*Page Text Styles */
+      .content-text, .content-grid{
+        font-family: $font-stag-body;
+        p, hr, h1, h2, h3, h4, ul { padding:12px 0; margin: $gutter-wide 0;}
+        p {font-family: $font-stag-body; font-size: $font-size-default; color:$color-black;
+          letter-spacing: 0.1em; line-height: 1.2; padding: 2px; text-shadow: #000 0px 0px 0px;}
+        .person  {
+          color: $color-pink;
+          font-weight: normal;
+          b {text-transform: uppercase;}
+         }
+      }
+      .content-text.breadcrumbs{ /*same as btn breadcrumbs and title-block*/
+        width:100%;
+        article{ float: left; width:25%; }
+        .btn { min-width: 100%; background: $color-grey-dark; border-color:$color-white;
+        &.current{background: $color-red;}
+        a {font-size: 11px; font-weight: 700;}
+         }
+      }
+      .content-small p {font-size:13px; padding: 0.3em 0;}
+      .space-top {padding-top: 15px;}
+      .space-bottom {padding-bottom: 15px;}
+
+
+      /*Buttons & Breadcrumbs - sold and buy*/
+      .title-block{ /*same as btn breadcrumbs*/
+        background: $color-grey-medium;
+        float:left; padding: 0;  border: 1px solid $color-white; min-width: 170px; text-align: center; margin-bottom: 10px;
+        h2, a {
+            color: $color-white;
+            font-family: $font-raleway;
+            text-transform: uppercase;
+            font-size: $font-size-small;
+            letter-spacing: $letter-normal;
+            padding: 1px 5px;
+            font-weight: 700;
+          }
+        &.orange{ background: $color-red; margin: 80px auto; }
+        &::after{clear: both;}
+        &.count{
+          min-width: 30px;
+          h2,a {padding:2px, 10px;}
+        }
+      }
+      .title-d-pink {background: $color-dark-pink;}
+      .title-red {background: $color-red;}
+      .btn{
+        &, a {
+          color: $color-white;
+          font-family: $font-raleway;
+          border-radius: 0;
+          text-transform: uppercase;
+          font-size: $font-size-small;
+          letter-spacing: $letter-normal;
+          padding: 5px 19px;
+         }
+        background-color: $color-green;
+        border-color: $color-green;
+        padding: 0;
+
+        &.sold{ background-color: $color-red; border-color: $color-red;}
+        &.orange{ background-color: $color-red; border-color: $color-red; min-width:180px;}
+      }
+
+      /*GRID styles and spacing of items thumbnails cover videos*/
+      .cover-section{}
+      .cover-recommend, .cover-headline { /*12 | 20 |12 |14pt -check font sizes*/
+        color: $color-black;
+        letter-spacing: $letter-wide;
+        img { /*max-height:230px;*/ padding:0 0 10px 0; margin: 0 auto; width: 100%;}
+        h2 { font-family: $font-raleway; font-size: $font-size-small; text-transform: uppercase;
+             padding:10px 20px 0 30px;  margin: 0; }/*tag*/
+        h1 { font-family: $font-raleway; font-weight: 700; font-style: italic; font-size: $font-size-h4; text-transform: uppercase;
+            padding:10px 20px 0 30px;  margin: 0; width:100%; overflow: hidden; }/*title*/
+        p { font-family: $font-stag-body; font-size: $font-size-small;
+           padding:10px 25px 0 30px; margin: 0 0 10px 0; max-height: 65px; overflow: hidden;
+        }/*summary*/
+        h4 { font-family: $font-raleway; font-weight: 700; font-style: italic; font-size: $font-size-default; text-transform: uppercase;
+           padding:0 30px 20px;  margin: 0;
+        }/*author*/
+              &.pink {background: $color-pink; }
+              &.blush {background: $color-blush;}
+              &.rosy{background: $color-rosy;}
+              &.mint{background: $color-mint;}
+              &.sunny {background: $color-sunny;}
+      }
+      .content-grid {
+        &.breadcrumbs {
+          margin-left: -$gutter-thin;  margin-right: -$gutter-thin;
+          article { /*breadcrumbs section to take grid styles*/
+          padding:0.6em $gutter-thin $gutter-thin;  margin: 0;
+          }
+        }
+      &.cover{ /*defaults */
+          margin-left: -$gutter-thin;  margin-right: -$gutter-thin; /* fixes for main placement of outer grid --cover*/
+          article {
+            padding:$gutter-thin;  margin: 0;
+            img {width:100%; }
+            .btn{ /*btn for sold / buy*/
+              position: absolute; right: 0.4em; top: 50%;
+              a{font-size: 11px; padding:1em;}
+              }
+          }
+        }
+        &.cover article {
+          &.cover-recommend, &.cover-headline {
+            max-height: 398px; min-height: 398px; overflow: hidden; clear: right;
+            padding: 0;
+            margin: $gutter-thin;
+            &.col-sm-4 {width: calc(33.3% - 0.6em);}
+            /* see responsive section for widths*/
+          }
+          &.cover-headline{
+             max-height:110px;  min-height:110px; padding-top:25px;
+          }
+        }
+        &.thumbnails article {/* wider gutter than cover on about page*/
+          padding: 0 5px 10px;
+          &.col-sm-4:nth-child(3n+1) {padding-left:0; padding-right:10px; clear:both;}
+          &.col-sm-4:nth-child(3n) {padding-left:10px; padding-right:0;}
+        }
+        &.videos{
+          padding: 0;
+          /*section removed?
+          article:nth-child(odd) { padding: 9px 30px 9px 0;}
+          article:nth-child(even){ padding: 9px 0 5px 30px;}*/
+        }
+        &.post-list {
+          padding-top:$gutter-wide;
+          margin: -$gutter-default;
+          article {
+            padding:0;
+            img {width:100%; }
+            margin: $gutter-default;
+            }
+          p, h1, h2, h3, h4 {padding: $gutter-default;}
+          .col-sm-4{ width: calc(30% - #{$gutter-default});/*auto calc */
+            /*section removed?
+            article, .title-block.red { margin-left:1em; margin-right:0;}
+            }
+          .col-sm-4:first-child{ width:$width-leftbar;
+            article,.title-block.red { margin-left: 0;} */
+            }
+          .post-summary {
+            padding-top:5px;
+            article {background: $color-grey-light; }
+          }
+          p {font-family: $font-stag-body; font-size: $font-size-small; padding: $gutter-default;}
+          h3{
+            font-family: $font-stag-body; font-size: $font-size-big; text-transform: uppercase;
+            font-weight: 900; padding-top: 1em;
+            margin: -4px 0;
+          }
+       }
+      }
+
+      /* Sidebar and right content styles */
+      #CS-page .content-sidebars section{clear:none;} /*/this is causing text overlay none clears why is it here -- for magazine layout rather */
+      .content-sidebars {
+        border-top: 2px $color-white solid;
+        aside { padding:0;
+          .breadcrumb {
+            .btn, a {width:100%;}
+            .btn { text-align :left; padding: 1em 4em;}
+          }
+        }
+        section { background: $color-white; padding:0;}
+        p, h1, h2, h3, h4{ padding:$gutter-wide $gutter-default; margin:0;}
+        hr {padding: 0; margin-bottom: 15px; margin-top: 10px;}
+
+        color: $color-black;
+        p {font-family: $font-stag-body; font-size: $font-size-default; letter-spacing: 0.14em; line-height: 1.32; text-shadow: #000 0px 0px 0px;}
+        h3{font-family: $font-raleway; font-size: $font-size-big; text-transform: uppercase; font-style: italic;}
+        h4.date {font-family: $font-raleway; color: $color-dark-pink; font-weight: 900; font-size: 15px; letter-spacing: 0.055em; padding-top: 25px;
+            .author{text-transform: uppercase;}
+          }
+        article h2 {font-family: $font-stag-bold; font-size: 15px; letter-spacing: 0.1em; padding-bottom: 12px;}
+        }
+      .side-summary, .post-summary {
+        background:#efefef;
+        h3{padding: $gutter-default; padding-bottom:0;}
+        p {padding: $gutter-default; line-height: 1.5em; font-size: $font-size-small; padding-top:5px; text-shadow: #000 0px 0px 0px; letter-spacing: $letter-normal;}
+        .selected{background: $color-crimson!important; color: $color-white;
+          p {text-shadow: #fff 0px 0px 0px;}
+          }
+      }
+      /*I added it this way to be more specifc but maybe there is a better way, otherwise tex-shadow is ignored
+      .side-summary .selected p {
+        text-shadow: #fff 0px 0px 0px !important;
+      } */
+
+      .side-summary, .side-menu{ width:$width-leftbar; background:#e2e2e2;}
+      .row-eq-height {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+      }
+
+      /*Styles: Zebra */
+      .zebra article:nth-child(even) { background: transparent; }
+      .zebra article:nth-child(odd)  { background: #f9f9f9; }
+
+      /* Extras side menu */
+      nav.sub-menu{
+        ul {
+          li {
+            margin: $gutter-default 0;
+            background: #c2c2c2;
+            &.active {background: $color-pink;}
+            h4 {
+              padding: 1em 4em 0;
+              color: #a1a1a1;
+              font-size: $font-size-small;
+              text-transform: uppercase;
+              font-family: $font-raleway;
+            &.white{color:$color-white;}
+            }
+            a {
+              padding: 1em 4em;
+              color:#707070;
+              font-size: $font-size-small;
+              font-family: $font-raleway;
+            }
+            a:hover {background: none; }
+            }
+          }
+      }
+
+      /*magazine headers (this means there is a sidebar on the page)*/
+      .magazine {
+        &.col-sm-9 { width:$width-rightbar;}
+        .issue {top:0;position: absolute; min-width:165px;border-left:1px solid $color-white; border-bottom: 0;}
+        .showcase{    margin:0 $gutter-default;    } /*style inside magazine layout = rightside*/
+        .intro {font-size: $font-size-base; font-family: $font-stag-body;  font-weight: 900;}
+        blockquote { background: $color-dark-pink; color: $color-white;}
+      }
+
+      /* Socials = font-awesome */
+      .social-icons{
+        text-align: center;
+        padding-bottom:$gutter-default;
+        padding-left: $gutter-default;
+        float:left; width: 100%;
+        a{
+          display: inline-block; vertical-align: middle;
+        }
+        .fa {
+          color: $color-white;
+            background: $color-black;
+            font-size: 1em;  border-radius:30px;
+            width: 30px; height: 30px;
+            padding-top: 6px;
+            margin:5px; float:left;
+        }
+      }
+
+      /* Footer styles */
+      footer{
+        background: $color-grey-heavy;
+        .fullwide{
+          background: $color-grey-darker;
+          padding: $gutter-default;
+        }
+
+        .footer-narrow {
+          max-width: 980px;
+        }
+
+        .footer-logo a{
+          font-family: $font-raleway;
+          text-transform: uppercase;
+          font-size: 24px;
+          font-weight: 800;
+          color: $color-grey-medium;
+          letter-spacing: 0.072em;
+          text-decoration: none;
+        }
+      }
+      .footer-text{
+        clear: both;
+        font-family: $font-stag-body;
+        hr { border-top: 1px solid #444444; margin-top:15px; margin-bottom:10px; }
+        p { text-align: center; padding-bottom: 2em;}
+      }
+      .footer-menu{
+          clear:both;
+          font-family: $font-helvetica; font-size:11.5px; letter-spacing: 0.09em; line-height: 1.9em;
+          padding: 11px 0;
+          a { color: #ccc; }
+          ul {
+            width:20%; float:left; padding: 0 $gutter-default; margin-bottom: 20px;
+            &:first-child { padding-left:0;}
+            &:last-child { padding-right:0; padding-left:25px;}
+            li {
+              list-style: none;
+              padding: $gutter-thin 0;
+            }
+          }
+          .foot-menu-head{
+            border-bottom: 1px solid #fff;
+            max-width: 95px;
+            padding-bottom: 0.1em;
+            font-family: $font-helvetica-bold; font-weight: 700; font-size: 12px; letter-spacing: 0.1em;
+            a {color:#fff; text-decoration: none;}
+          }
+          .border-left{
+            position: relative;
+
+          }
+          .border-left:after {
+            content: "";
+            position: absolute;
+            top: 10px;
+            margin: 0 auto;
+            border-left: 1px solid #fff;
+            height: 192px;
+            margin-left: -25px;
+          }
+      }
+      .footer-res{ font-size:13px; font-family: $font-helvetica-medium-italic; font-style: italic; color: #858585; letter-spacing: 0.05em;}
+
+      /*login form style*/
+      .content-login{
+        background: url(../images/showcase-gallery.jpg);
+        background-size: cover;
+        min-height:720px; height: 100vh;
+        padding-top:30px;
+        text-align: center;
+        .login-box {
+          padding: 3em 6em; margin: 0 auto; max-width: 650px;
+          background-color: rgba(255,255,255,0.7);
+          .logo {max-width:300px; margin: 0 auto;}
+          h1 {font-size: 24px;color: $color-red; font-family: $font-raleway; font-weight: 900;}
+          h2 {font-size: 18px; font-family: $font-raleway;  font-weight: 900; }
+          input {
+            background: $color-grey-medium; border:0;  border-radius: 0;
+            margin: 3px 2%; padding: 10px 10px;
+            width: 46%; float:left;
+            font-family: $font-din;font-size:11px; color: $color-white;
+            text-transform: uppercase; text-align: center;
+            &[type="submit"] {
+              width:200px; border-radius: 0; clear:both; float:none;
+              background: $color-red;
+              font-size:14px;
+              letter-spacing: 0.07em;
+            }
+          }
+        }
+      }
+
     }
 }
 .footer-res{ font-size:13px; font-family: $font-helvetica-medium-italic; font-style: italic; color: #858585; letter-spacing: 0.05em;}
@@ -496,550 +1060,7 @@ footer{
   background-size: cover;
   min-height:720px; height: 100vh;
   padding-top:30px;
-  text-align: center;/*a Pixelzoo theme*/
-  /*Cityscape Styles - v12*/
-  /*Sections*/
-
-  #CS-header .img-responsive {margin: 1px auto;}
-  #logo {
-    background: $color-grey-light;
-    padding:40px 10px 8px 10px;
-    .small { display:none;}
-  }
-  #CS-page{
-    clear: both;
-    max-width: $main-page-width;
-    margin-bottom:100px;
-    margin: 1px auto;
-    height: auto;
-    overflow-x: hidden;
-    .container{max-width: $main-page-width; }
-    section, .clear-row{clear: both;}
-  }
-  #CS-footer{
-    clear: both;
-    color: $color-white; padding-top: $gutter-thin; /* bottom of cspage whitespace*/
-  }
-
-  /* text resets */
-  .btn, .title-block h2 {letter-spacing: $letter-normal; font-weight: 600;}
-  h1, h2, h3 {letter-spacing: $letter-normal;  font-weight: 900;}
-  b, strong {font-family: $font-stag-semibold; font-weight: 600; text-shadow: none;}
-  p {clear: both;} /* font-weight: 600;*/
-
-  /*Navbar*/
-  #CS-header {
-    nav{
-      border-radius:0; border:none;
-      background: $color-grey-dark;
-      max-width: $main-page-width;
-      width:100%;
-      margin: 0 auto;
-      a{color: $color-white; font-family: $font-raleway; font-size: 11.5px; text-transform: uppercase; letter-spacing: $letter-normal; font-weight: 600;}
-      li {border-right: solid 1px $color-white;}
-      li:last-child {border-right:0;}
-      li li a{color: $color-grey-dark;}
-      .active > a {background: $color-red;}
-      ul li{
-      width: 15.6667%; /* fallback for non-calc() browsers*/
-      width: calc(100% / 6 ); /*$nav-item-total*/ box-sizing: border-box;
-      }
-    }
-    .nav-language, .nav-login  {
-      background: $color-grey-dark;
-      li a {
-        min-height:30px;
-        padding:8px 5px 8px 8px;
-        font-size:10px!important;
-        letter-spacing: 0.12em !important;
-      }
-    }
-    .nav-login {
-      float:right; margin-top:-96px;/*adjust position for nav login*/
-      li {
-        border-right: 0!important;
-        border-left: 2px solid $color-grey-light;
-        min-width: 165px;
-      }
-    }
-    .nav-language  {
-      float:left; margin-top:-30px;/*adjust position for nav language*/
-      li {
-        display: inline-block;
-        width: auto; /*62px;*/
-        a { margin-top: -1px; padding:8px 5px; }
-        &:last-child { margin-left:-5px;}
-      }
-    }
-  }
-  /*general nav resets*/
-  .navbar{ max-height: 65px;
-    .navbar-collapse { text-align: center;  padding-right:0;  padding-left:0;}
-    .navbar-nav { display: inline-block; width:100%;
-     > li > a:hover{  background: $color-grey-light; color: $color-grey-dark!important;}
-     > li.active > a:hover{  color: $color-white!important;}
-    }
-  }
-  .nav > li > a { min-height:65px; padding: 20px 0 0 0;}
-
-
-  /* sub nav drop down */
-  #CS-header nav .dropdown-menu {
-    border-radius: 0; border-color:#ffffff; border-width: 0 1px 1px 1px; margin-left:-1px; padding:0;
-    min-width:203px;
-    background-color: $color-grey-dark;
-    li {
-      width:100% !important; background: transparent;
-      border-top: solid 1px #ffffff; border-right:none;
-      text-align: center;
-    a { width:100%; min-height:3em; padding-top:1em;
-        text-transform: capitalize; color: $color-grey-heavy;
-      }
-    &.active > a {color:$color-red; background-color:#f5f5f5;}
-    }
-  }
-
-  /*SHOWCASE Styles*/
-  /* Carousel Feature*/
-
-  .showcase{
-    article {position: relative; overflow: hidden; width: 100%;}
-    .breadcrumb{ /*overlay breadcrumb on showcase img*/
-      margin-bottom:-10px;
-      position: absolute;
-      z-index: 99;
-    }
-    .carousel-caption{ /*this is for same style to be used on slide show caption and gallery titels*/
-      left:0; right: 0; bottom: 0;
-      padding: 0 2px;  /*padding: 0.5em 15px padding for showcase only -- make them the same as magazine layout*/
-      margin-left: 0;
-      background-color: $overlay-grey;
-      text-shadow: none;
-      text-align: left;
-      h2{ color: $color-white; font-family: $font-raleway; font-weight: 700;
-        text-decoration: none; text-transform: uppercase;
-        font-size: $font-size-small; margin-top: 15px; margin-bottom: 0; padding-bottom: 4px;}
-      h3, h3 a{ color: $color-white; font-size: 29px; font-family: $font-raleway;
-        text-decoration: none; text-transform: uppercase; font-style: italic;
-         margin-top: 0; padding-bottom: 20px; padding-top: 0; letter-spacing: 0.1em;}
-    }
-    &.title-header img, &.vert-red img{ padding-bottom: $gutter-thin;}
-    &.slideshow img, &.magazine img{ padding-bottom: 0;}
-  }
-  .carousel-control {
-    background-image: none!important;
-    .icon-prev { left:10%;}
-    .icon-next { right:10%;}
-  }
-  .carousel-inner > .item > img, .carousel-inner > .item > a > img { width: 100%;}
-  .caption {font-size:0.8em!important; background: $color-white;}
-  .gallery {padding-top: $gutter-default;padding-bottom: $gutter-default;}
-
-  /*cover articles with overlays and showcase headers */
-  .title-header {
-     img {width: 100%;}
-    .title-header-overlay {
-      width: calc(100% - (2 * #{$gutter-thin})); /* twice gutter of the .cover */
-      padding: 24px 0 30px; position: absolute;  bottom: 0;
-      background-color: $overlay-grey; text-align: center;
-      color: $color-white;  font-style: italic;
-      .title{
-        padding: 4px 0 0 0; margin: 0;
-        font-family: $font-raleway; text-transform: uppercase;
-        font-size: 60px;
-        letter-spacing: 0.075em;
-        }
-      .tag{
-        background: $overlay-red;
-        font-family: $font-raleway; font-size: 14px; font-weight: 600;
-        text-transform: uppercase; font-style: normal;
-        letter-spacing: 0.2em;
-        padding: 0.4em;
-        display: block; margin: 0 auto; max-width: 20%; min-width: 150px;
-        &.long{max-width:40%;}
-        }
-      p{
-        margin: 0; padding: 0;
-        font-family: $font-raleway; font-style: normal;
-        font-size: 12px;
-        font-weight: 500;
-        letter-spacing: 0.075em;
-        }
-      }
-      .vert-center {
-        font-style: normal;
-        position: absolute; top: 33.3%; bottom: 33.3%;
-       }
-      .vert-red{
-        background: $overlay-red; font-style: normal;
-        position: absolute; top: 33.3%; bottom: 33.3%;}
-      &.magazine{ border-left: 2px solid $color-white;}
-  }
-  .magazine .title-header-overlay { width: 100%; bottom: 0; top:initial; .title{font-size:46px;}} /*for overlay on magazine layout*/
-  .showcase .title-header-overlay { width: 100%;}
-  .masonry .title-header-overlay{  width: calc(100% - (2 * #{$gutter-thin})); bottom: $gutter-thin; /*for project overlay on masonry layout*/
-          p {color: $color-white;}
-          h1.title{ font-size: 36px;}
-          h2.title{font-size: 24px;}
-  }
-  .masonry .col-sm-4.title-header img {max-height: 395px; overflow: hidden; }
-
-
-
-  /*Page Text Styles */
-  .content-text, .content-grid{
-    font-family: $font-stag-body;
-    p, hr, h1, h2, h3, h4, ul { padding:12px 0; margin: $gutter-wide 0;}
-    p {font-family: $font-stag-body; font-size: $font-size-default; color:$color-black;
-      letter-spacing: 0.1em; line-height: 1.2; padding: 2px; text-shadow: #000 0px 0px 0px;}
-    .person  {
-      color: $color-pink;
-      font-weight: normal;
-      b {text-transform: uppercase;}
-     }
-  }
-  .content-text.breadcrumbs{ /*same as btn breadcrumbs and title-block*/
-    width:100%;
-    article{ float: left; width:25%; }
-    .btn { min-width: 100%; background: $color-grey-dark; border-color:$color-white;
-    &.current{background: $color-red;}
-    a {font-size: 11px; font-weight: 700;}
-     }
-  }
-
-  .content-project-about {padding-top: 20px;} /* Extra 20px padding for project about page - only page that has it */
-  .content-small p {font-size:13px; padding: 0.3em 0;}
-  .space-top {padding-top: 15px;}
-  .space-bottom {padding-bottom: 15px;}
-
-
-  /*Buttons & Breadcrumbs - sold and buy*/
-  .title-block{ /*same as btn breadcrumbs*/
-    background: $color-grey-medium;
-    float:left; padding: 0;  border: 1px solid $color-white; min-width: 170px; text-align: center; margin-bottom: 10px;
-    h2, a {
-        color: $color-white;
-        font-family: $font-raleway;
-        text-transform: uppercase;
-        font-size: $font-size-small;
-        letter-spacing: $letter-normal;
-        padding: 1px 5px;
-        font-weight: 700;
-      }
-    &.orange{ background: $color-red; margin: 80px auto; }
-    &::after{clear: both;}
-    &.count{
-      min-width: 30px;
-      h2,a {padding:2px, 10px;}
-    }
-  }
-  .title-d-pink {background: $color-dark-pink;}
-  .title-red {background: $color-red;}
-  .btn{
-    &, a {
-      color: $color-white;
-      font-family: $font-raleway;
-      border-radius: 0;
-      text-transform: uppercase;
-      font-size: $font-size-small;
-      letter-spacing: $letter-normal;
-      padding: 5px 19px;
-     }
-    background-color: $color-green;
-    border-color: $color-green;
-    padding: 0;
-
-    &.sold{ background-color: $color-red; border-color: $color-red;}
-    &.orange{ background-color: $color-red; border-color: $color-red; min-width:180px;}
-  }
-
-  /*GRID styles and spacing of items thumbnails cover videos*/
-  .cover-section{}
-  .cover-recommend, .cover-headline { /*12 | 20 |12 |14pt -check font sizes*/
-    color: $color-black;
-    letter-spacing: $letter-wide;
-    img { /*max-height:230px;*/ padding:0 0 10px 0; margin: 0 auto; width: 100%;}
-    h2 { font-family: $font-raleway; font-size: $font-size-small; text-transform: uppercase;
-         padding:10px 20px 0 30px;  margin: 0; }/*tag*/
-    h1 { font-family: $font-raleway; font-weight: 700; font-style: italic; font-size: $font-size-h4; text-transform: uppercase;
-        padding:10px 20px 0 30px;  margin: 0; width:100%; overflow: hidden; }/*title*/
-    p { font-family: $font-stag-body; font-size: $font-size-small;
-       padding:10px 25px 0 30px; margin: 0 0 10px 0; max-height: 65px; overflow: hidden;
-    }/*summary*/
-    h4 { font-family: $font-raleway; font-weight: 700; font-style: italic; font-size: $font-size-default; text-transform: uppercase;
-       padding:0 30px 20px;  margin: 0;
-    }/*author*/
-          &.pink {background: $color-pink; }
-          &.blush {background: $color-blush;}
-          &.rosy{background: $color-rosy;}
-          &.mint{background: $color-mint;}
-          &.sunny {background: $color-sunny;}
-  }
-  .content-grid {
-    &.breadcrumbs {
-      margin-left: -$gutter-thin;  margin-right: -$gutter-thin;
-      article { /*breadcrumbs section to take grid styles*/
-      padding:0.6em $gutter-thin $gutter-thin;  margin: 0;
-      }
-    }
-  &.cover{ /*defaults */
-      margin-left: -$gutter-thin;  margin-right: -$gutter-thin; /* fixes for main placement of outer grid --cover*/
-      article {
-        padding:$gutter-thin;  margin: 0;
-        img {width:100%; }
-        .btn{ /*btn for sold / buy*/
-          position: absolute; right: 0.4em; top: 50%;
-          a{font-size: 11px; padding:1em;}
-          }
-      }
-    }
-    &.cover article {
-      &.cover-recommend, &.cover-headline {
-        max-height: 398px; min-height: 398px; overflow: hidden; clear: right;
-        padding: 0;
-        margin: $gutter-thin;
-        &.col-sm-4 {width: calc(33.3% - 0.6em);}
-        /* see responsive section for widths*/
-      }
-      &.cover-headline{
-         max-height:110px;  min-height:110px; padding-top:25px;
-      }
-    }
-    &.thumbnails article {/* wider gutter than cover on about page*/
-      padding: 0 5px 10px;
-      &.col-sm-4:nth-child(3n+1) {padding-left:0; padding-right:10px; clear:both;}
-      &.col-sm-4:nth-child(3n) {padding-left:10px; padding-right:0;}
-    }
-    &.videos{
-      padding: 0;
-      /*section removed?
-      article:nth-child(odd) { padding: 9px 30px 9px 0;}
-      article:nth-child(even){ padding: 9px 0 5px 30px;}*/
-    }
-    &.post-list {
-      padding-top:$gutter-wide;
-      margin: -$gutter-default;
-      article {
-        padding:0;
-        img {width:100%; }
-        margin: $gutter-default;
-        }
-      p, h1, h2, h3, h4 {padding: $gutter-default;}
-      .col-sm-4{ width: calc(30% - #{$gutter-default});/*auto calc */
-        /*section removed?
-        article, .title-block.red { margin-left:1em; margin-right:0;}
-        }
-      .col-sm-4:first-child{ width:$width-leftbar;
-        article,.title-block.red { margin-left: 0;} */
-        }
-      .post-summary {
-        padding-top:5px;
-        article {background: $color-grey-light; }
-      }
-      p {font-family: $font-stag-body; font-size: $font-size-small; padding: $gutter-default;}
-      h3{
-        font-family: $font-stag-body; font-size: $font-size-big; text-transform: uppercase;
-        font-weight: 900; padding-top: 1em;
-        margin: -4px 0;
-      }
-   }
-  }
-
-  /* Sidebar and right content styles */
-  #CS-page .content-sidebars section{clear:none;} /*/this is causing text overlay none clears why is it here -- for magazine layout rather */
-  .content-sidebars {
-    border-top: 2px $color-white solid;
-    aside { padding:0;
-      .breadcrumb {
-        .btn, a {width:100%;}
-        .btn { text-align :left; padding: 1em 4em;}
-      }
-    }
-    section { background: $color-white; padding:0;}
-    p, h1, h2, h3, h4{ padding:$gutter-wide $gutter-default; margin:0;}
-    hr {padding: 0; margin-bottom: 15px; margin-top: 10px;}
-
-    color: $color-black;
-    p {font-family: $font-stag-body; font-size: $font-size-default; letter-spacing: 0.14em; line-height: 1.32; text-shadow: #000 0px 0px 0px;}
-    h3{font-family: $font-raleway; font-size: $font-size-big; text-transform: uppercase; font-style: italic;}
-    h4.date {font-family: $font-raleway; color: $color-dark-pink; font-weight: 900; font-size: 15px; letter-spacing: 0.055em; padding-top: 25px;
-        .author{text-transform: uppercase;}
-      }
-    article h2 {font-family: $font-stag-bold; font-size: 15px; letter-spacing: 0.1em; padding-bottom: 12px;}
-    }
-  .side-summary, .post-summary {
-    background:#efefef;
-    h3{padding: $gutter-default; padding-bottom:0;}
-    p {padding: $gutter-default; line-height: 1.5em; font-size: $font-size-small; padding-top:5px; text-shadow: #000 0px 0px 0px; letter-spacing: $letter-normal;}
-    .selected{background: $color-crimson!important; color: $color-white;
-      p {text-shadow: #fff 0px 0px 0px;}
-      }
-  }
-  /*I added it this way to be more specifc but maybe there is a better way, otherwise tex-shadow is ignored
-  .side-summary .selected p {
-    text-shadow: #fff 0px 0px 0px !important;
-  } */
-
-  .side-summary, .side-menu{ width:$width-leftbar; background:#e2e2e2;}
-  .row-eq-height {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-  }
-
-  /*Styles: Zebra */
-  .zebra article:nth-child(even) { background: transparent; }
-  .zebra article:nth-child(odd)  { background: #f9f9f9; }
-
-  /* Extras side menu */
-  nav.sub-menu{
-    ul {
-      li {
-        margin: $gutter-default 0;
-        background: #c2c2c2;
-        &.active {background: $color-pink;}
-        h4 {
-          padding: 1em 4em 0;
-          color: #a1a1a1;
-          font-size: $font-size-small;
-          text-transform: uppercase;
-          font-family: $font-raleway;
-        &.white{color:$color-white;}
-        }
-        a {
-          padding: 1em 4em;
-          color:#707070;
-          font-size: $font-size-small;
-          font-family: $font-raleway;
-        }
-        a:hover {background: none; }
-        }
-      }
-  }
-
-  /*magazine headers (this means there is a sidebar on the page)*/
-  .magazine {
-    &.col-sm-9 { width:$width-rightbar;}
-    .issue {top:0;position: absolute; min-width:165px;border-left:1px solid $color-white; border-bottom: 0;}
-    .showcase{    margin:0 $gutter-default;    } /*style inside magazine layout = rightside*/
-    .intro {font-size: $font-size-base; font-family: $font-stag-body;  font-weight: 900;}
-    blockquote { background: $color-dark-pink; color: $color-white;}
-  }
-
-  /* Socials = font-awesome */
-  .social-icons{
-    text-align: center;
-    padding-bottom:$gutter-default;
-    padding-left: $gutter-default;
-    float:left; width: 100%;
-    a{
-      display: inline-block; vertical-align: middle;
-    }
-    .fa {
-      color: $color-white;
-        background: $color-black;
-        font-size: 1em;  border-radius:30px;
-        width: 30px; height: 30px;
-        padding-top: 6px;
-        margin:5px; float:left;
-    }
-  }
-
-  /* Footer styles */
-  footer{
-    background: $color-grey-heavy;
-    .fullwide{
-      background: $color-grey-darker;
-      padding: $gutter-default;
-    }
-
-    .footer-narrow {
-      max-width: 980px;
-    }
-
-    .footer-logo a{
-      font-family: $font-raleway;
-      text-transform: uppercase;
-      font-size: 24px;
-      font-weight: 800;
-      color: $color-grey-medium;
-      letter-spacing: 0.072em;
-      text-decoration: none;
-    }
-  }
-  .footer-text{
-    clear: both;
-    font-family: $font-stag-body;
-    hr { border-top: 1px solid #444444; margin-top:15px; margin-bottom:10px; }
-    p { text-align: center; padding-bottom: 2em;}
-  }
-  .footer-menu{
-      clear:both;
-      font-family: $font-helvetica; font-size:11.5px; letter-spacing: 0.09em; line-height: 1.9em;
-      padding: 11px 0;
-      a { color: #ccc; }
-      ul {
-        width:20%; float:left; padding: 0 $gutter-default; margin-bottom: 20px;
-        &:first-child { padding-left:0;}
-        &:last-child { padding-right:0; padding-left:25px;}
-        li {
-          list-style: none;
-          padding: $gutter-thin 0;
-        }
-      }
-      .foot-menu-head{
-        border-bottom: 1px solid #fff;
-        max-width: 95px;
-        padding-bottom: 0.1em;
-        font-family: $font-helvetica-bold; font-weight: 700; font-size: 12px; letter-spacing: 0.1em;
-        a {color:#fff; text-decoration: none;}
-      }
-      .border-left{
-        position: relative;
-
-      }
-      .border-left:after {
-        content: "";
-        position: absolute;
-        top: 10px;
-        margin: 0 auto;
-        border-left: 1px solid #fff;
-        height: 192px;
-        margin-left: -25px;
-      }
-  }
-  .footer-res{ font-size:13px; font-family: $font-helvetica-medium-italic; font-style: italic; color: #858585; letter-spacing: 0.05em;}
-
-  /*login form style*/
-  .content-login{
-    background: url(../images/showcase-gallery.jpg);
-    background-size: cover;
-    min-height:720px; height: 100vh;
-    padding-top:30px;
-    text-align: center;
-    .login-box {
-      padding: 3em 6em; margin: 0 auto; max-width: 650px;
-      background-color: rgba(255,255,255,0.7);
-      .logo {max-width:300px; margin: 0 auto;}
-      h1 {font-size: 24px;color: $color-red; font-family: $font-raleway; font-weight: 900;}
-      h2 {font-size: 18px; font-family: $font-raleway;  font-weight: 900; }
-      input {
-        background: $color-grey-medium; border:0;  border-radius: 0;
-        margin: 3px 2%; padding: 10px 10px;
-        width: 46%; float:left;
-        font-family: $font-din;font-size:11px; color: $color-white;
-        text-transform: uppercase; text-align: center;
-        &[type="submit"] {
-          width:200px; border-radius: 0; clear:both; float:none;
-          background: $color-red;
-          font-size:14px;
-          letter-spacing: 0.07em;
-        }
-      }
-    }
-  }
-
+  text-align: center;
   .login-box {
     padding: 3em 6em; margin: 0 auto; max-width: 650px;
     background-color: rgba(255,255,255,0.7);
