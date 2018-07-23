@@ -105,6 +105,7 @@
   src: url("../fonts/velinotext-blackitalic.eot?#iefix") format("embedded-opentype"), url("../fonts/velinotext-blackitalic.woff2") format("woff2"), url("../fonts/velinotext-blackitalic.woff") format("woff"), url("../fonts/velinotext-blackitalic.ttf") format("truetype"), url("../fonts/velinotext-blackitalic.svg#velinotext-blackitalic") format("svg");
   font-weight: bold;
   font-style: italic; }
+/*hamburger nav opacity*/
 /*default is 41px*/
 /*default is 34px*/
 /*default is 28px*/
@@ -3509,42 +3510,26 @@ tbody.collapse.in {
   .fa:hover {
     text-decoration: none; }
 
-.fa-twitter {
-  background: #0ea9e3; }
-  .fa-twitter:before {
-    content: "\f099"; }
+.fa-twitter:before {
+  content: "\f099"; }
 
-.fa-facebook {
-  background: #3b549b; }
-  .fa-facebook:before {
-    content: "\f09a"; }
+.fa-facebook:before {
+  content: "\f09a"; }
 
-.fa-google-plus {
-  background: #de131d; }
-  .fa-google-plus:before {
-    content: "\f1a0"; }
+.fa-google-plus:before {
+  content: "\f1a0"; }
 
-.fa-linkedin {
-  background: #047aba; }
-  .fa-linkedin:before {
-    content: "\f0e1"; }
+.fa-linkedin:before {
+  content: "\f0e1"; }
 
-.fa-vimeo {
-  background: #00adef; }
-  .fa-vimeo:before {
-    content: "\f27d"; }
+.fa-vimeo:before {
+  content: "\f27d"; }
 
-/*fa-volume-down content: "\f027";*/
-.fa-audio {
-  background: url(../images/icon-audio.png); }
+.fa-email:before {
+  content: "\f0e0"; }
 
-/* fa-youtube-play content: "\f16a"; */
-.fa-video {
-  background: url(../images/icon-video.png); }
-
-/*fa-book content: "\f02d";*/
-.fa-book {
-  background: url(../images/icon-book.png); }
+.fa-print:before {
+  content: "\f02f"; }
 
 /*fa-chevron-right left */
 .glyphicon.icon-prev:before {
