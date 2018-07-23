@@ -58,6 +58,10 @@ body{ background: #ff00ff;}
   .content-grid {
     &.thumbnails{
       .img-responsive{ width:100%;}
+      article.col-sm-4:nth-child(3n) {
+          padding-left: 0;
+          padding-right: 10px;
+        }
       }
     &.videos article { padding:5px 0 !important;}
     &.cover article.cover-recommend.col-xs-6 {width: calc(50% - 0.6em);}
@@ -79,8 +83,8 @@ body{ background: #ff00ff;}
   }
 }
 
-}
 
+}
 
 @media only screen and (max-width:425px){
 /*full width columns for PORTRAIT to phones*/
@@ -89,6 +93,7 @@ body{ background: #ff00ff;}
   .content-grid {
     &.thumbnails{
       .col-xs-6, .img-responsive{ width:100%;}
+      article { padding: 0 5px 10px;}
       }
     &.cover article.cover-recommend.col-xs-6 {width: 100%;max-height:initial;}
     .cover-recommend img, .cover-recommend p { max-height: initial;}
