@@ -104,6 +104,8 @@ p {clear: both;} /* font-weight: 600;*/
 /*SHOWCASE Styles*/
 /* Carousel Feature*/
 
+.content-sidebars .showcase {padding-bottom: 8px; background-color: #fff;}
+
 .showcase{
   article {position: relative; overflow: hidden; width: 100%;}
   .breadcrumb{ /*overlay breadcrumb on showcase img*/
@@ -232,6 +234,23 @@ blockquote {
   border-left:0;
 }
 
+.article-login a {font-family: $font-raleway; font-weight: 700; color: #000;}
+
+/*article image + caption*/
+figure {position: relative;}
+figcaption {
+  font-family: $font-raleway;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing:$letter-normal;
+  background: rgba(161,161,161,0.95);
+  padding: 14px 25px;
+  position: absolute;
+  margin: 0 $gutter-double;
+  left: 0;
+  right: 0;
+  bottom: 8px;
+}
 
 /*Buttons & Breadcrumbs - sold and buy*/
 .title-block{ /*same as btn breadcrumbs*/
@@ -371,12 +390,12 @@ blockquote {
   border-top: 2px $color-white solid;
   aside { padding:0;
     .breadcrumb {
-      .btn, a {width:100%;}
-      .btn { text-align :left; padding: 1em 2.3em!important;}
+      .btn, a {width:100%; padding-left: 0; } /*don't think this is actually a link so might need to move these styles to a heaidng type */
+      .btn { text-align :left; padding: 1em 56px !important; font-weight: 700; letter-spacing: $letter-normal; font-size: 14px;}
     }
   }
   section { background: $color-white; padding:0;}
-  p, h1, h2, h3, h4{ padding:$gutter-wide $gutter-double; margin:0;}
+  p, h1, h2, h3, h4, figure { padding:$gutter-wide $gutter-double; margin:0;}
   hr {padding: 0; margin-bottom: 15px; margin-top: 10px;}
 
   color: $color-black;
@@ -396,10 +415,6 @@ blockquote {
     p {text-shadow: #fff 0px 0px 0px;}
     }
 }
-/*I added it this way to be more specifc but maybe there is a better way, otherwise tex-shadow is ignored
-.side-summary .selected p {
-  text-shadow: #fff 0px 0px 0px !important;
-} */
 
 .side-summary, .side-menu{ width:$width-leftbar; background:#e2e2e2;}
 .row-eq-height {
@@ -417,22 +432,27 @@ blockquote {
 nav.sub-menu{
   ul {
     li {
-      margin: $gutter-default 0;
+      margin: 10px 0;
       background: #c2c2c2;
       &.active {background: $color-pink;}
       h4 {
-        padding: 1em 4em 0;
+        padding: 17px 56px 0;
         color: #a1a1a1;
         font-size: $font-size-small;
         text-transform: uppercase;
         font-family: $font-raleway;
+        font-weight: bold;
+        letter-spacing: $letter-normal;
       &.white{color:$color-white;}
       }
       a {
-        padding: 1em 4em;
-        color:#707070;
-        font-size: $font-size-small;
+        padding: 6px 56px;
+        color:#5a5a5a;
+        font-size: 11px;
         font-family: $font-raleway;
+        letter-spacing: 0.075em;
+        line-height: 1.2;
+        min-height: 46px;
       }
       a:hover {background: none; }
       }
@@ -444,7 +464,7 @@ nav.sub-menu{
   &.col-sm-9 { width:$width-rightbar;}
   .issue {top:0;position: absolute; min-width:165px;border-left:1px solid $color-white; border-bottom: 0;}
   .showcase{    margin:0 0 0 $gutter-double; } /*style inside magazine layout = rightside*/
-  .intro {font-family: $font-raleway;  font-weight: 900; text-shadow: none; letter-spacing: 0.1em; font-size: 14px; line-height: 1.2em;}
+  .intro {font-family: $font-raleway;  font-weight: 700; text-shadow: none; letter-spacing: 0.1em; font-size: 14px; line-height: 1.2em; padding-top: 3px;} /* somehow there is a font weight 900 on the <i> i think? ignores font weight here - stuck */
   blockquote { background: $color-dark-pink; color: $color-white;}
 }
 
