@@ -89,7 +89,12 @@ body{ background: #ff00ff;}
 .side-menu.col-xs-12 {width:100%!important; }
 }
 
-@media only screen and (max-width:425px){
+
+@media only screen and (max-width:640px){
+/*full width columns for MOBILE asper client examples
+}
+
+@media only screen and (max-width:425px){*/
 /*full width columns for PORTRAIT to phones*/
   body{ background: #00ffff;}
 #CS-page{
