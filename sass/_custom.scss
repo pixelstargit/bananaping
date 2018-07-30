@@ -133,6 +133,26 @@ p {clear: both;} /* font-weight: 600;*/
     h3 {color:#000000; font-size: 36px; letter-spacing: 0.075em;}
   }
 
+  .carousel-caption-film {
+    h2, h3 {padding:0 $gutter-double; margin:0;}
+    h2 {color: #fff;font-size: 14px; padding-bottom: 7px; padding-top: 23px;}
+    h3 { font-size: 30px; letter-spacing: 0.075em; padding-bottom: 38px;
+      a {color:#000000;}
+    }
+  }
+
+  .feaured-video-excerpt {
+    font-family: "Stag Light", serif;
+    font-size: 13px;
+    letter-spacing: $letter-normal;
+    line-height: 0.9;
+    color: #000;
+    text-shadow: #000 0px 0px 0px;
+    padding: 17px $gutter-double 24px 27px;
+    background-color: #e0e0e0;
+
+  }
+
 
   &.title-header img, &.vert-red img{ padding-bottom: $gutter-thin;}
   &.slideshow img, &.magazine img{ padding-bottom: 0;}
@@ -193,6 +213,34 @@ p {clear: both;} /* font-weight: 600;*/
         h1.title{ font-size: 36px;}
         h2.title{font-size: 24px;}
 }
+
+/*Magazine Film styles for video overlay */
+.magazine-film-header-overlay {
+  height: 600px; /*NEED TO DO THIS AGAIN SO IT'S RESPONSIVE*/
+  background: no-repeat 50% 50%; }
+
+  .vid-thumb-overlay {
+      opacity:0.36;
+      width: 100%;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      -ms-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+  }
+
+  .play {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 23%;
+  }
+
+  .magazine-film-header-overlay:hover .vid-thumb-overlay {
+      opacity:0.5;
+  }
+
+
 .masonry .col-sm-4.title-header img {max-height: 395px; overflow: hidden; }
 .masonry.projects .col-sm-4.title-header img {max-height: initial;}
 
