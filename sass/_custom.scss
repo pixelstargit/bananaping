@@ -112,6 +112,7 @@ p {clear: both;} /* font-weight: 600;*/
     margin-bottom:-10px;
     position: absolute;
     z-index: 99;
+    margin-top: 0px;
   }
   .carousel-caption{ /*this is for same style to be used on slide show caption and gallery titels*/
     left:0; right: 0; bottom: 0;
@@ -150,12 +151,11 @@ p {clear: both;} /* font-weight: 600;*/
     text-shadow: #000 0px 0px 0px;
     padding: 17px $gutter-double 24px 27px;
     background-color: #e0e0e0;
-
+    margin-bottom: 2px;
   }
 
-
   &.title-header img, &.vert-red img{ padding-bottom: $gutter-thin;}
-  &.slideshow img, &.magazine img{ padding-bottom: 0;}
+  &.title-header .film-thumbnail img, &.slideshow img, &.magazine img { padding-bottom: 0;}
 }
 .carousel-control {
   background-image: none!important;
@@ -214,30 +214,35 @@ p {clear: both;} /* font-weight: 600;*/
         h2.title{font-size: 24px;}
 }
 
-/*Magazine Film styles for video overlay */
-.magazine-film-header-overlay {
-  height: 600px; /*NEED TO DO THIS AGAIN SO IT'S RESPONSIVE*/
-  background:url(../images/magazine-film-cover.jpg) no-repeat 50% 50%; }
+/*Magazine Film styles for video play icon overlay */
 
-  .vid-thumb-overlay {
-      opacity:0.36;
-      width: 100%;
-      -webkit-transition: all 0.3s ease-in-out;
-      -moz-transition: all 0.3s ease-in-out;
-      -o-transition: all 0.3s ease-in-out;
-      -ms-transition: all 0.3s ease-in-out;
-      transition: all 0.3s ease-in-out;
+  .film-thumb-overlay-container {
+    position: relative;
   }
 
-  .play {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 23%;
+  .film-thumbnail {
+    position: relative;
   }
 
-  .magazine-film-header-overlay:hover .vid-thumb-overlay {
-      opacity:0.5;
+  .film-thumbnail img {padding-bottom:0;}
+
+  .play-overlay-icon {
+    position: absolute;
+    display: block;
+    top: 30%;
+    left: 38%;
+    max-width: 24%;
+    opacity:0.36;
+    width: 100%;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .film-thumb-overlay-container:hover .play-overlay-icon {
+    opacity:0.5;
   }
 
 
@@ -267,9 +272,8 @@ p {clear: both;} /* font-weight: 600;*/
    }
 }
 
-.content-project-about {padding-top: 20px;} /* Extra 20px padding for project about page - only page that has it */
 .content-small p {font-size:13px; padding: 0.3em 0;}
-.space-top {padding-top: 15px;}
+.space-top {padding-top: 15px;} /* Extra 20px padding for project about page - only page that has it */
 .space-bottom {padding-bottom: 15px;}
 
 blockquote {
@@ -350,6 +354,12 @@ figcaption {
        padding:10px 20px 0 30px;  margin: 0; }/*tag*/
   h1 { font-family: $font-raleway; font-weight: 700; font-style: italic; font-size: $font-size-h4; text-transform: uppercase;
       padding:10px 20px 0 30px;  margin: 0; width:100%; overflow: hidden; }/*title*/
+
+  h1.film, p.film, h4.film {padding-left:20px;} /*padding is different on Film page, not sure if we should just ignore but added it anyway*/
+  h1.film {padding-top: 7px; letter-spacing: 0.1em;}
+  p.film {padding-top: 8px; margin-bottom: 9px; letter-spacing: $letter-normal;}
+  h4.film {letter-spacing: 0.1em;}
+
   p { font-family: $font-stag-body; font-size: $font-size-small;
      padding:10px 25px 0 30px; margin: 0 0 10px 0; max-height: 65px; overflow: hidden;
   }/*summary*/
@@ -455,22 +465,29 @@ figcaption {
   h4.date-magazine {padding-top: 10px; padding-bottom: 20px;}
   article h2 {font-family: $font-stag-bold; font-size: 15px; letter-spacing: 0.1em; padding-bottom: 12px;}
   }
+
+  .side-summary, .side-menu{ width:$width-leftbar; background:#e2e2e2;}
+  .row-eq-height {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+
 .side-summary, .post-summary {
   background:#efefef;
-  h3{padding: $gutter-default; padding-bottom:0;}
-  p {padding: $gutter-default; line-height: 1.5em; font-size: $font-size-small; padding-top:5px; text-shadow: #000 0px 0px 0px; letter-spacing: $letter-normal;}
+  h3{padding: $gutter-default; padding-bottom:0; padding-left: 25px;}
+  p {padding: $gutter-default; padding-top:5px; padding-left: 25px; line-height: 1.5em; font-size: $font-size-small; text-shadow: #000 0px 0px 0px; letter-spacing: $letter-normal;}
   .selected{background: $color-crimson!important; color: $color-white;
     p {text-shadow: #fff 0px 0px 0px;}
     }
+  .selected-dispatches {background: $color-dark-pink !important; color:$color-white;
+  p {text-shadow: #fff 0px 0px 0px;}
+  }
 }
 
-.side-summary, .side-menu{ width:$width-leftbar; background:#e2e2e2;}
-.row-eq-height {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
+
 
 /*Styles: Zebra */
 .zebra article:nth-child(even) { background: transparent; }
