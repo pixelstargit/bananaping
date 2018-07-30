@@ -20,9 +20,53 @@
   <body>
 
 <!-- Header -->
+<div id="CS-header">
+  <!-- Logo -->
+          <header id="logo"><a href="#"><img src="images/logo-cityscapes.png" class="img-responsive large" alt="Cityscapes">
+            <!--mobile logos-->
+            <img src="images/logo-cityscapes-small.png" class="img-responsive small" alt="Cityscapes"></a></header>
+<!-- Mobile hamburger -->
+         <nav class="navbar navbar-default">
+             <div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                 <span class="sr-only">Toggle navigation</span>
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+               </button>
+             </div>
+<!-- Navigation Menu -->
+             <div id="navbar" class="navbar-collapse collapse">
+               <ul class="nav nav-language">
+                  <li><a href="#">ENGLISH</a></li>
+                  <li><a href="#">ESPAÑOL</a></li>
+                </ul>
+               <ul class="nav navbar-nav">
+                 <li class="active"><a href="#">Home</a></li>
+                 <li><a href="#">About Us</a></li>
+                 <li><a href="#">Magazine</a></li>
+                 <li><a href="#">Projects</a></li>
+        <!-- Wide 2 lines menu item -->
+                 <li class="dropdown">
+                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                     The Download</a>
+                   <ul class="dropdown-menu">
+                     <li><a href="#">Subnav 1</a></li>
+                     <li><a href="#">Subnav 2</a></li>
+                     <li><a href="#">Subnav 3</a></li>
+                     <li><a href="#">One more extra long titled link</a></li>
+                   </ul>
+                 </li>
+                 <li><a href="#">Dispatches</a></li>
+               </ul>
+              <ul class="nav nav-login">
+                 <li><a href="#">login/signup</a></li>
+               </ul>
+             </div>
+         </nav>
+</div>
 
 <!-- Main Content Page -->
-<!-- Projects Page-->
 <div id="CS-page">
 
       <!-- Image showcase -->
@@ -161,29 +205,68 @@ moments of unexpected aesthetic provocation/illumination?</p>
 </div>
 
 <!-- Footer -->
+<div id="CS-footer">
+  <footer>
+    <div class="fullwide">
+      <div class="container footer-logo footer-narrow">
+          <a href="#">CS Collective</a>
+      </div>
+    </div>
+    <div class="container footer-narrow hidden-xs">
+
+      <nav class="footer-menu">
+        <ul>
+          <li class="foot-menu-head"><a href="#">ABOUT US</a></li>
+          <li><a href="#">Who We Are</a></li>
+          <li><a href="#">What We Believe</a></li>
+          <li><a href="#">Key People</a></li>
+          <li><a href="#">Collaborators</a></li>
+          <li><a href="#">Our Boards</a></li>
+          <li><a href="#">Support</a></li>
+        </ul>
+        <ul>
+          <li class="foot-menu-head"><a href="#">MAGAZINE</a></li>
+          <li><a href="#">Current Issue</a></li>
+          <li><a href="#">All Issues</a></li>
+        </ul>
+        <ul>
+          <li class="foot-menu-head"><a href="#">PROJECTS</a></li>
+          <li><a href="#">Exhibitions</a></li>
+          <li><a href="#">Films</a></li>
+          <li><a href="#">Convening</a></li>
+          <li><a href="#">CS.Praxis</a></li>
+        </ul>
+        <ul>
+          <li class="foot-menu-head"><a href="#">CONTACT</a></li>
+          <li><a href="#">Editorial</a></li>
+          <li><a href="#">Subscriptions</a></li>
+          <li><a href="#">General Enquiries</a></li>
+          <li><a href="#">Collaborate With Us</a></li>
+        </ul>
+        <ul class="border-left">
+          <li class="foot-menu-head"><a href="#">SUBSCRIBE</a></li>
+          <li><a href="#">Print Edition (X2 Annually)</a></li>
+          <li><a href="#">Digital Edition</a></li>
+          <li><a href="#">Digital & Print Edition</a></li>
+          <li><a href="#">Libraries</a></li>
+          <li><a href="#">Newsletters & Notices</a></li>
+        </ul>
+      </nav>
+
+
+    </div>
+    <div class="footer-text container">
+      <hr>
+      <p class="footer-res">CS Collective is a registered 501c3</p>
+    </div>
+  </footer>
+</div>
 
 
 
 <!--Bootstrap js -->
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap.js"></script>
-<script>
-$(".carousel").on("touchstart", function(event){
-        var xClick = event.originalEvent.touches[0].pageX;
-    $(this).one("touchmove", function(event){
-        var xMove = event.originalEvent.touches[0].pageX;
-        if( Math.floor(xClick - xMove) > 5 ){
-            $(this).carousel('next');
-        }
-        else if( Math.floor(xClick - xMove) < -5 ){
-            $(this).carousel('prev');
-        }
-    });
-    $(".carousel").on("touchend", function(){
-            $(this).off("touchmove");
-    });
-});
-</script>
 
   </body>
 </html>
