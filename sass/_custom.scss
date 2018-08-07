@@ -404,6 +404,20 @@ figcaption {
        max-height:110px;  min-height:110px; padding-top:25px;
     }
   }
+  &.mixed{/* for col 2|1 */
+    padding:0;
+    &.col-sm-8 {
+      padding:0;
+      margin-left: -$gutter-thin;
+      margin-right:0;
+    }
+    &.col-sm-4 {
+      clear: none !important;
+      padding-left: 0;
+      margin-right: -$gutter-thin;
+      margin-left:0;
+     }
+  }
   &.thumbnails article {/* wider gutter than cover on about page*/
     padding: 0 5px 10px;
     &.col-sm-4:nth-child(3n+1) {padding-left:0; padding-right:10px; clear:both;}
@@ -411,9 +425,6 @@ figcaption {
   }
   &.videos{
     padding: 0;
-    /*section removed?
-    article:nth-child(odd) { padding: 9px 30px 9px 0;}
-    article:nth-child(even){ padding: 9px 0 5px 30px;}*/
   }
   &.post-list {
     padding-top:$gutter-wide;
