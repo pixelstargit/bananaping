@@ -283,7 +283,7 @@ blockquote {
   letter-spacing: $letter-normal;
   padding: 53px 60px 40px 60px;
   line-height: 1.2em;
-  margin: $gutter-default 0 10px $gutter-double;
+  margin: $gutter-default 0 $gutter-default $gutter-double;
   border-left:0;
 }
 
@@ -459,13 +459,15 @@ figcaption {
 
   color: $color-black;
   p {font-family: $font-stag-body; font-size: $font-size-default; letter-spacing: 0.14em; line-height: 1.32; text-shadow: #000 0px 0px 0px;}
-  h3{font-family: $font-raleway; font-size: $font-size-big; text-transform: uppercase; font-style: italic;}
+  h3{font-family: $font-raleway; font-size: $font-size-big; text-transform: uppercase; font-style: italic; line-height: 1;}
   h4.date {font-family: $font-raleway; color: $color-dark-pink; font-weight: 900; font-size: 15px; letter-spacing: 0.055em; padding-top: 25px; padding-bottom: 16px;
       .author{text-transform: uppercase;}
     }
   h4.date-magazine {padding-top: 10px; padding-bottom: 20px;}
   article h2 {font-family: $font-stag-bold; font-size: 15px; letter-spacing: 0.1em; padding-bottom: 12px;}
   }
+
+  .top-gap {padding-top: 8px;}
 
   .side-summary, .side-menu{ width:$width-leftbar; background:#e2e2e2;}
   .row-eq-height {
@@ -530,7 +532,7 @@ nav.sub-menu{
   &.col-sm-9 { width:$width-rightbar;}
   .issue {top:0;position: absolute; min-width:165px;border-left:1px solid $color-white; border-bottom: 0;}
   .showcase{    margin:0 0 0 $gutter-double; } /*style inside magazine layout = rightside*/
-  .intro {font-family: $font-raleway;  font-weight: 700; text-shadow: none; letter-spacing: 0.1em; font-size: 14px; line-height: 1.2em; padding-top: 3px;} /* somehow there is a font weight 900 on the <i> i think? ignores font weight here - stuck */
+  .intro {font-family: $font-raleway;  font-weight: 700; text-shadow: none; letter-spacing: 0.1em; font-size: 14px; line-height: 1.2em; padding-top: 0; padding-bottom: 12px; font-style: italic;} /* somehow there is a font weight 900 on the <i> i think? ignores font weight here - stuck */
   blockquote { background: $color-dark-pink; color: $color-white;}
 }
 
