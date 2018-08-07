@@ -21,6 +21,7 @@
 #CS-footer{
   clear: both;
   color: $color-white; padding-top: $gutter-thin; /* bottom of cspage whitespace*/
+  .container {width:100%;}
 }
 
 /* text resets */
@@ -131,9 +132,16 @@ p {clear: both;} /* font-weight: 600;*/
   }
 
   .carousel-caption-black {
-    h2 {color:#000000; padding-bottom: 2px;}
-    h3 {color:#000000; font-size: 36px; letter-spacing: 0.075em;}
+  h2 {color:#000000; padding-bottom: 2px;}
+  h3 {color:#000000; font-size: 36px; letter-spacing: 0.075em;
+    a {color: #000000;}
+    }
   }
+
+.carousel-caption-home {
+  padding: 0.5em 20px;
+  h3 {line-height:1;}
+}
 
   .carousel-caption-film {
     h2, h3 {padding:0 $gutter-double; margin:0;}
@@ -267,7 +275,7 @@ p {clear: both;} /* font-weight: 600;*/
 }
 .content-text.breadcrumbs{ /*same as btn breadcrumbs and title-block*/
   width:100%;
-  article{ float: left; width:25%; }
+  article{ float: left; width:25%; padding-bottom: 2px;}
   .btn { min-width: 100%; background: $color-grey-dark; border-color:$color-white;
   &.current{background: $color-red;}
   a {font-size: 11px; font-weight: 700;}
@@ -385,7 +393,7 @@ figcaption {
     margin-left: -$gutter-thin;  margin-right: -$gutter-thin; /* fixes for main placement of outer grid --cover*/
     article {
       padding:$gutter-thin;  margin: 0;
-      img {width:100%; }
+      img {width:100%; max-height: $height-cover;}
       .btn{ /*btn for sold / buy*/
         position: absolute; right: 0.4em; top: 50%;
         a{font-size: 11px; padding:1em;}
@@ -394,7 +402,7 @@ figcaption {
   }
   &.cover article {
     &.cover-recommend, &.cover-headline {
-      max-height: 398px; min-height: 398px; overflow: hidden; clear: right;
+      max-height: $height-cover; min-height: $height-cover; overflow: hidden; clear: right;
       padding: 0;
       margin: $gutter-thin;
       &.col-sm-4 {width: calc(33.3% - 0.6em);}
@@ -404,16 +412,16 @@ figcaption {
        max-height:110px;  min-height:110px; padding-top:25px;
     }
   }
-  &.mixed{/* for col 2|1 */
+  &.mixed{/* for col 2|1  -homepage*/
     padding:0;
     &.col-sm-8 {
-      padding:0;
+      padding:0; padding-top:$gutter-thin;
       margin-left: -$gutter-thin;
       margin-right:0;
     }
     &.col-sm-4 {
       clear: none !important;
-      padding-left: 0;
+      padding-left: 0; padding-top:$gutter-thin;
       margin-right: -$gutter-thin;
       margin-left:0;
      }
@@ -478,8 +486,6 @@ figcaption {
   h4.date-magazine {padding-top: 10px; padding-bottom: 20px;}
   article h2 {font-family: $font-stag-bold; font-size: 15px; letter-spacing: 0.1em; padding-bottom: 12px;}
   }
-
-  .top-gap {padding-top: 8px;}
 
   .side-summary, .side-menu{ width:$width-leftbar; background:#e2e2e2;}
   .row-eq-height {
@@ -546,7 +552,10 @@ nav.sub-menu{
   .showcase{    margin:0 0 0 $gutter-double; } /*style inside magazine layout = rightside*/
   .intro {font-family: $font-raleway;  font-weight: 700; text-shadow: none; letter-spacing: 0.1em; font-size: 14px; line-height: 1.2em; padding-top: 0; padding-bottom: 12px; font-style: italic;} /* somehow there is a font weight 900 on the <i> i think? ignores font weight here - stuck */
   blockquote { background: $color-dark-pink; color: $color-white;}
+  .top-gap {padding-top: 8px;}
 }
+
+  .top-gap {padding-top: 8px;}
 
 /* Socials = font-awesome */
 .social-icons{
