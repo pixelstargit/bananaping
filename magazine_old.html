@@ -68,7 +68,7 @@
 </div>
 
 <!-- Main Content Page -->
-<div id="CS-page" class="flex-container">
+<div id="CS-page">
 
     <!-- Side Bar -->
       <section class="content-sidebars">
@@ -76,11 +76,22 @@
           <aside class="col-xs-12 col-sm-3 side-menu">
     <!-- Showcase -->
               <section class="showcase">
-                <div class="carousel slide" data-ride="carousel">
+                <div id="carousel-featured" class="carousel slide" data-ride="carousel">
                   <div class="carousel-inner" role="listbox">
               <!--Slides -->
                     <div class="item active"><img src="images/cover-08.jpg" alt="Cover"></div>
+                    <div class="item"><img src="images/cover-01.jpg" alt="Cover"> </div>
                   </div>
+
+                  <!-- Controls -->
+                  <a class="left carousel-control" href="#carousel-featured" role="button" data-slide="prev">
+                    <span class="glyphicon icon-prev" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="right carousel-control" href="#carousel-featured" role="button" data-slide="next">
+                    <span class="glyphicon icon-next" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
                 </div>
               </section>
 
@@ -105,6 +116,7 @@
             </article>
           </section>
 </section>
+
 
 <!-- Cover sections Grid -->
 <!-- nested cols left side 2 | 1-->
@@ -132,53 +144,52 @@
            </article>
       </section>
 
-
-
 <!-- Cover sections Grid -->
 <!-- nested cols right side 2 | 1-->
 
-        <section class="content-grid cover mixed col-sm-8 invert ">
-          <!-- section Breadcrumbs-->
-          <article class="breadcrumbs">
-            <button type="button" class="btn orange"><a href="#">Reporting, Interviews & Conversations</a></button>
+      <section class="content-grid cover mixed col-sm-8 invert">
+        <!-- section Breadcrumbs-->
+        <article class="breadcrumbs">
+          <button type="button" class="btn orange"><a href="#">Reporting, Interviews & Conversations</a></button>
+        </article>
+
+          <article class="cover-recommend pink col-xs-6">
+              <img src="images/piece-cover-06.jpg" alt="Cover">
+              <h1>Majority World</h1>
+              <p>Shahidul Alam forged a stellar career that is shifting the way South Asian countries are portrayed</p>
+              <h4>Zeeshan Khan</h4>
           </article>
 
-            <article class="cover-recommend pink col-xs-6">
-                <img src="images/piece-cover-06.jpg" alt="Cover">
-                <h1>Majority World</h1>
-                <p>Shahidul Alam forged a stellar career that is shifting the way South Asian countries are portrayed</p>
-                <h4>Zeeshan Khan</h4>
-            </article>
+          <article class="cover-recommend pink col-xs-6">
+              <img src="images/piece-cover-07.jpg" alt="Cover">
+              <h1>Majority World</h1>
+              <p>Shahidul Alam forged a stellar career that is shifting the way South Asian countries are portrayed</p>
+              <h4>Zeeshan Khan</h4>
+          </article>
 
-            <article class="cover-recommend pink col-xs-6">
-                <img src="images/piece-cover-07.jpg" alt="Cover">
-                <h1>Majority World</h1>
-                <p>Shahidul Alam forged a stellar career that is shifting the way South Asian countries are portrayed</p>
-                <h4>Zeeshan Khan</h4>
-            </article>
+          <article class="cover-recommend pink col-xs-6">
+              <img src="images/piece-cover-04.jpg" alt="Cover">
+              <h1>Majority World</h1>
+              <p>Shahidul Alam forged a stellar career that is shifting the way South Asian countries are portrayed</p>
+              <h4>Zeeshan Khan</h4>
+          </article>
 
-            <article class="cover-recommend pink col-xs-6">
-                <img src="images/piece-cover-04.jpg" alt="Cover">
-                <h1>Majority World</h1>
-                <p>Shahidul Alam forged a stellar career that is shifting the way South Asian countries are portrayed</p>
-                <h4>Zeeshan Khan</h4>
-            </article>
+          <article class="cover quote col-xs-6">
+              <img src="images/quote-03.jpg" alt="Cover">
+          </article>
 
+          <article class="cover-headline pink col-xs-6">
+              <h1>Majority World</h1>
+              <h4>Zeeshan Khan</h4>
+          </article>
 
-            <article class="cover quote col-xs-6">
-                <img src="images/quote-03.jpg" alt="Cover">
-            </article>
+          <article class="cover-headline pink col-xs-6">
+              <h1>Majority World</h1>
+              <h4>Zeeshan Khan</h4>
+          </article>
+    </section>
 
-            <article class="cover-headline pink col-xs-6">
-                <h1>Majority World</h1>
-                <h4>Zeeshan Khan</h4>
-            </article>
-
-            <article class="cover-headline pink col-xs-6">
-                <h1>Majority World</h1>
-                <h4>Zeeshan Khan</h4>
-            </article>
-      </section>
+<!--Gallery SLideshow-->
 
     <!-- title blocks breadcrumbs -->
     <section class="content-text">
@@ -188,42 +199,39 @@
       <article class="title-block count"><h2>3</h2></article>
     </section>
 
-    <!--Magazine Slider -->
-        <section class="showcase gallery showcase-magazine">
-          <div id="carousel-featured" class="carousel slide" data-ride="carousel">
+        <section class="showcase gallery">
+          <div id="carousel-gallery" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner" role="listbox">
 
-              <!--Magazine Slider -->
-                        <!-- Indicators (dots) -->
-                        <ol class="carousel-indicators carousel-indicators-magazine">
-                            <li data-target="#carousel-featured" data-slide-to="0" class="active"></li>
-                            <li data-target="#carousel-featured" data-slide-to="1"></li>
+      <!--Slides -->
+              <div class="item active">
+                <img src="images/placeholder.jpg" alt="Gallery">
+                <div class="carousel-caption">
+                  <h2>NEW slideshow with dots and caption styles</h2>
+                  <h3><a href="#">Silent Lives</a></h3>
+                </div>
+                <p class="featured-excerpt col-sm-12">CAPTION + PHOTO CREDIT HERE: Spear-throwing at one of the anthropology day events which were part of the events at the 1904 Olympics</p>
+              </div>
+              <div class="item">
+                <img src="images/placeholder.jpg" alt="Gallery">
+                <div class="carousel-caption">
+                  <h2>Fasdsadsadd</h2>
+                  <h3><a href="#">Silent Lives</a></h3>
+                </div>
+                <p class="featured-excerpt col-sm-12">CAPTION + PHOTO CREDIT HERE: Spear-throwing at one of the anthropology day events which were part of the events at the 1904 Olympics</p>
+              </div>
+            </div>
 
-                        </ol>
-
-                        <!-- Slides -->
-                      <div class="item active">
-                        <img src="images/slider_magazine_01.jpg" alt="Gallery">
-                        <div class="carousel-caption">
-                          <h2>Aun Raza</h2>
-                          <h3><a href="#">CASUAL URGENCIES OF THE EVERYDAY</a></h3>
-                        </div>
-                        <p class="featured-excerpt col-sm-12">In 2005, Myanmar’s ruling generals moved their capital from Yangon (formerly Rangoon), a metropolitan region of some seven million people, to Naypyidaw. It has hardly alleviated the crush; Yangon’s population has tripled since 1983. Traffic congestion and smog, by-products of 7% annual growth, are common facets of daily life. Not that such hard statistics are what attracted Aun Raza (b. 1983, Lahore) to this brash Southeast Asian metropolis. Trained as an artist at the National College of Arts in Lahore, Raza’s essay on Yangon focuses on the visible ambiguities, its “roughness” and “tenderness”. Everyday life here, remarks Raza, is marked by “casual urgencies”.</p>
-                      </div>
-
-                      <div class="item">
-                        <img src="images/slider_magazine_01.jpg" alt="Gallery">
-                        <div class="carousel-caption">
-                          <h2>Fasdsadsadd</h2>
-                          <h3><a href="#">What ahppens if we have a really long caption like this one over here?</a></h3>
-                        </div>
-                        <p class="featured-excerpt col-sm-12">CAPTION + PHOTO CREDIT HERE: Spear-throwing at one of the anthropology day events which were part of the events at the 1904 Olympics</p>
-                      </div>
-
-                    </div>
-
-
-                  </div>
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-gallery" role="button" data-slide="prev">
+              <span class="glyphicon icon-prev" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-gallery" role="button" data-slide="next">
+              <span class="glyphicon icon-next" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
         </section>
 </div>
 
