@@ -79,6 +79,7 @@ body{ background: #ff00ff;}
     &.mixed.col-sm-4{ margin-left: $gutter-thin; margin-right: $gutter-thin; width:auto;}
 
     &.masonry .col-sm-8 { width:100%; min-height: 407px;}
+    &.masonry .hidden-xs {display: none;}
     &.videos article { padding:0;}
 
     &.cover.mixed article.cover-recommend.col-xs-6 {
@@ -125,6 +126,7 @@ body{ background: #ff00ff;}
     &.cover article.cover-headline.col-xs-6,
     &.cover article.cover-recommend.col-xs-6 {width: 100%;max-height:initial;}
     .cover-recommend img, .cover-recommend p { max-height: initial;}
+    &.masonry .col-sm-8 {  min-height: auto;}
   }
 }
 .title-header .title-header-overlay{
