@@ -82,7 +82,7 @@ body{ background: #ff00ff;}
     &.masonry .hidden-xs {display: none;}
     &.videos article { padding:0;}
 
-    &.cover.mixed article.cover-recommend.col-xs-6, 
+    &.cover.mixed article.cover-recommend.col-xs-6,
     &.mixed .col-xs-6{width: calc(100% - 0.6em) !important; min-height:initial; max-height: initial;}
 
   }
@@ -102,7 +102,7 @@ body{ background: #ff00ff;}
 
 .content-text.breadcrumbs article{  width:50%;}
 .flex-order-first{ order:-1;}
-.side-menu.col-xs-12 {width:100%!important; }
+.side-menu.col-xs-12, .content-sidebars {width:100%!important; }
 }
 
 
