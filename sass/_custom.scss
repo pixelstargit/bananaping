@@ -398,6 +398,7 @@ figcaption {
         position: absolute; right: 0.4em; top: 50%;
         a{font-size: 11px; padding:1em;}
         }
+       &.breadcrumbs .btn{ position: relative; right:0; top: 0; }
     }
   }
   &.cover article {
@@ -670,4 +671,22 @@ footer{
       }
     }
   }
+}
+
+
+/*flex*/
+
+
+.flex-container {
+  display: flex;
+  flex-direction: row ;
+  flex-wrap: wrap ;
+  justify-content: flex-start;
+}
+.flex-item{
+   margin: 0 auto;
+   flex-shrink:1;
+  }
+@media only screen and (max-width:767px){
+  .flex-order-first{ order:-1;}
 }
