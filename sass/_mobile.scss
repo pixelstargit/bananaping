@@ -82,10 +82,7 @@ body{ background: #ff00ff;}
     &.masonry .hidden-xs {display: none;}
     &.videos article { padding:0;}
 
-    &.cover.mixed article.cover-recommend.col-xs-6 {
-        width: calc(100% - 0.6em); min-height:initial; max-height: initial;
-        img {display:none;}
-    }
+    &.cover.mixed article.cover-recommend.col-xs-6, 
     &.mixed .col-xs-6{width: calc(100% - 0.6em) !important; min-height:initial; max-height: initial;}
 
   }
