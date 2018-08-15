@@ -58,7 +58,7 @@ p {clear: both;} /* font-weight: 600;*/
     }
   }
   .nav-login {
-    float:right; margin-top:-96px;/*adjust position for nav login*/
+    float:right; margin-top:-96px; margin-right:1px;/*adjust position for nav login*/
     li {
       border-right: 0!important;
       border-left: 2px solid $color-grey-light;
@@ -95,7 +95,7 @@ p {clear: both;} /* font-weight: 600;*/
   li {
     width:100% !important; background: transparent;
     border-top: solid 1px #ffffff; border-right:none;
-    text-align: center;
+    text-align: left;
   a { width:100%; min-height:3em; padding-top:1em;
       text-transform: capitalize; color: $color-grey-heavy;
     }
