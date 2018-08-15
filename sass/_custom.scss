@@ -528,9 +528,13 @@ figcaption {
 }
 
 /* Sidebar and right content styles */
-#CS-page .content-sidebars section{clear:none;} /*/this is causing text overlay none clears why is it here -- for magazine layout rather */
+#CS-page .content-sidebars section{clear:none;} /*this is for clears -- for magazine layout */
+
+/*top of page gaps standard */
+.content-sidebars, .showcase { border-top: 2px $color-white solid;}
+.showcase.magazine, .content-sidebars .showcase {border-top: none;}
+
 .content-sidebars {
-  border-top: 2px $color-white solid;
   aside { padding:0;
     .breadcrumb {
       .btn, a {width:100%; padding-left: 0; } /*don't think this is actually a link so might need to move these styles to a heaidng type */
