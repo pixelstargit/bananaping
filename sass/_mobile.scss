@@ -69,11 +69,10 @@ body{ background: #ff00ff;}
       h1 {padding: 10px 20px 10px 30px;}
     }
     &.thumbnails{
-      .img-responsive{ width:100%;}
-      article.col-sm-4:nth-child(3n) {
-          padding-left: 0;
-          padding-right: 10px;
-        }
+      margin-left:$gutter-default;
+       .img-responsive{ width:100%;}
+       article { padding: 0 $gutter-default 10px 0;}
+       article.col-sm-6:nth-child(even) {padding-left: 0; padding-right: $gutter-default; }
       }
     &.mixed.col-sm-8{ margin-left: $gutter-thin; margin-right: $gutter-thin; width:auto;}
     &.mixed.col-sm-4{ margin-left: $gutter-thin; margin-right: $gutter-thin; width:auto;}
@@ -82,12 +81,13 @@ body{ background: #ff00ff;}
     &.masonry .hidden-xs {display: none;}
     &.videos article { padding:0;}
 
-    &.cover.mixed article.cover-recommend.col-xs-6,
-    &.mixed .col-xs-6{width: calc(100% - 0.6em) !important; min-height:initial; max-height: initial;}
+    /*on landscape splits into 2 cols and then one col with correct padding OR see below make one col sooner*/
+    &.cover.mixed article.cover-recommend.col-xs-6{width: calc(100% - 0.6em); min-height:initial; max-height: initial;}
+    &.mixed .col-xs-6{width: 100%; min-height:initial; max-height: initial;}
 
   }
 
-  .breadcrumbs .btn.orange { min-width: 100%; padding: inherit 0;  max-width: 100%;}
+  .breadcrumbs .btn.orange { min-width: 100%; padding: inherit 0;  max-width: 100%; white-space: normal;}
   .magazine.col-xs-12, .side-menu.sub-menu{ width:100%; }
   .side-menu img, .side-summary {width: 100%;}
 }
@@ -117,7 +117,7 @@ body{ background: #ff00ff;}
   .content-grid {
     &.thumbnails{
       .col-xs-6, .img-responsive{ width:100%;}
-      article { padding: 0 5px 10px;}
+      article { padding: 0 $gutter-default 10px 0;}
       }
     &.mixed .col-xs-6 {width: 100%;}
     &.cover article.cover-headline.col-xs-6,
@@ -157,11 +157,14 @@ body{ background: #ff00ff;}
 
 
 @media only screen and (max-width:375px){
-/*tiniest PORTRAIT to phones*/
+/*tiniest PORTRAIT to phones - blue*/
 body{ background: #000fff;}
 
 .col-xs-6 {width:100%;}
 .content-grid.thumbnails article{padding-left: 0!important; padding-right: 0!important;}
-.breadcrumbs .btn.orange { min-width:100%;}
+.breadcrumbs {
+  max-width:375px; overflow:hidden;
+  .btn.orange { min-width:100%;}
+}
 .content-text.breadcrumbs article{  width:100%;}
 }
