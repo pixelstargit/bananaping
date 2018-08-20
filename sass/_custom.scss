@@ -58,7 +58,7 @@ p {clear: both;} /* font-weight: 600;*/
     }
   }
   .nav-login {
-    float:right; margin-top:-96px;/*adjust position for nav login*/
+    float:right; margin-top:-96px; margin-right:1px;/*adjust position for nav login*/
     li {
       border-right: 0!important;
       border-left: 2px solid $color-grey-light;
@@ -95,7 +95,7 @@ p {clear: both;} /* font-weight: 600;*/
   li {
     width:100% !important; background: transparent;
     border-top: solid 1px #ffffff; border-right:none;
-    text-align: center;
+    text-align: left;
   a { width:100%; min-height:3em; padding-top:1em;
       text-transform: capitalize; color: $color-grey-heavy;
     }
@@ -109,6 +109,7 @@ p {clear: both;} /* font-weight: 600;*/
 .content-sidebars .showcase {background-color: #fff;}
 
 .showcase{
+  width:100%;
   article {position: relative; overflow: hidden; width: 100%;}
   .breadcrumb{ /*overlay breadcrumb on showcase img*/
     margin-bottom:-10px;
@@ -139,8 +140,10 @@ p {clear: both;} /* font-weight: 600;*/
   }
 
 .carousel-caption-home {
-  padding: 0.5em 20px;
+  padding: 0 28px; height: 113px;
   h3 {line-height:1;}
+  h2 {padding-bottom: 7px;}
+	h3 {line-height:0.8; letter-spacing: $letter-normal; margin-bottom: 0;}
 }
 
   .carousel-caption-film {
@@ -152,7 +155,7 @@ p {clear: both;} /* font-weight: 600;*/
   }
 
   .featured-excerpt {
-    font-family: "Stag Light", serif;
+    font-family: $font-raleway;
     font-size: 13px;
     letter-spacing: $letter-normal;
     line-height: 0.9;
@@ -166,6 +169,52 @@ p {clear: both;} /* font-weight: 600;*/
   &.title-header img, &.vert-red img{ padding-bottom: $gutter-thin;}
   &.title-header .film-thumbnail img, &.slideshow img, &.magazine img { padding-bottom: 0;}
 }
+
+/*Magazine showcase slider styles */
+
+.showcase-magazine {
+.carousel-caption { padding-left: 60px;
+  h2 {font-size: 14px;
+    margin-top: 18px;
+    margin-bottom: 8px;
+    }
+  h3 {padding-bottom: 27px;}
+  }
+
+  .featured-excerpt {
+    font-family: $font-stag-body;
+    padding: 19px 60px 24px 60px;}
+}
+
+/*slider dots*/
+.carousel-indicators {
+  left: 33%;
+  bottom: 113px;
+  text-align: left;
+  li , li.active{width:20px; height: 20px; background-color: #fff; border: 0px; margin: 0;}
+  li.active {background-color:#ff0000;}
+}
+
+#carousel-gallery .carousel-indicators {
+  text-align: center;
+  left: 50%;
+  bottom: 55px;
+  li , li.active {width: 11px; height: 11px;}
+}
+
+.carousel-indicators-magazine {
+  text-align: right;
+  right: 0;
+  left: auto;
+  padding-right: 60px;
+  bottom: auto;
+  top: 75%;
+}
+
+#carousel-gallery .caption {line-height: 1.1; letter-spacing: 0.02em; padding: 10px 20px; height: 60px; overflow: hidden;}
+
+
+
 .carousel-control {
   background-image: none!important;
   .icon-prev { left:10%;}
@@ -173,7 +222,7 @@ p {clear: both;} /* font-weight: 600;*/
 }
 .carousel-inner > .item > img, .carousel-inner > .item > a > img { width: 100%;}
 .content-sidebars .showcase .carousel-inner .item img { margin-bottom: -1px; }
-.caption {font-size:0.8em!important; background: $color-grey-medium!important;} /*darker than .featured-excerpt*/
+.caption {font-size:11px!important; background: $color-grey-medium!important;} /*darker than .featured-excerpt*/
 .gallery {padding-top: $gutter-default;padding-bottom: $gutter-default;}
 
 /*cover articles with overlays and showcase headers */
@@ -256,7 +305,7 @@ p {clear: both;} /* font-weight: 600;*/
   }
 
 
-.masonry .col-sm-4.title-header img {max-height: 395px; overflow: hidden; }
+.masonry .col-sm-4.title-header img {max-height: 392px; overflow: hidden; }
 .masonry.projects .col-sm-4.title-header img {max-height: initial;}
 
 
@@ -275,7 +324,7 @@ p {clear: both;} /* font-weight: 600;*/
 }
 .content-text.breadcrumbs{ /*same as btn breadcrumbs and title-block*/
   width:100%;
-  article{ float: left; width:25%; padding-bottom: 2px;}
+  article{  width:25%; float: left; padding-bottom: 2px;}
   .btn { min-width: 100%; background: $color-grey-dark; border-color:$color-white;
   &.current{background: $color-red;}
   a {font-size: 11px; font-weight: 700;}
@@ -402,7 +451,7 @@ figcaption {
     }
   }
   &.cover article {
-    &.cover-recommend, &.cover-headline {
+    &.cover-recommend, &.cover-headline, &.quote {
       max-height: $height-cover; min-height: $height-cover; overflow: hidden; clear: right;
       padding: 0;
       margin: $gutter-thin;
@@ -419,12 +468,26 @@ figcaption {
       padding:0; padding-top:$gutter-thin;
       margin-left: -$gutter-thin;
       margin-right:0;
+      width: calc(66.67% + 0.6em);
+      &.invert{
+      clear: none !important;
+      margin-left: 0;
+      margin-right: -$gutter-thin;
+      .col-xs-6 {width: calc(50% - 0.6em);}
+      }
     }
     &.col-sm-4 {
       clear: none !important;
       padding-left: 0; padding-top:$gutter-thin;
       margin-right: -$gutter-thin;
       margin-left:0;
+      width: calc(33.3% - 0.6em);
+      &.invert{
+      clear: both !important;
+      margin-right: 0;
+      margin-left: -$gutter-thin;
+      .col-xs-12 {width: calc(100% - 0.6em);}
+      }
      }
   }
   &.thumbnails article {/* wider gutter than cover on about page*/
@@ -465,9 +528,13 @@ figcaption {
 }
 
 /* Sidebar and right content styles */
-#CS-page .content-sidebars section{clear:none;} /*/this is causing text overlay none clears why is it here -- for magazine layout rather */
+#CS-page .content-sidebars section{clear:none;} /*this is for clears -- for magazine layout */
+
+/*top of page gaps standard */
+.content-sidebars, .showcase { border-top: 2px $color-white solid;}
+.showcase.magazine, .content-sidebars .showcase {border-top: none;}
+
 .content-sidebars {
-  border-top: 2px $color-white solid;
   aside { padding:0;
     .breadcrumb {
       .btn, a {width:100%; padding-left: 0; } /*don't think this is actually a link so might need to move these styles to a heaidng type */
@@ -674,8 +741,7 @@ footer{
 }
 
 
-/*flex*/
-
+/*general flex*/
 
 .flex-container {
   display: flex;
@@ -687,6 +753,3 @@ footer{
    margin: 0 auto;
    flex-shrink:1;
   }
-@media only screen and (max-width:767px){
-  .flex-order-first{ order:-1;}
-}
