@@ -40,7 +40,7 @@ p {clear: both;} /* font-weight: 600;*/
     margin: 0 auto;
     a{color: $color-white; font-family: $font-raleway; font-size: 11.5px; text-transform: uppercase; letter-spacing: $letter-normal; font-weight: 600;}
     li {border-right: solid 1px $color-white;}
-    li:last-child {border-right:0;}
+    li:nth-child(6) {border-right:0;} /*width of navbar visually affected by the right border */
     li li a{color: $color-grey-dark;}
     .active > a {background: $color-red;}
     ul li{
@@ -56,9 +56,10 @@ p {clear: both;} /* font-weight: 600;*/
       font-size:10px!important;
       letter-spacing: 0.12em !important;
     }
+    li:last-child {border-right:0;}
   }
   .nav-login {
-    float:right; margin-top:-96px; margin-right:1px;/*adjust position for nav login*/
+    float:right; margin-top:-96px;/*adjust position for nav login*/
     li {
       border-right: 0!important;
       border-left: 2px solid $color-grey-light;
@@ -71,7 +72,7 @@ p {clear: both;} /* font-weight: 600;*/
     li {
       display: inline-block;
       width: auto; /*62px;*/
-      a { margin-top: -1px; padding:8px 5px; }
+      a { margin-top: -1px; padding:8px 5px 8px 7px; }
       &:last-child { margin-left:-5px;}
     }
   }
@@ -178,12 +179,15 @@ p {clear: both;} /* font-weight: 600;*/
     margin-top: 18px;
     margin-bottom: 8px;
     }
-  h3 {padding-bottom: 27px;}
+  h3 {padding-bottom: 27px; max-width: 80%;}
   }
 
   .featured-excerpt {
     font-family: $font-stag-body;
-    padding: 19px 60px 24px 60px;}
+    padding: 19px 60px 24px 60px;
+    height: 113px;
+  }
+
 }
 
 /*slider dots*/
@@ -323,8 +327,8 @@ p {clear: both;} /* font-weight: 600;*/
    }
 }
 .content-text.breadcrumbs{ /*same as btn breadcrumbs and title-block*/
-  width:100%;
-  article{  width:25%; float: left; padding-bottom: 2px;}
+  width:101%; margin-left: -1px;
+  article{  width:25%; float: left;   padding-bottom: $gutter-thin;}
   .btn { min-width: 100%; background: $color-grey-dark; border-color:$color-white;
   &.current{background: $color-red;}
   a {font-size: 11px; font-weight: 700;}
@@ -531,7 +535,7 @@ figcaption {
 #CS-page .content-sidebars section{clear:none;} /*this is for clears -- for magazine layout */
 
 /*top of page gaps standard */
-.content-sidebars, .showcase { border-top: 2px $color-white solid;}
+.content-sidebars, .showcase { border-top: 0px $color-white solid;} /*this is 1px from header nav border*/
 .showcase.magazine, .content-sidebars .showcase {border-top: none;}
 
 .content-sidebars {
@@ -555,7 +559,8 @@ figcaption {
   article h2 {font-family: $font-stag-bold; font-size: 15px; letter-spacing: 0.1em; padding-bottom: 12px;}
   }
 
-  .side-summary, .side-menu{ width:$width-leftbar; background:#e2e2e2;}
+  .side-menu{ width: $width-leftbar; background:#e2e2e2;}
+  .side-summary {width: calc(#{$width-leftbar} + 2px); background:#e2e2e2;}/*standardize width because of the border on the sidemenu */
   .row-eq-height {
     display: -webkit-box;
     display: -webkit-flex;
