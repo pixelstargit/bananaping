@@ -198,6 +198,7 @@ body{ background: #ff00ff;}
     .carousel-caption {
       h3 a {font-size: 19px;}
     }
+  article {height: 100vh;}
   }
 
   #carousel-gallery {
@@ -208,6 +209,8 @@ body{ background: #ff00ff;}
   blockquote {font-size: 25px;}
 
   .title-header .title-header-overlay .tag.long {max-width:60%;}
+  .masonry .title-header-overlay h1.title {font-size:30px;}
+  .title-header img {object-fit: cover; width: auto; max-width: none; height:100vh;}
 
 }
 
@@ -245,4 +248,5 @@ body{ background: #000fff;}
 .masonry .title-header-overlay p {display: none;}
 
 .title-header .title-header-overlay .tag.long {max-width:80%;}
+.masonry .title-header-overlay h1.title {font-size:24px;}
 }
