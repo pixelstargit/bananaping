@@ -253,14 +253,17 @@ p {clear: both;} /* font-weight: 600;*/
       display: block; margin: 0 auto; max-width: 20%; min-width: 150px;
       &.long{max-width:40%;}
       }
+      .tag-darker {background: $overlay-red-darker;}
     p{
-      margin: 0; padding: 0;
+      margin: 0;
+      padding: 0 30px;
       font-family: $font-raleway; font-style: normal;
       font-size: 12px;
       font-weight: 500;
       letter-spacing: 0.075em;
       }
     }
+    .overlay-darker {background: $overlay-grey-darker;}
     .vert-center {
       font-style: normal;
       position: absolute; top: 33.3%; bottom: 33.3%;
@@ -368,7 +371,7 @@ figcaption {
   bottom: 8px;
 }
 
-/*Buttons & Breadcrumbs - sold and buy*/
+/*Buttons & Breadcrumbs */
 .title-block{ /*same as btn breadcrumbs*/
   background: $color-grey-medium;
   float:left; padding: 0;  border: 1px solid $color-white; min-width: 170px; text-align: center; margin-bottom: 10px;
@@ -486,6 +489,7 @@ figcaption {
       padding-left: 0; padding-top:$gutter-thin;
       margin-right: -$gutter-thin;
       margin-left:0;
+      min-width:33.3%;
       width: calc(33.3% - 0.6em);
       &.invert{
       clear: both !important;
@@ -562,6 +566,7 @@ figcaption {
 
   .side-menu{ width: $width-leftbar; background:#e2e2e2;}
   .side-summary {width: calc(#{$width-leftbar} + 2px); background:#e2e2e2;}/*standardize width because of the border on the sidemenu */
+  .side-summary.zebra {width: calc(#{$width-leftbar});}/*zebra width sidemenu */
   .row-eq-height {
     display: -webkit-box;
     display: -webkit-flex;
@@ -626,9 +631,8 @@ nav.sub-menu{
   .showcase{    margin:0 0 0 $gutter-double; } /*style inside magazine layout = rightside*/
   .intro {font-family: $font-raleway;  font-weight: 700; text-shadow: none; letter-spacing: 0.1em; font-size: 14px; line-height: 1.2em; padding-top: 0; padding-bottom: 12px; font-style: italic;} /* somehow there is a font weight 900 on the <i> i think? ignores font weight here - stuck */
   blockquote { background: $color-dark-pink; color: $color-white;}
-  .top-gap {padding-top: 8px;}
+  .top-gap {padding-top: 22px;}
 }
-
   .top-gap {padding-top: 8px;}
 
 /* Socials = font-awesome */
@@ -748,7 +752,6 @@ footer{
 
 
 /*general flex*/
-
 .flex-container {
   display: flex;
   flex-direction: row ;
