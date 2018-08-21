@@ -98,6 +98,7 @@ body{ background: #ff00ff;}
   .content-text{
     margin-left: $gutter-default; margin-right: $gutter-default;
     &.breadcrumbs {margin-left: 0; margin-right: 0; }
+    &.counting-block{ margin-left: 0.6em; margin-right: 0.6em;}
   }
   .breadcrumbs .btn.orange { min-width: 100%; padding: inherit 0;  max-width: 100%; white-space: normal;}
   .magazine.col-xs-12, .side-menu.sub-menu{ width:100%; }
@@ -134,6 +135,7 @@ body{ background: #ff00ff;}
   }
 
   .magazine .showcase {margin-left: 0;}
+  .no-gap{padding-top:12px !important;}
 
 }
 
@@ -206,7 +208,7 @@ body{ background: #ff00ff;}
   .carousel-indicators {bottom: 75px;}
   }
 
-  blockquote {font-size: 25px;}
+  blockquote {font-size: 25px; padding: 1em;}
 
   .title-header .title-header-overlay .tag.long {max-width:60%;}
   .masonry .title-header-overlay h1.title {font-size:30px;}
