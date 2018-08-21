@@ -212,7 +212,26 @@ body{ background: #ff00ff;}
 
   .title-header .title-header-overlay .tag.long {max-width:60%;}
   .masonry .title-header-overlay h1.title {font-size:30px;}
+
+  /*method 1
   .title-header img {object-fit: cover; width: auto; max-width: none; height:100vh;}
+  */
+
+  .fill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height:100%;
+    width:auto;
+  }
+  .fill img {
+      flex-shrink: 0;
+      min-width: 100%;
+      min-height: 100%;
+      height: 100%;
+      width: auto;
+  }
 
 }
 
