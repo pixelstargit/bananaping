@@ -25,7 +25,7 @@
 }
 
 /* text resets */
-.btn, .title-block h2 {letter-spacing: $letter-normal; font-weight: 600;}
+.btn, .title-block h2 {letter-spacing: $letter-wide; font-weight: 600;}
 h1, h2, h3 {letter-spacing: $letter-normal;  font-weight: 900;}
 b, strong {font-family: $font-stag-semibold; font-weight: 600; text-shadow: none;}
 p {clear: both;} /* font-weight: 600;*/
@@ -38,7 +38,7 @@ p {clear: both;} /* font-weight: 600;*/
     max-width: $main-page-width;
     width:100%;
     margin: 0 auto;
-    a{color: $color-white; font-family: $font-raleway; font-size: 11.5px; text-transform: uppercase; letter-spacing: $letter-normal; font-weight: 600;}
+    a{color: $color-white; font-family: $font-raleway; font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600;}
     li {border-right: solid 1px $color-white;}
     li:nth-child(6) {border-right:0;} /*width of navbar visually affected by the right border */
     li li a{color: $color-grey-dark;}
@@ -142,9 +142,8 @@ p {clear: both;} /* font-weight: 600;*/
 
 .carousel-caption-home {
   padding: 0 28px; height: 113px;
-  h3 {line-height:1;}
   h2 {padding-bottom: 7px;}
-	h3 {line-height:0.8; letter-spacing: $letter-normal; margin-bottom: 0;}
+	h3 {line-height:1; letter-spacing: $letter-normal; margin-bottom: 0;}
 }
 
   .carousel-caption-film {
@@ -156,10 +155,10 @@ p {clear: both;} /* font-weight: 600;*/
   }
 
   .featured-excerpt {
-    font-family: $font-raleway;
+    font-family: $font-stag-body;
     font-size: 13px;
-    letter-spacing: $letter-normal;
-    line-height: 0.9;
+    letter-spacing: $letter-wide;
+    line-height: 1.25;
     color: #000;
     text-shadow: #000 0px 0px 0px;
     padding: 17px $gutter-double 24px 27px;
@@ -186,7 +185,7 @@ p {clear: both;} /* font-weight: 600;*/
   .featured-excerpt {
     font-family: $font-stag-body;
     padding: 19px 60px 24px 60px;
-    height: 113px;
+    height: 130px;
   }
 
 }
@@ -229,6 +228,8 @@ p {clear: both;} /* font-weight: 600;*/
 .content-sidebars .showcase .carousel-inner .item img { margin-bottom: -1px; }
 .caption {font-size:11px!important; background: $color-grey-medium!important;} /*darker than .featured-excerpt*/
 .gallery {padding-top: $gutter-default;padding-bottom: $gutter-default;}
+
+.modal-dialog { width: 760px;}
 
 /*cover articles with overlays and showcase headers */
 .title-header {
@@ -382,7 +383,7 @@ figcaption {
       font-family: $font-raleway;
       text-transform: uppercase;
       font-size: $font-size-small;
-      letter-spacing: $letter-normal;
+      letter-spacing: $letter-wide;
       padding: 1px 5px;
       font-weight: 700;
     }
@@ -393,6 +394,7 @@ figcaption {
     h2,a {padding:2px, 10px;}
   }
 }
+.title-block-wider {min-width: 200px;}
 .title-d-pink {background: $color-dark-pink;}
 .title-red {background: $color-red;}
 .btn{
@@ -402,7 +404,7 @@ figcaption {
     border-radius: 0;
     text-transform: uppercase;
     font-size: $font-size-small;
-    letter-spacing: $letter-normal;
+    letter-spacing: $letter-wide;
     padding: 5px 19px;
    }
   background-color: $color-green;
@@ -417,11 +419,11 @@ figcaption {
 .cover-section{}
 .cover-recommend, .cover-headline { /*12 | 20 |12 |14pt -check font sizes*/
   color: $color-black;
-  letter-spacing: $letter-wide;
+  letter-spacing: $letter-normal;
   img { /*max-height:230px;*/ padding:0 0 10px 0; margin: 0 auto; width: 100%;}
   h2 { font-family: $font-raleway; font-size: $font-size-small; text-transform: uppercase;
        padding:10px 20px 0 30px;  margin: 0; }/*tag*/
-  h1 { font-family: $font-raleway; font-weight: 700; font-style: italic; font-size: $font-size-h4; text-transform: uppercase;
+  h1 { font-family: $font-raleway; font-weight: 900; font-style: italic; font-size: $font-size-h4; text-transform: uppercase;
       padding:10px 20px 0 30px;  margin: 0; width:100%; overflow: hidden; }/*title*/
 
   h1.film, p.film, h4.film {padding-left:20px;} /*padding is different on Film page, not sure if we should just ignore but added it anyway*/
@@ -455,7 +457,7 @@ figcaption {
       img {width:100%; max-height: $height-cover;}
       .btn{ /*btn for sold / buy*/
         position: absolute; right: 0.4em; top: 50%;
-        a{font-size: 11px; padding:1em;}
+        a{font-size: 12px; padding:1em;}
         }
        &.breadcrumbs .btn{ position: relative; right:0; top: 0; }
     }
@@ -605,7 +607,7 @@ nav.sub-menu{
       h4 {
         padding: 17px 56px 0;
         color: #a1a1a1;
-        font-size: $font-size-small;
+        font-size: 11px;
         text-transform: uppercase;
         font-family: $font-raleway;
         font-weight: bold;
