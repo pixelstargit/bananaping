@@ -270,7 +270,9 @@ p {clear: both;} /* font-weight: 600;*/
      }
     .vert-red{
       background: $overlay-red; font-style: normal;
-      position: absolute; top: 33.3%; bottom: 33.3%;}
+      position: absolute; top: 33.3%; bottom: 33.3%;
+      p{text-transform: uppercase;}
+    }
     &.magazine{ border-left: 2px solid $color-white;}
 }
 .magazine .title-header-overlay { width: 100%; bottom: 0; top:initial; .title{font-size:46px;}} /*for overlay on magazine layout*/
