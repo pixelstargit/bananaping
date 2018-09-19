@@ -87,6 +87,17 @@ p {clear: both;} /* font-weight: 600;*/
 }
 .nav > li > a { min-height:65px; padding: 20px 0 0 0;}
 
+/* about page tabbed filter overide*/
+.nav.nav-tabs {
+  padding: 0; margin: 0; border: none;
+  & > li { margin-bottom:0;}
+ .title-block a, .title-block h2  {padding-top:2px;}
+ .active .title-block {
+   background: $color-dark-pink; /* like .title-d-pink*/
+   a {text-decoration: none;}
+  }
+}
+
 
 /* sub nav drop down */
 #CS-header nav .dropdown-menu {
