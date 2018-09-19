@@ -240,7 +240,22 @@ p {clear: both;} /* font-weight: 600;*/
 .caption {font-size:11px!important; background: $color-grey-medium!important;} /*darker than .featured-excerpt*/
 .gallery {padding-top: $gutter-default;padding-bottom: $gutter-default;}
 
-.modal-dialog { width: 760px;}
+.modal-dialog {
+  width:100%;
+  max-width: 1024px;
+  .modal-body img {width: 100%;}
+  .modal-header {
+    padding: 0px; border-bottom: none;
+    position: absolute; right: 0; top: 0;
+    z-index: 999;
+  }
+  .modal-header .close {
+    margin-top: 5px; margin-right: 10px; border: none;
+    background: transparent;
+    font-size: 30px; color: white;
+  }
+}
+
 
 /*cover articles with overlays and showcase headers */
 .title-header {
