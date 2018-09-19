@@ -452,7 +452,7 @@ figcaption {
   h1 { font-family: $font-raleway; font-weight: 900; font-style: italic; font-size: $font-size-h4; text-transform: uppercase;
       padding:10px 20px 0 30px;  margin: 0; width:100%; overflow: hidden; }/*title*/
 
-  h1.film, p.film, h4.film {padding-left:20px;} /*padding is different on Film page, not sure if we should just ignore but added it anyway*/
+  h1.film, p.film, h4.film, h2.film {padding-left:20px;} /*padding is different on Film page, not sure if we should just ignore but added it anyway*/
   h1.film {padding-top: 7px; letter-spacing: 0.1em;}
   p.film {padding-top: 8px; margin-bottom: 9px; letter-spacing: $letter-normal;}
   h4.film {letter-spacing: 0.1em;}
