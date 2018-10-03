@@ -136,6 +136,21 @@ p {
   min-height: 65px;
   padding: 20px 0 0 0; }
 
+/* about page tabbed filter overide*/
+.nav.nav-tabs {
+  padding: 0;
+  margin: 0;
+  border: none; }
+  .nav.nav-tabs > li {
+    margin-bottom: 0; }
+  .nav.nav-tabs .title-block a, .nav.nav-tabs .title-block h2 {
+    padding-top: 2px; }
+  .nav.nav-tabs .active .title-block {
+    background: #f1666f;
+    /* like .title-d-pink*/ }
+    .nav.nav-tabs .active .title-block a {
+      text-decoration: none; }
+
 /* sub nav drop down */
 #CS-header nav .dropdown-menu {
   border-radius: 0;
@@ -333,7 +348,24 @@ p {
   padding-bottom: 15px; }
 
 .modal-dialog {
-  width: 760px; }
+  width: 100%;
+  max-width: 1024px; }
+  .modal-dialog .modal-body img {
+    width: 100%; }
+  .modal-dialog .modal-header {
+    padding: 0px;
+    border-bottom: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 999; }
+  .modal-dialog .modal-header .close {
+    margin-top: 5px;
+    margin-right: 10px;
+    border: none;
+    background: transparent;
+    font-size: 30px;
+    color: white; }
 
 /*cover articles with overlays and showcase headers */
 .title-header img {
@@ -622,7 +654,7 @@ figcaption {
     margin: 0;
     width: 100%;
     overflow: hidden; }
-  .cover-recommend h1.film, .cover-recommend p.film, .cover-recommend h4.film, .cover-headline h1.film, .cover-headline p.film, .cover-headline h4.film {
+  .cover-recommend h1.film, .cover-recommend p.film, .cover-recommend h4.film, .cover-recommend h2.film, .cover-headline h1.film, .cover-headline p.film, .cover-headline h4.film, .cover-headline h2.film {
     padding-left: 20px; }
   .cover-recommend h1.film, .cover-headline h1.film {
     padding-top: 7px;
@@ -1228,6 +1260,8 @@ body {
         /*width: 100%;*/ }
         #CS-page .content-grid .cover-recommend h1, #CS-page .content-grid .cover-headline h1 {
           padding: 10px 20px 10px 30px; }
+        #CS-page .content-grid .cover-recommend h1.film, #CS-page .content-grid .cover-headline h1.film {
+          padding: 7px 20px 0 20px; }
       #CS-page .content-grid .cover-recommend, #CS-page .content-grid .quote {
         max-height: 440px;
         min-height: 440px; }
