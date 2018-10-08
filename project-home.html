@@ -58,39 +58,64 @@
 
 <!-- Main Content Page -->
 <div id="CS-page">
+  <!-- Showcase with slideshow-->
+    <section class="showcase slideshow flex-order-first">
 
-  <!-- Side Bar -->
-    <section class="content-sidebars row-eq-height">
-      <!-- left Bar -->
-            <aside class="col-xs-12 col-sm-3 side-menu">
-      <!-- Extras Menu -->
-              <nav class="sub-menu">
-                <ul class="nav">
-                  <li><h4 class="white">reporting</h4><a href="#">What Really Happened at Motijheel</a></li>
-                  <li><h4 class="white">Documentary</h4><a href="#">What Really Happened at Motijheel</a></li>
-                  <li><h4 class="white">Research Papers</h4><a href="#">What Really Happened at Motijheel</a></li>
-                </ul>
-             </nav>
+      <div id="carousel-featured" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner" role="listbox">
 
-            </aside>
-  <!-- right content -->
-        <section class="showcase magazine title-header">
-          <article>
-      <!--header overlay image-->
-            <div class="title-header-image fill">
-              <img src="images/showcase-01.jpg" class="">
+<!-- Indicators (dots) -->
+          <ol class="carousel-indicators">
+              <li data-target="#carousel-featured" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel-featured" data-slide-to="1"></li>
+              <li data-target="#carousel-featured" data-slide-to="2"></li>
+          </ol>
+
+  <!--Slides -->
+          <div class="item active">
+            <!-- Breadcrumbs-->
+            <article class="breadcrumb">
+              <a href="magazine.html"><button type="button" class="btn orange">#03/Urban Things</button></a>
+            </article>
+
+            <img src="images/slider-home01.jpg" alt="Featured">
+            <div class="carousel-caption carousel-caption-black carousel-caption-home">
+              <h2>Conversation</h2>
+              <h3><a href="magazine-detail.html">Wonky beats midtempos, bleeps & burps, crazy, zany phraseologies & integalatic organics</a></h3>
             </div>
-        <!--title-->
-            <div class="title-header-overlay">
-              <h2 class="tag tag-darker">Exhibition</h2>
-              <h1 class="title"><a href="projects-project.html">City Desired</a></h1>
-              <p>Mapping the fine grain of a city awkwardly negotiating change</p>
-            </div>
-          </article>
-        </section>
+          </div>
 
+          <div class="item">
+            <!-- Breadcrumbs-->
+            <article class="breadcrumb">
+              <a href="magazine.html"><button type="button" class="btn orange">#04/different breadcrumb?</button></a>
+            </article>
+            <img src="images/slider-home02.jpg" alt="Featured">
+            <div class="carousel-caption carousel-caption-black carousel-caption-home">
+              <h2>Featured</h2>
+              <h3><a href="magazine-detail.html">Another Slide here with Title Limit</a></h3>
+            </div>
+          </div>
+
+          <div class="item">
+            <!-- Breadcrumbs-->
+            <article class="breadcrumb">
+              <a href="magazine.html"><button type="button" class="btn orange">#03/Urban Things</button></a>
+            </article>
+
+            <img src="images/slider-home01.jpg" alt="Featured">
+            <div class="carousel-caption carousel-caption-black carousel-caption-home">
+              <h2>Conversation</h2>
+              <h3><a href="magazine-detail.html">Another really interesting headline goes here</a></h3>
+            </div>
+          </div>
+
+
+        </div>
+
+      </div>
     </section>
-
+  
 
 
     <!-- Masonry Text and Grid-->
