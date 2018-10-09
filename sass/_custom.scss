@@ -120,7 +120,7 @@ p {clear: both;} /* font-weight: 600;*/
 
 .content-sidebars .showcase {background-color: #fff;}
 
-.showcase{
+.showcase , .modal-content {
   width:100%;
   article {position: relative; overflow: hidden; width: 100%;}
   .breadcrumb{ /*overlay breadcrumb on showcase img*/
@@ -268,9 +268,17 @@ p {clear: both;} /* font-weight: 600;*/
 .caption {font-size:11px!important; background: $color-grey-medium!important;} /*darker than .featured-excerpt*/
 .gallery {padding-top: $gutter-default;padding-bottom: $gutter-default;}
 
+#myModal {padding-right: 0!important;} /*added this as 17px padding is added inline - can;t figure out where this is coming from  - Hannah */
+
 .modal-dialog {
   width:100%;
-  max-width: 1024px;
+  margin: 0;
+   /* max-width: 100%;  1024px changed so modal fills screen*/
+   .modal-content {background: #000; box-shadow: none; border: none; border-radius: 0;
+      .carousel-caption {bottom: 150px;}
+      .carousel-control {bottom: 280px;}
+   }
+  .modal-body {width: 100%; overflow: hidden; padding: 0;}
   .modal-body img {width: 100%;}
   .modal-header {
     padding: 0px; border-bottom: none;
@@ -280,7 +288,7 @@ p {clear: both;} /* font-weight: 600;*/
   .modal-header .close {
     margin-top: 5px; margin-right: 10px; border: none;
     background: transparent;
-    font-size: 30px; color: white;
+    font-size: 60px; color: white;
   }
 }
 
