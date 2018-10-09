@@ -45,6 +45,8 @@
   &:before {  content: "\f02f";}
 }
 
-/*fa-chevron-right left */
+/*fa-chevron-right left
 .glyphicon.icon-prev:before{ font-family: "FontAwesome"; content: "\f053";}
-.glyphicon.icon-next:before{ font-family: "FontAwesome"; content: "\f054";}
+.glyphicon.icon-next:before{ font-family: "FontAwesome"; content: "\f054";}*/
+
+.icon-fscreen:before { content: "\f065";} /* 21a8 f065 f31e */
