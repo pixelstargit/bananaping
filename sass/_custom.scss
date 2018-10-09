@@ -229,12 +229,32 @@ p {clear: both;} /* font-weight: 600;*/
 #carousel-gallery .caption {line-height: 1.1; letter-spacing: 0.02em; padding: 10px 20px; height: 60px; overflow: hidden;}
 
 
-
+/*square Next and back slides*/
 .carousel-control {
+  width:50px;
+  top:30px; bottom:110px;  margin-left: 28px;
   background-image: none!important;
-  .icon-prev { left:10%;}
-  .icon-next { right:10%;}
+  &.right { left: 32px; }
+  .icon-prev, .icon-next {
+    margin-top: 150px; margin-left: 0px;
+    left:20%; top: auto; bottom:10px;
+  }
+  &.square{
+    opacity: 1;
+    .icon-prev, .icon-next {
+      width:30px; height:30px;
+      text-shadow:none; color: $color-grey-dark;
+      font-family:  $font-raleway;
+      font-size: 30px; padding-top:12px;
+      background: $color-white;
+      opacity: 1; line-height: 0;
+    }
+  }
 }
+ .showcase-magazine .carousel-control {
+   top:0px; bottom:250px;  margin-left: 50px; /*height issues here */
+ }
+
 .carousel-inner > .item > img, .carousel-inner > .item > a > img { width: 100%;}
 .content-sidebars .showcase .carousel-inner .item img { margin-bottom: -1px; }
 .caption {font-size:11px!important; background: $color-grey-medium!important;} /*darker than .featured-excerpt*/
@@ -270,6 +290,7 @@ p {clear: both;} /* font-weight: 600;*/
       font-family: $font-raleway; text-transform: uppercase;
       font-size: 60px;
       letter-spacing: 0.075em;
+      a {text-decoration: none; color: $color-white;}
       }
     .tag{
       background: $overlay-red;
@@ -362,6 +383,7 @@ p {clear: both;} /* font-weight: 600;*/
 .content-text.breadcrumbs{ /*same as btn breadcrumbs and title-block*/
   width:101%; margin-left: -1px;
   article{  width:25%; float: left;   padding-bottom: $gutter-thin;}
+  a {font-size: 11px; font-weight: 700;}
   .btn { min-width: 100%; background: $color-grey-dark; border-color:$color-white;
   &.current{background: $color-red;}
   a {font-size: 11px; font-weight: 700;}
@@ -609,7 +631,9 @@ figcaption {
 
 .side-summary, .post-summary {
   background:#efefef;
+  .selected h3 a{  color: $color-white;}
   h3{padding: $gutter-default; padding-bottom:0; padding-left: 25px;}
+  h3 a{ /*text-decoration: none;*/ color: $color-black;}
   p {padding: $gutter-default; padding-top:5px; padding-left: 25px; line-height: 1.5em; font-size: $font-size-small; text-shadow: #000 0px 0px 0px; letter-spacing: $letter-normal;}
   .selected{background: $color-crimson!important; color: $color-white;
     p {text-shadow: #fff 0px 0px 0px;}
