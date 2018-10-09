@@ -254,6 +254,9 @@ p {clear: both;} /* font-weight: 600;*/
  .showcase-magazine .carousel-control {
    top:0px; bottom:250px;  margin-left: 50px; /*height issues here */
  }
+ #carousel-gallery .carousel-control { top:0px; bottom:55px;  margin-left: 10px; }
+
+
 
 .carousel-inner > .item > img, .carousel-inner > .item > a > img { width: 100%;}
 .content-sidebars .showcase .carousel-inner .item img { margin-bottom: -1px; }
