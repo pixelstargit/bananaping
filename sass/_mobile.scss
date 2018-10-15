@@ -248,6 +248,7 @@ body{ background: #ffffff;}
 
   /* extra styles to make slider header images full height */
 .carousel-inner > .item > img, .carousel-inner > .item > a > img {max-width: none; width: auto;}
+.carousel-inner > .item.active {display: flex;}
 
 
 
