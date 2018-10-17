@@ -235,7 +235,6 @@ body{ background: #ffffff;}
     overflow: hidden;
     height:calc(100vh - 72px);
     width:auto;
-    text-align: center;
   }
   .fill img {
       flex-shrink: 0;
@@ -243,12 +242,17 @@ body{ background: #ffffff;}
       min-height: 100%;
       height: 100%;
       width: auto;
-      object-fit:cover;
-  }
+    }
 
-  /* extra styles to make slider header images full height */
+  .carousel-inner > .item > img, .carousel-inner > .item > a > img {max-width: none; width: auto;}
+
+
+  /* extra styles to make slider header images full height
 .carousel-inner > .item > img, .carousel-inner > .item > a > img {max-width: none; width: auto;}
+.carousel-inner > .item {display: none;}
 .carousel-inner > .item.active {display: flex;}
+*/
+.fill .breadcrumb {text-align: left; top: 0; }
 
 
 
