@@ -57,19 +57,19 @@
     </div>
 
 <!-- Main Content Page -->
-<div id="CS-page">
+<div id="CS-page" class="flex-container">
   <!-- Showcase with slideshow-->
     <section class="showcase slideshow flex-order-first">
 
-      <div id="carousel-featured" class="carousel slide flex-container" data-ride="carousel">
-        <div class="carousel-inner flex-ietm" role="listbox">
+      <div id="carousel-featured" class="carousel slide carousel-fit flex-container" data-ride="carousel">
+        <div class="carousel-inner flex-item" role="listbox">
 
 <!-- Indicators (dots)
           <ol class="carousel-indicators">
               <li data-target="#carousel-featured" data-slide-to="0" class="active"></li>
               <li data-target="#carousel-featured" data-slide-to="1"></li>
               <li data-target="#carousel-featured" data-slide-to="2"></li>
-          </ol> -->
+          </ol>-->
 
   <!--Slides -->
           <div class="item active fill">
@@ -77,9 +77,10 @@
             <article class="breadcrumb">
               <a href="magazine.html"><button type="button" class="btn orange">#03/Urban Things</button></a>
             </article>
-
+            <div class="fill">
             <img src="images/slider-home01.jpg" alt="Featured">
-            <div class="carousel-caption carousel-caption-home">
+          </div>
+            <div class="carousel-caption carousel-caption-black carousel-caption-home">
               <h2>Conversation</h2>
               <h3><a href="magazine-detail.html">Wonky beats midtempos, bleeps & burps, crazy, zany phraseologies & integalatic organics</a></h3>
             </div>
@@ -90,7 +91,9 @@
             <article class="breadcrumb">
               <a href="magazine.html"><button type="button" class="btn orange">#04/different breadcrumb?</button></a>
             </article>
+            <div class="fill">
             <img src="images/slider-home02.jpg" alt="Featured">
+          </div>
             <div class="carousel-caption carousel-caption-black carousel-caption-home">
               <h2>Featured</h2>
               <h3><a href="magazine-detail.html">Another Slide here with Title Limit</a></h3>
@@ -102,45 +105,47 @@
             <article class="breadcrumb">
               <a href="magazine.html"><button type="button" class="btn orange">#03/Urban Things</button></a>
             </article>
-
+            <div class="fill">
             <img src="images/slider-home01.jpg" alt="Featured">
+          </div>
             <div class="carousel-caption carousel-caption-black carousel-caption-home">
               <h2>Conversation</h2>
               <h3><a href="magazine-detail.html">Another really interesting headline goes here</a></h3>
             </div>
           </div>
 
-          <!-- Controls (squares)-->
-          <a class="left carousel-control square" href="#carousel-featured" role="button" data-slide="prev">
-            <span class="icon-prev" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="right carousel-control square" href="#carousel-featured" role="button" data-slide="next">
-            <span class="icon-next" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
-          <a class="fscreen carousel-control square" href="#carousel-featured" role="button" data-toggle="modal" data-target="#myModal">
-            <span class="icon-fscreen" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
 
         </div>
 
+        <!-- Controls Squares-->
+        <a class="left carousel-control square" href="#carousel-featured" role="button" data-slide="prev">
+          <span class="icon-prev" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control square" href="#carousel-featured" role="button" data-slide="next">
+          <span class="icon-next" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+        <a class="fscreen carousel-control square" href="#carousel-featured" role="button" data-toggle="modal" data-target="#myModal" data-local="#carousel-featured">
+          <span class="icon-fscreen" aria-hidden="true"></span>
+          <span class="sr-only">Fullscreen</span>
+        </a>
       </div>
     </section>
 
-    <!-- Modal -->
-    <div class="modal fade" id="myModal" role="dialog">
-      <div class="modal-dialog">
-      <!-- Modal content-->
-          <div class="modal-content">
-            <div class="modal-header"><button type="button" class="close" data-dismiss="modal">&times;</button></div>
-            <div class="modal-body">
-              <img src="images/slider-home01.jpg" alt="Featured">
-            </div>
-         </div>
-      </div>
-    </div>
+
+<!-- Modal -->
+<div class="modal fade modal-fullscreen force-fullscreen" id="myModal" tabindex="-1" role="dialog" >
+  <div class="modal-dialog">
+  <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header"><button type="button" class="close" data-dismiss="modal">&times;</button></div>
+        <div class="modal-body">
+
+        </div>
+     </div>
+  </div>
+</div>
   <!-- Side Bar -->
     <section class="content-sidebars row-eq-height">
       <!-- left Bar -->
@@ -291,6 +296,8 @@ collection of 54 countries, hundreds of millions of people, thousands of cities,
 <!--Bootstrap js -->
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap.js"></script>
+<script src="js/bootstrap-modal-carousel.js"></script> <!-- added for fullscreen slider -->
+
 
   </body>
 </html>
