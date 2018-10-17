@@ -17,6 +17,7 @@ body{ background: #ffffff;}
   blockquote {margin: $gutter-default;}
 
   .masonry .title-header-overlay h1.title {font-size: 32px;}
+  .counting-block{width:66.3%;}
 }
 
 
@@ -142,7 +143,7 @@ body{ background: #ffffff;}
   width:25%;
   &:nth-of-type(5){ clear: both; padding-left: 0; }
 }
-
+  .counting-block{width:100%;}
 }
 
 
