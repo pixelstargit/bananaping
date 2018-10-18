@@ -186,7 +186,7 @@ p {clear: both;} /* font-weight: 600;*/
 .showcase-magazine {
   .item , .item > .active {height: 100%;}
 
-  .carousel-inner {overflow: visible;
+  .carousel-inner {
     img {margin-bottom: 130px;}
   }
 
@@ -260,9 +260,10 @@ p {clear: both;} /* font-weight: 600;*/
  .showcase-magazine .carousel-control {
    top:0px; bottom:250px;  margin-left: 50px; /*height issues here */
  }
- .modal-daalog .modal-content .carousel-control.moveup, .carousel-control.moveup {bottom:150px;}
+ .modal-dialog .modal-content .carousel-control.moveup, .carousel-control.move-up {bottom:150px;}
  #carousel-gallery .carousel-control { top:0px; bottom:55px;  margin-left: 10px; }
 
+#carousel-photo .carousel-control {bottom: 260px;}
 
 
 .carousel-inner > .item > img, .carousel-inner > .item > a > img { width: 100%;}
@@ -284,7 +285,7 @@ p {clear: both;} /* font-weight: 600;*/
 		align-items: center;
    /* max-width: 100%;  1024px changed so modal fills screen*/
    .modal-content {background: #000; box-shadow: none; border: none; border-radius: 0; max-height: 100vh;
-      .carousel-caption {position: absolute; bottom: 0; min-height: 130px; height: auto;}
+      .carousel-caption {position: absolute; bottom: 0; min-height: 130px; height: auto; padding: 0 28px;}
       .carousel-control {bottom: 130px;}
       .item {height: auto; max-height: 100vh;}
       .breadcrumb {
@@ -307,7 +308,7 @@ p {clear: both;} /* font-weight: 600;*/
   }
 }
 
-  .modal-body #carousel-featured {margin-top: 0 !important;}
+  .modal-body #carousel-featured , .modal-body #carousel-photo {margin-top: 0 !important;}
 
 
 /*cover articles with overlays and showcase headers */
