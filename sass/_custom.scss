@@ -268,22 +268,31 @@ p {clear: both;} /* font-weight: 600;*/
 .caption {font-size:11px!important; background: $color-grey-medium!important;} /*darker than .featured-excerpt*/
 .gallery {padding-top: $gutter-default;padding-bottom: $gutter-default;}
 
-#myModal {padding-right: 0!important;} /*added this as 17px padding is added inline - can;t figure out where this is coming from  - Hannah */
+#myModal {padding-right: 0!important;
+  background: rgba(0, 0, 0, 0.8);
+}
 
 .modal-dialog {
-  width:100%;
-  margin: 0;
+  position: relative;
+		margin: 0;
+		width: 100%;
+    height: auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
    /* max-width: 100%;  1024px changed so modal fills screen*/
    .modal-content {background: #000; box-shadow: none; border: none; border-radius: 0; max-height: 100vh;
       .carousel-caption {position: absolute; bottom: 0; min-height: 130px; height: auto;}
       .carousel-control {bottom: 130px;}
-      .item {height: 100vh}
+      .item {height: auto; max-height: 100vh;}
       .breadcrumb {
         padding-left: 28px;
       }
    }
-  .modal-body {width: 100%; overflow: hidden; padding: 0; height: 100%;}
-  .modal-body img {width: 100%; height: auto;}
+  .modal-body {width: 100%; overflow: hidden; padding: 0; height: 100%;
+   img {width: 100%; height: auto;}
+   .icon-fscreen::before {content: "\f066";}
+  }
   .modal-header {
     padding: 0px; border-bottom: none;
     position: absolute; right: 0; top: 0;
@@ -415,6 +424,7 @@ p {clear: both;} /* font-weight: 600;*/
 .content-small p {font-size:13px; padding: 0.3em 0;}
 .space-top {padding-top: 15px;} /* Extra 20px padding for project about page - only page that has it */
 .space-bottom {padding-bottom: 15px;}
+.content-sidebars aside .breadcrumb.space-top {padding-top: 7px; background: white;}
 
 blockquote {
   font-family: "Raleway", sans-serif;
