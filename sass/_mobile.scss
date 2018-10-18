@@ -257,7 +257,7 @@ body{ background: #ffffff;}
   }
 
   .modal-dialog .modal-content .carousel-caption h3 a {font-size:16px;}
-
+	.modal-dialog .modal-content .carousel-caption h1 a {font-size:30px;}
 
 .footer-alt input, .footer-alt input[type="submit"]{width:100%; margin-left:0;}
 .footer-menu ul{
@@ -298,7 +298,10 @@ body{ background: #ffffff;}
 }
 
 .title-header .title-header-overlay.vert-red .title , .title-header .title-header-overlay.vert-center .title{font-size: 1.8em;}
-
+.magazine .title-header-overlay .title {font-size:24px;}
+.title-header .title-header-overlay {padding:5px 0;}
+.modal-dialog .modal-content .carousel-caption {min-height:10px;}
+.modal-dialog .modal-content .carousel-control.move-up, .carousel-control.move-up{  bottom:100px; }
 
 #carousel-gallery {
   .caption {height: 100px;}
