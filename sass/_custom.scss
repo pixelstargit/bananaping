@@ -172,9 +172,9 @@ p {clear: both;} /* font-weight: 600;*/
     line-height: 1.25;
     color: #000;
     text-shadow: #000 0px 0px 0px;
-    padding: 17px $gutter-double 24px 27px;
-    background-color: #e0e0e0;
+    padding: 20px 0;
     margin-bottom: 2px;
+    height: 130px;
   }
 
   &.title-header img, &.vert-red img{ padding-bottom: $gutter-thin;}
@@ -186,8 +186,12 @@ p {clear: both;} /* font-weight: 600;*/
 .showcase-magazine {
   .item , .item > .active {height: 100%;}
 
+  .carousel-inner {overflow: visible;
+    img {margin-bottom: 130px;}
+  }
+
   .carousel-caption { padding-left: 60px;
-    bottom: 132px;
+    bottom: 0;
     h2 {font-size: 14px;
       margin-top: 18px;
       margin-bottom: 8px;
@@ -195,11 +199,6 @@ p {clear: both;} /* font-weight: 600;*/
       h3 {padding-bottom: 27px; max-width: 80%;}
     }
 
-  .featured-excerpt {
-    font-family: $font-stag-body;
-    padding: 19px 60px 24px 60px;
-    height: 130px;
-  }
 
 }
 
