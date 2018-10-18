@@ -184,14 +184,16 @@ p {clear: both;} /* font-weight: 600;*/
 /*Magazine showcase slider styles */
 
 .showcase-magazine {
-.carousel-caption { padding-left: 60px;
-  bottom: 0;
-  h2 {font-size: 14px;
-    margin-top: 18px;
-    margin-bottom: 8px;
+  .item , .item > .active {height: 100%;}
+
+  .carousel-caption { padding-left: 60px;
+    bottom: 132px;
+    h2 {font-size: 14px;
+      margin-top: 18px;
+      margin-bottom: 8px;
+      }
+      h3 {padding-bottom: 27px; max-width: 80%;}
     }
-  h3 {padding-bottom: 27px; max-width: 80%;}
-  }
 
   .featured-excerpt {
     font-family: $font-stag-body;
@@ -276,7 +278,7 @@ p {clear: both;} /* font-weight: 600;*/
   position: relative;
 		margin: 0;
 		width: 100%;
-    height: auto;
+    height: 100%;
 		display: flex;
 		justify-content: center;
 		align-items: center;
