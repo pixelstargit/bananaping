@@ -144,7 +144,10 @@ body{ background: #ffffff;}
   &:nth-of-type(5){ clear: both; padding-left: 0; }
 }
   .counting-block{width:100%;}
+
 }
+
+
 
 
 
@@ -256,8 +259,6 @@ body{ background: #ffffff;}
   .modal-dialog .modal-content .carousel-caption h3 a {font-size:16px;}
 
 
-
-
 .footer-alt input, .footer-alt input[type="submit"]{width:100%; margin-left:0;}
 .footer-menu ul{
   width:30%;
@@ -266,6 +267,7 @@ body{ background: #ffffff;}
     &:after { margin: 0; border-left: none; padding:0;}
   }
 }
+
 
 }
 
@@ -319,5 +321,5 @@ body{ background: #ffffff;}
     }
   }
 }
-
+footer .footer-logo{ text-align: center; }
 }
