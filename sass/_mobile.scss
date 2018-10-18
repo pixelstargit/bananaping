@@ -240,6 +240,7 @@ body{ background: #ffffff;}
       min-width: 100%;
       min-height: 100%;
       height: 100%;
+      width:auto; /*this is needed for header banner widths on static pages */
   }
 
   .carousel-inner > .item > img, .carousel-inner > .item > a > img {max-width: none; width: auto;}
