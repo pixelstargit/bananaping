@@ -152,6 +152,11 @@ body{ background: #ffffff;}
 }
   .counting-block{width: calc(98.5% - 0.6em);}
 
+  /*pagination height placeholder hack */
+  .pagin-placeholder { display: flex; 
+    img {max-height: 100%;}
+  }
+
 }
 
 

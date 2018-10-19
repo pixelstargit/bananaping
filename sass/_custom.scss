@@ -289,7 +289,7 @@ p {clear: both;} /* font-weight: 600;*/
    /* max-width: 100%;  1024px changed so modal fills screen*/
    .modal-content {background: #000; box-shadow: none; border: none; border-radius: 0; max-height: 100vh;
       .carousel-caption {position: absolute; bottom: 0; min-height: 130px; height: auto;
-        .photo-caption , .featured-excerpt {padding-left: 60px; padding-right: 30px;}
+        .photo-caption , .featured-excerpt {padding-left: 40px; padding-right: 30px;}
       }
       .carousel-control {bottom: 130px;}
       .item {height: auto; max-height: 100vh;}
@@ -883,12 +883,17 @@ footer{
   }
 }
 
-/*pagination ack*/
+/*pagination hack*/
 
 .collapse.pgin {  display: block;}
 #pg1{ position: absolute; z-index: 0;}
 #pg2{ position: absolute; z-index: 1;}
 #pg3{ position: absolute; z-index: 2;}
+
+/* placeholder to give height to covers hack */
+.pagin-placeholder {
+  img {opacity: 1; max-height: 353px;}
+}
 
 
 /*general flex*/
