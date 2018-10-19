@@ -105,6 +105,12 @@ body{ background: #ffffff;}
   .breadcrumbs .btn.orange { min-width: 100%; padding: inherit 0;  max-width: 100%; white-space: normal;}
   .magazine.col-xs-12, .side-menu.sub-menu{ width:100%; }
   .side-menu img, .side-summary {width: 100%;}
+  .showcase .featured-excerpt, .modal-content .featured-excerpt {font-size: 11px; }
+  .modal-content .carousel-caption {
+       .photo-caption , .featured-excerpt {padding-left: 40px; padding-right: 10px;}
+     }
+    .modal-content .carousel-control {   bottom: 240px;
+    }
 }
 
 
@@ -144,7 +150,7 @@ body{ background: #ffffff;}
   width:25%;
   &:nth-of-type(5){ clear: both; padding-left: 0; }
 }
-  .counting-block{width:99%;}
+  .counting-block{width: calc(98.5% - 0.6em);}
 
 }
 
@@ -325,6 +331,7 @@ body{ background: #ffffff;}
 .title-header .title-header-overlay {padding:5px 0;}
 .modal-dialog .modal-content .carousel-caption {min-height:10px;}
 .modal-dialog .modal-content .carousel-control.move-up, .carousel-control.move-up{  bottom:100px; }
+.modal-dialog .modal-content .carousel-control {bottom:300px !important;}
 
 #carousel-gallery {
   .caption {height: 100px;}
