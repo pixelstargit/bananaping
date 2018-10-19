@@ -890,12 +890,6 @@ footer{
 #pg2{ position: absolute; z-index: 1;}
 #pg3{ position: absolute; z-index: 2;}
 
-@media only screen and (max-width: 767px) {
-
-  #pg1{ position: absolute; }
-  #pg2{ position: relative; top:-100%;}
-  #pg3{  position: relative; top:-100%;}
-}
 
 /*general flex*/
 .flex-container {
