@@ -886,12 +886,12 @@ footer{
 /*pagination hack*/
 
 .collapse.pgin {  display: block;}
-#pg1{ position: absolute; z-index: 0;}
-#pg2{ position: absolute; z-index: 1;}
-#pg3{ position: absolute; z-index: 2;}
+#pg1{ position: absolute; z-index: 1;}
+#pg2{ position: absolute; z-index: 2;}
+#pg3{ position: absolute; z-index: 3;}
 
 /* placeholder to give height to covers hack */
-.pagin-placeholder {
+.pagin-placeholder {z-index: 0;
   img {opacity: 0; max-height: 353px;}
 }
 
