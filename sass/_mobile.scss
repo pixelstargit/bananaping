@@ -114,8 +114,8 @@ body{ background: #ffffff;}
   .modal-content .carousel-caption {
        .photo-caption , .featured-excerpt {padding-left: 40px; padding-right: 10px;}
      }
-    .modal-content .carousel-control {   bottom: 240px;
-    }
+    .modal-content .carousel-control {bottom: 240px;}
+    .modal-content #carousel-gallery .carousel-control {bottom: 80px;}
 }
 
 
@@ -168,6 +168,11 @@ body{ background: #ffffff;}
 
   .modal-body {width: 100%; overflow: hidden; padding: 0; height: 100%;
    img {width: auto; height: 100vh;}
+  }
+
+  #carousel-gallery {
+    .caption {min-height: 60px;}
+  .carousel-indicators {top: 10px;}
   }
 
 }
@@ -266,10 +271,7 @@ body{ background: #ffffff;}
   }
 
 
-  #carousel-gallery {
-    .caption {height: 80px;}
-  .carousel-indicators {bottom: 75px;}
-  }
+
 
   blockquote {font-size: 25px; padding: 1em;}
 
@@ -315,6 +317,7 @@ body{ background: #ffffff;}
   }
 }
 
+#carousel-gallery .carousel-control {bottom: 70px;}
 
 }
 
@@ -325,6 +328,10 @@ body{ background: #ffffff;}
 }
 
 #CS-page .modal-content .carousel-control {bottom: 180px;}
+
+.modal-dialog .modal-content #carousel-gallery .carousel-caption {bottom: 80px;}
+
+#CS-page .modal-content #carousel-gallery .carousel-control {bottom: 160px;}
 }
 
 
@@ -357,6 +364,7 @@ body{ background: #ffffff;}
 .modal-dialog .modal-content .carousel-caption {min-height:10px;}
 .modal-dialog .modal-content .carousel-control.move-up, .carousel-control.move-up{  bottom:100px; }
 .modal-dialog .modal-content .carousel-control {bottom:300px !important;}
+.modal-dialog .modal-content #carousel-gallery .carousel-control {bottom:190px !important;}
 .modal-dialog .modal-content .modal-body img {padding-bottom: 110px;}
 .modal-dialog {
   .carousel-control .icon-prev, .carousel-control .icon-next, .carousel-control .icon-fscreen {bottom: 0; margin-top: 0;}
@@ -364,8 +372,10 @@ body{ background: #ffffff;}
 
 #carousel-gallery {
   .caption {height: 100px;}
-.carousel-indicators {bottom: 95px;}
+  .carousel-control {bottom: 95px;}
 }
+
+#carousel-gallery
 
 .masonry .title-header-overlay p {display: none;}
 
