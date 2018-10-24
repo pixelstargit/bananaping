@@ -20,6 +20,11 @@ body{ background: #ffffff;}
   .counting-block{width:66.3%;}
 }
 
+@media only screen and (max-width:980px) and (min-width:767px){
+  /*tablets for LANDSCAPE home */
+  .home-content{  width: calc(100% - 1.8em); margin-left: 0.6em;}
+  .page3-content{  width: calc(100% - 1.2em); margin-left: 0.6em;}
+}
 
 @media only screen and (max-width:767px){
 /*Half columns for LANDSCAPE to tablets PORTRAIT -magenta*/
@@ -153,8 +158,16 @@ body{ background: #ffffff;}
   .counting-block{width: calc(98.5% - 0.6em);}
 
   /*pagination height placeholder hack */
-  .pagin-placeholder { display: flex; 
+  .pagin-placeholder { display: flex;
     img {max-height: 100%;}
+  }
+
+  .modal-dialog .modal-content .modal-body {
+    #carousel-photo {height:calc(100% + 200px)!important;}
+  }
+
+  .modal-body {width: 100%; overflow: hidden; padding: 0; height: 100%;
+   img {width: auto; height: 100vh;}
   }
 
 }
@@ -305,7 +318,14 @@ body{ background: #ffffff;}
 
 }
 
+@media only screen and (max-width:420px){
 
+.modal-dialog {
+  .modal-content .modal-body img {padding-bottom: 150px;}
+}
+
+#CS-page .modal-content .carousel-control {bottom: 180px;}
+}
 
 
 @media only screen and (max-width:375px){
@@ -337,6 +357,10 @@ body{ background: #ffffff;}
 .modal-dialog .modal-content .carousel-caption {min-height:10px;}
 .modal-dialog .modal-content .carousel-control.move-up, .carousel-control.move-up{  bottom:100px; }
 .modal-dialog .modal-content .carousel-control {bottom:300px !important;}
+.modal-dialog .modal-content .modal-body img {padding-bottom: 110px;}
+.modal-dialog {
+  .carousel-control .icon-prev, .carousel-control .icon-next, .carousel-control .icon-fscreen {bottom: 0; margin-top: 0;}
+}
 
 #carousel-gallery {
   .caption {height: 100px;}
