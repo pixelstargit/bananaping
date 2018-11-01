@@ -93,7 +93,7 @@ p {clear: both;} /* font-weight: 600;*/
   & > li { margin-bottom:0;}
  .title-block a, .title-block h2  {padding-top:2px;}
  .active .title-block {
-   background: $color-dark-pink; /* like .title-d-pink*/
+   background: $color-dark-pink;
    a {text-decoration: none;}
   }
 }
@@ -129,7 +129,7 @@ p {clear: both;} /* font-weight: 600;*/
     z-index: 99;
     margin-top: 0px;
   }
-  .carousel-caption{ /*this is for same style to be used on slide show caption and gallery titels*/
+  .carousel-caption{
     left:0; right: 0; bottom: 0;
     padding: 0;
     margin-left: 0;
@@ -199,7 +199,7 @@ p {clear: both;} /* font-weight: 600;*/
       padding-left: 40px;
       }
       h3 {padding-bottom: 27px; padding-left: 40px;}
-      .featured-excerpt {padding-left: 40px; padding-right: 20px; background: #d4d4d4;}
+      .featured-excerpt {padding-left: 40px; padding-right: 20px; background: #d4d4d4; min-height: 140px;}
     }
 
 
@@ -265,7 +265,7 @@ p {clear: both;} /* font-weight: 600;*/
   }
 }
  .showcase-magazine .carousel-control {
-   top:0px; bottom:250px;  margin-left: 30px; /*height issues here */
+   top:0px; bottom:250px;  margin-left: 30px;
  }
  .modal-dialog .modal-content .carousel-control.moveup, .carousel-control.move-up {bottom:150px;}
  #carousel-gallery .carousel-control { top:0px; bottom:55px;  margin-left: 10px; }
@@ -276,8 +276,8 @@ p {clear: both;} /* font-weight: 600;*/
 
 .carousel-inner > .item > img, .carousel-inner > .item > a > img { width: 100%;}
 .content-sidebars .showcase .carousel-inner .item img { margin-bottom: -1px; }
-.caption {font-size:11px!important; background: $color-grey-medium!important;} /*darker than .featured-excerpt*/
-.gallery {padding-top: $gutter-default;padding-bottom: $gutter-default;}
+.caption {font-size:11px!important; background: $color-grey-medium!important;}
+.gallery {padding-top: 0.3em; padding-bottom: $gutter-default;}
 
 #myModal {padding-right: 0!important;
   background: rgba(0, 0, 0, 0.8);
@@ -509,6 +509,7 @@ figcaption {
 .counting-block {
    width: calc(33.3% - 0.6em + 1px);
    background: $color-red;
+   margin: 5px 0;
    article{ float:left; margin-bottom:0; border-top: none; border-bottom:none; }
    .count-wide{
      min-width:auto;  border: none;
@@ -636,7 +637,9 @@ figcaption {
       .col-xs-12 {width: calc(100% - 0.6em);}
       }
      }
+     &.bottom-margin {margin-bottom: 5px;} /* extra space below grid for magazine page*/
   }
+
   &.thumbnails article {/* wider gutter than cover on about page*/
     padding: 0 5px 10px;
     &.col-sm-4:nth-child(3n+1) {padding-left:0; padding-right:10px; clear:both;}
