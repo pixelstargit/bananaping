@@ -146,8 +146,7 @@ p {
   .nav.nav-tabs .title-block a, .nav.nav-tabs .title-block h2 {
     padding-top: 2px; }
   .nav.nav-tabs .active .title-block {
-    background: #f1666f;
-    /* like .title-d-pink*/ }
+    background: #f1666f; }
     .nav.nav-tabs .active .title-block a {
       text-decoration: none; }
 
@@ -181,30 +180,28 @@ p {
 .content-sidebars .showcase {
   background-color: #fff; }
 
-.showcase {
+.showcase, .modal-content {
   width: 100%; }
-  .showcase article {
+  .showcase article, .modal-content article {
     position: relative;
     overflow: hidden;
     width: 100%; }
-  .showcase .breadcrumb {
+  .showcase .breadcrumb, .modal-content .breadcrumb {
     /*overlay breadcrumb on showcase img*/
     margin-bottom: -10px;
     position: absolute;
     z-index: 99;
     margin-top: 0px; }
-  .showcase .carousel-caption {
-    /*this is for same style to be used on slide show caption and gallery titels*/
+  .showcase .carousel-caption, .modal-content .carousel-caption {
     left: 0;
     right: 0;
     bottom: 0;
-    padding: 0 2px;
-    /*padding: 0.5em 15px padding for showcase only -- make them the same as magazine layout*/
+    padding: 0;
     margin-left: 0;
     background-color: rgba(161, 161, 161, 0.46);
     text-shadow: none;
     text-align: left; }
-    .showcase .carousel-caption h2 {
+    .showcase .carousel-caption h2, .modal-content .carousel-caption h2 {
       color: #ffffff;
       font-family: "Raleway", sans-serif;
       font-weight: 700;
@@ -214,7 +211,7 @@ p {
       margin-top: 15px;
       margin-bottom: 0;
       padding-bottom: 4px; }
-    .showcase .carousel-caption h3, .showcase .carousel-caption h3 a {
+    .showcase .carousel-caption h3, .showcase .carousel-caption h3 a, .modal-content .carousel-caption h3, .modal-content .carousel-caption h3 a {
       color: #ffffff;
       font-size: 29px;
       font-family: "Raleway", sans-serif;
@@ -225,68 +222,75 @@ p {
       padding-bottom: 20px;
       padding-top: 0;
       letter-spacing: 0.1em; }
-  .showcase .carousel-caption-black h2 {
+  .showcase .carousel-caption-black h2, .modal-content .carousel-caption-black h2 {
     color: #000000;
     padding-bottom: 2px; }
-  .showcase .carousel-caption-black h3 {
+  .showcase .carousel-caption-black h3, .modal-content .carousel-caption-black h3 {
     color: #000000;
     font-size: 36px;
     letter-spacing: 0.075em; }
-    .showcase .carousel-caption-black h3 a {
+    .showcase .carousel-caption-black h3 a, .modal-content .carousel-caption-black h3 a {
       color: #000000; }
-  .showcase .carousel-caption-home {
+  .showcase .carousel-caption-home, .modal-content .carousel-caption-home {
     padding: 0 28px;
     height: 113px; }
-    .showcase .carousel-caption-home h2 {
+    .showcase .carousel-caption-home h2, .modal-content .carousel-caption-home h2 {
       padding-bottom: 7px; }
-    .showcase .carousel-caption-home h3 {
+    .showcase .carousel-caption-home h3, .modal-content .carousel-caption-home h3 {
       line-height: 1;
       letter-spacing: 0.075em;
       margin-bottom: 0; }
-  .showcase .carousel-caption-film h2, .showcase .carousel-caption-film h3 {
+  .showcase .carousel-caption-film h2, .showcase .carousel-caption-film h3, .modal-content .carousel-caption-film h2, .modal-content .carousel-caption-film h3 {
     padding: 0 20px;
     margin: 0; }
-  .showcase .carousel-caption-film h2 {
+  .showcase .carousel-caption-film h2, .modal-content .carousel-caption-film h2 {
     color: #fff;
     font-size: 14px;
     padding-bottom: 7px;
     padding-top: 23px; }
-  .showcase .carousel-caption-film h3 {
+  .showcase .carousel-caption-film h3, .modal-content .carousel-caption-film h3 {
     font-size: 30px;
     letter-spacing: 0.075em;
     padding-bottom: 38px; }
-    .showcase .carousel-caption-film h3 a {
+    .showcase .carousel-caption-film h3 a, .modal-content .carousel-caption-film h3 a {
       color: #000000; }
-  .showcase .featured-excerpt {
+  .showcase .featured-excerpt, .modal-content .featured-excerpt {
     font-family: "Stag Light", serif;
     font-size: 13px;
     letter-spacing: 0.1em;
     line-height: 1.25;
     color: #000;
     text-shadow: #000 0px 0px 0px;
-    padding: 17px 20px 24px 27px;
-    background-color: #e0e0e0;
-    margin-bottom: 2px; }
-  .showcase.title-header img, .showcase.vert-red img {
+    padding: 20px;
+    margin-bottom: 2px;
+    height: auto;
+    background: #d4d4d4; }
+  .showcase.title-header img, .showcase.vert-red img, .modal-content.title-header img, .modal-content.vert-red img {
     padding-bottom: 0.3em; }
-  .showcase.title-header .film-thumbnail img, .showcase.slideshow img, .showcase.magazine img {
+  .showcase.title-header .film-thumbnail img, .showcase.slideshow img, .showcase.magazine img, .modal-content.title-header .film-thumbnail img, .modal-content.slideshow img, .modal-content.magazine img {
     padding-bottom: 0; }
 
 /*Magazine showcase slider styles */
+.showcase-magazine .item, .showcase-magazine .item > .active {
+  height: 100%; }
+.showcase-magazine .carousel-inner img {
+  margin-bottom: 130px; }
 .showcase-magazine .carousel-caption {
-  padding-left: 60px;
+  padding-left: 0px;
   bottom: 0; }
   .showcase-magazine .carousel-caption h2 {
     font-size: 14px;
     margin-top: 18px;
-    margin-bottom: 8px; }
+    margin-bottom: 8px;
+    padding-left: 40px; }
   .showcase-magazine .carousel-caption h3 {
     padding-bottom: 27px;
-    max-width: 80%; }
-.showcase-magazine .featured-excerpt {
-  font-family: "Stag Light", serif;
-  padding: 19px 60px 24px 60px;
-  height: 130px; }
+    padding-left: 40px; }
+  .showcase-magazine .carousel-caption .featured-excerpt {
+    padding-left: 40px;
+    padding-right: 20px;
+    background: #d4d4d4;
+    min-height: 140px; }
 
 /*slider dots*/
 .carousel-indicators {
@@ -322,15 +326,63 @@ p {
   line-height: 1.1;
   letter-spacing: 0.02em;
   padding: 10px 20px;
-  height: 60px;
+  min-height: 60px;
   overflow: hidden; }
 
+/*square Next and back slides*/
 .carousel-control {
+  width: 50px;
+  top: 30px;
+  bottom: 108px;
+  margin-left: 28px;
   background-image: none !important; }
-  .carousel-control .icon-prev {
-    left: 10%; }
-  .carousel-control .icon-next {
-    right: 10%; }
+  .carousel-control.right {
+    left: 32px; }
+  .carousel-control .icon-prev, .carousel-control .icon-next, .carousel-control .icon-fscreen {
+    margin-top: 150px;
+    margin-left: 0px;
+    left: 20%;
+    top: auto;
+    bottom: 10px; }
+  .carousel-control.square {
+    opacity: 1; }
+    .carousel-control.square .icon-prev, .carousel-control.square .icon-next, .carousel-control.square .icon-fscreen {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      text-shadow: none;
+      color: #898989;
+      font-family: "Raleway", sans-serif;
+      font-size: 30px;
+      padding-top: 12px;
+      background: #ffffff;
+      opacity: 1;
+      line-height: 0; }
+    .carousel-control.square .icon-fscreen {
+      background: #ffffff url("../images/icon-fscreen.png");
+      background-repeat: no-repeat;
+      background-position: center; }
+  .carousel-control.fscreen {
+    left: 64px; }
+
+.showcase-magazine .carousel-control {
+  top: 0px;
+  bottom: 250px;
+  margin-left: 30px; }
+
+.modal-dialog .modal-content .carousel-control.moveup, .carousel-control.move-up {
+  bottom: 150px; }
+
+#carousel-gallery .carousel-control {
+  top: 0px;
+  bottom: 55px;
+  margin-left: 10px; }
+
+#carousel-gallery .featured-excerpt {
+  margin-bottom: 0; }
+
+#carousel-photo .carousel-control {
+  bottom: 260px; }
 
 .carousel-inner > .item > img, .carousel-inner > .item > a > img {
   width: 100%; }
@@ -342,16 +394,56 @@ p {
   font-size: 11px !important;
   background: #b7b7b7 !important; }
 
-/*darker than .featured-excerpt*/
 .gallery {
-  padding-top: 15px;
+  padding-top: 0.3em;
   padding-bottom: 15px; }
 
+#myModal {
+  padding-right: 0 !important;
+  background: rgba(0, 0, 0, 0.8); }
+
 .modal-dialog {
+  position: relative;
+  margin: 0;
   width: 100%;
-  max-width: 1024px; }
-  .modal-dialog .modal-body img {
-    width: 100%; }
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* max-width: 100%;  1024px changed so modal fills screen*/ }
+  .modal-dialog .modal-content {
+    background: #000;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    max-height: 100vh; }
+    .modal-dialog .modal-content .carousel-caption {
+      position: absolute;
+      bottom: 0;
+      min-height: 130px;
+      height: auto; }
+      .modal-dialog .modal-content .carousel-caption .photo-caption, .modal-dialog .modal-content .carousel-caption .featured-excerpt {
+        padding-left: 40px;
+        padding-right: 30px; }
+      .modal-dialog .modal-content .carousel-caption #carousel-gallery .caption {
+        min-height: 60px; }
+      .modal-dialog .modal-content .carousel-caption #carousel-gallery .carousel-control {
+        top: 10px; }
+    .modal-dialog .modal-content .carousel-control {
+      bottom: 130px; }
+    .modal-dialog .modal-content .item {
+      height: auto;
+      max-height: 100vh; }
+    .modal-dialog .modal-content .breadcrumb {
+      padding-left: 28px; }
+  .modal-dialog .modal-body {
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
+    height: 100%; }
+    .modal-dialog .modal-body img {
+      width: 100%;
+      height: auto; }
   .modal-dialog .modal-header {
     padding: 0px;
     border-bottom: none;
@@ -364,8 +456,11 @@ p {
     margin-right: 10px;
     border: none;
     background: transparent;
-    font-size: 30px;
+    font-size: 60px;
     color: white; }
+
+.modal-body #carousel-featured, .modal-body #carousel-photo {
+  margin-top: 0 !important; }
 
 /*cover articles with overlays and showcase headers */
 .title-header img {
@@ -387,6 +482,9 @@ p {
     text-transform: uppercase;
     font-size: 60px;
     letter-spacing: 0.075em; }
+    .title-header .title-header-overlay .title a {
+      text-decoration: none;
+      color: #ffffff; }
   .title-header .title-header-overlay .tag {
     background: rgba(235, 33, 46, 0.48);
     font-family: "Raleway", sans-serif;
@@ -429,6 +527,9 @@ p {
     text-transform: uppercase; }
 .title-header.magazine {
   border-left: 2px solid #ffffff; }
+
+.slideshow .title-header.magazine {
+  border-left: 0 solid; }
 
 .magazine .title-header-overlay {
   width: 100%;
@@ -514,6 +615,9 @@ p {
     width: 25%;
     float: left;
     padding-bottom: 0.3em; }
+  .content-text.breadcrumbs a {
+    font-size: 11px;
+    font-weight: 700; }
   .content-text.breadcrumbs .btn {
     min-width: 100%;
     background: #898989;
@@ -534,6 +638,10 @@ p {
 /* Extra 20px padding for project about page - only page that has it */
 .space-bottom {
   padding-bottom: 15px; }
+
+.content-sidebars aside .breadcrumb.space-top {
+  padding-top: 7px;
+  background: white; }
 
 blockquote {
   font-family: "Raleway", sans-serif;
@@ -589,13 +697,6 @@ figcaption {
     margin: 80px auto; }
   .title-block::after {
     clear: both; }
-  .title-block.count {
-    min-width: 30px; }
-    .title-block.count h2, .title-block.count a {
-      padding: 2px, 10px; }
-
-.title-block-wider {
-  min-width: 200px; }
 
 .title-d-pink {
   background: #f1666f; }
@@ -615,6 +716,8 @@ figcaption {
     font-size: 12px;
     letter-spacing: 0.1em;
     padding: 5px 19px; }
+  .btn.no-click {
+    cursor: initial; }
   .btn.sold {
     background-color: #ff0000;
     border-color: #ff0000; }
@@ -622,6 +725,64 @@ figcaption {
     background-color: #ff0000;
     border-color: #ff0000;
     min-width: 180px; }
+  .btn:hover, .btn:focus, .btn.focus {
+    color: #ffffff; }
+
+.counting-block {
+  width: calc(33.3% - 0.6em + 1px);
+  background: #ff0000;
+  margin: 5px 0; }
+  .counting-block article {
+    float: left;
+    margin-bottom: 0;
+    border-top: none;
+    border-bottom: none; }
+  .counting-block .count-wide {
+    min-width: auto;
+    border: none;
+    /*min-width:calc(100% - (6 * 30px));  set amount of count blocks */ }
+  .counting-block .title-block.count {
+    float: left;
+    min-width: 25px; }
+    .counting-block .title-block.count h2, .counting-block .title-block.count a {
+      padding: 2px, 10px; }
+
+/* magazine cover pagination */
+.cover-paging {
+  position: absolute;
+  margin-top: -30px;
+  width: calc( 100% + 1px); }
+  .cover-paging ul {
+    margin-bottom: 0;
+    padding: 0; }
+    .cover-paging ul .btn, .cover-paging ul li {
+      min-width: 11.1% !important;
+      border: none;
+      width: auto;
+      display: block;
+      float: left;
+      padding: 6px 0; }
+    .cover-paging ul a {
+      float: none;
+      padding: 4px 0; }
+  .cover-paging ul .pagenav {
+    background: #2C2D2C; }
+  .cover-paging .grey {
+    background: #898989; }
+
+.carousel-indicators.carousel-pagin {
+  left: 0;
+  bottom: 0;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center; }
+  .carousel-indicators.carousel-pagin li {
+    text-indent: 0;
+    border-radius: 0;
+    padding-bottom: 25px; }
 
 /*GRID styles and spacing of items thumbnails cover videos*/
 .cover-recommend, .cover-headline {
@@ -654,6 +815,9 @@ figcaption {
     margin: 0;
     width: 100%;
     overflow: hidden; }
+    .cover-recommend h1 a, .cover-headline h1 a {
+      color: #000000;
+      text-decoration: none; }
   .cover-recommend h1.film, .cover-recommend p.film, .cover-recommend h4.film, .cover-recommend h2.film, .cover-headline h1.film, .cover-headline p.film, .cover-headline h4.film, .cover-headline h2.film {
     padding-left: 20px; }
   .cover-recommend h1.film, .cover-headline h1.film {
@@ -737,7 +901,8 @@ figcaption {
   padding-top: 25px; }
 .content-grid.mixed {
   /* for col 2|1  -homepage*/
-  padding: 0; }
+  padding: 0;
+  /* extra space below grid for magazine page*/ }
   .content-grid.mixed.col-sm-8 {
     padding: 0;
     padding-top: 0.3em;
@@ -764,6 +929,8 @@ figcaption {
       margin-left: -0.3em; }
       .content-grid.mixed.col-sm-4.invert .col-xs-12 {
         width: calc(100% - 0.6em); }
+  .content-grid.mixed.bottom-margin {
+    margin-bottom: 5px; }
 .content-grid.thumbnails article {
   /* wider gutter than cover on about page*/
   padding: 0 5px 10px; }
@@ -900,10 +1067,15 @@ figcaption {
 
 .side-summary, .post-summary {
   background: #efefef; }
+  .side-summary .selected h3 a, .post-summary .selected h3 a {
+    color: #ffffff; }
   .side-summary h3, .post-summary h3 {
     padding: 15px;
     padding-bottom: 0;
     padding-left: 25px; }
+  .side-summary h3 a, .post-summary h3 a {
+    /*text-decoration: none;*/
+    color: #000000; }
   .side-summary p, .post-summary p {
     padding: 15px;
     padding-top: 5px;
@@ -1137,6 +1309,30 @@ footer {
         font-size: 14px;
         letter-spacing: 0.07em; }
 
+/*pagination hack*/
+.collapse.pgin {
+  display: block; }
+
+#pg1 {
+  position: absolute;
+  z-index: 1; }
+
+#pg2 {
+  position: absolute;
+  z-index: 2; }
+
+#pg3 {
+  position: absolute;
+  z-index: 3; }
+
+/* placeholder to give height to covers hack */
+#pg-placeholder {
+  position: relative;
+  z-index: 0; }
+
+.pagin-placeholder img {
+  opacity: 0.01; }
+
 /*general flex*/
 .flex-container {
   display: flex;
@@ -1166,7 +1362,19 @@ body {
     margin: 15px; }
 
   .masonry .title-header-overlay h1.title {
-    font-size: 32px; } }
+    font-size: 32px; }
+
+  .counting-block {
+    width: 66.3%; } }
+@media only screen and (max-width: 980px) and (min-width: 767px) {
+  /*tablets for LANDSCAPE home */
+  .home-content {
+    width: calc(100% - 1.8em);
+    margin-left: 0.6em; }
+
+  .page-content {
+    width: calc(100% - 1.2em);
+    margin-left: 0.6em; } }
 @media only screen and (max-width: 767px) {
   /*Half columns for LANDSCAPE to tablets PORTRAIT -magenta*/
   /*body{ background: #ff00ff;}*/
@@ -1313,6 +1521,15 @@ body {
       width: 100%; }
     #CS-page .side-menu img, #CS-page .side-summary {
       width: 100%; }
+    #CS-page .showcase .featured-excerpt, #CS-page .modal-content .featured-excerpt {
+      font-size: 11px; }
+    #CS-page .modal-content .carousel-caption .photo-caption, #CS-page .modal-content .carousel-caption .featured-excerpt {
+      padding-left: 40px;
+      padding-right: 10px; }
+    #CS-page .modal-content .carousel-control {
+      bottom: 240px; }
+    #CS-page .modal-content #carousel-gallery .carousel-control {
+      bottom: 80px; }
 
   .title-header .title-header-overlay.vert-red .title, .title-header .title-header-overlay.vert-center .title {
     font-size: 40px; }
@@ -1340,10 +1557,12 @@ body {
     display: none; }
   .showcase-magazine .carousel-caption {
     bottom: 113px;
-    padding-left: 30px; }
+    padding-left: 0; }
     .showcase-magazine .carousel-caption h3 {
       padding-bottom: 10px;
       max-width: 100%; }
+  .showcase-magazine #carousel-photo .carousel-control {
+    bottom: 360px; }
   .showcase-magazine .featured-excerpt {
     padding: 10px 30px; }
 
@@ -1351,7 +1570,39 @@ body {
     margin-left: 0; }
 
   .no-gap {
-    padding-top: 12px !important; } }
+    padding-top: 12px !important; }
+
+  .footer-menu ul {
+    width: 25%; }
+    .footer-menu ul:nth-of-type(5) {
+      clear: both;
+      padding-left: 0; }
+
+  .counting-block {
+    width: calc(98.5% - 0.6em); }
+
+  /*pagination height placeholder hack */
+  .pagin-placeholder {
+    display: flex; }
+    .pagin-placeholder img {
+      max-height: 100%; }
+
+  .modal-dialog .modal-content .modal-body #carousel-photo {
+    height: calc(100% + 200px) !important; }
+
+  .modal-body {
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
+    height: 100%; }
+    .modal-body img {
+      width: auto;
+      height: 100vh; }
+
+  #carousel-gallery .caption {
+    min-height: 60px; }
+  #carousel-gallery .carousel-indicators {
+    top: 10px; } }
 @media only screen and (max-width: 640px) {
   /*full width columns for MOBILE asper client examples Cyan
   }
@@ -1387,10 +1638,6 @@ body {
   .title-header .title-header-overlay.vert-red, .title-header .title-header-overlay.vert-center {
     height: 130px; }
 
-  .post-list .col-sm-4, .side-menu.col-xs-12 {
-    display: none; }
-
-  /*{width:100%!important; }*/
   /*.magazine.title-header-image.col-xs-12,*/
   .content-login .login-box input.col-xs-12 {
     width: 100% !important; }
@@ -1407,10 +1654,6 @@ body {
     font-size: 12px; }
   .title-header .carousel-caption h3 {
     font-size: 29px; }
-
-  .footer-alt input, .footer-alt input[type="submit"] {
-    width: 100%;
-    margin-left: 0; }
 
   .content-login .login-box {
     padding: 1em; }
@@ -1430,18 +1673,41 @@ body {
   .cover.masonry .col-xs-6 {
     width: 100%; }
 
-  .showcase-magazine .featured-excerpt {
-    display: none; }
   .showcase-magazine .carousel-caption {
-    bottom: 0; }
+    bottom: 0;
+    left: 0 !important;
+    right: 0 !important; }
+    .showcase-magazine .carousel-caption h2 {
+      padding-left: 10px; }
+    .showcase-magazine .carousel-caption h3 {
+      padding-left: 10px; }
+    .showcase-magazine .carousel-caption .featured-excerpt {
+      font-size: 11px;
+      padding-left: 10px;
+      height: 200px; }
+  .showcase-magazine #carousel-photo .carousel-control {
+    bottom: 300px;
+    margin-left: 0; }
 
   .showcase .carousel-caption h3 a {
     font-size: 19px; }
 
-  #carousel-gallery .caption {
-    height: 80px; }
-  #carousel-gallery .carousel-indicators {
-    bottom: 75px; }
+  .modal-dialog .modal-content .modal-body #carousel-photo {
+    height: calc(100% + 200px) !important; }
+  .modal-dialog .modal-content .modal-body #carousel-photo .carousel-caption .photo-caption {
+    padding-left: 0; }
+  .modal-dialog .modal-content .modal-body #carousel-photo .carousel-caption h2 {
+    padding-left: 10px; }
+  .modal-dialog .modal-content .modal-body #carousel-photo .carousel-caption h3 {
+    padding-left: 10px; }
+  .modal-dialog .modal-content .modal-body #carousel-photo .carousel-caption .featured-excerpt {
+    font-size: 11px;
+    padding-left: 10px;
+    height: 200px; }
+  .modal-dialog .modal-content .modal-body img {
+    padding-bottom: 200px; }
+  .modal-dialog .modal-content .modal-body #carousel-photo .carousel-control {
+    margin-left: 0; }
 
   blockquote {
     font-size: 25px;
@@ -1458,7 +1724,7 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    height: calc(100vh - 72px);
+    height: calc(100vh - 127px);
     width: auto; }
 
   .fill img {
@@ -1466,7 +1732,63 @@ body {
     min-width: 100%;
     min-height: 100%;
     height: 100%;
-    width: auto; } }
+    width: auto;
+    /*this is needed for header banner widths on static pages */ }
+
+  .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    max-width: none;
+    width: auto; }
+
+  .fill .breadcrumb {
+    text-align: left;
+    top: 0; }
+
+  .showcase .carousel-caption-home {
+    left: 0 !important;
+    right: 0 !important; }
+
+  .modal-dialog .modal-body .fill {
+    width: 100%;
+    height: auto; }
+
+  .modal-dialog .modal-content .carousel-caption h3 a {
+    font-size: 16px; }
+
+  .modal-dialog .modal-content .carousel-caption h1 a {
+    font-size: 30px; }
+
+  .footer-alt input, .footer-alt input[type="submit"] {
+    width: 100%;
+    margin-left: 0; }
+
+  .footer-menu ul {
+    width: 30%; }
+    .footer-menu ul:nth-of-type(4) {
+      clear: both;
+      padding-left: 0; }
+    .footer-menu ul:nth-of-type(5) {
+      clear: none;
+      width: 60%;
+      padding-left: 17px; }
+      .footer-menu ul:nth-of-type(5):after {
+        margin: 0;
+        border-left: none;
+        padding: 0; }
+
+  #carousel-gallery .carousel-control {
+    bottom: 70px; } }
+@media only screen and (max-width: 420px) {
+  .modal-dialog .modal-content .modal-body img {
+    padding-bottom: 150px; }
+
+  #CS-page .modal-content .carousel-control {
+    bottom: 180px; }
+
+  .modal-dialog .modal-content #carousel-gallery .carousel-caption {
+    bottom: 80px; }
+
+  #CS-page .modal-content #carousel-gallery .carousel-control {
+    bottom: 160px; } }
 @media only screen and (max-width: 375px) {
   /*tiniest PORTRAIT to phones - blue*/
   /*body{ background: #000fff;}*/
@@ -1498,11 +1820,37 @@ body {
   .title-header .title-header-overlay.vert-red .title, .title-header .title-header-overlay.vert-center .title {
     font-size: 1.8em; }
 
+  .magazine .title-header-overlay .title {
+    font-size: 24px; }
+
+  .title-header .title-header-overlay {
+    padding: 5px 0; }
+
+  .modal-dialog .modal-content .carousel-caption {
+    min-height: 10px; }
+
+  .modal-dialog .modal-content .carousel-control.move-up, .carousel-control.move-up {
+    bottom: 100px; }
+
+  .modal-dialog .modal-content .carousel-control {
+    bottom: 300px !important; }
+
+  .modal-dialog .modal-content #carousel-gallery .carousel-control {
+    bottom: 190px !important; }
+
+  .modal-dialog .modal-content .modal-body img {
+    padding-bottom: 110px; }
+
+  .modal-dialog .carousel-control .icon-prev, .modal-dialog .carousel-control .icon-next, .modal-dialog .carousel-control .icon-fscreen {
+    bottom: 0;
+    margin-top: 0; }
+
   #carousel-gallery .caption {
     height: 100px; }
-  #carousel-gallery .carousel-indicators {
+  #carousel-gallery .carousel-control {
     bottom: 95px; }
 
+  #carousel-gallery
   .masonry .title-header-overlay p {
     display: none; }
 
@@ -1510,4 +1858,24 @@ body {
     max-width: 80%; }
 
   .masonry .title-header-overlay h1.title {
-    font-size: 24px; } }
+    font-size: 24px; }
+
+  .footer-menu .foot-menu-head {
+    margin-left: auto;
+    margin-right: auto; }
+  .footer-menu ul {
+    width: 100%;
+    clear: both;
+    padding-left: 0; }
+    .footer-menu ul li {
+      text-align: center; }
+    .footer-menu ul:last-child {
+      padding-left: 0;
+      width: 100%; }
+      .footer-menu ul:last-child:after {
+        margin: 0;
+        border-left: none;
+        padding: 0; }
+
+  footer .footer-logo {
+    text-align: center; } }
