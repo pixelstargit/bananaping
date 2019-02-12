@@ -2,6 +2,9 @@
 /*Cityscape Styles - Praxis overrides*/
 /*Sections*/
 
-body.praxis{
-  background-color: red;
+.praxis{
+  .title-header .vert-red{
+    top:0; bottom: auto; /*move to top*/
+    }
+
 }
