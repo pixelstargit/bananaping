@@ -5,7 +5,26 @@
 .praxis{
   .title-header .vert-red{
     top:0; bottom: auto; /*move to top*/
-    }
+  }
+  .cover-recommend, .cover-headline {
+      &.grey{background: $color-grey-medium;}
+      &.storm{background: $color-storm;}
+      &.peach{background: $color-peach;}
+      &.turq{background: $color-turq;}
+  }
+  .content-grid.mixed .col-sm-8{
+    margin-left: -$gutter-thin; /*add tablet margin left */
+    margin-right: $gutter-thin;
 
+    img {padding-bottom:0;}
+    .title-header-overlay {
+      position: absolute; bottom: 0;
+      padding: 24px 0 30px; position: absolute;  bottom: 0;
+      background-color: $overlay-grey;
+      }
+    .overlay-darker {
+      background: $overlay-grey-darker;
+      }
+    }
 }
 .nocaps {text-transform: lowercase;}
