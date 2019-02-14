@@ -12,6 +12,7 @@
       &.peach{background: $color-peach;}
       &.turq{background: $color-turq;}
       &.banana{background: $color-banana;}
+      &.rosy{background: $color-rosy;}
   }
   .content-grid.mixed .col-sm-8{
     margin-left: -$gutter-thin; /*add tablet margin left */
@@ -27,5 +28,35 @@
       background: $overlay-grey-darker;
       }
     }
+  .dropup .dropdown-menu {
+    min-width: calc(100% - 0.6em); border-radius: 0; background: transparent; border:none; box-shadow: none;
+    padding:0; margin-bottom:2px;
+    li a {
+      color: $color-white;
+      font-family: $font-raleway; text-transform: uppercase; font-weight: normal;
+      font-size: 11px; letter-spacing: $letter-normal; text-align: center;
+      padding: 5px 19px;
+      background-color:#ccc;
+      margin: 3px 0 3px 1px;
+       &.grey{background-color: $overlay-grey;}
+       &.storm{background-color: $overlay-storm;}
+       &.peach{background-color: $overlay-peach;}
+       &.turq{background-color: $overlay-turq;}
+       &.banana{background-color: $overlay-banana;}
+       &.rosy{background-color: $overlay-rosy;}
+    }
+  }
 }
 .nocaps {text-transform: lowercase;}
+
+
+/* Web GL Map Overides */
+#earth-div{
+  .we-pm-icon {
+    background-image: url("images/marker_yellow.png");
+    width: 30px !important;
+    height: 35px !important;
+    margin-left: -15px;
+    margin-top: -35px;
+  }
+}
