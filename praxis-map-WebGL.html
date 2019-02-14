@@ -9,7 +9,7 @@
     <meta name="author" content="the pixelzoo">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Homepage</title>
+    <title>Praxis Map - Web GL</title>
 
     <!-- Bootstrap core CSS & Theme Style -->
     <link href="css/app.css" rel="stylesheet">
@@ -29,7 +29,7 @@
         var marker = WE.marker([51.5, -0.09] , 'images/marker_yellow.png').addTo(earth);
         marker.bindPopup("<h4 class='mapmarker-title'>Hello world!</h4><br>I am a popup.<br /><p style='font-size:10px;color:#999'>Tip: Another popup is hidden in Cairo..</p>", {maxWidth: 150, closeButton: true}).openPopup();
 
-        var markerCustom = WE.marker([50, -9], 'images/marker_yellow.png', width=30, height=35).addTo(earth);
+        var markerCustom = WE.marker([50, -9]).addTo(earth);
 
 
       }
