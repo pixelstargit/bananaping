@@ -19,7 +19,7 @@
     <script src="http://www.webglearth.com/v2/api.js"></script>
     <script>
     function initialize() {
-      var earth = new WE.map('earth_div', {zoom: 2, position: [4.191264828126714,32.18684674999997], sky: true}
+      var earth = new WE.map('earth_div', {zoom: 2.3, position: [4.191264828126714,32.18684674999997], sky: true}
         );
       WE.tileLayer('http://tileserver.maptiler.com/nasa/{z}/{x}/{y}.jpg',{
         attribution: 'NASA'
@@ -40,9 +40,6 @@
 
         var marker = WE.marker([6.589309899895074, 3.3939842690333535], 'images/marker_pink.png').addTo(earth);
         marker.bindPopup("<h6 class='map-popup-title'>Title of Initiative</h6><div id='praxis-category'>CATEGORY:<br><a href='praxis-initiatives.html'>Built Environment</a></div><div id='map-popup-location'>Lagos<br>Nigeria</div><div id='map-popup-link'><a href='praxis-project.html'>Read more</a>", {maxWidth: 150, closeButton: true});
-
-
-
 
       }
     </script>
@@ -93,7 +90,7 @@
     <!-- Web GL Map-->
       <section class="showcase flex-order-first">
 
-        <div id="earth_div" style="max-width:980px;max-height:510px;border:1px solid gray; padding:2px;"></div>
+        <div id="earth_div" style="max-width:980px;max-height:510px;border:0px solid gray; padding:2px;"></div>
 
       </section>
     </div>

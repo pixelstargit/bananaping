@@ -1,0 +1,254 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="the pixelzoo">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>CS Praxis</title>
+
+    <!-- Bootstrap core CSS & Theme Style -->
+    <link href="css/app.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Web GL Earth Globe -->
+    <script src="http://www.webglearth.com/v2/api.js"></script>
+    <script>
+    function initialize() {
+      var earth = new WE.map('earth_div', {zoom: 2.3, position: [4.191264828126714,32.18684674999997], sky: true}
+        );
+      WE.tileLayer('http://tileserver.maptiler.com/nasa/{z}/{x}/{y}.jpg',{
+        attribution: 'NASA'
+        }).addTo(earth);
+
+        <!-- Markers -->
+        var marker = WE.marker([4.76766, 7.018849999999929], 'images/marker_yellow.png').addTo(earth);
+        marker.bindPopup("<h6 class='map-popup-title'>Human City Project</h6><div id='praxis-category'>CATEGORY:<br><a href='praxis-initiatives.html'>Activism & Engagement</a></div><div id='map-popup-location'>Port Harcourt<br>Nigeria</div><div id='map-popup-link'><a href='praxis-project.html'>Read more</a>", {maxWidth: 150, closeButton: true});
+
+        var marker = WE.marker([12.9791198, 77.5912997], 'images/marker_blue.png').addTo(earth);
+        marker.bindPopup("<h6 class='map-popup-title'>Urban Lens</h6><div id='praxis-category'>CATEGORY:<br><a href='praxis-initiatives.html'>Culture & Publics</a></div><div id='map-popup-location'>Bangalore & New Deli<br>India</div><div id='map-popup-link'><a href='praxis-project.html'>Read more</a>", {maxWidth: 150, closeButton: true});
+
+        var marker = WE.marker([-26.205, 28.04970000000003], 'images/marker_grey.png').addTo(earth);
+        marker.bindPopup("<h6 class='map-popup-title'>School Minimum Norms & Standards</h6><div id='praxis-category'>CATEGORY:<br><a href='praxis-initiatives.html'>Policy</a></div><div id='map-popup-location'>Johannesburg<br>South Africa</div><div id='map-popup-link'><a href='praxis-project.html'>Read more</a>", {maxWidth: 150, closeButton: true});
+
+        var marker = WE.marker([-33.928992, 18.417396], 'images/marker_orange.png').addTo(earth);
+        marker.bindPopup("<h6 class='map-popup-title'>AAPS</h6><div id='praxis-category'>CATEGORY:<br><a href='praxis-initiatives.html'>Academia & Research</a></div><div id='map-popup-location'>Cape Town<br>South Africa</div><div id='map-popup-link'><a href='praxis-project.html'>Read more</a>", {maxWidth: 150, closeButton: true});
+
+        var marker = WE.marker([6.589309899895074, 3.3939842690333535], 'images/marker_pink.png').addTo(earth);
+        marker.bindPopup("<h6 class='map-popup-title'>Title of Initiative</h6><div id='praxis-category'>CATEGORY:<br><a href='praxis-initiatives.html'>Built Environment</a></div><div id='map-popup-location'>Lagos<br>Nigeria</div><div id='map-popup-link'><a href='praxis-project.html'>Read more</a>", {maxWidth: 150, closeButton: true});
+
+      }
+    </script>
+
+
+  </head>
+  <body onload="initialize()"> <!--add for Web GL -->
+
+<!-- Header -->
+  <div id="CS-header">
+    <!-- Logo -->
+            <header id="logo"><a href="#"><img src="images/logo-cityscapes.png" class="img-responsive large" alt="Cityscapes">
+              <!--mobile logos-->
+              <img src="images/logo-cityscapes-small.png" class="img-responsive small" alt="Cityscapes"></a></header>
+<!-- Mobile hamburger -->
+           <nav class="navbar navbar-default">
+               <div class="navbar-header">
+                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                   <span class="sr-only">Toggle navigation</span>
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+                 </button>
+               </div>
+  <!-- Navigation Menu -->
+               <div id="navbar" class="navbar-collapse collapse">
+                 <ul class="nav nav-language">
+                    <li><a href="#">ENGLISH</a></li>
+                    <li><a href="#">ESPAÑOL</a></li>
+                  </ul>
+                 <ul class="nav navbar-nav">
+                   <li><a href="homepage.html">Home</a></li>
+                   <li><a href="about.html">About Us</a></li>
+                   <li><a href="magazine.html">Magazine</a></li>
+                   <li><a href="project-home.html">Projects</a></li>
+                   <li class="active"><a href="praxis-home.html">CS Praxis</a></li>
+                   <li><a href="dispatch.html">Dispatches</a></li>
+                   <li class="mobile-nav-login"><a href="login.html">Sign-Up / Login</a></li>
+                 </ul>
+                <ul class="nav nav-login">
+                   <li><a href="login.html">login/signup</a></li>
+                 </ul>
+               </div>
+           </nav>
+  </div>
+
+<!-- Main Content Page -->
+<div id="CS-page" class="praxis">
+
+  <!-- Image showcase -->
+    <section class="showcase title-header flex-item">
+      <article class="carousel-inner">
+        <!-- Web GL Map-->
+            <div id="earth_div" style="max-width:980px;max-height:510px;border:0px solid gray; padding:2px;"></div>
+        <!--title-->
+            <div class="title-header-overlay vert-red">
+              <h1 class="title">CS.Praxis</h1>
+              <p>A Map of Urban Actors & Initiatives across the South (fix this spacing) and new map</P>
+            </div>
+      </article>
+    </section>
+
+<div class="page-content">
+      <!-- Sub nav breadcrumbs- for the 100% wide-->
+      <section class="content-text breadcrumbs">
+        <article>
+          <a href="praxis-home.html" class="btn orange current">Home</a>
+        </article>
+        <article>
+          <a href="praxis-about.html" class="btn orange">About</a>
+        </article>
+        <article>
+          <div class="dropup show">
+          <a href="praxis-initiatives.html" class="btn orange" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Initiatives</a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <li><a class="dropdown-item storm" href="praxis-initiatives.html">Politics & Policy (P&P)</a></li>
+              <li><a class="dropdown-item turq" href="praxis-initiatives.html">Culture & Publics (C&P)</a></li>
+              <li><a class="dropdown-item rosy" href="praxis-initiatives.html">Built Environment (BE)</a></li>
+              <li><a class="dropdown-item peach" href="praxis-initiatives.html">Academia & Research (A&R)</a></li>
+              <li><a class="dropdown-item banana" href="praxis-initiatives.html">Activism & Engagement (A&E)</a></li>
+            </ul>
+          </div>
+        </article>
+        <article>
+          <div class="dropup show">
+          <a href="praxis-people.html" class="btn orange" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">People</a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <li><a class="dropdown-item storm" href="praxis-people.html">Policy (P)</a></li>
+              <li><a class="dropdown-item turq" href="praxis-people.html">Culture & Publics (C&P)</a></li>
+              <li><a class="dropdown-item rosy" href="praxis-people.html">Built Environment (BE)</a></li>
+              <li><a class="dropdown-item peach" href="praxis-people.html">Academia & Research (A&R)</a></li>
+              <li><a class="dropdown-item banana" href="praxis-people.html">Activism & Engagement (A&E)</a></li>
+            </ul>
+          </div>
+        </article>
+      </section>
+
+
+
+        <section class="content-grid mixed cover flex-item">
+       <!--Cover recommended article-->
+          <article class="cover-recommend grey col-xs-12 col-sm-8">
+              <img src="images/showcase_praxis_article.jpg" alt="Cover"> <!--FEATURED Praxis article-->
+              <div class="title-header-overlay overlay-darker">
+              <h2>Feature</h2>
+              <h1><a href="praxis-project.html">What Design can do</a></h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer</p>
+            </div>
+          </article>
+
+
+            <article class="cover-recommend storm col-xs-6 col-sm-4">
+                <img src="images/piece-praxis-01.jpg" alt="Cover">
+                <h2>P | Johannesburg</h2>
+                <h1><a href="praxis-project.html">School mimimum norms & Standards</a></h1>
+                <p>Shahidul Alam forged a stellar career that is shifting the way South Asian countries are portrayed</p>
+
+            </article>
+
+            <article class="cover-recommend peach col-xs-6 col-sm-4">
+                <img src="images/piece-praxis-02.jpg" alt="Cover">
+                <h2>A&R | Bangalore</h2>
+                <h1><a href="praxis-project.html">IIHS (Indian Institute of Human Settlements)</a></h1>
+                <p>Something here about four lines of text. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer</p>
+            </article>
+
+            <article class="cover-recommend blush col-xs-6 col-sm-4">
+                <img src="images/piece-praxis-people.jpg" alt="Cover">
+                <h2><a href="praxis-people.html">Interview</a></h2>
+                <h1><a href="praxis-project.html">Omar Sharif: Working on the Margins in Casablanca</a></h1>
+                <p>These have long headings. Less space for summary. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </article>
+
+            <article class="cover-recommend turq col-xs-6 col-sm-4">
+                <img src="images/piece-praxis-03.jpg" alt="Cover">
+                <h2>C&P | Sao Paolo</h2>
+                <h1><a href="praxis-project.html">A Batata Precisa <span class="nocaps">de</span> Voce</a></h1>
+                <p>Something here about four lines of text -- which part is clickable to the destination page.</p>
+            </article>
+
+      </section>
+
+
+</div>
+</div>
+
+<!-- Footer -->
+<div id="CS-footer">
+  <footer>
+    <div class="fullwide">
+      <div class="container footer-logo footer-narrow">
+          <a href="#">CS Collective</a>
+      </div>
+    </div>
+    <div class="container footer-narrow">
+
+      <nav class="footer-menu">
+        <ul>
+          <li class="foot-menu-head"><a href="about.html">ABOUT US</a></li>
+          <li><a href="about.html">Who We Are</a></li>
+          <li><a href="about.html">What We Believe</a></li>
+          <li><a href="about.html">Key People</a></li>
+          <li><a href="about.html">Collaborators</a></li>
+          <li><a href="about.html">Our Boards</a></li>
+          <li><a href="about.html">Support</a></li>
+        </ul>
+        <ul>
+          <li class="foot-menu-head"><a href="magazine.html">MAGAZINE</a></li>
+          <li><a href="magazine.html">Current Issue</a></li>
+          <li><a href="magazine.html">All Issues</a></li>
+        </ul>
+        <ul>
+          <li class="foot-menu-head"><a href="project-home.html">PROJECTS</a></li>
+          <li><a href="projects-project.html">Exhibitions</a></li>
+          <li><a href="projects-project.html">Films</a></li>
+          <li><a href="projects-project.html">Convening</a></li>
+          <li><a href="projects-project.html">CS.Praxis</a></li>
+        </ul>
+        <ul>
+          <li class="foot-menu-head"><a href="#">CONTACT</a></li>
+          <li><a href="#">Editorial</a></li>
+          <li><a href="#">Subscriptions</a></li>
+          <li><a href="#">General Enquiries</a></li>
+          <li><a href="#">Collaborate With Us</a></li>
+        </ul>
+        <ul class="border-left">
+          <li class="foot-menu-head"><a href="login.html">SUBSCRIBE</a></li>
+          <li><a href="#">issue Edition (X2 Annually)</a></li>
+          <li><a href="#">Digital Edition</a></li>
+          <li><a href="#">Digital & issue Edition</a></li>
+          <li><a href="#">Libraries</a></li>
+          <li><a href="#">Newsletters & Notices</a></li>
+        </ul>
+      </nav>
+
+
+    </div>
+    <div class="footer-text container">
+      <hr>
+      <p class="footer-res">CS Collective is a registered 501c3</p>
+    </div>
+  </footer>
+</div>
+
+
+
+<!--Bootstrap js -->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+
+  </body>
+</html>
