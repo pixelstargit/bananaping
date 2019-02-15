@@ -46,7 +46,7 @@
                      <li><a href="about.html">About Us</a></li>
                      <li class="active"><a href="magazine.html">Magazine</a></li>
                      <li><a href="project-home.html">Projects</a></li>
-                     <li><a href="download.html">The Download</a></li>
+                     <li><a href="praxis-home.html">CS Praxis</a></li>
                      <li><a href="dispatch.html">Dispatches</a></li>
                      <li class="mobile-nav-login"><a href="login.html">Sign-Up / Login</a></li>
                    </ul>
@@ -183,10 +183,6 @@
                             </div>
                           </div>
                           </section>
-
-                  <!--old placeholder for height
-                    <div class="showcase pagin-placeholder flex-container"><img src="images/magazine-cover-placeholder.png" alt="Cover"></div>
-                    -->
 
               </aside>
 
@@ -436,23 +432,7 @@
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap.js"></script>
 <script src="js/bootstrap-modal-carousel.js"></script> <!-- added for fullscreen slider -->
-<script>
-$(".carousel").on("touchstart", function(event){
-        var xClick = event.originalEvent.touches[0].pageX;
-    $(this).one("touchmove", function(event){
-        var xMove = event.originalEvent.touches[0].pageX;
-        if( Math.floor(xClick - xMove) > 5 ){
-            $(this).carousel('next');
-        }
-        else if( Math.floor(xClick - xMove) < -5 ){
-            $(this).carousel('prev');
-        }
-    });
-    $(".carousel").on("touchend", function(){
-            $(this).off("touchmove");
-    });
-});
-</script>
+
 
   </body>
 </html>

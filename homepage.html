@@ -46,7 +46,7 @@
                    <li><a href="about.html">About Us</a></li>
                    <li><a href="magazine.html">Magazine</a></li>
                    <li><a href="project-home.html">Projects</a></li>
-                   <li><a href="download.html">The Download</a></li>
+                   <li><a href="praxis-home.html">CS Praxis</a></li>
                    <li><a href="dispatch.html">Dispatches</a></li>
                    <li class="mobile-nav-login"><a href="login.html">Sign-Up / Login</a></li>
                  </ul>
@@ -69,13 +69,6 @@
 
       <div id="carousel-featured" class="carousel slide carousel-fit flex-container" data-ride="carousel">
         <div class="carousel-inner flex-item" role="listbox">
-
-<!-- Indicators (dots)
-          <ol class="carousel-indicators">
-              <li data-target="#carousel-featured" data-slide-to="0" class="active"></li>
-              <li data-target="#carousel-featured" data-slide-to="1"></li>
-              <li data-target="#carousel-featured" data-slide-to="2"></li>
-          </ol>-->
 
   <!--Slides -->
           <div class="item active fill">
@@ -226,19 +219,19 @@
             <img src="images/piece-cover-01.jpg" alt="Cover">
             <h2>Interview</h2>
             <h1><a href="magazine-detail.html">Majority World</a></h1>
-            <p><!-- might also need to make this a nested grid with sidebar 1=2| 1=1 -->
+            <p>
             Shahidul Alam forged a stellar career that is shifting the way South Asian countries are portrayed</p>
             <h4>Zeeshan Khan</h4>
         </article>
 
-        <article class="cover-recommend rosy col-xs-12"><!--add colour background-->
+        <article class="cover-recommend rosy col-xs-12">
             <img src="images/piece-cover-01.jpg" alt="Cover">
             <h2>Download</h2>
             <h1><a href="download.html">Map of Institutional Circumnavigation</a></h1>
             <p>Something here about four lines of text -- which part is clickable to the destination page.</p>
         </article>
 
-        <article class="cover-recommend mint col-xs-12"><!--add colour background-->
+        <article class="cover-recommend mint col-xs-12">
             <img src="images/piece-cover-01.jpg" alt="Cover">
             <h2>Intelligence</h2>
             <h1><a href="magazine-detail.html">Cities in Tension</a></h1>
@@ -246,7 +239,7 @@
             <h4>Joylon Leslie</h4>
         </article>
 
-        <article class="cover-recommend sunny col-xs-12"><!--add colour background-->
+        <article class="cover-recommend sunny col-xs-12">
             <img src="images/piece-cover-01.jpg" alt="Cover">
             <h2>Dispatch</h2>
             <h1><a href="dispatch.html">Systems, not band-aids</a></h1>
@@ -259,7 +252,7 @@
 </div>
 
 <!-- Footer -->
-<div id="CS-footer"><!--add new padding styles-->
+<div id="CS-footer">
   <footer>
     <div class="fullwide">
       <div class="container footer-logo footer-narrow">
@@ -320,23 +313,6 @@
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap.js"></script>
 <script src="js/bootstrap-modal-carousel.js"></script> <!-- added for fullscreen slider -->
-<script>
-$(".carousel").on("touchstart", function(event){
-        var xClick = event.originalEvent.touches[0].pageX;
-    $(this).one("touchmove", function(event){
-        var xMove = event.originalEvent.touches[0].pageX;
-        if( Math.floor(xClick - xMove) > 5 ){
-            $(this).carousel('next');
-        }
-        else if( Math.floor(xClick - xMove) < -5 ){
-            $(this).carousel('prev');
-        }
-    });
-    $(".carousel").on("touchend", function(){
-            $(this).off("touchmove");
-    });
-});
-</script>
 
   </body>
 </html>
