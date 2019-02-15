@@ -204,9 +204,10 @@ body{ background: #ffffff;}
   .content-text.breadcrumbs .btn.orange{ white-space: nowrap;}
 }
 .title-header .title-header-overlay{
-  &.vert-red, &.vert-center {
-  height: 130px;
-  }
+  &.vert-red, &.vert-center {  height: 130px;  }
+}
+.praxis .title-header .title-header-overlay{
+  &.vert-red, &.vert-center {  height: auto;  }
 }
 
 
@@ -353,6 +354,10 @@ body{ background: #ffffff;}
 }
 
 .title-header .title-header-overlay.vert-red .title , .title-header .title-header-overlay.vert-center .title{font-size: 1.8em;}
+.praxis .title-header .title-header-overlay{
+  &.vert-red { display: none;}
+}
+
 .magazine .title-header-overlay .title {font-size:24px;}
 .title-header .title-header-overlay {padding:5px 0;}
 .modal-dialog .modal-content .carousel-caption {min-height:10px;}
