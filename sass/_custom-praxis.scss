@@ -74,6 +74,7 @@
 
 /* Web GL Map Overides */
 #earth_div{
+  max-width:980px;max-height:510px;border:0px solid gray; padding:0px;
   .we-pm-icon {
     width: 30px !important;
     height: 35px !important;
