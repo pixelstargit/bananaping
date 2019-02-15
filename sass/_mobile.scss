@@ -6,7 +6,6 @@ body{ background: #ffffff;}
 /*but not larger than desktop*/
 /*body{ background: #cc0055;}*/
 
-  /*#CS-page {margin:1px 10px;}*/
   .title-header .title-header-overlay {
     &.vert-red, &.vert-center {
     .title{ font-size:50px;}
@@ -51,7 +50,6 @@ body{ background: #ffffff;}
       padding-left: 30px;
       text-transform: capitalize;
       font-size: $font-size-big;
-      /*font-family: $font-helvetica-bold; this doesn't look right*/
     }
   }
   .navbar .navbar-nav {
@@ -73,11 +71,11 @@ body{ background: #ffffff;}
        img{max-height: initial;}
     }
     &.cover article.cover-headline.col-xs-6,
-    &.cover article.cover-recommend.col-xs-6 {width: calc(50% - 0.6em);}/*width: 100%;*/
+    &.cover article.cover-recommend.col-xs-6 {width: calc(50% - 0.6em);}
     .cover-recommend, .cover-headline {
       overflow: hidden; clear: right;
       padding: 0;
-      margin: 0.3em; width:calc(50% - 0.6em);/*width: 100%;*/
+      margin: 0.3em; width:calc(50% - 0.6em);
       h1 {padding: 10px 20px 10px 30px;}
       h1.film {padding:7px 20px 0 20px;}
     }
@@ -91,6 +89,8 @@ body{ background: #ffffff;}
       }
     &.mixed.col-sm-8{ margin-left: $gutter-thin; margin-right: $gutter-thin; width:auto;}
     &.mixed.col-sm-4{ margin-left: $gutter-thin; margin-right: $gutter-thin; width:auto;}
+    &.mixed .col-xs-12{ margin-left: $gutter-thin; margin-right: $gutter-thin;
+      width: calc(100% - 0.6em); min-height: auto;} /* praxis feature*/
 
     &.masonry .col-sm-8 { width:100%; }
     &.masonry .hidden-xs {display: none;}
@@ -98,7 +98,6 @@ body{ background: #ffffff;}
 
     /*on landscape splits into halves and then one col with correct padding on cyan*/
     &.cover.mixed article.cover-recommend.col-xs-6{width: calc(50% - 0.6em);}
-  /*  &.mixed .col-xs-6{width:50%;width: calc(50% - 0.6em);}*/
 
     .quote{width: calc(50% - 0.6em);}
   }
@@ -183,11 +182,7 @@ body{ background: #ffffff;}
 
 
 @media only screen and (max-width:640px){
-/*full width columns for MOBILE asper client examples Cyan
-}
-
-@media only screen and (max-width:425px){*/
-/*full width columns for PORTRAIT to phones*/
+/*full width columns for MOBILE asper client examples Cyan*/
   /*body{ background: #00ffff;}*/
 #CS-page{
   .content-grid {
@@ -216,9 +211,8 @@ body{ background: #ffffff;}
 
 
 
-  /*.magazine.title-header-image.col-xs-12,*/ .content-login .login-box input.col-xs-12 {width:100%!important; }
+  .content-login .login-box input.col-xs-12 {width:100%!important; }
   .showcase .carousel-caption{
-    /*display:none;*/
     right: 0;
     h2 {font-size: 0.7em;}
     h3 {font-size: 1em;}
