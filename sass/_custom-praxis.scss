@@ -44,15 +44,25 @@
        &.turq{background-color: $overlay-turq;}
        &.banana{background-color: $overlay-banana;}
        &.rosy{background-color: $overlay-rosy;}
+      }
     }
-  }
-  h4.location{
-    background: $color-sunny; max-height: 68px; min-height: 68px; overflow: hidden;
-    padding: 14px 13px;
-    font-family: $font-raleway; font-weight: 900; font-style: italic;
-    font-size: $font-size-big; text-transform: uppercase; letter-spacing: $letter-normal;
-  }
+    h4.location{
+      background: $color-sunny; max-height: 68px; min-height: 68px; overflow: hidden;
+      padding: 14px 13px;
+      font-family: $font-raleway; font-weight: 900; font-style: italic;
+      font-size: $font-size-big; text-transform: uppercase; letter-spacing: $letter-normal;
+    }
+    .cover-recommend p, .cover-headline p{
+      max-height: 52px;
+    }
+    .content-grid.cover article.cover-recommend,
+    .content-grid.cover article.cover-headline,
+    .content-grid.cover article.quote {
+      max-height: 400px;
+      min-height: 400px;
+    }
 }
+
 .nocaps {text-transform: lowercase;}
 
 

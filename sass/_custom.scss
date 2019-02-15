@@ -29,7 +29,7 @@
 h1, h2, h3 {letter-spacing: $letter-normal;  font-weight: 900;}
 b, strong {font-family: $font-stag-semibold; font-weight: 600; text-shadow: none;}
 p {clear: both;} /* font-weight: 600;*/
-a, a:hover {color:$color-dark-pink;};
+a, a:hover, a:focus {color:inherit;}
 
 /*Navbar*/
 #CS-header {
