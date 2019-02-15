@@ -17,6 +17,7 @@ body{ background: #ffffff;}
 
   .masonry .title-header-overlay h1.title {font-size: 32px;}
   .counting-block{width:66.3%;}
+  .praxis .content-grid.mixed .col-sm-8 { width: calc(66.67% - 0.6em); margin-left:$gutter-thin;}
 }
 
 @media only screen and (max-width:980px) and (min-width:767px){
@@ -115,6 +116,7 @@ body{ background: #ffffff;}
      }
     .modal-content .carousel-control {bottom: 240px;}
     .modal-content #carousel-gallery .carousel-control {bottom: 80px;}
+
 }
 
 
