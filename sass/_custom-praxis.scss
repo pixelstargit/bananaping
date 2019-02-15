@@ -3,6 +3,7 @@
 /*Sections*/
 
 .praxis{
+  .title-header .title-header-overlay{  padding: 15px 0; }
   .title-header .vert-red{
     top:0; bottom: auto; /*move to top*/
   }
@@ -25,9 +26,10 @@
     }
     .title-header-overlay {
       position: absolute; bottom: 0;
-      padding: 24px 0 30px; position: absolute;  bottom: 0;
+    position: absolute;  bottom: 0;
       background-color: $overlay-grey;
       }
+
     .overlay-darker {
       background: $overlay-grey-darker;
       }
